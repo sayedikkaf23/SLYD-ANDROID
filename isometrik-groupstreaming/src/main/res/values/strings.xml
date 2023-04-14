@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string name="ism_tx_quality">Tx Quality- \u0020</string>
+  <string name="ism_rx_quality">Rx Quality- \u0020</string>
+</resources>

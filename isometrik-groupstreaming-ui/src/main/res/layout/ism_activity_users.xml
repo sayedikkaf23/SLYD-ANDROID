@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlParent"
+    android:keepScreenOn="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@+id/btCreateUser"
+      android:layout_below="@+id/abLayout"
+      >
+
+    <TextView
+        android:id="@+id/tvNoUsers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="@dimen/ism_dp_8"
+        android:drawableTop="@drawable/ism_ic_no_users"
+        android:gravity="center"
+        android:text="@string/ism_no_users"
+        android:textColor="@color/ism_black"
+        android:visibility="gone"
+        />
+  </RelativeLayout>
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btCreateUser"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="@dimen/ism_dp_30"
+      android:layout_marginEnd="@dimen/ism_dp_70"
+      android:layout_marginStart="@dimen/ism_dp_70"
+      android:background="@drawable/ism_gradient_curved_background"
+      android:text="@string/ism_create_user"
+      android:textAllCaps="false"
+      android:textColor="@color/ism_white"
+      android:textSize="@dimen/ism_sp_18"
+      android:elevation="@dimen/ism_dp_5"
+      />
+
+  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:id="@+id/refresh"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@+id/btCreateUser"
+      android:layout_below="@+id/abLayout"
+      >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUsers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/ism_dp_5"
+        />
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:id="@+id/abLayout"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      style="@style/ThemeOverlay.AppCompat.ActionBar"
+      >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ism_white"
+        >
+
+      <TextView
+          android:id="@+id/tvTitle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:fontFamily="@font/sf_pro_semibold"
+          android:gravity="center"
+          android:text="@string/ism_users"
+          android:textColor="@color/ism_title_black"
+          android:textSize="@dimen/ism_sp_20"
+          />
+
+      <androidx.appcompat.widget.AppCompatImageButton
+          android:id="@+id/ibBack"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_alignParentStart="true"
+          android:background="@android:color/transparent"
+          android:padding="@dimen/ism_dp_16"
+          android:tint="@color/ism_text_black"
+          app:srcCompat="@drawable/ism_ic_arrow_back"
+          />
+    </RelativeLayout>
+  </com.google.android.material.appbar.AppBarLayout>
+  <include
+      android:layout_marginTop="?attr/actionBarSize"
+      layout="@layout/ism_overlay_connection_state"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+</RelativeLayout>

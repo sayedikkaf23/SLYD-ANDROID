@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/ism_dp_5"
+    >
+
+  <TextView
+      android:id="@+id/tvPresetMessage"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/ism_preset_message_background"
+      android:maxLines="2"
+      android:paddingStart="@dimen/ism_dp_10"
+      android:paddingEnd="@dimen/ism_dp_10"
+      android:paddingTop="@dimen/ism_dp_5"
+      android:paddingBottom="@dimen/ism_dp_5"
+      android:textColor="@color/ism_white"
+      android:text="@string/ism_hello"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

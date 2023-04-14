@@ -1,0 +1,33 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml:1:1-10:12
+INJECTED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml:1:1-10:12
+INJECTED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml:1:1-10:12
+	package
+		ADDED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml:2:5-45
+		INJECTED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml
+		INJECTED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml:1:11-69
+application
+ADDED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml:4:5-8:19
+	android:label
+		ADDED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml:5:9-41
+	android:icon
+		ADDED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml:6:9-45
+	android:allowBackup
+		ADDED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml:4:18-45
+uses-sdk
+INJECTED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml
+INJECTED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml
+INJECTED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml
+INJECTED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml
+		ADDED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml
+		INJECTED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml
+		ADDED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml
+		INJECTED from E:\SAPP_CLIENT\lib\src\main\AndroidManifest.xml

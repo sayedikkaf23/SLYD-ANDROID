@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ism_white"
+    android:orientation="vertical">
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:id="@+id/abLayout"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      style="@style/ThemeOverlay.AppCompat.ActionBar"
+      >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ism_white">
+
+      <androidx.appcompat.widget.AppCompatImageButton
+          android:id="@+id/ibBack"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_alignParentStart="true"
+          android:background="@android:color/transparent"
+          android:padding="@dimen/ism_dp_16"
+          android:tint="@color/ism_text_black"
+          app:srcCompat="@drawable/ism_ic_arrow_back"
+          />
+
+      <TextView
+
+          android:id="@+id/tvTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:text="@string/ism_create_user"
+          android:textColor="@color/ism_title_black"
+          android:textSize="@dimen/ism_sp_20"
+          android:fontFamily="@font/sf_pro_semibold" />
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/btCreate"
+          android:background="@android:color/transparent"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:layout_centerVertical="true"
+          android:text="@string/ism_next"
+          android:padding="@dimen/ism_dp_16"
+          android:textAllCaps="false"
+          android:textColor="@color/ism_blue"
+          android:textSize="@dimen/ism_sp_16"
+          tools:ignore="RtlCompat" />
+
+    </RelativeLayout>
+  </com.google.android.material.appbar.AppBarLayout>
+  <!--profile pc-->
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivProfilePic"
+      android:layout_below="@+id/abLayout"
+      android:layout_centerHorizontal="true"
+      android:layout_width="@dimen/ism_dp_80"
+      android:layout_marginBottom="@dimen/ism_dp_20"
+      app:srcCompat="@drawable/ism_default_profile_image"
+      android:layout_height="@dimen/ism_dp_80"/>
+
+  <androidx.appcompat.widget.AppCompatImageButton
+      android:id="@+id/ibAddImage"
+      android:layout_marginEnd="@dimen/ism_dp__10"
+      android:layout_marginBottom="@dimen/ism_dp__10"
+      android:layout_width="wrap_content"
+      android:background="#00000000"
+      android:layout_height="wrap_content"
+      android:layout_alignEnd="@+id/ivProfilePic"
+      android:layout_alignBottom="@+id/ivProfilePic"
+      app:srcCompat="@drawable/ism_ic_add_photo" />
+
+    <LinearLayout
+        android:id="@+id/llUserDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivProfilePic"
+        android:orientation="vertical"
+        android:padding="@dimen/ism_dp_16">
+
+      <!--name-->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginTop="@dimen/ism_dp_5"
+          android:layout_marginBottom="@dimen/ism_dp_5"
+          android:weightSum="5">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="@dimen/ism_dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:padding="@dimen/ism_dp_5"
+            android:text="@string/ism_user_name"
+            android:textSize="@dimen/ism_sp_16" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etName"
+            android:layout_width="@dimen/ism_dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@android:color/transparent"
+            android:hint="@string/ism_enter_user_name"
+            android:inputType="textPersonName"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:padding="@dimen/ism_dp_5"
+            android:textColor="@color/ism_title_black"
+            android:textSize="@dimen/ism_sp_16" />
+      </LinearLayout>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/ism_dp_1"
+          android:background="@color/ism_divider" />
+
+      <!--user name-->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginTop="@dimen/ism_dp_5"
+          android:layout_marginBottom="@dimen/ism_dp_5"
+          android:weightSum="5">
+
+        <TextView
+            android:id="@+id/tvUserIdentifier"
+            android:layout_width="@dimen/ism_dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:padding="@dimen/ism_dp_5"
+            android:text="@string/ism_user_identifier"
+            android:textSize="@dimen/ism_sp_16" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etUserIdentifier"
+            android:layout_width="@dimen/ism_dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@android:color/transparent"
+            android:hint="@string/ism_enter_user_identifier"
+            android:inputType="text"
+            android:maxLength="50"
+            android:maxLines="2"
+            android:padding="@dimen/ism_dp_5"
+            android:textColor="@color/ism_title_black"
+            android:textSize="@dimen/ism_sp_16" />
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/llUserDetails"
+        android:padding="@dimen/ism_dp_26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true">
+
+      <TextView
+          android:id="@+id/tvAlreadyMember"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/ism_avoid_create_user"
+          android:textColor="@color/ism_title_black"
+          android:textSize="@dimen/ism_sp_16" />
+
+      <TextView
+          android:padding="@dimen/ism_dp_5"
+          android:id="@+id/tvSelectUser"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/ism_select_user"
+          android:textColor="@color/ism_blue"
+          android:textSize="@dimen/ism_sp_16" />
+    </LinearLayout>
+
+</RelativeLayout>

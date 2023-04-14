@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ism_black"
+    >
+
+  <View
+      android:id="@+id/vPeek"
+      android:layout_margin="@dimen/ism_dp_20"
+      android:layout_width="@dimen/ism_dp_80"
+      android:layout_height="@dimen/ism_dp_4"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/ism_peek_rectangle"
+      />
+
+  <RelativeLayout
+      android:id="@+id/rlKickOut"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/vPeek"
+      android:layout_marginTop="@dimen/ism_dp_8"
+      >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivKickOut"
+        android:layout_marginStart="@dimen/ism_dp_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ism_dp_12"
+        android:layout_marginTop="@dimen/ism_dp_12"
+        app:srcCompat="@drawable/ism_ic_kickout"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvKickOut"
+        android:layout_toEndOf="@+id/ivKickOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ism_dp_16"
+        android:layout_marginStart="@dimen/ism_dp_12"
+        android:layout_marginTop="@dimen/ism_dp_12"
+        android:maxLines="1"
+        android:textColor="@color/ism_white"
+        android:text="@string/ism_kickout"
+        android:ellipsize="end"
+        android:textSize="@dimen/ism_sp_16"
+        android:singleLine="true"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ism_dp_0_5"
+        android:background="@color/ism_grey"
+        android:layout_below="@+id/ivKickOut"
+        android:layout_marginEnd="@dimen/ism_dp_18"
+        android:layout_marginStart="@dimen/ism_dp_18"
+        />
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/rlRemoteVideo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/rlKickOut"
+      >
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivRemoteVideo"
+        android:layout_marginStart="@dimen/ism_dp_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ism_dp_12"
+        android:layout_marginTop="@dimen/ism_dp_12"
+        app:srcCompat="@drawable/ism_ic_video"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRemoteVideo"
+        android:layout_toEndOf="@+id/ivRemoteVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ism_dp_16"
+        android:layout_marginStart="@dimen/ism_dp_12"
+        android:layout_marginTop="@dimen/ism_dp_12"
+        android:maxLines="1"
+        android:textColor="@color/ism_white"
+        android:text="@string/ism_mute_unmute_video"
+        android:ellipsize="end"
+        android:textSize="@dimen/ism_sp_16"
+        android:singleLine="true"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ism_dp_0_5"
+        android:background="@color/ism_grey"
+        android:layout_below="@+id/ivRemoteVideo"
+        android:layout_marginEnd="@dimen/ism_dp_18"
+        android:layout_marginStart="@dimen/ism_dp_18"
+        />
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/rlRemoteAudio"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/rlRemoteVideo"
+      >
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivRemoteAudio"
+        android:layout_marginStart="@dimen/ism_dp_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ism_dp_12"
+        android:layout_marginTop="@dimen/ism_dp_12"
+        app:srcCompat="@drawable/ism_ic_volume"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRemoteAudio"
+        android:layout_toEndOf="@+id/ivRemoteAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ism_dp_16"
+        android:layout_marginStart="@dimen/ism_dp_12"
+        android:layout_marginTop="@dimen/ism_dp_12"
+        android:maxLines="1"
+        android:textColor="@color/ism_white"
+        android:text="@string/ism_mute_unmute_audio"
+        android:ellipsize="end"
+        android:textSize="@dimen/ism_sp_16"
+        android:singleLine="true"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ism_dp_0_5"
+        android:background="@color/ism_grey"
+        android:layout_below="@+id/ivRemoteAudio"
+        android:layout_marginEnd="@dimen/ism_dp_18"
+        android:layout_marginStart="@dimen/ism_dp_18"
+        />
+  </RelativeLayout>
+
+
+
+</RelativeLayout>

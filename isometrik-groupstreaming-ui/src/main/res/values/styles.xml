@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- The launcher theme. It sets the main window background to the launch_screen drawable -->
+  <style name="Theme.AppCompat.Light.NoActionBar.Launcher">
+    <item name="android:windowBackground">@drawable/ism_splash_screen</item>
+
+  </style>
+
+</resources>
+

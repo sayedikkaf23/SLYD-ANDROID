@@ -1,0 +1,71 @@
+import dependencies.*
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'org.jetbrains.dokka'
+apply from: Deps.dependency
+apply from: "$rootDir/ktlint.gradle"
+
+android {
+    compileSdkVersion 32
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 32
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled = true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
+        debug {
+            signingConfig signingConfigs.debug
+            minifyEnabled = false
+            matchingFallbacks = ['debug', 'release']
+        }
+    }
+
+    flavorDimensions "default"
+    productFlavors {
+        dev {
+            dimension "default"
+            buildConfigField "String", "BASEURL", "\"https://api.syld.io/\""
+            buildConfigField 'String', 'DOMAIN', '"ezcall.app"'
+            buildConfigField 'String', 'SHA_256', '"sha256/oQbf6++PwdD56tFC7HR5JGYtgvh9gfMCFHj/2km7Tks="'
+            buildConfigField 'String', 'MQTT_URL', '"tcp://157.241.94.74:1883"'
+            buildConfigField 'String', 'MQTT_USERNAME', '"3embed"'
+            buildConfigField 'String', 'MQTT_PASSWORD', '"3embed"'
+            buildConfigField 'String', 'FCM_SERVER_KEY', '"AAAAZRlwHyo:APA91bGTYYHPemR2WC9dRItWO9OpZa8HbUUkPOTFkXDR9cIGlEQXM9rcyVH3ojQcpZEjZkAISMhieyvYCzun-dsjJSfUDPOBnWLbtgjwEdO01UwXkXrDBWkfqAH3QimTlMz0nhmoTHNm"'
+
+        }
+        live {
+            dimension "default"
+            buildConfigField "String", "BASEURL", "\"https://api.syld.io/\""
+            buildConfigField 'String', 'DOMAIN', '"ezcall.app"'
+            buildConfigField 'String', 'SHA_256', '"sha256/oQbf6++PwdD56tFC7HR5JGYtgvh9gfMCFHj/2km7Tks="'
+            buildConfigField 'String', 'MQTT_URL', '"tcp:/157.241.94.74:1883"'
+            buildConfigField 'String', 'MQTT_USERNAME', '"3embed"'
+            buildConfigField 'String', 'MQTT_PASSWORD', '"3embed"'
+            buildConfigField 'String', 'FCM_SERVER_KEY', '"AAAAZRlwHyo:APA91bGTYYHPemR2WC9dRItWO9OpZa8HbUUkPOTFkXDR9cIGlEQXM9rcyVH3ojQcpZEjZkAISMhieyvYCzun-dsjJSfUDPOBnWLbtgjwEdO01UwXkXrDBWkfqAH3QimTlMz0nhmoTHNm"'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dokka {
+        outputFormat = 'html'
+        outputDirectory = "$buildDir/javadoc"
+    }
+}
+

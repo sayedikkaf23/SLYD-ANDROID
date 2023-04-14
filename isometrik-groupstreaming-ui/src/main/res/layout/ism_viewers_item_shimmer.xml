@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ism_black"
+     >
+
+  <RelativeLayout
+      android:id="@+id/rlRemove"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:layout_marginTop="@dimen/ism_dp_16"
+      android:background="@color/ism_shimmer_grey"
+      >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/ism_dp_4"
+        android:paddingEnd="@dimen/ism_dp_15"
+        android:paddingStart="@dimen/ism_dp_15"
+        android:paddingTop="@dimen/ism_dp_4"
+        android:text="@string/ism_kickout"
+        android:textColor="@color/ism_shimmer_grey"
+        />
+
+  </RelativeLayout>
+
+  <TextView
+      android:id="@+id/tvViewerName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      android:layout_toEndOf="@+id/ivViewerImage"
+      android:layout_toStartOf="@+id/rlRemove"
+      android:background="@color/ism_shimmer_grey"
+      android:textSize="@dimen/ism_sp_16"
+      />
+  <TextView
+      android:id="@+id/tvViewerIdentifier"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvViewerName"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_2"
+      android:layout_toEndOf="@+id/ivViewerImage"
+      android:layout_toStartOf="@+id/rlRemove"
+      android:background="@color/ism_shimmer_grey"
+      android:textSize="@dimen/ism_sp_14"
+      />
+
+  <TextView
+      android:id="@+id/tvJoinTime"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvViewerIdentifier"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_2"
+      android:layout_toEndOf="@+id/ivViewerImage"
+      android:layout_toStartOf="@+id/rlRemove"
+      android:background="@color/ism_shimmer_grey"
+      android:textSize="@dimen/ism_sp_14"
+      />
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/ism_dp_1"
+      android:layout_below="@id/ivViewerImage"
+      android:layout_marginStart="@dimen/ism_dp_80"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      android:background="@color/ism_line_gray"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivMember"
+      android:layout_width="@dimen/ism_dp_24"
+      android:layout_height="@dimen/ism_dp_24"
+      android:layout_alignParentEnd="true"
+      android:layout_below="@+id/rlRemove"
+      android:layout_marginEnd="@dimen/ism_dp_19"
+      android:layout_marginTop="@dimen/ism_dp_5"
+      android:tint="@color/ism_shimmer_grey"
+      app:srcCompat="@drawable/ism_default_profile_image"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivViewerImage"
+      android:layout_width="@dimen/ism_dp_60"
+      android:layout_height="@dimen/ism_dp_60"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginStart="@dimen/ism_dp_16"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      app:tint="@color/ism_shimmer_grey"
+      app:srcCompat="@drawable/ism_default_profile_image"
+      />
+
+</RelativeLayout>

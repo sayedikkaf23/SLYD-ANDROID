@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">stripe</string>
+    <!--Add card-->
+    <string name="addCardStripeDeclare">I authorise Stripe Samples to send instructions to the financial institution that issued my card to take payments from my card account in accordance with the terms of my agreement with you.</string>
+    <string name="addCardStripeOk">Ok</string>
+    <string name="addCardSetupFailed">Setup failed</string>
+    <string name="addCardSave">Save</string>
+    <string name="addCardSetupError">Error:</string>
+</resources>

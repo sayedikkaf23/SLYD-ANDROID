@@ -1,0 +1,23 @@
+import dependencies.*
+
+apply from: Deps.common
+
+dependencies {
+
+    implementation Deps.Gson.gson
+
+    //Rxjava
+    implementation Deps.RxJava.rxjava2
+
+    implementation Deps.javax
+    implementation Deps.javaxjsr250
+    implementation Deps.RxJava.rxAndroid
+    implementation Deps.RxJava.rxrelay2
+
+
+
+    implementation Deps.parceler
+    annotationProcessor Deps.parcelerProcessor
+
+}
+

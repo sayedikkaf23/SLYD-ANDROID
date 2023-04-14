@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ism_black"
+    >
+
+  <RelativeLayout
+      android:id="@+id/rlAdmin"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:layout_marginTop="@dimen/ism_dp_16"
+      android:background="@color/ism_shimmer_grey"
+      >
+
+    <TextView
+        android:id="@+id/tvAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/ism_dp_4"
+        android:paddingEnd="@dimen/ism_dp_15"
+        android:paddingStart="@dimen/ism_dp_15"
+        android:paddingTop="@dimen/ism_dp_4"
+        android:text="@string/ism_admin"
+        android:textColor="@color/ism_shimmer_grey"
+        />
+
+  </RelativeLayout>
+
+  <TextView
+      android:id="@+id/tvMemberName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      android:layout_toEndOf="@+id/ivMemberImage"
+      android:layout_toStartOf="@+id/rlAdmin"
+      android:background="@color/ism_shimmer_grey"
+      android:textSize="@dimen/ism_sp_16"
+      />
+
+  <TextView
+      android:id="@+id/tvMemberIdentifier"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvMemberName"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_2"
+      android:layout_toEndOf="@+id/ivMemberImage"
+      android:layout_toStartOf="@+id/rlAdmin"
+      android:textSize="@dimen/ism_sp_14"
+      android:background="@color/ism_shimmer_grey"
+      />
+
+  <TextView
+      android:id="@+id/tvJoinTime"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvMemberIdentifier"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_2"
+      android:layout_toEndOf="@+id/ivMemberImage"
+      android:layout_toStartOf="@+id/rlAdmin"
+      android:textSize="@dimen/ism_sp_12"
+      android:background="@color/ism_shimmer_grey"
+      />
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/ism_dp_1"
+      android:layout_below="@id/tvJoinTime"
+      android:layout_marginStart="@dimen/ism_dp_80"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      android:background="@color/ism_line_gray"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivMemberImage"
+      android:layout_width="@dimen/ism_dp_60"
+      android:layout_height="@dimen/ism_dp_60"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginStart="@dimen/ism_dp_16"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      app:srcCompat="@drawable/ism_default_profile_image"
+      app:tint="@color/ism_shimmer_grey"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivLiveStatus"
+      android:layout_width="@dimen/ism_dp_16"
+      android:layout_height="@dimen/ism_dp_16"
+      android:layout_alignParentEnd="true"
+      android:layout_below="@+id/rlAdmin"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      android:tint="@color/ism_shimmer_grey"
+      app:srcCompat="@drawable/ism_default_profile_image"
+      />
+
+</RelativeLayout>

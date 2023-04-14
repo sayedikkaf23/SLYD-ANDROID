@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ism_transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+<!--  android:background="@color/ism_transparent"-->
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/ism_dp_50"
+      android:background="@color/ism_white"
+      >
+
+  <TextView
+      android:id="@+id/tvLiveHeading"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/ism_sp_18"
+      android:text="@string/ism_your_live"
+      android:textColor="@color/ism_black"
+      android:layout_centerHorizontal="true"
+      android:gravity="center_horizontal"
+      android:layout_marginTop="@dimen/ism_dp_64"
+      android:layout_marginStart="@dimen/ism_dp_44"
+      android:layout_marginEnd="@dimen/ism_dp_44"
+      android:layout_marginBottom="@dimen/ism_dp_16"
+      android:textStyle="bold"
+      />
+
+  <TextView
+      android:id="@+id/tvLiveDescription"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvLiveHeading"
+      android:textSize="@dimen/ism_sp_14"
+      android:text="@string/ism_notified_users"
+      android:textColor="@color/ism_black"
+      android:layout_centerHorizontal="true"
+      android:gravity="center_horizontal"
+      android:layout_marginStart="@dimen/ism_dp_30"
+      android:layout_marginEnd="@dimen/ism_dp_30"
+      />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/tvLive"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/ism_dp_48"
+      android:layout_marginEnd="@dimen/ism_dp_48"
+      android:textSize="@dimen/ism_sp_16"
+      android:text="@string/ism_ok"
+      android:paddingTop="@dimen/ism_dp_14"
+      android:paddingBottom="@dimen/ism_dp_14"
+      android:layout_marginTop="@dimen/ism_dp_30"
+      android:layout_marginBottom="@dimen/ism_dp_16"
+      android:textColor="@color/ism_white"
+      android:layout_below="@+id/tvLiveDescription"
+      android:gravity="center_horizontal"
+      android:background="@drawable/ism_request_button"
+      android:textAllCaps="false"
+      app:elevation="@dimen/ism_dp_8"
+      android:elevation="@dimen/ism_dp_5"
+      />
+  </RelativeLayout>
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivLive"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:srcCompat="@drawable/ism_ic_golive_pentagon"
+      android:layout_centerHorizontal="true"
+      />
+
+</RelativeLayout>

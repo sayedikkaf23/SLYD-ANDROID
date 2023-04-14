@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlRootLayout"
+    android:keepScreenOn="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+  <androidx.appcompat.widget.AppCompatImageButton
+      android:id="@+id/ibExit"
+      android:layout_width="@dimen/ism_dp_28"
+      android:layout_height="@dimen/ism_dp_28"
+      android:layout_margin="@dimen/ism_dp_13"
+      app:srcCompat="@drawable/ism_ic_close"
+      android:layout_alignParentStart="true"
+      android:tint="@color/ism_white"
+      android:background="@drawable/ism_golive_circle"
+      />
+
+  <RelativeLayout
+      android:id="@+id/rlStreams"
+      android:background="@drawable/ism_stream_background"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+  <io.isometrik.gs.rtcengine.utils.VideoGridContainer
+      android:id="@+id/videoGridContainer"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvStreams"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  <View
+      android:id="@+id/vDummy"
+      android:layout_centerHorizontal="true"
+      android:layout_width="@dimen/ism_dp_0"
+      android:layout_height="@dimen/ism_dp_0"/>
+
+  <RelativeLayout
+      android:id="@+id/rlInitiator"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/ism_dp_16"
+      android:layout_marginTop="@dimen/ism_dp_20"
+      android:background="@drawable/ism_profile_button"
+      android:elevation="@dimen/ism_dp_3"
+      >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivInitiatorImage"
+        android:layout_width="@dimen/ism_dp_40"
+        android:layout_height="@dimen/ism_dp_40"
+        app:srcCompat="@drawable/ism_default_profile_image"
+        android:layout_margin="@dimen/ism_dp_1"
+        />
+
+    <TextView
+        android:id="@+id/tvInitiatorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/ism_white"
+        android:textSize="11sp"
+        android:layout_toEndOf="@+id/ivInitiatorImage"
+        android:text="@string/ism_user_name"
+        android:layout_marginTop="@dimen/ism_dp_4"
+        android:layout_marginStart="@dimen/ism_dp_5"
+        android:layout_marginEnd="@dimen/ism_dp_20"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:maxLength="20"
+        />
+
+    <TextView
+        android:id="@+id/tvInitiatorIdentifier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/ism_identifier_text_white"
+        android:textSize="@dimen/ism_sp_10"
+        android:layout_below="@+id/tvInitiatorName"
+        android:layout_toEndOf="@+id/ivInitiatorImage"
+        android:text="@string/ism_user_identifier"
+        android:layout_marginTop="@dimen/ism_dp_1"
+        android:layout_marginStart="@dimen/ism_dp_5"
+        android:layout_marginEnd="@dimen/ism_dp_20"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:maxLength="20"
+        />
+
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/rlViewers"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/ism_dp_20"
+      android:layout_toEndOf="@+id/vDummy"
+      android:layout_toStartOf="@+id/ivEndStream"
+      android:clickable="true"
+      android:focusable="true"
+      android:elevation="@dimen/ism_dp_8"
+      >
+    <!--elevation given to RL above to allow clicks-->
+    <include
+        android:id="@+id/llViewersList"
+        layout="@layout/ism_viewers_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/tvNoOfViewers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="@string/ism_viewers_count"
+        android:singleLine="true"
+        android:textColor="@color/ism_white"
+        android:layout_marginStart="@dimen/ism_dp_5"
+        android:layout_below="@+id/llViewersList"
+        android:layout_marginTop="@dimen/ism_dp_3"
+        android:visibility="gone"
+        />
+
+  </RelativeLayout>
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivEndStream"
+      android:layout_width="@dimen/ism_dp_44"
+      android:layout_height="@dimen/ism_dp_44"
+      android:layout_alignParentEnd="true"
+      app:srcCompat="@drawable/ism_ic_close"
+      android:layout_marginTop="@dimen/ism_dp_20"
+      android:layout_marginEnd="@dimen/ism_dp_8"
+      android:padding="@dimen/ism_dp_8"
+      android:tint="@color/ism_white"
+      />
+
+  <TextView
+      android:id="@+id/tvLiveStreamStatus"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/ism_sp_12"
+      android:layout_marginTop="@dimen/ism_dp_18"
+      android:layout_marginStart="@dimen/ism_dp_16"
+      android:background="@drawable/ism_live_indicator_background"
+      android:paddingBottom="@dimen/ism_dp_2"
+      android:paddingEnd="@dimen/ism_dp_8"
+      android:paddingStart="@dimen/ism_dp_8"
+      android:paddingTop="@dimen/ism_dp_2"
+      android:text="@string/ism_live_indicator"
+      android:textColor="@color/ism_white"
+      android:layout_below="@+id/rlInitiator"
+      />
+
+  <TextView
+      android:id="@+id/tvDuration"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/ism_white"
+      android:layout_marginTop="@dimen/ism_dp_19"
+      android:layout_marginStart="@dimen/ism_dp_8"
+      android:layout_below="@+id/rlInitiator"
+      android:textSize="@dimen/ism_sp_12"
+      android:layout_toEndOf="@+id/tvLiveStreamStatus"
+      android:text="@string/ism_duration_placeholder"
+      />
+
+  <TextView
+      android:id="@+id/tvNoOfMembers"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/ism_members_counts_outline"
+      android:drawablePadding="@dimen/ism_dp_5"
+      android:drawableStart="@drawable/ism_ic_members"
+      android:maxLines="1"
+      android:paddingBottom="@dimen/ism_dp_5"
+      android:paddingEnd="@dimen/ism_dp_10"
+      android:paddingStart="@dimen/ism_dp_10"
+      android:paddingTop="@dimen/ism_dp_5"
+      android:text="3"
+      android:singleLine="true"
+      android:textColor="@color/ism_stream_name"
+      android:layout_below="@+id/rlInitiator"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      android:layout_marginStart="@dimen/ism_dp_8"
+      android:layout_toEndOf="@+id/tvDuration"
+      />
+
+  <include
+      layout="@layout/ism_gift_viewer"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/ism_dp_16"
+      android:layout_below="@+id/tvLiveStreamStatus"
+      />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAnchor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ism_dp_16"
+        android:layout_marginStart="@dimen/ism_dp_16"
+        android:background="@android:color/transparent"
+        android:layout_above="@+id/rvPredefinedMessages"
+        android:layout_toStartOf="@+id/ivSettings"
+        >
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/rvMessages"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:layout_constrainedHeight="true"
+          app:layout_constraintBottom_toBottomOf="@+id/clAnchor"
+          app:layout_constraintEnd_toEndOf="@+id/clAnchor"
+          app:layout_constraintHeight_max="@dimen/ism_dp_132"
+          app:layout_constraintStart_toStartOf="@+id/clAnchor"
+          app:layout_constraintTop_toTopOf="@+id/clAnchor"
+          >
+      </androidx.recyclerview.widget.RecyclerView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+  <include
+      layout="@layout/ism_disclaimer_warning_message"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/rvPredefinedMessages"
+      android:layout_toStartOf="@id/ivSettings"
+      />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvPredefinedMessages"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:layout_marginStart="@dimen/ism_dp_16"
+      android:paddingBottom="@dimen/ism_dp_5"
+      android:paddingTop="@dimen/ism_dp_5"
+      android:layout_above="@+id/rlSendMessages"
+      android:layout_toStartOf="@+id/ivSettings"
+      />
+
+  <RelativeLayout
+      android:id="@+id/rlSendMessages"
+      android:layout_width="wrap_content"
+      android:layout_toStartOf="@+id/ivLike"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="@dimen/ism_dp_17"
+      android:layout_marginStart="@dimen/ism_dp_40"
+      android:layout_marginEnd="@dimen/ism_dp_8"
+      android:layout_marginTop="@dimen/ism_dp_10"
+      android:background="@drawable/ism_sendmessage_background"
+      android:layout_height="wrap_content"
+      android:elevation="@dimen/ism_dp_1"
+      >
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etSendMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ism_type_something_here"
+        android:maxLength="100"
+        android:maxLines="3"
+        android:paddingBottom="@dimen/ism_dp_10"
+        android:paddingLeft="@dimen/ism_dp_16"
+        android:paddingRight="@dimen/ism_dp_16"
+        android:paddingTop="@dimen/ism_dp_10"
+        android:textColor="@color/ism_hint_grey"
+        android:textColorHint="@color/ism_hint_grey"
+        android:textSize="@dimen/ism_sp_14"
+        android:background="@drawable/ism_sendmessage_background"
+        android:layout_toStartOf="@+id/ivSendMessage"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivSendMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/ism_dp_1"
+        android:padding="@dimen/ism_dp_8"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/ism_ic_send"
+        android:tint="@color/ism_hint_grey"
+        />
+  </RelativeLayout>
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivLike"
+      android:layout_width="@dimen/ism_dp_34"
+      android:layout_height="@dimen/ism_dp_34"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentEnd="true"
+      android:layout_marginEnd="@dimen/ism_dp_50"
+      android:layout_marginBottom="@dimen/ism_dp_20"
+      android:background="@drawable/ism_heartbutton_circle"
+      app:srcCompat="@drawable/ism_ic_heart"
+      android:padding="@dimen/ism_dp_10"
+      android:tint="@color/ism_white"
+      android:elevation="@dimen/ism_dp_3"
+      />
+
+  <io.isometrik.groupstreaming.ui.hearts.HeartsView
+      android:id="@+id/heartsView"
+      android:layout_width="@dimen/ism_dp_100"
+      android:layout_height="@dimen/ism_dp_350"
+      android:layout_alignParentBottom="true"
+      android:layout_toStartOf="@+id/ivSettings"
+      android:layout_marginBottom="@dimen/ism_dp_56"
+      />
+
+  <!-- Only viewer -->
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivJoin"
+      android:layout_width="@dimen/ism_dp_45"
+      android:layout_height="@dimen/ism_dp_45"
+      android:layout_above="@+id/ivRequest"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:layout_marginBottom="@dimen/ism_dp_10"
+      android:layout_alignParentEnd="true"
+      android:background="@drawable/ism_join_button_circle"
+      app:srcCompat="@drawable/ism_ic_join_member"
+      android:padding="@dimen/ism_dp_11"
+      android:elevation="@dimen/ism_dp_3"
+      />
+
+  <!-- Both viewer and broadcaster -->
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivRequest"
+      android:layout_width="@dimen/ism_dp_45"
+      android:layout_height="@dimen/ism_dp_45"
+      android:layout_above="@+id/ivAddMember"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:layout_marginBottom="@dimen/ism_dp_10"
+      android:layout_alignParentEnd="true"
+      android:background="@drawable/ism_actionbutton_circle"
+      app:srcCompat="@drawable/ism_ic_copublish_request"
+      android:padding="@dimen/ism_dp_10"
+      android:visibility="gone"
+      android:elevation="@dimen/ism_dp_3"
+      />
+
+  <!-- Only broadcaster -->
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivAddMember"
+      android:layout_width="@dimen/ism_dp_45"
+      android:layout_height="@dimen/ism_dp_45"
+      android:layout_above="@+id/ivGifts"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:layout_marginBottom="@dimen/ism_dp_10"
+      android:layout_alignParentEnd="true"
+      android:background="@drawable/ism_actionbutton_circle"
+      app:srcCompat="@drawable/ism_ic_add_member"
+      android:tint="@color/ism_white"
+      android:padding="@dimen/ism_dp_10"
+      android:elevation="@dimen/ism_dp_3"
+      />
+
+  <!-- Only viewer -->
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivGifts"
+      android:layout_width="@dimen/ism_dp_45"
+      android:layout_height="@dimen/ism_dp_45"
+      android:layout_above="@+id/ivEffects"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:layout_marginBottom="@dimen/ism_dp_10"
+      android:layout_alignParentEnd="true"
+      android:background="@drawable/ism_actionbutton_circle"
+      app:srcCompat="@drawable/ism_ic_gift"
+      android:padding="@dimen/ism_dp_12"
+      android:elevation="@dimen/ism_dp_3"
+      />
+
+  <!-- Only broadcaster -->
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivEffects"
+      android:layout_width="@dimen/ism_dp_45"
+      android:layout_height="@dimen/ism_dp_45"
+      android:layout_above="@+id/ivBeautify"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:layout_marginBottom="@dimen/ism_dp_10"
+      android:layout_alignParentEnd="true"
+      android:background="@drawable/ism_actionbutton_circle"
+      app:srcCompat="@drawable/ism_ic_effects"
+      android:padding="@dimen/ism_dp_11"
+      android:elevation="@dimen/ism_dp_3"
+      />
+
+  <!-- Only broadcaster -->
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivBeautify"
+      android:layout_width="@dimen/ism_dp_45"
+      android:layout_height="@dimen/ism_dp_45"
+      android:layout_above="@+id/ivSwitchCamera"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:layout_marginBottom="@dimen/ism_dp_10"
+      android:layout_alignParentEnd="true"
+      android:background="@drawable/ism_actionbutton_circle"
+      app:srcCompat="@drawable/ism_ic_beautify"
+      android:padding="@dimen/ism_dp_9"
+      android:elevation="@dimen/ism_dp_3"
+      />
+
+  <!-- Only broadcaster -->
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivSwitchCamera"
+      android:layout_width="@dimen/ism_dp_45"
+      android:layout_height="@dimen/ism_dp_45"
+      android:layout_above="@+id/ivSettings"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:layout_marginBottom="@dimen/ism_dp_10"
+      android:layout_alignParentEnd="true"
+      android:background="@drawable/ism_actionbutton_circle"
+      app:srcCompat="@drawable/ism_ic_camera_switch"
+      android:padding="@dimen/ism_dp_9"
+      android:elevation="@dimen/ism_dp_3"
+      />
+
+  <!-- Both publisher and broadcaster -->
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivSettings"
+      android:layout_width="@dimen/ism_dp_45"
+      android:layout_height="@dimen/ism_dp_45"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentEnd="true"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:layout_marginBottom="@dimen/ism_dp_72"
+      android:background="@drawable/ism_actionbutton_circle"
+      app:srcCompat="@drawable/ism_ic_setting_on"
+      android:padding="@dimen/ism_dp_9"
+      android:elevation="@dimen/ism_dp_3"
+      />
+
+  <include
+      android:layout_marginTop="?attr/actionBarSize"
+      layout="@layout/ism_overlay_connection_state"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <io.isometrik.groupstreaming.ui.utils.TimeDownView
+      android:id="@+id/tvCountDown"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/ism_white"
+      android:shadowColor="@color/ism_black"
+      android:shadowRadius="1"
+      android:shadowDx="5"
+      android:shadowDy="5"
+      android:layout_centerInParent="true"
+      android:visibility="gone"/>
+  </RelativeLayout>
+
+  <TextView
+      android:id="@+id/tvNoBroadcaster"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:drawablePadding="@dimen/ism_dp_8"
+      android:drawableTop="@drawable/ism_ic_no_live_streams"
+      android:gravity="center"
+      android:text="@string/ism_no_streams"
+      android:textColor="@color/ism_black"
+      android:visibility="gone"
+      />
+
+  <include
+      layout="@layout/ism_activity_scrollable_streams_shimmer"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      />
+
+</RelativeLayout>

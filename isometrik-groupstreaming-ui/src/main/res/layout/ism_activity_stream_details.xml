@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ism_white"
+    android:keepScreenOn="true"
+    android:fitsSystemWindows="true"
+    >
+
+  <androidx.coordinatorlayout.widget.CoordinatorLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/abLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ism_dp_300"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+
+      <com.google.android.material.appbar.CollapsingToolbarLayout
+          android:id="@+id/clToolbar"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:collapsedTitleGravity="center"
+          app:contentScrim="@color/ism_white"
+          app:expandedTitleMarginEnd="@dimen/ism_dp_64"
+          app:expandedTitleMarginStart="@dimen/ism_dp_48"
+          app:layout_scrollFlags="scroll|exitUntilCollapsed"
+          >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+          <androidx.appcompat.widget.AppCompatImageView
+              android:id="@+id/ivStreamImage"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/ism_avatar_group_large"
+              android:foreground="?android:attr/selectableItemBackground"
+              android:scaleType="centerCrop"
+              android:transitionName="streamImage"
+              app:layout_collapseMode="parallax"
+              />
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/ism_dp_72"
+              android:layout_gravity="bottom"
+              android:background="@color/ism_stream_details_overlay"
+              >
+
+            <TextView
+                android:id="@+id/tvStreamName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tvInitiatedBy"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="@dimen/ism_dp_13"
+                android:layout_marginStart="@dimen/ism_dp_13"
+                android:layout_marginRight="@dimen/ism_dp_13"
+                android:layout_marginEnd="@dimen/ism_dp_13"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/ism_white"
+                android:textSize="@dimen/ism_sp_24"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvInitiatedBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="@dimen/ism_dp_13"
+                android:layout_marginLeft="@dimen/ism_dp_13"
+                android:layout_marginStart="@dimen/ism_dp_13"
+                android:layout_marginTop="@dimen/ism_dp_3"
+                android:layout_marginRight="@dimen/ism_dp_13"
+                android:layout_marginEnd="@dimen/ism_dp_13"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/ism_white"
+                />
+
+          </RelativeLayout>
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_scrollFlags="scroll|enterAlways"
+            >
+
+        </androidx.appcompat.widget.Toolbar>
+
+      </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+  <androidx.appcompat.widget.AppCompatImageButton
+      android:id="@+id/ibBack"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:background="@android:color/transparent"
+      android:padding="@dimen/ism_dp_16"
+
+      android:tint="@color/ism_text_black"
+      app:srcCompat="@drawable/ism_ic_arrow_back"
+      />
+  <include
+      android:layout_marginTop="?attr/actionBarSize"
+      layout="@layout/ism_overlay_connection_state"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+</RelativeLayout>

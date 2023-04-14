@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlParent"
+    android:keepScreenOn="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ism_black"
+    >
+
+  <io.isometrik.gs.rtcengine.utils.PreviewVideoGridContainer
+      android:id="@+id/videoGridContainer"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      />
+
+  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:id="@+id/refresh"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/abLayout"
+      >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLiveStreams"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/ism_dp_5"
+        />
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  <TextView
+      android:id="@+id/tvNoBroadcaster"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:drawablePadding="@dimen/ism_dp_8"
+      android:drawableTop="@drawable/ism_ic_no_live_streams"
+      android:gravity="center"
+      android:text="@string/ism_no_streams"
+      android:textColor="@color/ism_white"
+      android:visibility="gone"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageButton
+      android:id="@+id/ibExit"
+      android:layout_width="@dimen/ism_dp_28"
+      android:layout_height="@dimen/ism_dp_28"
+      android:layout_margin="@dimen/ism_dp_13"
+      app:srcCompat="@drawable/ism_ic_close"
+      android:layout_alignParentStart="true"
+      android:background="@drawable/ism_ic_circle_close"
+      />
+
+  <include
+      android:layout_marginTop="?attr/actionBarSize"
+      layout="@layout/ism_overlay_connection_state"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <io.isometrik.groupstreaming.ui.utils.TimeDownView
+      android:id="@+id/tvCountDown"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/ism_white"
+      android:shadowColor="@color/ism_black"
+      android:shadowRadius="1"
+      android:shadowDx="5"
+      android:shadowDy="5"
+      android:layout_centerInParent="true"
+      android:visibility="gone"/>
+
+  <View
+      android:id="@+id/vDummy"
+      android:layout_width="@dimen/ism_dp_0"
+      android:layout_height="@dimen/ism_dp_0"
+      android:layout_centerInParent="true"
+      />
+
+  <TextView
+      android:id="@+id/tvPreviewDisclaimer"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/vDummy"
+      android:text="@string/ism_preview_disclaimer"
+      android:layout_marginStart="@dimen/ism_dp_16"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:textSize="@dimen/ism_sp_16"
+      android:gravity="center_horizontal"
+      android:layout_marginTop="@dimen/ism_dp_36"
+      android:textColor="@color/ism_white"
+      android:lineSpacingExtra="@dimen/ism_dp_3"
+      android:padding="@dimen/ism_dp_5"
+      android:background="@drawable/ism_coverimage_background"
+      android:visibility="gone"
+      />
+</RelativeLayout>

@@ -1,0 +1,119 @@
+package io.isometrik.groupstreaming.ui.multilive;
+
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.core.graphics.drawable.RoundedBitmapDrawable;
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
+import androidx.recyclerview.widget.RecyclerView;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.BitmapImageViewTarget;
+import io.isometrik.groupstreaming.ui.R;
+import java.util.ArrayList;
+
+/**
+ * The type Users adapter.
+ */
+public class MultiLiveUsersAdapter extends RecyclerView.Adapter {
+
+  private Context mContext;
+  private ArrayList<MultiLiveSelectMembersModel> users;
+
+  /**
+   * Instantiates a new Users adapter.
+   *
+   * @param mContext the m context
+   * @param users the users
+   */
+  MultiLiveUsersAdapter(Context mContext, ArrayList<MultiLiveSelectMembersModel> users) {
+    this.mContext = mContext;
+    this.users = users;
+  }
+
+  @Override
+  public int getItemCount() {
+    return users.size();
+  }
+
+  @NonNull
+  @Override
+  public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    return new MultiLiveUsersAdapter.UsersViewHolder(
+        LayoutInflater.from(mContext).inflate(R.layout.ism_users_item, viewGroup, false));
+  }
+
+  @Override
+  public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
+
+    MultiLiveUsersAdapter.UsersViewHolder holder =
+        (MultiLiveUsersAdapter.UsersViewHolder) viewHolder;
+
+    try {
+      MultiLiveSelectMembersModel user = users.get(position);
+      if (user != null) {
+        holder.tvUserName.setText(user.getUserName());
+        holder.tvUserIdentifier.setText(user.getUserIdentifier());
+
+        if (user.isSelected()) {
+          holder.tvSelect.setText(mContext.getString(R.string.ism_remove));
+        } else {
+          holder.tvSelect.setText(mContext.getString(R.string.ism_add));
+        }
+
+        try {
+          Glide.with(mContext)
+              .load(user.getUserProfilePic())
+              .asBitmap()
+              .placeholder(R.drawable.ism_default_profile_image)
+              .into(new BitmapImageViewTarget(holder.ivUserImage) {
+                @Override
+                protected void setResource(Bitmap resource) {
+                  RoundedBitmapDrawable circularBitmapDrawable =
+                      RoundedBitmapDrawableFactory.create(mContext.getResources(), resource);
+                  circularBitmapDrawable.setCircular(true);
+                  holder.ivUserImage.setImageDrawable(circularBitmapDrawable);
+                }
+              });
+        } catch (IllegalArgumentException | NullPointerException e) {
+          e.printStackTrace();
+        }
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+
+  /**
+   * The type Users view holder.
+   */
+  static class UsersViewHolder extends RecyclerView.ViewHolder {
+
+    TextView tvUserName, tvUserIdentifier, tvSelect;
+
+    ImageView ivUserImage;
+
+    RelativeLayout rlSelectUser;
+
+    /**
+     * Instantiates a new Users view holder.
+     *
+     * @param itemView the item view
+     */
+    UsersViewHolder(@NonNull View itemView) {
+      super(itemView);
+
+      tvUserName = itemView.findViewById(R.id.tvUserName);
+      tvSelect = itemView.findViewById(R.id.tvSelect);
+      tvUserIdentifier = itemView.findViewById(R.id.tvUserIdentifier);
+
+      ivUserImage = itemView.findViewById(R.id.ivUserImage);
+      rlSelectUser = itemView.findViewById(R.id.rlSelect);
+    }
+  }
+}

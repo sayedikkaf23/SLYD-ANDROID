@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/ism_dp_95"
+    android:layout_height="wrap_content"
+    android:background="@color/ism_black"
+    android:orientation="vertical"
+    >
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivFilterImage"
+      android:layout_width="@dimen/ism_dp_60"
+      android:layout_height="@dimen/ism_dp_60"
+      android:layout_marginStart="@dimen/ism_dp_18"
+      android:layout_marginTop="@dimen/ism_dp_10"
+      android:layout_marginEnd="@dimen/ism_dp_8"
+      app:srcCompat="@drawable/ism_default_profile_image" />
+
+  <TextView
+      android:id="@+id/tvFilterName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/ivFilterImage"
+      android:layout_centerHorizontal="true"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:layout_marginTop="@dimen/ism_dp_8"
+      android:text="@string/ism_masks"
+      android:textColor="@color/ism_white"
+      android:textSize="@dimen/ism_sp_14" />
+
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivFilterSelected"
+      android:layout_width="@dimen/ism_dp_25"
+      android:layout_height="@dimen/ism_dp_25"
+      android:layout_alignParentEnd="true"
+      android:layout_margin="@dimen/ism_dp_5"
+      android:background="@drawable/ism_filters_select_background"
+      android:padding="@dimen/ism_dp_5"
+      app:srcCompat="@drawable/ism_ic_tick"
+      android:tint="@color/ism_white" />
+
+
+</RelativeLayout>
+

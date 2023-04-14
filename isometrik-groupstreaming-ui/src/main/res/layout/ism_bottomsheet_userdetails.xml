@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ism_black"
+    >
+
+  <View
+      android:id="@+id/vPeek"
+      android:layout_margin="@dimen/ism_dp_20"
+      android:layout_width="@dimen/ism_dp_80"
+      android:layout_height="@dimen/ism_dp_4"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/ism_peek_rectangle"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivUserImage"
+      android:layout_width="@dimen/ism_dp_100"
+      android:layout_height="@dimen/ism_dp_100"
+      app:srcCompat="@drawable/ism_default_profile_image"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="@dimen/ism_dp_14"
+      android:layout_below="@+id/vPeek"
+      />
+
+  <TextView
+      android:id="@+id/tvUserName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/ivUserImage"
+      android:textSize="@dimen/ism_sp_18"
+      android:text="@string/ism_user_name"
+      android:textColor="@color/ism_white"
+      android:layout_centerHorizontal="true"
+      android:gravity="center_horizontal"
+      android:layout_marginTop="@dimen/ism_dp_30"
+      android:layout_marginStart="@dimen/ism_dp_44"
+      android:layout_marginEnd="@dimen/ism_dp_44"
+      android:layout_marginBottom="@dimen/ism_dp_16"
+      android:textStyle="bold"
+      />
+
+  <TextView
+      android:id="@+id/tvUserIdetifier"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvUserName"
+      android:textSize="@dimen/ism_sp_14"
+      android:text="@string/ism_user_identifier"
+      android:textColor="@color/ism_white"
+      android:layout_centerHorizontal="true"
+      android:gravity="center_horizontal"
+      android:layout_marginStart="@dimen/ism_dp_30"
+      android:layout_marginEnd="@dimen/ism_dp_30"
+      android:layout_marginBottom="@dimen/ism_dp_16"
+      />
+
+</RelativeLayout>

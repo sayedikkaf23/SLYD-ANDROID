@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvConnectionState"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#55000000"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/ism_dp_16"
+    android:visibility="gone"
+    android:text="@string/ism_connection_lost"
+    android:textColor="@color/ism_white"
+    android:textSize="@dimen/ism_sp_16"
+    android:textStyle="bold"
+    />
+

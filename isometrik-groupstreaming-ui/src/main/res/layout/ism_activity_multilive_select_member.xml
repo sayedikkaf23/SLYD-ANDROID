@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:keepScreenOn="true"
+    android:focusableInTouchMode="true"
+    >
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:id="@+id/abLayout"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      style="@style/ThemeOverlay.AppCompat.ActionBar"
+      >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ism_white"
+        >
+
+      <TextView
+          android:id="@+id/tvNewBroadcast"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/ism_dp_6"
+          android:layout_toEndOf="@+id/ibBack"
+          android:text="@string/ism_new_broadcast"
+          android:textColor="@color/ism_black"
+          android:textSize="@dimen/ism_sp_17"
+          android:textStyle="bold"
+          />
+
+      <TextView
+          android:id="@+id/tvMembersCount"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tvNewBroadcast"
+          android:layout_marginTop="@dimen/ism_dp_1"
+          android:layout_toEndOf="@+id/ibBack"
+          android:ellipsize="end"
+          android:maxLines="1"
+          android:text="@string/ism_add_members"
+          android:textColor="@color/ism_black"
+          />
+
+      <androidx.appcompat.widget.AppCompatImageButton
+          android:id="@+id/ibBack"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_alignParentStart="true"
+          android:background="@android:color/transparent"
+          android:padding="@dimen/ism_dp_16"
+          android:tint="@color/ism_text_black"
+          app:srcCompat="@drawable/ism_ic_arrow_back"
+          />
+
+    </RelativeLayout>
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvUsersSelected"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/abLayout"
+      android:layout_marginEnd="@dimen/ism_dp_9" />
+
+  <View
+      android:id="@+id/vLineTwo"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/ism_dp_1"
+      android:layout_below="@+id/rvUsersSelected"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginLeft="@dimen/ism_dp_13"
+      android:layout_marginRight="@dimen/ism_dp_13"
+      android:layout_marginStart="@dimen/ism_dp_13"
+      android:background="@color/ism_seperator_gray"
+      />
+
+  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:id="@+id/refresh"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/vLineTwo"
+      >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUsers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarStyle="outsideInset" />
+
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivNext"
+      android:layout_width="@dimen/ism_dp_60"
+      android:layout_height="@dimen/ism_dp_60"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentEnd="true"
+      android:layout_margin="@dimen/ism_dp_18"
+      android:background="@drawable/ism_golive_circle"
+      app:srcCompat="@drawable/ism_ic_arrow_back"
+      android:padding="@dimen/ism_dp_18"
+      android:rotation="180"
+      android:clickable="true"
+      android:focusable="true"
+      android:tint="@color/ism_white"
+      android:elevation="@dimen/ism_dp_5"
+      />
+
+  <TextView
+      android:id="@+id/tvNoUsers"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:drawablePadding="@dimen/ism_dp_8"
+      android:drawableTop="@drawable/ism_ic_no_users"
+      android:gravity="center"
+      android:text="@string/ism_no_users_start_broadcast"
+      android:textColor="@color/ism_black"
+      android:visibility="gone"
+      />
+</RelativeLayout>

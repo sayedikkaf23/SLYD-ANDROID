@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/ism_dp_8"
+    android:layout_marginEnd="@dimen/ism_dp_8"
+    android:layout_marginStart="@dimen/ism_dp_8"
+    >
+  <TextView
+      android:id="@+id/tvMessage"
+
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/ism_remove_message_background"
+      android:paddingBottom="@dimen/ism_dp_9"
+      android:paddingEnd="@dimen/ism_dp_12"
+      android:paddingStart="@dimen/ism_dp_12"
+      android:paddingTop="@dimen/ism_dp_9"
+      android:text="@string/ism_message_removed"
+      android:textColor="@color/ism_white"
+      android:textSize="@dimen/ism_sp_12"
+      android:textStyle="italic"
+      />
+  <TextView
+      android:id="@+id/tvMessageTime"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_below="@+id/tvMessage"
+      android:layout_marginEnd="@dimen/ism_dp_18"
+      android:layout_marginStart="@dimen/ism_dp_8"
+      android:layout_marginTop="@dimen/ism_dp_2"
+      android:text="Today, 12:00PM"
+      android:textColor="@color/ism_text_time"
+      android:textSize="@dimen/ism_sp_10"
+
+      />
+</RelativeLayout>

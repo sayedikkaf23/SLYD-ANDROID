@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlGifts"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    >
+
+  <FrameLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_toStartOf="@+id/ivGiftGif"
+      >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ism_dp_34"
+        android:layout_marginEnd="@dimen/ism_dp_54"
+        android:layout_marginStart="@dimen/ism_dp_5"
+        android:layout_marginTop="@dimen/ism_dp_36"
+        android:background="@drawable/ism_text_message_background"
+        >
+
+      <TextView
+          android:id="@+id/tvGiftSenderName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/ism_dp_34"
+          android:layout_toEndOf="@+id/ivGiftSenderImage"
+          android:ellipsize="end"
+          android:maxLines="1"
+          android:text="Sender"
+          android:textColor="@color/ism_text_username"
+          />
+
+      <TextView
+          android:id="@+id/tvGiftName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tvGiftSenderName"
+          android:layout_marginEnd="@dimen/ism_dp_34"
+          android:layout_toEndOf="@+id/ivGiftSenderImage"
+          android:ellipsize="end"
+          android:maxLines="1"
+          android:text="Gifts"
+          android:textColor="@color/ism_white"
+          />
+
+      <TextView
+          android:id="@+id/tvGiftCoinValue"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tvGiftName"
+          android:layout_marginEnd="@dimen/ism_dp_34"
+          android:layout_toEndOf="@+id/ivGiftSenderImage"
+          android:drawableEnd="@drawable/ism_ic_coins"
+          android:ellipsize="end"
+          android:drawablePadding="@dimen/ism_dp_3"
+          android:maxLines="1"
+          android:text="@string/ism_coins"
+          android:textColor="@color/ism_gray"
+          />
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ivGiftSenderImage"
+          android:layout_width="@dimen/ism_dp_30"
+          android:layout_height="@dimen/ism_dp_30"
+          android:layout_alignParentStart="true"
+          android:layout_marginEnd="@dimen/ism_dp_5"
+          app:srcCompat="@drawable/ism_default_profile_image"
+          />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivGiftImage"
+        android:layout_width="@dimen/ism_dp_80"
+        android:layout_height="@dimen/ism_dp_80"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="@dimen/ism_dp_15"
+        />
+  </FrameLayout>
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivGiftGif"
+      android:layout_width="@dimen/ism_dp_70"
+      android:layout_height="@dimen/ism_dp_70"
+      android:layout_alignParentEnd="true"
+      android:layout_margin="@dimen/ism_dp_15"
+      />
+
+</RelativeLayout>

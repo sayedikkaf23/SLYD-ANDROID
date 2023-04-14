@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+  <!--  Streams activity  -->
+  <color name="ism_white">#ffffff</color>
+  <color name="ism_black">#000000</color>
+  <color name="ism_gray">#F8F6F6</color>
+  <color name="ism_text_black">#222222</color>
+  <color name="ism_title_black">#484848</color>
+  <color name="ism_stream_name">#FFFAFAFA</color>
+  <color name="ism_stream_overlay">#77000000</color>
+  <color name="ism_blue">#007AFF</color>
+  <color name="ism_grey">#757575</color>
+
+
+  <!--  Members activity-->
+  <color name="ism_admin_text_blue">#00B3FF</color>
+  <color name="ism_identifier_text_grey">#999999</color>
+  <color name="ism_line_gray">#22000000</color>
+  <color name="ism_green_dark">#FF84DE04</color>
+  <color name="ism_text_gray">#969595</color>
+  <color name="ism_red_dark">#EF5350</color>
+  <color name="ism_text_username">#00B3FF</color>
+  <color name="ism_text_time">#F5F5F5</color>
+
+  <!--  Users Activity-->
+  <color name="ism_divider">#EFEFEF</color>
+
+  <!--  Stream details Activity-->
+
+  <color name="ism_stream_details_overlay">#08000000</color>
+  <color name="ism_transparent">#00000000</color>
+
+  <!--  Select members Activity-->
+  <color name="ism_seperator_gray">#e5e5e5</color>
+  <color name="ism_select_member">#808080</color>
+
+  <!--  Copublish activity-->
+  <color name="ism_identifier_text_white">#F5F5F5</color>
+  <color name="ism_jointime_text_white">#EEEEEE</color>
+  <color name="ism_decline_red">#D32F2F</color>
+  <color name="ism_accept_green">#388E3C</color>
+  <color name="ism_cancel_grey">#424242</color>
+  <color name="ism_end_color">#A831FF</color>
+  <color name="ism_start_color">#00B3FF</color>
+  <color name="ism_join_green">#16C40B</color>
+  <color name="ism_profile_grey">#99000000</color>
+  <color name="ism_heart_background_red">#F55065</color>
+  <color name="ism_hint_grey">#666666</color>
+  <color name="ism_livestatus_red">#F22A2A</color>
+  <color name="ism_send_message_grey">#E9E9E9</color>
+  <!--  Filters-->
+  <color name="ism_filters_gray">#BDBDBD</color>
+  <!--  Golive Activity-->
+  <color name="ism_disclaimer_red">#EF0000</color>
+  <color name="ism_public_grey">#88BDBDBD</color>
+  <color name="ism_shimmer_grey">#E0E0E0</color>
+
+</resources>

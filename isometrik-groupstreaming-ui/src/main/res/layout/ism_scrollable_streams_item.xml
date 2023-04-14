@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ism_transparent"
+    >
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivStreamImage"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:contentDescription="@string/ism_app_name"
+      android:scaleType="centerCrop"
+      android:src="@mipmap/ism_ic_launcher"
+      />
+
+</RelativeLayout>

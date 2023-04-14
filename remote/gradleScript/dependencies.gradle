@@ -1,0 +1,28 @@
+import dependencies.*
+
+apply from: Deps.common
+
+dependencies {
+
+  //Retrofit
+  implementation Deps.OkHttp3.loggingInterceptor
+  implementation Deps.Retrofit2.adapterRxjava2
+  implementation Deps.Retrofit2.converterGson
+  implementation Deps.Retrofit2.retrofit
+  implementation Deps.Facebook.stethoNetwork
+
+  implementation Deps.Kotlin.coroutines
+
+  //RxJava
+  implementation Deps.RxJava.rxAndroid
+  implementation Deps.RxJava.rxjava2
+  implementation Deps.RxJava.rxrelay2
+
+  //MQTT
+  implementation Deps.MQTT.mqttClient
+  implementation Deps.MQTT.mqttService
+
+  //FCM
+  implementation Deps.FCM.fcmMessaging
+}
+

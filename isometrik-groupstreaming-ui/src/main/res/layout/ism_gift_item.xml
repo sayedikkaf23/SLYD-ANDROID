@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ism_black"
+    android:gravity="center"
+    >
+
+  <TextView
+      android:id="@+id/tvGiftName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/ivGift"
+      android:layout_centerHorizontal="true"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:textColor="@color/ism_identifier_text_white"
+      android:textSize="@dimen/ism_sp_10"
+      android:text="@string/ism_gift_name"
+      />
+
+  <TextView
+      android:id="@+id/tvCoinValue"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvGiftName"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="@dimen/ism_dp_2"
+      android:drawablePadding="@dimen/ism_dp_5"
+      android:drawableStart="@drawable/ism_ic_dollar"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:textColor="@color/ism_white"
+      android:textSize="@dimen/ism_sp_12"
+      android:layout_marginBottom="@dimen/ism_dp_10"
+      android:text="@string/ism_coins"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivGift"
+      android:layout_width="@dimen/ism_dp_50"
+      android:layout_height="@dimen/ism_dp_50"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="@dimen/ism_dp_10"
+      />
+</RelativeLayout>

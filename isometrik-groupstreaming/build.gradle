@@ -1,0 +1,144 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+android {
+  compileSdkVersion 32
+
+  defaultConfig {
+    minSdkVersion 19
+    targetSdkVersion 32
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    ndk {
+      abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+    }
+
+    consumerProguardFiles 'proguard-rules.pro'
+  }
+
+  buildTypes {
+
+    release {
+      minifyEnabled false
+
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+      buildConfigField 'String', 'DEFAULT_SUBDOMAIN', '"apis"'
+      buildConfigField 'String', 'DEFAULT_BASE_PATH', '"isometrik.io"'
+      buildConfigField 'String', 'CONNECTIONS_BASE_PATH', '"isometrik.io:2052"'
+      buildConfigField 'String', 'CONNECTIONS_DEFAULT_SUBDOMAIN', '"connections"'
+    }
+    debug {
+      minifyEnabled false
+
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+      buildConfigField 'String', 'DEFAULT_SUBDOMAIN', '"apis"'
+      buildConfigField 'String', 'DEFAULT_BASE_PATH', '"isometrik.io"'
+      buildConfigField 'String', 'CONNECTIONS_BASE_PATH', '"isometrik.io:2052"'
+      buildConfigField 'String', 'CONNECTIONS_DEFAULT_SUBDOMAIN', '"connections"'
+    }
+
+
+  }
+
+  sourceSets {
+    main {
+      jniLibs.srcDirs = ['src/main/jniLibs']
+    }
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+}
+repositories{
+  flatDir{
+//    dirs 'libs'
+    dirs '../deepar'
+  }
+}
+dependencies {
+
+  implementation 'io.agora.rtc:full-sdk:3.0.0'
+
+  implementation group: 'com.squareup.retrofit2', name: 'retrofit', version: '2.8.1'
+  api group: 'com.squareup.okhttp3', name: 'logging-interceptor', version: '4.1.1'
+  implementation 'org.jetbrains:annotations:16.0.2'
+  implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+  implementation 'com.google.code.gson:gson:2.8.6'
+  // https://mvnrepository.com/artifact/org.eclipse.paho/org.eclipse.paho.client.mqttv3
+  implementation group: 'org.eclipse.paho', name: 'org.eclipse.paho.client.mqttv3', version: '1.1.0'
+  implementation (name: 'deepar', ext:'aar')
+}
+def sdkGroupId = 'io.isometrik'
+def sdkArtifactId = 'groupstreaming'
+def sdkVersion = '1.0.0'
+
+publishing {
+  publications {
+    aar(MavenPublication) {
+      groupId sdkGroupId
+      version sdkVersion
+      artifactId sdkArtifactId
+
+      artifact("$buildDir/outputs/aar/${project.getName()}-release.aar")
+
+      pom {
+        name = 'Groupstreaming sdk'
+        description = 'Isometrik groupstreaming sdk'
+        url = 'http://isometrik.io/sdks/android'
+
+        developers {
+          developer {
+            id = 'Ashutosh'
+            name = 'Ashutosh'
+            email = 'ashu@isometrik.io'
+          }
+        }
+
+        licenses {
+          license {
+            name = 'The Apache License, Version 2.0'
+            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+          }
+        }
+
+        // A slightly hacky fix so that your POM will include any transitive dependencies
+        // that your library builds upon
+        withXml {
+          def dependenciesNode = asNode().appendNode('dependencies')
+
+          project.configurations.implementation.allDependencies.each {
+            def dependencyNode = dependenciesNode.appendNode('dependency')
+            dependencyNode.appendNode('groupId', it.group)
+            dependencyNode.appendNode('artifactId', it.name)
+            dependencyNode.appendNode('version', it.version)
+          }
+        }
+
+      }
+    }
+  }
+
+  repositories {
+    // The repository to publish to, MavenCentral
+//    maven {
+//      // This is an arbitrary name, you may also use "mavencentral" or
+//      // any other name that's descriptive for you
+//      name = "android-developer"
+//
+//      def releasesRepoUrl = "https://repo.isometrik.io/service/local/staging/deploy/maven2/"
+//      def snapshotsRepoUrl = "https://repo.isometrik.io/content/repositories/snapshots/"
+//      // You only need this if you want to publish snapshots, otherwise just set the URL
+//      // to the release repo directly
+//      url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+//
+//      // The username and password for repo
+//      credentials {
+//        username "IsometrikRepoUsername"
+//        password "IsometrikRepoPassword"
+//      }
+//    }
+    mavenCentral()
+    google()
+  }
+}
+

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ism_black"
+    >
+
+  <View
+      android:id="@+id/vPeek"
+      android:layout_margin="@dimen/ism_dp_20"
+      android:layout_width="@dimen/ism_dp_80"
+      android:layout_height="@dimen/ism_dp_4"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/ism_peek_rectangle"
+      />
+
+  <LinearLayout
+      android:id="@+id/llCoinBalance"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:weightSum="2"
+      android:layout_below="@+id/vPeek"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="@dimen/ism_dp_5"
+      >
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="@string/ism_coins_balance"
+      android:textColor="@color/ism_white"
+      android:textSize="@dimen/ism_sp_16"
+      />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="@dimen/ism_dp_3"
+        android:drawableStart="@drawable/ism_ic_dollar"
+        android:textColor="@color/ism_white"
+        android:textSize="@dimen/ism_sp_14"
+        android:layout_marginStart="@dimen/ism_dp_12"
+        android:text="1300"
+        />
+  </LinearLayout>
+
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvGiftCategories"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/ism_dp_5"
+      android:layout_marginStart="@dimen/ism_dp_5"
+      android:focusableInTouchMode="true"
+      android:layout_below="@+id/llCoinBalance"
+      />
+
+  <View
+      android:id="@+id/vSeperator"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/ism_dp_0_5"
+      android:background="@color/ism_grey"
+      android:layout_below="@+id/rvGiftCategories"
+      />
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/vSeperator"
+      >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGifts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        />
+
+    <TextView
+        android:id="@+id/tvNoGifts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/ism_no_gifts_category"
+        android:textColor="@color/ism_divider"
+        android:textSize="@dimen/ism_sp_14"
+        android:visibility="gone"
+        />
+
+  </RelativeLayout>
+
+  </RelativeLayout>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ism_black"
+    >
+
+  <RelativeLayout
+      android:id="@+id/rlAccepted"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      >
+
+    <View
+        android:id="@+id/vPeekAccepted"
+        android:layout_margin="@dimen/ism_dp_20"
+        android:layout_width="@dimen/ism_dp_80"
+        android:layout_height="@dimen/ism_dp_4"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ism_peek_rectangle"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivAcceptedUserImage"
+        android:layout_width="@dimen/ism_dp_100"
+        android:layout_height="@dimen/ism_dp_100"
+        app:srcCompat="@drawable/ism_default_profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ism_dp_14"
+        android:layout_below="@+id/vPeekAccepted"
+        />
+
+    <TextView
+        android:id="@+id/tvAcceptedHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivAcceptedUserImage"
+        android:textSize="@dimen/ism_sp_18"
+        android:text="@string/ism_copublish_previously_accepted_heading"
+        android:textColor="@color/ism_white"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/ism_dp_30"
+        android:layout_marginStart="@dimen/ism_dp_44"
+        android:layout_marginEnd="@dimen/ism_dp_44"
+        android:layout_marginBottom="@dimen/ism_dp_16"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tvAcceptedDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAcceptedHeading"
+        android:textSize="@dimen/ism_sp_14"
+        android:text="@string/ism_copublish_previously_accepted_description"
+        android:textColor="@color/ism_white"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="@dimen/ism_dp_30"
+        android:layout_marginEnd="@dimen/ism_dp_30"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAcceptedDescription"
+        android:layout_marginTop="@dimen/ism_dp_30"
+        android:layout_marginBottom="@dimen/ism_dp_24"
+        android:layout_marginStart="@dimen/ism_dp_16"
+        android:layout_marginEnd="@dimen/ism_dp_16"
+        android:weightSum="2"
+        >
+
+      <TextView
+          android:id="@+id/tvContinueAccept"
+          android:layout_weight="1"
+          android:layout_width="@dimen/ism_dp_0"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/ism_sp_18"
+          android:paddingTop="@dimen/ism_dp_8"
+          android:paddingBottom="@dimen/ism_dp_8"
+          android:layout_marginEnd="@dimen/ism_dp_16"
+          android:text="@string/ism_continue"
+          android:textColor="@color/ism_white"
+          android:gravity="center_horizontal"
+          android:background="@drawable/ism_cancel_button"
+          />
+
+      <TextView
+          android:id="@+id/btExit"
+          android:layout_weight="1"
+          android:layout_width="@dimen/ism_dp_0"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/ism_dp_16"
+          android:textSize="@dimen/ism_sp_18"
+          android:text="@string/ism_exit"
+          android:paddingTop="@dimen/ism_dp_8"
+          android:paddingBottom="@dimen/ism_dp_8"
+          android:textColor="@color/ism_white"
+          android:gravity="center_horizontal"
+          android:background="@drawable/ism_gradient_copublish"
+          />
+
+    </LinearLayout>
+
+
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/rlRejected"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      >
+
+    <View
+        android:id="@+id/vPeekRejected"
+        android:layout_margin="@dimen/ism_dp_20"
+        android:layout_width="@dimen/ism_dp_80"
+        android:layout_height="@dimen/ism_dp_4"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ism_peek_rectangle"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivRejectedUserImage"
+        android:layout_width="@dimen/ism_dp_100"
+        android:layout_height="@dimen/ism_dp_100"
+        app:srcCompat="@drawable/ism_default_profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ism_dp_14"
+        android:layout_below="@+id/vPeekRejected"
+        />
+
+    <TextView
+        android:id="@+id/tvRejectedHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivRejectedUserImage"
+        android:textSize="@dimen/ism_sp_18"
+        android:text="@string/ism_copublish_previously_rejected_heading"
+        android:textColor="@color/ism_white"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/ism_dp_30"
+        android:layout_marginStart="@dimen/ism_dp_44"
+        android:layout_marginEnd="@dimen/ism_dp_44"
+        android:layout_marginBottom="@dimen/ism_dp_16"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tvRejectedDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvRejectedHeading"
+        android:textSize="@dimen/ism_sp_14"
+        android:text="@string/ism_copublish_rejected_description"
+        android:textColor="@color/ism_white"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="@dimen/ism_dp_30"
+        android:layout_marginEnd="@dimen/ism_dp_30"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvRejectedDescription"
+        android:layout_marginTop="@dimen/ism_dp_30"
+        android:layout_marginBottom="@dimen/ism_dp_24"
+        android:layout_marginStart="@dimen/ism_dp_16"
+        android:layout_marginEnd="@dimen/ism_dp_16"
+        android:weightSum="2"
+        >
+
+      <TextView
+          android:id="@+id/tvExit"
+          android:layout_weight="1"
+          android:layout_width="@dimen/ism_dp_0"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/ism_sp_18"
+          android:paddingTop="@dimen/ism_dp_8"
+          android:paddingBottom="@dimen/ism_dp_8"
+          android:layout_marginEnd="@dimen/ism_dp_16"
+          android:text="@string/ism_exit"
+          android:textColor="@color/ism_white"
+          android:gravity="center_horizontal"
+          android:background="@drawable/ism_cancel_button"
+          />
+
+      <TextView
+          android:id="@+id/tvContinueReject"
+          android:layout_weight="1"
+          android:layout_width="@dimen/ism_dp_0"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/ism_dp_16"
+          android:textSize="@dimen/ism_sp_18"
+          android:text="@string/ism_continue"
+          android:paddingTop="@dimen/ism_dp_8"
+          android:paddingBottom="@dimen/ism_dp_8"
+          android:textColor="@color/ism_white"
+          android:gravity="center_horizontal"
+          android:background="@drawable/ism_gradient_copublish"
+          />
+
+    </LinearLayout>
+
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/rlPending"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <View
+        android:id="@+id/vPeekPending"
+        android:layout_margin="@dimen/ism_dp_20"
+        android:layout_width="@dimen/ism_dp_80"
+        android:layout_height="@dimen/ism_dp_4"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ism_peek_rectangle"
+        />
+
+    <View
+        android:id="@+id/vDummy"
+        android:layout_width="@dimen/ism_dp_0"
+        android:layout_height="@dimen/ism_dp_0"
+        android:layout_centerHorizontal="true"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivInitiatorImage"
+        android:layout_width="@dimen/ism_dp_50"
+        android:layout_height="@dimen/ism_dp_50"
+        app:srcCompat="@drawable/ism_default_profile_image"
+        android:layout_toStartOf="@+id/vDummy"
+        android:layout_marginTop="@dimen/ism_dp_14"
+        android:layout_below="@+id/vPeekPending"
+        android:layout_marginEnd="@dimen/ism_dp__4"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPendingUserImage"
+        android:layout_width="@dimen/ism_dp_50"
+        android:layout_height="@dimen/ism_dp_50"
+        app:srcCompat="@drawable/ism_default_profile_image"
+        android:layout_toEndOf="@+id/vDummy"
+        android:layout_marginTop="@dimen/ism_dp_14"
+        android:layout_below="@+id/vPeekPending"
+        android:layout_marginStart="@dimen/ism_dp__4"
+        />
+
+    <TextView
+        android:id="@+id/tvActionHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivInitiatorImage"
+        android:textSize="@dimen/ism_sp_18"
+        android:text="@string/ism_copublish_request_pending_heading"
+        android:textColor="@color/ism_white"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/ism_dp_30"
+        android:layout_marginStart="@dimen/ism_dp_44"
+        android:layout_marginEnd="@dimen/ism_dp_44"
+        android:layout_marginBottom="@dimen/ism_dp_16"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tvActionDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvActionHeading"
+        android:textSize="@dimen/ism_sp_14"
+        android:text="@string/ism_copublish_request_pending_description"
+        android:textColor="@color/ism_white"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="@dimen/ism_dp_30"
+        android:layout_marginEnd="@dimen/ism_dp_30"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvActionDescription"
+        android:layout_marginTop="@dimen/ism_dp_30"
+        android:layout_marginBottom="@dimen/ism_dp_24"
+        android:layout_marginStart="@dimen/ism_dp_16"
+        android:layout_marginEnd="@dimen/ism_dp_16"
+        android:weightSum="2"
+        >
+
+      <TextView
+          android:id="@+id/tvDelete"
+          android:layout_weight="1"
+          android:layout_width="@dimen/ism_dp_0"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/ism_sp_18"
+          android:paddingTop="@dimen/ism_dp_8"
+          android:paddingBottom="@dimen/ism_dp_8"
+          android:layout_marginEnd="@dimen/ism_dp_16"
+          android:text="@string/ism_delete"
+          android:textColor="@color/ism_white"
+          android:gravity="center_horizontal"
+          android:background="@drawable/ism_cancel_button"
+          android:elevation="@dimen/ism_dp_3"
+          />
+
+      <TextView
+          android:id="@+id/tvContinue"
+          android:layout_weight="1"
+          android:layout_width="@dimen/ism_dp_0"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/ism_dp_16"
+          android:textSize="@dimen/ism_sp_18"
+          android:text="@string/ism_continue"
+          android:paddingTop="@dimen/ism_dp_8"
+          android:paddingBottom="@dimen/ism_dp_8"
+          android:textColor="@color/ism_white"
+          android:gravity="center_horizontal"
+          android:background="@drawable/ism_gradient_copublish"
+          android:elevation="@dimen/ism_dp_3"
+          />
+
+    </LinearLayout>
+
+  </RelativeLayout>
+
+
+</RelativeLayout>

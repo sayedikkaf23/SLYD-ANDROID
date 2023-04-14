@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ism_black"
+    >
+
+  <View
+      android:id="@+id/vPeek"
+      android:layout_margin="@dimen/ism_dp_20"
+      android:layout_width="@dimen/ism_dp_80"
+      android:layout_height="@dimen/ism_dp_4"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/ism_peek_rectangle"
+      />
+
+  <TextView
+      android:id="@+id/tvViewers"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/vPeek"
+      android:textSize="@dimen/ism_sp_18"
+      android:text="@string/ism_stream_viewers"
+      android:textColor="@color/ism_white"
+      android:layout_marginStart="@dimen/ism_dp_16"
+      android:layout_marginBottom="@dimen/ism_dp_13"
+      />
+
+  <TextView
+      android:id="@+id/tvViewersCount"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/vPeek"
+      android:layout_alignParentEnd="true"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:drawableEnd="@drawable/ism_ic_viewers_black"
+      android:drawablePadding="@dimen/ism_dp_5"
+      app:drawableTint="@color/ism_white"
+      android:ellipsize="end"
+      android:gravity="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:text="0"
+      android:textColor="@color/ism_white"
+      android:textSize="@dimen/ism_sp_18"
+      />
+
+  <View
+      android:id="@+id/vSeperator"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/ism_dp_0_5"
+      android:background="@color/ism_grey"
+      android:layout_below="@+id/tvViewers"
+      />
+
+  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:id="@+id/refresh"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/vSeperator"
+      android:layout_marginTop="@dimen/ism_dp_30"
+      >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvViewers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  <TextView
+      android:id="@+id/tvNoViewer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/vSeperator"
+      android:layout_centerHorizontal="true"
+      android:drawablePadding="@dimen/ism_dp_8"
+      android:drawableTop="@drawable/ism_ic_no_viewers"
+      android:gravity="center"
+      android:text="@string/ism_no_viewers"
+      android:textColor="@color/ism_white"
+      android:layout_margin="@dimen/ism_dp_36"
+      android:visibility="gone"
+      />
+
+  <io.isometrik.groupstreaming.ui.utils.shimmer.ShimmerFrameLayout
+      android:id="@+id/shimmerFrameLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/vSeperator"
+      android:layout_marginTop="@dimen/ism_dp_30"
+      android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <include layout="@layout/ism_viewers_item_shimmer" />
+      <include layout="@layout/ism_viewers_item_shimmer" />
+      <include layout="@layout/ism_viewers_item_shimmer" />
+      <include layout="@layout/ism_viewers_item_shimmer" />
+      <include layout="@layout/ism_viewers_item_shimmer" />
+
+    </LinearLayout>
+  </io.isometrik.groupstreaming.ui.utils.shimmer.ShimmerFrameLayout>
+
+</RelativeLayout>

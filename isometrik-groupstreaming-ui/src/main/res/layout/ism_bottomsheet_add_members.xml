@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ism_black"
+    >
+
+  <View
+      android:id="@+id/vPeek"
+      android:layout_margin="@dimen/ism_dp_20"
+      android:layout_width="@dimen/ism_dp_80"
+      android:layout_height="@dimen/ism_dp_4"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/ism_peek_rectangle"
+      />
+
+
+  <TextView
+      android:id="@+id/tvGoLiveHeading"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/ism_sp_18"
+      android:layout_centerHorizontal="true"
+      android:textColor="@color/ism_white"
+      android:text="@string/ism_golive_heading"
+      android:layout_below="@+id/vPeek"
+      android:textStyle="bold"
+      android:layout_margin="@dimen/ism_dp_8"
+      />
+
+  <TextView
+      android:id="@+id/tvGoLiveDescription"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvGoLiveHeading"
+      android:layout_marginStart="@dimen/ism_dp_16"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:textSize="@dimen/ism_sp_14"
+      android:layout_centerHorizontal="true"
+      android:gravity="center_horizontal"
+      android:lineSpacingExtra="@dimen/ism_dp_2"
+      android:text="@string/ism_golive_description"
+      android:textColor="@color/ism_text_gray"
+      android:layout_marginBottom="@dimen/ism_dp_16"
+      />
+
+  <com.google.android.material.tabs.TabLayout
+      android:id="@+id/tabLayoutUsers"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@android:color/transparent"
+      app:tabGravity="fill"
+      app:tabIndicatorColor="@color/ism_white"
+      app:tabIndicatorHeight="@dimen/ism_dp_1"
+      app:tabMode="scrollable"
+      app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+      app:tabTextColor="@color/ism_grey"
+      app:tabSelectedTextColor="@color/ism_white"
+      android:layout_below="@+id/tvGoLiveDescription"
+      app:tabInlineLabel="true"
+      app:tabIconTint="@color/ism_grey"
+      />
+
+  <View
+      android:id="@+id/vSeperator"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/ism_dp_0_5"
+      android:background="@color/ism_grey"
+      android:layout_below="@+id/tabLayoutUsers"
+      />
+
+  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:id="@+id/refresh"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/vSeperator"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUsers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        />
+
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  <TextView
+      android:id="@+id/tvNoUsers"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/vSeperator"
+      android:layout_centerHorizontal="true"
+      android:drawablePadding="@dimen/ism_dp_8"
+      android:drawableTop="@drawable/ism_ic_no_users"
+      android:gravity="center"
+      android:text="@string/ism_no_users_add_member"
+      android:textColor="@color/ism_white"
+      android:layout_margin="@dimen/ism_dp_36"
+      android:visibility="gone"
+      />
+  <io.isometrik.groupstreaming.ui.utils.shimmer.ShimmerFrameLayout
+      android:id="@+id/shimmerFrameLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/vSeperator"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <include layout="@layout/ism_members_item_shimmer" />
+      <include layout="@layout/ism_members_item_shimmer" />
+      <include layout="@layout/ism_members_item_shimmer" />
+      <include layout="@layout/ism_members_item_shimmer" />
+      <include layout="@layout/ism_members_item_shimmer" />
+
+    </LinearLayout>
+  </io.isometrik.groupstreaming.ui.utils.shimmer.ShimmerFrameLayout>
+
+
+</RelativeLayout>

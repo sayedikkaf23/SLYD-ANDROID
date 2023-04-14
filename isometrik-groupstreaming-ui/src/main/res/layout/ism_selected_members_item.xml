@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/ism_dp_81"
+    android:layout_height="wrap_content"
+    >
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivUserImage"
+      android:layout_width="@dimen/ism_dp_60"
+      android:layout_marginStart="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_8"
+      android:layout_height="@dimen/ism_dp_60"
+      app:srcCompat="@drawable/ism_default_profile_image" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivRemoveUser"
+      android:layout_marginEnd="@dimen/ism_dp__4"
+      android:layout_marginBottom="@dimen/ism_dp__4"
+      android:layout_width="@dimen/ism_dp_20"
+      android:background="@drawable/ism_member_select_circle"
+      android:layout_height="@dimen/ism_dp_20"
+      android:layout_alignEnd="@+id/ivUserImage"
+      android:layout_alignBottom="@+id/ivUserImage"
+      android:tint="@color/ism_select_member"
+      android:padding="@dimen/ism_dp_3"
+      app:srcCompat="@drawable/ism_ic_close" />
+
+  <TextView
+      android:id="@+id/tvUserName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/ivUserImage"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="@dimen/ism_dp_8"
+      android:layout_marginEnd="@dimen/ism_dp_5"
+      android:layout_marginLeft="@dimen/ism_dp_5"
+      android:layout_marginRight="@dimen/ism_dp_5"
+      android:layout_marginStart="@dimen/ism_dp_5"
+      android:layout_marginTop="@dimen/ism_dp_6"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:textColor="@color/ism_select_member"
+      android:textSize="@dimen/ism_sp_12" />
+
+</RelativeLayout>

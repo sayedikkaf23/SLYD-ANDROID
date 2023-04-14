@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlDisclaimer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    >
+
+  <TextView
+      android:id="@+id/tvDisclaimer"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/ism_dp_16"
+      android:elevation="@dimen/ism_dp_3"
+      android:lineSpacingExtra="@dimen/ism_dp_5"
+      android:text="@string/ism_disclaimer_message"
+      android:textColor="@color/ism_white"
+      android:textSize="@dimen/ism_sp_14"
+      />
+
+  <TextView
+      android:id="@+id/tvWarning"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvDisclaimer"
+      android:layout_margin="@dimen/ism_dp_16"
+      android:elevation="@dimen/ism_dp_3"
+      android:lineSpacingExtra="@dimen/ism_dp_5"
+      android:text="@string/ism_warning_message"
+      android:textColor="@color/ism_white"
+      android:textSize="@dimen/ism_sp_14"
+      />
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/tvGotIt"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/ism_dp_48"
+      android:layout_marginEnd="@dimen/ism_dp_48"
+      android:textSize="@dimen/ism_sp_16"
+      android:text="@string/ism_got_it"
+      android:paddingTop="@dimen/ism_dp_14"
+      android:paddingBottom="@dimen/ism_dp_14"
+      android:layout_marginBottom="@dimen/ism_dp_16"
+      android:textColor="@color/ism_white"
+      android:layout_below="@+id/tvWarning"
+      android:gravity="center_horizontal"
+      android:background="@drawable/ism_request_button"
+      android:textAllCaps="false"
+      app:elevation="@dimen/ism_dp_8"
+      android:elevation="@dimen/ism_dp_5"
+      />
+</RelativeLayout>

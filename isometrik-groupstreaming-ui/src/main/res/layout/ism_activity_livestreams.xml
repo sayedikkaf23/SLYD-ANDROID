@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlParent"
+    android:keepScreenOn="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/abLayout"
+      >
+
+    <TextView
+        android:id="@+id/tvNoBroadcaster"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="@dimen/ism_dp_8"
+        android:drawableTop="@drawable/ism_ic_no_live_streams"
+        android:gravity="center"
+        android:text="@string/ism_no_streams"
+        android:textColor="@color/ism_black"
+        android:visibility="gone"
+        />
+  </RelativeLayout>
+
+  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:id="@+id/refresh"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/abLayout"
+      >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLiveStreams"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/ism_dp_5"
+        />
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:id="@+id/abLayout"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      style="@style/ThemeOverlay.AppCompat.ActionBar"
+      >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ism_white"
+        >
+
+      <TextView
+          android:id="@+id/tvTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:fontFamily="@font/sf_pro_semibold"
+          android:text="@string/ism_live_streams"
+          android:textColor="@color/ism_title_black"
+          android:textSize="@dimen/ism_sp_20"
+          />
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ivProfile"
+          android:layout_width="@dimen/ism_dp_60"
+          android:layout_height="@dimen/ism_dp_60"
+          android:layout_centerVertical="true"
+          android:layout_alignParentEnd="true"
+          android:layout_margin="@dimen/ism_dp_5"
+          android:background="@android:color/transparent"
+          app:srcCompat="@drawable/ism_default_profile_image"
+          android:elevation="@dimen/ism_dp_3"
+          />
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ivPreview"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_toStartOf="@+id/ivProfile"
+          android:layout_margin="@dimen/ism_dp_8"
+          app:srcCompat="@drawable/ism_ic_preview"
+          android:elevation="@dimen/ism_dp_3"
+          />
+
+    </RelativeLayout>
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/btGoLive"
+      android:layout_width="@dimen/ism_dp_72"
+      android:layout_height="@dimen/ism_dp_72"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="@dimen/ism_dp_30"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/ism_golive_circle"
+      app:srcCompat="@drawable/ism_ic_golive_video"
+      android:padding="@dimen/ism_dp_18"
+      android:elevation="@dimen/ism_dp_5"
+      />
+
+  <include
+      android:layout_marginTop="?attr/actionBarSize"
+      layout="@layout/ism_overlay_connection_state"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+</RelativeLayout>

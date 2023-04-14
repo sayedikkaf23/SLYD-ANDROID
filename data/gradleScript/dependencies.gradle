@@ -1,0 +1,25 @@
+import dependencies.*
+
+apply from: Deps.common
+
+dependencies {
+
+  implementation Deps.RxJava.rxjava2
+  implementation Deps.RxJava.rxAndroid
+
+  implementation Deps.Retrofit2.retrofit
+
+  implementation Deps.Gson.gson
+
+
+  //Module
+  implementation project(Deps.Module.cache)
+  implementation project(Deps.Module.remote)
+  implementation project(Deps.Module.domain)
+
+  implementation Deps.javax
+
+  //security
+  implementation Deps.security
+}
+

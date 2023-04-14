@@ -1,0 +1,16 @@
+import dependencies.*
+
+apply from: Deps.common
+
+dependencies {
+
+  implementation Deps.Gson.gson
+
+
+  //Room
+  implementation Deps.Room.rxjava2
+  implementation Deps.Room.runtime
+  kapt Deps.Room.annotationProcessor
+
+}
+

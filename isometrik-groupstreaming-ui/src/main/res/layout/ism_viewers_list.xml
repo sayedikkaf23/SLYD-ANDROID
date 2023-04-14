@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:scrollbars="none"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/llViewers"
+    >
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivMore"
+      android:layout_width="@dimen/ism_dp_40"
+      android:layout_height="@dimen/ism_dp_40"
+      android:background="@drawable/ism_golive_circle"
+      app:srcCompat="@drawable/ism_ic_more"
+      android:tint="@color/ism_white"
+      android:layout_gravity="center_vertical"
+      android:padding="@dimen/ism_dp_6"
+      android:elevation="@dimen/ism_dp_6"
+      android:visibility="invisible"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivOne"
+      android:layout_width="@dimen/ism_dp_40"
+      android:layout_height="@dimen/ism_dp_40"
+      android:layout_marginStart="@dimen/ism_dp__18"
+      app:srcCompat="@drawable/ism_default_profile_image"
+      android:elevation="@dimen/ism_dp_5"
+      android:visibility="gone"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivTwo"
+      android:layout_width="@dimen/ism_dp_40"
+      android:layout_marginStart="@dimen/ism_dp__18"
+      android:layout_height="@dimen/ism_dp_40"
+      app:srcCompat="@drawable/ism_default_profile_image"
+      android:elevation="@dimen/ism_dp_4"
+      android:visibility="gone"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivThree"
+      android:layout_width="@dimen/ism_dp_40"
+      android:layout_marginStart="@dimen/ism_dp__18"
+      android:layout_height="@dimen/ism_dp_40"
+      app:srcCompat="@drawable/ism_default_profile_image"
+      android:elevation="@dimen/ism_dp_3"
+      android:visibility="gone"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivFour"
+      android:layout_width="@dimen/ism_dp_40"
+      android:layout_marginStart="@dimen/ism_dp__18"
+      android:layout_height="@dimen/ism_dp_40"
+      app:srcCompat="@drawable/ism_default_profile_image"
+      android:elevation="@dimen/ism_dp_2"
+      android:visibility="gone"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivFive"
+      android:layout_width="@dimen/ism_dp_40"
+      android:layout_marginStart="@dimen/ism_dp__18"
+      android:layout_height="@dimen/ism_dp_40"
+      app:srcCompat="@drawable/ism_default_profile_image"
+      android:elevation="@dimen/ism_dp_1"
+      android:visibility="gone"
+      />
+
+<!--  <androidx.appcompat.widget.AppCompatImageView-->
+<!--      android:id="@+id/ivSix"-->
+<!--      android:layout_width="@dimen/ism_dp_40"-->
+<!--      android:layout_marginStart="-18dp"-->
+<!--      android:layout_height="@dimen/ism_dp_40"-->
+<!--      app:srcCompat="@drawable/ism_default_profile_image"-->
+<!--      />-->
+
+</LinearLayout>
+    </HorizontalScrollView>

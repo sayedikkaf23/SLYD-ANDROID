@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ism_black"
+    >
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/tvGiftCategoryImage"
+      android:layout_width="@dimen/ism_dp_24"
+      android:layout_height="@dimen/ism_dp_24"
+      app:tint="@color/ism_white"
+      android:layout_marginTop="@dimen/ism_dp_16"
+      android:layout_marginStart="@dimen/ism_dp_20"
+      android:layout_marginEnd="@dimen/ism_dp_20"
+      android:layout_centerHorizontal="true"
+      app:srcCompat="@drawable/ism_ic_gift_category_classic"
+      />
+
+  <TextView
+      android:id="@+id/tvGiftCategoryName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/ism_copublish_gift_category_text_selector"
+      android:textSize="@dimen/ism_sp_12"
+      android:layout_marginTop="@dimen/ism_dp_5"
+      android:layout_marginBottom="@dimen/ism_dp_16"
+      android:layout_marginStart="@dimen/ism_dp_20"
+      android:layout_marginEnd="@dimen/ism_dp_20"
+      android:gravity="center_horizontal"
+      android:layout_centerHorizontal="true"
+      android:text="@string/ism_gift_category_animated"
+      android:layout_below="@+id/tvGiftCategoryImage"
+      />
+
+</RelativeLayout>

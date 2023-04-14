@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ism_black"
+    >
+
+  <View
+      android:id="@+id/vPeek"
+      android:layout_margin="@dimen/ism_dp_20"
+      android:layout_width="@dimen/ism_dp_80"
+      android:layout_height="@dimen/ism_dp_4"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/ism_peek_rectangle"
+      />
+
+
+  <TextView
+      android:id="@+id/tvWarning"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/ism_sp_18"
+      android:text="@string/ism_warning_end"
+      android:textColor="@color/ism_white"
+      android:layout_marginStart="@dimen/ism_dp_36"
+      android:layout_marginTop="@dimen/ism_dp_8"
+      android:layout_marginEnd="@dimen/ism_dp_36"
+      android:layout_marginBottom="@dimen/ism_dp_36"
+      android:layout_centerHorizontal="true"
+      android:layout_below="@+id/vPeek"
+      android:gravity="center_horizontal"
+      />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvWarning"
+      android:layout_marginBottom="@dimen/ism_dp_24"
+      android:layout_marginStart="@dimen/ism_dp_16"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:weightSum="2"
+      >
+
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_weight="1"
+        android:layout_width="@dimen/ism_dp_0"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/ism_sp_16"
+        android:paddingTop="@dimen/ism_dp_8"
+        android:paddingBottom="@dimen/ism_dp_8"
+        android:layout_marginEnd="@dimen/ism_dp_16"
+        android:text="@string/ism_cancel"
+        android:textColor="@color/ism_white"
+        android:gravity="center_horizontal"
+        android:background="@drawable/ism_cancel_button"
+        android:elevation="@dimen/ism_dp_3"
+        />
+
+    <TextView
+        android:id="@+id/tvAction"
+        android:layout_weight="1"
+        android:layout_width="@dimen/ism_dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ism_dp_16"
+        android:textSize="@dimen/ism_sp_16"
+        android:text="@string/ism_end_video"
+        android:paddingTop="@dimen/ism_dp_8"
+        android:paddingBottom="@dimen/ism_dp_8"
+        android:textColor="@color/ism_white"
+        android:gravity="center_horizontal"
+        android:background="@drawable/ism_gradient_copublish"
+        android:elevation="@dimen/ism_dp_3"
+        />
+
+  </LinearLayout>
+
+</RelativeLayout>

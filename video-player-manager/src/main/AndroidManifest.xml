@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.volokh.danylo.video_player_manager">
+    <uses-sdk tools:overrideLibrary="tv.danmaku.ijk.media.player_arm64"/>
+    <!--<uses-sdk tools:overrideLibrary="tv.danmaku.ijk.media.player-x86_64"/>-->
+    <application
+        android:allowBackup="false"
+        android:supportsRtl="true">
+
+    </application>
+
+</manifest>

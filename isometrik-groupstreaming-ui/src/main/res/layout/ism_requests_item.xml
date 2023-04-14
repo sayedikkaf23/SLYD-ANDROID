@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ism_black"
+    android:foreground="?android:attr/selectableItemBackground"
+    >
+
+  <RelativeLayout
+    android:id="@+id/rlDecline"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:layout_marginEnd="@dimen/ism_dp_16"
+    android:layout_marginTop="@dimen/ism_dp_16"
+    android:background="@drawable/ism_decline_button"
+    android:elevation="@dimen/ism_dp_1"
+      >
+
+  <TextView
+      android:id="@+id/tvDecline"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:paddingBottom="@dimen/ism_dp_5"
+      android:paddingEnd="@dimen/ism_dp_15"
+      android:paddingStart="@dimen/ism_dp_15"
+      android:paddingTop="@dimen/ism_dp_5"
+      android:text="@string/ism_decline"
+      android:textColor="@color/ism_white"
+      />
+
+</RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/rlAccept"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toStartOf="@+id/rlDecline"
+      android:layout_marginEnd="@dimen/ism_dp_8"
+      android:layout_marginTop="@dimen/ism_dp_16"
+      android:background="@drawable/ism_accept_button"
+      android:elevation="@dimen/ism_dp_1"
+      >
+
+    <TextView
+        android:id="@+id/tvAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/ism_dp_5"
+        android:paddingEnd="@dimen/ism_dp_15"
+        android:paddingStart="@dimen/ism_dp_15"
+        android:paddingTop="@dimen/ism_dp_5"
+        android:text="@string/ism_accept"
+        android:textColor="@color/ism_white"
+        />
+
+  </RelativeLayout>
+
+  <TextView
+      android:id="@+id/tvUserName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      android:layout_toEndOf="@+id/ivUserImage"
+      android:layout_toStartOf="@+id/rlAccept"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:text="UserName"
+      android:textColor="@color/ism_white"
+      android:textSize="@dimen/ism_sp_16"
+      />
+
+  <TextView
+      android:id="@+id/tvUserIdentifier"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvUserName"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_2"
+      android:layout_toEndOf="@+id/ivUserImage"
+      android:layout_toStartOf="@+id/rlAccept"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:text="UserIdentifier"
+      android:textColor="@color/ism_identifier_text_white"
+      android:textSize="@dimen/ism_sp_14"
+      />
+
+  <TextView
+      android:id="@+id/tvRequestTime"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvUserIdentifier"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_2"
+      android:layout_toEndOf="@+id/ivUserImage"
+      android:layout_toStartOf="@+id/rlAccept"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:text="Requested At 12:00PM"
+      android:textColor="@color/ism_jointime_text_white"
+      android:textSize="@dimen/ism_sp_12"
+      />
+
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/ism_dp_1"
+      android:layout_below="@id/tvRequestTime"
+      android:layout_marginStart="@dimen/ism_dp_80"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      android:background="@color/ism_line_gray"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivUserImage"
+      android:layout_width="@dimen/ism_dp_60"
+      android:layout_height="@dimen/ism_dp_60"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginStart="@dimen/ism_dp_16"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      app:srcCompat="@drawable/ism_default_profile_image"
+      />
+
+</RelativeLayout>
