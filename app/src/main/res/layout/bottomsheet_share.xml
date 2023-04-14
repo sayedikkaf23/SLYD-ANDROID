@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_400"
+    android:background="@drawable/curved_top_corners"
+    android:orientation="vertical"
+    android:elevation="@dimen/dp_5"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_5"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+      <EditText
+          android:id="@+id/etMessage"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/dp_40"
+          android:layout_marginLeft="@dimen/dp_5"
+          android:background="@android:color/transparent"
+          android:hint="@string/write_message"
+          android:padding="@dimen/dp_5"
+          android:textSize="@dimen/sp_10" />
+
+      <chat.hola.com.app.Utilities.RoundedImageView
+          android:id="@+id/ivProfilePic"
+          android:layout_width="@dimen/dp_40"
+          android:layout_height="@dimen/dp_40"
+          android:layout_centerVertical="true"
+          android:scaleType="centerCrop"
+          android:src="@drawable/profile_one" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/dp_10"
+        android:text="@string/ShareTo"
+        android:textSize="@dimen/sp_15"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <View
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_5"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/dp_5"
+        android:visibility="gone"
+        android:background="@drawable/rounded_rectangle" />
+
+
+  </LinearLayout>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/dp_0_5"
+      android:layout_gravity="center_horizontal"
+      android:background="@color/gray_text_darker"
+      android:visibility="gone" />
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/dp_0_5"
+      android:layout_gravity="center_horizontal"
+      android:background="@color/gray_text_darker" />
+
+  <androidx.appcompat.widget.SearchView
+      android:id="@+id/searchView"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/dp_40"
+      android:layout_margin="@dimen/dp_8"
+      app:iconifiedByDefault="false"
+      app:queryHint="@string/search"
+      app:queryBackground="@null"
+      android:background="@drawable/rounded_rectangle_light_gray"
+      android:visibility="visible" />
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shareList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/tvNoDataFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/NoDataFound"
+        android:drawablePadding="@dimen/dp_3"
+        app:drawableTopCompat="@drawable/ic_no_data_found"
+        android:visibility="gone" />
+
+  </FrameLayout>
+
+</LinearLayout>

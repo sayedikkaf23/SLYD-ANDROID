@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="chat.hola.com.app.profileScreen.business.contact_options.ContactOptionsActivity">
+
+    <!--action bar-->
+    <RelativeLayout
+        android:id="@+id/rL_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            style="?actionButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:tint="@color/star_black"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/contact_options"
+            android:textColor="@color/star_black"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:textSize="@dimen/title" />
+
+        <TextView
+            android:id="@+id/tV_done"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="@string/done"
+            android:fontFamily="@font/sf_pro_regular"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title" />
+
+    </RelativeLayout>
+
+    <!--Main UI-->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@+id/rL_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="@dimen/fifteen_dp"
+            android:textSize="@dimen/sp_24"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:textColor="@color/star_black"
+            android:text="@string/business_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <!--email-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/fifteen_dp">
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:drawableEnd="@drawable/ic_navigate_next"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/star_black"
+                android:textColorHint="@color/star_black"
+                tools:ignore="Autofill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Phone-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:layout_marginStart="@dimen/fifteen_dp">
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:drawableEnd="@drawable/ic_navigate_next"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/phone"
+                android:inputType="none"
+                android:textColor="@color/star_black"
+                android:textColorHint="@color/star_black"
+                tools:ignore="Autofill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--address-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/fifteen_dp">
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:drawableEnd="@drawable/ic_navigate_next"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/address"
+                android:inputType="none"
+                android:textColor="@color/star_black"
+                android:textColorHint="@color/star_black"
+                tools:ignore="Autofill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_10"
+    android:foreground="?android:selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5">
+
+        <ImageView
+            android:id="@+id/ivCommentProfilePic"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_one"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toStartOf="@+id/tvTime"
+            android:layout_toEndOf="@+id/ivCommentProfilePic"
+            android:layout_toRightOf="@+id/ivCommentProfilePic"
+            android:orientation="vertical"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#10141C"
+                android:textSize="@dimen/sp_14"
+                tools:text="@string/username"/>
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="4"
+                android:textColor="#9AA4B4"
+                android:textSize="@dimen/small"
+                android:fontFamily="@font/sf_pro_semibold"
+                tools:text="@string/comments"
+                android:visibility="gone"/>
+
+            <chat.hola.com.app.Utilities.CommentTextView
+                android:id="@+id/commentTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+                <TextView
+                    android:id="@+id/expandable_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web"
+                    android:linksClickable="true"
+                    android:textColor="#9AA4B4"
+                    android:textSize="@dimen/small"
+                    android:fontFamily="@font/sf_pro_semibold"
+                    tools:text="@string/comments"/>
+
+                <TextView
+                    android:id="@+id/tvToggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:textColor="@color/star_black"
+                    android:textSize="@dimen/small"
+                    android:fontFamily="@font/sf_pro_medium"
+                    tools:text="@string/view_more"
+                    />
+            </chat.hola.com.app.Utilities.CommentTextView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/dp_3"
+            android:padding="@dimen/dp_2"
+            android:textColor="#9AA4B4"
+            android:textSize="@dimen/sp_10"
+            tools:text="@string/date_time"/>
+
+        <LinearLayout
+            android:layout_marginEnd="@dimen/dp_4"
+            android:layout_below="@+id/tvTime"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--delete-->
+            <ImageView
+                android:id="@+id/iVDelete"
+                android:layout_margin="@dimen/dp_2"
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_16"
+                android:layout_gravity="center_vertical"
+                android:button="@null"
+                android:stateListAnimator="@animator/scale"
+                android:src="@drawable/ic_delete"
+                tools:ignore="ContentDescription"
+                android:visibility="gone"/>
+
+
+            <!--like-->
+            <ImageView
+                android:id="@+id/iVLike"
+                android:visibility="gone"
+                android:layout_margin="@dimen/dp_2"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_gravity="center_vertical"
+                android:button="@null"
+                android:background="@color/transparent"
+                android:stateListAnimator="@animator/scale"
+                app:srcCompat="@drawable/love1"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

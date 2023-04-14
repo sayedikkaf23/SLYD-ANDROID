@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ezcall.android">
+
+    <queries>
+
+        <!-- For facebook share on 30+napi level -->
+        <package android:name="com.facebook.katana" />
+        <package android:name="com.facebook.lite" />
+    </queries>
+
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- account manager -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- For calls -->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> <!-- For record audio -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- For the xiaomi devices crashing on MI3 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- For call header -->
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" /> <!-- For automatic restarting of the mqtt service on the app boot -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="chat.hola.com.app.AppController"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:vmSafeMode="true"
+        tools:replace="android:icon,android:allowBackup,android:label,android:roundIcon,android:theme">
+
+        <activity
+            android:name="chat.hola.com.app.authentication.signup.CongratulationsActivity"
+            android:exported="true" />
+        <activity
+            android:name="chat.hola.com.app.authentication.signup.PrivacySettingsActivity"
+            android:exported="true" />
+        <activity
+            android:name="chat.hola.com.app.authentication.signup.SignUp2Activity"
+            android:exported="true" />
+        <activity
+            android:name="chat.hola.com.app.authentication.signup.SignUp1Activity"
+            android:exported="true" />
+        <activity
+            android:name="chat.hola.com.app.Activities.SelectLoginActivity"
+            android:exported="true" />
+        <activity
+            android:name="chat.hola.com.app.Activities.PreLoginActivity"
+            android:exported="true" />
+        <activity android:name="chat.hola.com.app.profileScreen.business.form.BusinessUserNameActivity" />
+        <activity android:name="chat.hola.com.app.profileScreen.editProfile.EditNameActivity" />
+        <activity android:name="chat.hola.com.app.profileScreen.editProfile.EditStatusActivity" />
+        <activity android:name="chat.hola.com.app.profileScreen.editProfile.EditUserNameActivity" />
+        <activity android:name="chat.hola.com.app.profileScreen.editProfile.EditKnownAsActivity" />
+        <activity android:name="chat.hola.com.app.subscription.SubscriptionActivity" />
+
+        <meta-data
+            android:name="com.onesignal.NotificationOpened.DEFAULT"
+            android:value="DISABLE" />
+        <meta-data
+            android:name="com.onesignal.NotificationServiceExtension"
+            android:value="chat.hola.com.app.notification.NotificationServiceExtension" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name="chat.hola.com.app.Activities.VideoStreamingActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" /> <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_appid" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource" />
+        </provider>
+
+        <activity android:name="chat.hola.com.app.Activities.FriendsListActivity" />
+        <activity android:name="chat.hola.com.app.profileScreen.business.contact_options.ContactOptionsActivity" />
+        <activity android:name="chat.hola.com.app.Activities.CallFinishActivity" />
+        <activity android:name="chat.hola.com.app.transfer_to_friend.TransferReceivedDetail" />
+        <activity android:name="chat.hola.com.app.referral_code.ReferralCodeActivity" />
+        <activity android:name="chat.hola.com.app.wallet.transaction.TransactionActivity" />
+        <activity android:name="chat.hola.com.app.profileScreen.star_video.PlayVideoActivity" />
+        <activity android:name="chat.hola.com.app.request_star_profile.star_category.StarCategoryActivity" />
+        <activity android:name="chat.hola.com.app.request_star_profile.request_star.RequestStarProfileActivity" />
+        <activity
+            android:name="chat.hola.com.app.star_configuration.NumberVerifyActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="chat.hola.com.app.star_configuration.VerificationActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="chat.hola.com.app.star_configuration.EmailVerifyActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name="chat.hola.com.app.star_configuration.StarConfigurationActivity" />
+        <activity android:name="chat.hola.com.app.transfer_to_friend.TransferSentDetail" />
+        <activity android:name="chat.hola.com.app.send_star_packet.SendStarPacketActivity" />
+        <activity
+            android:name="chat.hola.com.app.transfer_to_friend.TransferToFriendActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="chat.hola.com.app.qr_code_scanner.QRCodeActivity"
+            android:launchMode="singleTask" />
+        <activity android:name="chat.hola.com.app.my_qr_code.MyQRCodeActivity" />
+        <activity android:name="chat.hola.com.app.wallet.wallet_detail.WalletActivity" />
+        <activity
+            android:name="chat.hola.com.app.authentication.login.LoginActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:launchMode="singleTop"
+            android:theme="@style/activityTransparent" />
+        <activity
+            android:name="chat.hola.com.app.authentication.newpassword.NewPasswordActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
+        <activity
+            android:name="chat.hola.com.app.authentication.forgotpassword.ForgotPasswordActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:launchMode="singleTop"
+            android:theme="@style/activityTransparent" />
+        <activity
+            android:name="chat.hola.com.app.authentication.verifyEmail.VerifyEmailActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@style/activityTransparent" />
+        <activity
+            android:name="chat.hola.com.app.home.connect.ContactActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
+        <activity
+            android:name="chat.hola.com.app.home.connect.ContactCallActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
+        <activity
+            android:name="chat.hola.com.app.stories.StoriesPreviewActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.comment.CommentActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.search_user.SearchUserActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.friends.FriendsActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.music.MusicActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.blockUser.BlockUserActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.dubly.DubsActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.dublycategory.DubCategoryActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.acceptRequest.AcceptRequestActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.AddContact.AddContactActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.home.activity.youTab.channelrequesters.ChannelRequestersActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.home.activity.youTab.followrequest.FollowRequestActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.settings.SettingsActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.location.Location_Search_Activity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" /> <!-- For chat retrievals -->
+        <activity
+            android:name="chat.hola.com.app.Activities.ContactsSecretChat"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.Activities.ChatMessageScreen"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.SecretChat.SecretChatMessageScreen"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" /> <!-- Activity for the image cropping -->
+        <activity
+            android:name="chat.hola.com.app.ImageCropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name="chat.hola.com.app.ForwardMessage.ActivityForwardMessage"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="chat.hola.com.app.Giphy.GifPlayer"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="chat.hola.com.app.Giphy.SelectGIF"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="chat.hola.com.app.Activities.MessageInfo"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="chat.hola.com.app.Activities.ReplyMessageInfo"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" /> <!-- Wallpaper -->
+        <activity
+            android:name="chat.hola.com.app.Wallpapers.Library.LibraryActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="chat.hola.com.app.Wallpapers.Activities.SolidColorActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="chat.hola.com.app.onboarding.OnBoardingActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="chat.hola.com.app.Wallpapers.Activities.DrawActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="chat.hola.com.app.NumberVerification.ReVerify"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="chat.hola.com.app.NumberVerification.VerifyPhoneNumber"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="chat.hola.com.app.NumberVerification.ChooseCountry"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:parentActivityName="chat.hola.com.app.NumberVerification.VerifyPhoneNumber"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.NumberVerification.SmsVerification"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:parentActivityName="chat.hola.com.app.NumberVerification.VerifyPhoneNumber"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="chat.hola.com.app.Profile.SaveProfile"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.Profile.OwnProfileDetails"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.Profile.UpdateStatus"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.Profile.WriteNewNameOrStatus"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.Activities.MediaHistory"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.Activities.MediaHistory_FullScreenVideo"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.Activities.MediaHistory_FullScreenImage"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.Activities.DataUsage"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.home.LandingActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.activities_user.UserActivitiesActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.Profile.Settings"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.Activities.ContactsList"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.Activities.Terms"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.Profile.OpponentProfile"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.Profile.OpponentProfileNew"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.Profile.BlockedUser"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.DocumentPicker.FilePickerActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.DocumentPicker.MediaDetailsActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.GroupChat.Activities.CreateGroup"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.GroupChat.Activities.AddSubject"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.GroupChat.Activities.GroupChatMessageScreen"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.GroupChat.Activities.GroupInfo"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.GroupChat.Activities.GroupIconFullScreen"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.GroupChat.Activities.EditGroupSubject"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.GroupChat.Activities.AddMember"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.GroupChat.Activities.MessageAcknowledgement"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.GroupChat.Activities.ReplyMessageAcknowledgement"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.Activities.EditImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.motionView.motionviews.ui.MainMotionViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.motionView.motionviews.ui.StickerSelectActivity"
+            android:label="@string/add_sticker"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" /> <!-- for custom camera activities -->
+        <activity
+            android:name="chat.hola.com.app.cameraActivities.ui.camera.Camera1Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeFullscreen" />
+        <activity
+            android:name="chat.hola.com.app.cameraActivities.ui.camera2.Camera2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeFullscreen" />
+        <activity
+            android:name="chat.hola.com.app.cameraActivities.ui.preview.PreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeFullscreen" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeFullscreen.Crop" />
+        <activity
+            android:name="chat.hola.com.app.trendingDetail.TrendingDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.location.LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.stars.StarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.profileScreen.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.welcomeScreen.WelcomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.profileScreen.editProfile.EditProfileActivity"
+            android:parentActivityName="chat.hola.com.app.profileScreen.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.profileScreen.addChannel.AddChannelActivity"
+            android:parentActivityName="chat.hola.com.app.profileScreen.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.post.PostActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="chat.hola.com.app.search.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.profileScreen.discover.DiscoverActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="chat.hola.com.app.webScreen.WebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.profileScreen.editProfile.changeEmail.ChangeEmail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.profileScreen.followers.FollowersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.category.CategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.preview.PreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="chat.hola.com.app.mystories.MyStoriesActivity" />
+        <activity android:name="chat.hola.com.app.poststatus.PostStatusActivity" />
+        <activity
+            android:name="chat.hola.com.app.DublyCamera.CameraActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name="chat.hola.com.app.DublyCamera.CameraInFragments.CameraInFragmentsActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name="chat.hola.com.app.DublyCamera.CameraInFragments.Filters.ManageFilters"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name="chat.hola.com.app.DublyCamera.PreviewGalleryVideoActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name="chat.hola.com.app.DublyCamera.PreviewGalleryImageActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name="chat.hola.com.app.DublyCamera.PreviewActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name="chat.hola.com.app.DublyCamera.PreviewImageActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name="chat.hola.com.app.DublyCamera.CameraInFragments.PreviewFragmentFilterImageActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name="chat.hola.com.app.DublyCamera.PreviewVideoActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name="chat.hola.com.app.DublyCamera.CameraInFragments.PreviewFragmentImageActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name="chat.hola.com.app.DublyCamera.CameraInFragments.PreviewFragmentVideoActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name="chat.hola.com.app.DublyCamera.CameraInFragments.PreviewFragmentGalleryVideoActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name="chat.hola.com.app.user_verification.RequestEmailOTPActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="chat.hola.com.app.user_verification.VerifyEmailOTPActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="chat.hola.com.app.user_verification.phone.VerifyNumberOTPActivity"
+            android:theme="@style/activityTransparent"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="chat.hola.com.app.user_verification.RequestNumberOTPActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="chat.hola.com.app.Activities.ChatCameraActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name="chat.hola.com.app.live_stream.Home.live_users.LiveUsersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.live_stream.Home.stream.StreamActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.live_stream.Home.StreamingMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.live_stream.LiveStream.LiveStreamBroadcaster.RTMPStreamBroadcasterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" /> <!-- android:theme="@style/AppThemeDark" -->
+        <activity android:name="chat.hola.com.app.live_stream.LiveStream.LiveStreamViewer.RTMPStreamPlayerActivity" />
+        <activity
+            android:name="chat.hola.com.app.live_stream.LiveStream.LiveStreamBroadcaster.WebRTCStreamBroadcasterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.live_stream.LiveStream.LiveStreamViewer.WebRTCStreamPlayerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.socialDetail.SocialDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.Share.CustomShare"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="audio/*" />
+                <data android:mimeType="video/*" />
+                <data android:mimeType="image/*" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="chat.hola.com.app.Activities.MainActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter
+                android:autoVerify="true"
+                tools:targetApi="23">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="ezcallapp.page.link"
+                    android:pathPrefix="/post/"
+                    android:scheme="http" />
+                <data
+                    android:host="ezcallapp.page.link"
+                    android:pathPrefix="/post/"
+                    android:scheme="https" />
+                <data
+                    android:host="ezcallapp.page.link"
+                    android:pathPrefix="/post/"
+                    android:scheme="http" />
+                <data
+                    android:host="com.ezcall.android"
+                    android:scheme="app" />
+                <data
+                    android:host="ezcallapp.page.link"
+                    android:pathPrefix="/userprofile/"
+                    android:scheme="https" />
+                <data
+                    android:host="ezcallapp.page.link"
+                    android:pathPrefix="/userprofile/"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="chat.hola.com.app.authentication.signup.SignUpActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@style/activityTransparent"
+            android:exported="true">
+            <intent-filter
+                android:autoVerify="true"
+                tools:targetApi="23">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="ezcallapp.page.link"
+                    android:pathPrefix="/refer/"
+                    android:scheme="http" />
+                <data
+                    android:host="ezcallapp.page.link"
+                    android:pathPrefix="/refer/"
+                    android:scheme="http" />
+                <data
+                    android:host="com.star.chat"
+                    android:scheme="app" />
+            </intent-filter>
+        </activity> <!-- RECEIVER -->
+        <receiver android:name="chat.hola.com.app.Utilities.TimeChangedReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_TICK" />
+                <action android:name="android.intent.action.ACTION_TIME_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="chat.hola.com.app.Utilities.BootCompletedIntentReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <!-- For htc phones -->
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="chat.hola.com.app.Utilities.ShutdownReceiver"
+            android:exported="false">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWEROFF" />
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.QUICKBOOT_POWEROFF" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="chat.hola.com.app.Utilities.ConnectivityReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver> <!-- END RECEIVER -->
+        <!-- SERVICE -->
+        <service android:name="chat.hola.com.app.Service.AppKilled" />
+        <service
+            android:name="chat.hola.com.app.Service.OreoJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="chat.hola.com.app.Networking.connection.NetworkCheckerService"
+            android:exported="false" /> <!-- For addition of the calls header -->
+        <service android:name="io.isometrik.android.rtmp.LiveVideoBroadcaster" />
+        <service
+            android:name="chat.hola.com.app.MQtt.MqttService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:stopWithTask="false" />
+        <service
+            android:name="chat.hola.com.app.live_stream.MQtt.MqttService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:stopWithTask="false" />
+        <service
+            android:name="chat.hola.com.app.Service.ShareService"
+            android:exported="false" />
+        <service
+            android:name="chat.hola.com.app.poststory.StoryService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true"
+            android:screenOrientation="portrait" />
+        <service android:name="chat.hola.com.app.manager.account.AppAuthenticatorService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <service
+            android:name="chat.hola.com.app.Notifications.MyFcmListenerService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="chat.hola.com.app.Notifications.RegistrationIntentService"
+            android:exported="false" />
+        <service
+            android:name="chat.hola.com.app.Service.PostService"
+            android:enabled="true"
+            android:exported="true" /> <!-- END SERVICE -->
+        <meta-data
+            android:name="CLOUDINARY_URL"
+            android:value="cloudinary://851369447544171:Ns1oaX0fBMwLWu51yvIN4n_oPfI@dxkoc9aao" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> <!-- map -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA5B6FVQmeaOFa8EJZjdoW_w3wdxj8c25M" /> <!-- END META DATA -->
+        <activity
+            android:name="chat.hola.com.app.profileScreen.business.StartBusinessProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.profileScreen.business.form.BusinessProfileFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.profileScreen.business.category.BusinessCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.profileScreen.business.address.BusinessAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.profileScreen.business.configuration.BusinessConfigurationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.profileScreen.business.post.BusinessPostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.profileScreen.editProfile.BusinessBioActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.post.location.LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="chat.hola.com.app.collections.edit_collection.EditCollectionActivity" />
+        <activity android:name="chat.hola.com.app.collections.add_to_collection.AddToCollectionActivity" />
+        <activity android:name="chat.hola.com.app.collections.collection.CollectionActivity" />
+        <activity android:name="chat.hola.com.app.collections.create_collection.CreateCollectionActivity" />
+        <activity android:name="chat.hola.com.app.collections.saved.SavedActivity" />
+
+        <service android:name="chat.hola.com.app.moveCameraObj.FetchAddressIntentService" />
+
+        <activity
+            android:name="chat.hola.com.app.Activities.LocationFetchActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/activityTransparent" />
+        <activity
+            android:name="chat.hola.com.app.calling.video.call.CallingActivity"
+            android:allowTaskReparenting="true"
+            android:autoRemoveFromRecents="true"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:launchMode="singleInstance"
+            android:parentActivityName="chat.hola.com.app.Activities.ChatMessageScreen"
+            android:resizeableActivity="true"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:taskAffinity="chat.hola.com.app.Activities.ChatMessageScreen"
+            android:theme="@style/CallFullScreenStyle" />
+        <activity android:name="chat.hola.com.app.live_stream.Home.follow_user.FollowUserActivity" />
+        <activity
+            android:name="chat.hola.com.app.welcomeScreen.StartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ui.kyc.KycActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ui.wallet.WebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ui.validate.ValidateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ui.dashboard.WalletDashboardActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ui.recharge.RechargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ui.paymentgateway.PaymentGatewaysActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ui.qrcode.WalletQrCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ui.password.RechargePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ui.transfer.TransferSuccessActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ui.withdraw.addbankaccount.AddBankAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ui.withdraw.bankaccount.BankAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ui.withdraw.withdrawallog.WithdrawalLogActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ui.cards.CardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ui.withdraw.method.WithdrawMethodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ui.stripe.AddStripeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ui.withdraw.bankdetail.BankDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ui.withdraw.detail.WithdawDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ecom.help.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ecom.help.helpsubcategory.HelpSubCatActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name="chat.hola.com.app.Utilities.SMSReceiver"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.phone.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="chat.hola.com.app.DublyCamera.tabs.TabCameraActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name="chat.hola.com.app.DublyCamera.deepar.DeeparFiltersTabCameraActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" /> <!-- <activity -->
+        <!-- android:name="chat.hola.com.app.DublyCamera.banuba.BanubaFiltersTabCameraActivity" -->
+        <!-- android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@style/FullScreen" /> -->
+        <activity
+            android:name="chat.hola.com.app.DublyCamera.duet.DuetActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name="chat.hola.com.app.DublyCamera.duet.DuetVideoPreviewActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name="chat.hola.com.app.DublyCamera.duet.DeeparDuetActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+        <activity android:name="chat.hola.com.app.coin.base.CoinActivity" />
+        <activity
+            android:name="chat.hola.com.app.ecom.addresslist.SavedAddressListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ecom.addresslist.manageaddress.AddAddressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name="chat.hola.com.app.ecom.pdp.ProductDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ecom.pdp.imagezoom.ZoomImageAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ecom.cart.EcomCartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ecom.payment.PaymentMethodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="chat.hola.com.app.ecom.review.ReviewProductActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="chat.hola.com.app.ecom.wishlist.WishListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity android:name="chat.hola.com.app.orders.historyscreen.HistoryActivity" />
+        <activity android:name="chat.hola.com.app.tracking.EcomTrackingActivity" />
+        <activity android:name="chat.hola.com.app.historyproductdetail.HistoryProductDetailActivity" />
+        <activity android:name="chat.hola.com.app.orderdetails.HistoryOrderDetailActivity" />
+        <!--
+        To resolve manifest merge error....
+activity#com.google.firebase.auth.internal.FederatedSignInActivity@android:launchMode was tagged at AndroidManifest.xml:24
+        -->
+<!--        <activity-->
+<!--            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"-->
+<!--            android:launchMode="standard"-->
+<!--            tools:replace="android:launchMode" /> &lt;!&ndash; Isometrik groupstreaming &ndash;&gt;-->
+<!--        <activity-->
+<!--            android:name="chat.hola.com.app.isometrik.groupstreaming.live.GoLiveActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:windowSoftInputMode="adjustResize"-->
+<!--            tools:ignore="LockedOrientationActivity" />-->
+<!--        <activity-->
+<!--            android:name="chat.hola.com.app.isometrik.groupstreaming.multilive.MultiLiveSelectMembersActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:windowSoftInputMode="adjustResize"-->
+<!--            tools:ignore="LockedOrientationActivity" />-->
+<!--        <activity-->
+<!--            android:name="chat.hola.com.app.isometrik.groupstreaming.scrollable.ScrollableStreamsActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:windowSoftInputMode="adjustResize"-->
+<!--            tools:ignore="LockedOrientationActivity" />-->
+        <activity
+            android:name="chat.hola.com.app.profileScreen.editProfile.editDetail.EditDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="chat.hola.com.app.profileScreen.business.form.verify.BusinessFormVerifyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider1674519595980409"
+            android:exported="true" />
+
+        <activity
+            android:name="chat.hola.com.app.home.callhistory.DetailCallInfo"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="chat.hola.com.app.profileScreen.discover.InviteContactActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

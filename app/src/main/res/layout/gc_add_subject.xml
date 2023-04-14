@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_white"
+
+
+        >
+
+        <TextView
+            android:id="@+id/newGroup"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toEndOf="@+id/close"
+            android:layout_toRightOf="@+id/close"
+            android:text="@string/NewGroup"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/sp_17"
+            android:textStyle="bold"
+
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/newGroup"
+            android:layout_marginTop="@dimen/dp_1"
+            android:layout_toEndOf="@+id/close"
+
+
+            android:layout_toRightOf="@+id/close"
+
+
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/AddSubject"
+            android:textColor="@color/color_black"
+
+
+            />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/close"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_13"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:layout_marginEnd="@dimen/dp_13"
+
+
+            android:layout_marginRight="@dimen/dp_13"
+            android:elevation="@dimen/dp_5"
+            android:foreground="@drawable/ripple_selector"
+            android:tint="@color/color_black"
+            app:srcCompat="@drawable/arrow_back_black" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_1"
+
+
+        android:layout_below="@+id/toolbar"
+        android:background="@color/color_line_gray"
+
+
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seperator">
+
+
+        <RelativeLayout
+
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white">
+
+
+            <FrameLayout
+                android:id="@+id/groupIcon_fl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/groupIcon"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_80"
+
+                    android:layout_marginStart="@dimen/dp_13"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:layout_marginTop="@dimen/dp_13"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:layout_marginRight="@dimen/dp_8"
+                    android:layout_marginBottom="@dimen/dp_13"
+                    android:foreground="@drawable/ripple_selector"
+                    android:scaleType="centerCrop"
+
+                    app:srcCompat="@drawable/chat_attachment_profile_default_image_frame" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/delete"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+
+
+                    android:layout_marginStart="@dimen/dp_76"
+                    android:layout_marginLeft="@dimen/dp_76"
+                    android:layout_marginTop="@dimen/dp_66"
+                    android:background="@drawable/circle_close"
+                    android:elevation="@dimen/dp_2"
+                    android:foreground="@drawable/ripple_selector"
+                    android:tint="@color/color_black"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/cancel_normal"
+
+                    />
+            </FrameLayout>
+
+            <github.ankushsachdeva.emojicon.EmojiconEditText
+                android:id="@+id/et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:layout_marginTop="@dimen/dimen_45dp"
+
+                android:layout_toStartOf="@+id/maxLength"
+
+
+                android:layout_toLeftOf="@+id/maxLength"
+                android:layout_toEndOf="@+id/groupIcon_fl"
+                android:layout_toRightOf="@+id/groupIcon_fl"
+                android:background="@color/tw__transparent"
+                android:fontFamily="Sans serif"
+                android:hint="@string/GroupSubject"
+                android:inputType="textCapSentences|textAutoCorrect"
+                android:maxLength="25"
+                android:maxLines="1"
+                android:paddingStart="@dimen/dp_2"
+                android:paddingLeft="@dimen/dp_2"
+                android:paddingEnd="@dimen/dp_3"
+                android:paddingRight="@dimen/dp_3"
+                android:textColor="@color/lblFromName"
+                android:textSize="@dimen/big">
+
+            </github.ankushsachdeva.emojicon.EmojiconEditText>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_below="@+id/et"
+                android:layout_alignStart="@+id/et"
+                android:layout_alignLeft="@+id/et"
+                android:layout_alignEnd="@+id/maxLength"
+                android:layout_alignRight="@+id/maxLength"
+                android:layout_marginTop="@dimen/dp_2"
+                android:background="@color/color_gray_chatscreen">
+
+            </View>
+
+            <TextView
+                android:id="@+id/maxLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/rl2"
+
+
+                android:layout_toStartOf="@+id/rl2"
+                android:layout_toLeftOf="@+id/rl2"
+
+                android:text="@string/twenty_five"
+                android:textColor="@color/lblFromName"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="@dimen/dp_13"
+                android:layout_marginLeft="@dimen/dp_13"
+                android:layout_marginTop="@dimen/dp_45"
+                android:layout_marginEnd="@dimen/dp_13"
+                android:layout_marginRight="@dimen/dp_13">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/emojiButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:foreground="@drawable/ripple_selector"
+                    android:src="@drawable/ic_msg_panel_smiles"
+                    android:tint="@color/color_gray_chatscreen" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/chat_keyboard_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:foreground="@drawable/ripple_selector"
+                    android:tint="@color/color_gray_chatscreen"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/chat_keyboard_icon" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/groupIcon_fl"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginLeft="@dimen/dp_16"
+
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_32"
+
+                android:text="@string/ProvideSubject"
+                android:textColor="@color/color_gray_chatscreen"
+                android:textSize="@dimen/small"
+
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl1">
+
+
+            <TextView
+
+
+                android:id="@+id/participantCount"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_18"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/participant"
+                android:textColor="@color/lblFromName"
+                android:textSize="@dimen/small" />
+
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="@dimen/dp_56"
+            android:layout_height="@dimen/dp_56"
+
+
+            android:layout_alignBottom="@+id/rl1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+
+            android:layout_marginBottom="@dimen/minus_28"
+            android:clickable="true"
+            android:tint="@color/color_white"
+            app:backgroundTint="@color/colorPrimary"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_done_black_24px" />
+
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvContactsSelected"
+        android:layout_width="match_parent"
+
+
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl" />
+
+</RelativeLayout>

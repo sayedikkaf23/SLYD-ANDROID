@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#70712989">
+
+    <!-- For generation of the dummy thumbnail images -->
+    <chat.hola.com.app.DublyCamera.CameraInFragments.Filters.CustomGPUImageView
+        android:id="@+id/dummy"
+        android:layout_marginTop="@dimen/dp__100"
+        android:layout_marginStart="@dimen/dp__100"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:visibility="visible"
+         />
+
+    <!--android:background="#11000000"-->
+    <include
+        android:id="@+id/image_edit_layout"
+        layout="@layout/image_editing_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rL_edit"
+        android:visibility="gone"
+        android:layout_above="@+id/rL_caption"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_40"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/trans_black">
+        <!--Two buttons for filter and tools-->
+        <LinearLayout
+            android:id="@+id/ll_buttons"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iV_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_story_filter"/>
+
+            <ImageView
+                android:id="@+id/iV_tools"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_story_tools"/>
+
+        </LinearLayout>
+
+        <!--Main Filters Views-->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/mainFiltersView"
+            android:layout_below="@+id/ll_buttons"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--filter list data-->
+                <LinearLayout
+                    android:id="@+id/ll_filters"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_all_filters_filter_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/dp_5" />
+                </LinearLayout>
+                <!--End of filter list data -->
+
+                <!--Edit filter list data-->
+                <LinearLayout
+                    android:id="@+id/ll_tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_all_tools_tool_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/dp_5" />
+
+
+                </LinearLayout>
+
+                <!--SeekBar-->
+                <RelativeLayout
+                    android:id="@+id/rl_seekbar_filter_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:background="@color/color_white">
+
+
+                    <chat.hola.com.app.DublyCamera.CameraInFragments.Filters.HelperClasses.RangeSeekBar
+                        android:id="@+id/sb_filters_filter_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:max="100"
+                        app:singleThumb="true" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRangeMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sb_filters_filter_image"
+                        android:textColor="@color/unselected_text_color"
+                        android:textSize="@dimen/sp_12"
+                        android:layout_marginTop="@dimen/dp_13"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginBottom="@dimen/dp_3"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRangeMedian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sb_filters_filter_image"
+                        android:textColor="@color/unselected_text_color"
+                        android:textSize="@dimen/sp_12"
+                        android:layout_marginTop="@dimen/dp_13"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/dp_3"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRangeMax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sb_filters_filter_image"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/unselected_text_color"
+                        android:textSize="@dimen/sp_10"
+                        android:layout_marginTop="@dimen/dp_13"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:layout_marginBottom="@dimen/dp_3"
+                        />
+
+                </RelativeLayout>
+
+                <!--Don filter layout-->
+                <LinearLayout
+                    android:id="@+id/ll_cancel_done_filter_image" android:layout_below="@+id/rl_seekbar_filter_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:background="@color/color_white"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/ll_cancel_filter_image"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/CANCEL"
+                            android:textColor="@color/unselected_text_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_done_filter_image"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/DONE"
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+    <!--caption view-->
+    <RelativeLayout
+        android:id="@+id/rL_caption"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/trans_black">
+
+        <!--Caption-->
+        <EditText
+            android:id="@+id/eT_caption"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="@string/add_caption"
+            android:padding="@dimen/eight_dp"
+            android:textColor="@color/color_white"
+            android:textColorHint="@color/whiteOverlay"
+            android:textSize="@dimen/big"
+            android:maxLength="50"/>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/ivNext"
+            android:layout_width="@dimen/dp_220"
+            android:layout_height="@dimen/dp_220"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/dp_20"
+            android:tint="@color/color_white"
+            android:visibility="visible"
+            app:backgroundTint="@color/base_color"
+            app:srcCompat="@drawable/send" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

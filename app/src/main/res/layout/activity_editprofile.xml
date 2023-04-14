@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/actionBarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:elevation="@dimen/two_dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/five_dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_settings"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/dp_5"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:text="@string/Profile1"
+                android:textColor="@color/color_text_black"
+                android:textSize="@dimen/big"
+                android:visibility="visible"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:id="@+id/ivBack"
+                style="?actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+
+        </RelativeLayout>
+
+
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="?actionButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/Cancel"
+            android:textAlignment="textStart"
+            android:textColor="@color/mineShaft"
+            android:textSize="@dimen/big"
+            tools:ignore="RtlCompat"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:gravity="center"
+            android:text="@string/EditProfile"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title"
+            android:visibility="gone"/>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        style="?actionButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical|end"
+        android:text="@string/Save"
+        android:textAlignment="textEnd"
+        android:textColor="@color/mineShaft"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_5"
+        android:textSize="@dimen/big"
+        android:visibility="gone"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@+id/actionBarRl"
+        android:background="#e5e5e5" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seperator"
+        android:orientation="vertical">
+
+        <!--profile pic-->
+        <RelativeLayout
+            android:id="@+id/rl_profilepic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:gravity="center_horizontal">
+
+            <FrameLayout
+                android:id="@+id/flAddProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/ten_dp">
+
+
+                <ImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_100"
+                    android:layout_gravity="center"
+                    android:foreground="@drawable/pic_with_white_stroke"
+                    android:src="@drawable/profile_one" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAdd"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:background="@drawable/circle_close"
+                    android:elevation="@dimen/dp_2"
+                    android:foreground="@drawable/ripple_selector"
+                    android:padding="@dimen/dp_5"
+                    android:tint="@color/color_black"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_add_a_photo_black_24dp"
+                    app:tint="@color/colorPrimary" />
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <!--Personal profile fields-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_profilepic"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llPersonalDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twenty_dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/sp_15">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/ic_arrow_right_gray"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/first_name"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:theme="@style/TextLabel" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/sp_15">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_arrow_right_gray"
+                        android:hint="@string/last_name"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:inputType="none"
+                        android:clickable="true"
+                        android:maxLines="1"
+                        android:theme="@style/TextLabel" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/sp_15">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:digits="@string/digits_small"
+                        android:drawableEnd="@drawable/ic_arrow_right_gray"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/UsernameStr"
+                        android:inputType="none"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:theme="@style/TextLabel" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/titleStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/sp_15">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/ic_arrow_right_gray"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/about"
+                        android:inputType="none"
+                        android:maxLength="100"
+                        android:maxLines="5"
+                        android:theme="@style/TextLabel" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <!--phone-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/titlePhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:textSize="@dimen/sp_15">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/ic_arrow_right_gray"
+                        android:focusable="false"
+                        android:hint="@string/phone"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/black"
+                        android:theme="@style/TextLabel" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/actionBarRl"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <!--banner-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivProfileBg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/profile_background_size"
+                        android:background="@drawable/default_cover_photo"
+                        android:scaleType="fitXY"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivChangeCover"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"
+                        android:background="@drawable/circle_close"
+                        android:elevation="@dimen/dp_2"
+                        android:padding="@dimen/dp_5"
+                        android:tint="@color/color_black"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_add_a_photo_black_24dp"
+                        app:tint="@color/star_grey" />
+
+
+                </RelativeLayout>
+
+                <!--profile pic-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_130"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:gravity="center_horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/flAddProfiles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/ten_dp">
+
+
+                        <ImageView
+                            android:id="@+id/ivProfiles"
+                            android:layout_width="@dimen/dp_100"
+                            android:layout_height="@dimen/dp_100"
+                            android:layout_gravity="center"
+                            android:src="@drawable/profile_one"
+                            android:foreground="@drawable/pic_with_white_stroke" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivAdds"
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_gravity="bottom|right"
+                            android:layout_marginTop="@dimen/dp_15"
+                            android:background="@drawable/circle_close"
+                            android:elevation="@dimen/dp_2"
+                            android:foreground="@drawable/ripple_selector"
+                            android:padding="@dimen/dp_5"
+                            android:tint="@color/color_black"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/ic_add_a_photo_black_24dp"
+                            app:tint="@color/colorPrimary" />
+                    </FrameLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!--Personal profile fields-->
+                <LinearLayout
+                    android:id="@+id/llPersonalDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilNames"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/sp_15">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNames"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_right_gray"
+                            android:hint="@string/first_name"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:inputType="none"
+                            android:clickable="true"
+                            android:maxLines="1"
+                            android:theme="@style/TextLabel" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilLastNames"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/sp_15">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etLastNames"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_right_gray"
+                            android:hint="@string/last_name"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:inputType="none"
+                            android:clickable="true"
+                            android:maxLines="1"
+                            android:theme="@style/TextLabel" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilUserNames"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/sp_15">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etUsernames"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/digits_small"
+                            android:drawableEnd="@drawable/ic_arrow_right_gray"
+                            android:hint="@string/UsernameStr"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:inputType="none"
+                            android:clickable="true"
+                            android:maxLength="20"
+                            android:maxLines="1"
+                            android:theme="@style/TextLabel" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/titleStatuss"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/sp_15">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etStatuss"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_right_gray"
+                            android:focusable="false"
+                            android:hint="@string/bio"
+                            android:focusableInTouchMode="false"
+                            android:inputType="none"
+                            android:clickable="true"
+                            android:maxLength="100"
+                            android:maxLines="5"
+                            android:theme="@style/TextLabel" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/titleEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/sp_15">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_arrow_right_gray"
+                            android:focusable="false"
+                            android:hint="@string/EmailAddress"
+                            android:focusableInTouchMode="false"
+                            android:inputType="none"
+                            android:clickable="true"
+                            android:maxLines="1"
+                            android:theme="@style/TextLabel" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--phone-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/titlePhones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:textSize="@dimen/sp_15">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPhones"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableEnd="@drawable/ic_arrow_right_gray"
+                            android:focusable="false"
+                            android:inputType="none"
+                            android:hint="@string/phone"
+                            android:maxLines="1"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:theme="@style/TextLabel" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!--Star Profile fields-->
+                    <LinearLayout
+                        android:id="@+id/llStar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilKnownAs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_15"
+                            android:layout_marginLeft="@dimen/dp_15"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:layout_marginEnd="@dimen/dp_15"
+                            android:layout_marginRight="@dimen/dp_15"
+                            android:textSize="@dimen/sp_15">
+
+                            <!-- /*
+                                * Bug Title: In star profile, not able to type letter c in known as
+                                * & known as should open a new page like other fields , keep it uniform please
+                                * Bug Id: #2703 & #2784
+                                * Fix Desc: set digits
+                                * Fix Dev: Hardik & Shakti
+                                * Fix Date: 22&23/6/21
+                                * */-->
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etKnownAs"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="@string/digits_both"
+                                android:drawableEnd="@drawable/ic_arrow_right_gray"
+                                android:hint="@string/known_as"
+                                android:focusableInTouchMode="false"
+                                android:inputType="none"
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:maxLength="20"
+                                android:maxLines="1"
+                                android:theme="@style/TextLabel" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvProfileDetailsChangePass"
+                        style="@style/Text.12sp.BaseAppColor.poppinsRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_25"
+                        android:layout_marginTop="@dimen/dp_15"
+                        android:layout_marginBottom="@dimen/dimen_5dp"
+                        android:background="@drawable/square_round_silver_border"
+                        android:paddingStart="@dimen/ten_dp"
+                        android:paddingTop="@dimen/eight_dp"
+                        android:paddingEnd="@dimen/ten_dp"
+                        android:paddingBottom="@dimen/eight_dp"
+                        android:text="@string/change_password"
+                        app:layout_constraintTop_toBottomOf="@+id/tilProfileDetailsMob" />
+
+                </LinearLayout>
+
+                <!--Business Profile-->
+                <LinearLayout
+                    android:id="@+id/llBusiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <!--business username-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilBusinessUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:textSize="@dimen/sp_15">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etBusinessUserName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:digits="@string/digits_small"
+                            android:drawableEnd="@drawable/ic_arrow_right_gray"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="@string/business_userName"
+                            android:inputType="none"
+                            android:maxLength="15"
+                            android:maxLines="1"
+                            android:textColor="@color/star_black"
+                            android:theme="@style/TextLabel" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--business name-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilBusinessName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:textSize="@dimen/sp_15">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etBusinessName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableEnd="@drawable/ic_arrow_right_gray"
+                            android:focusable="false"
+                            android:hint="@string/business_name"
+                            android:inputType="none"
+                            android:maxLines="1"
+                            android:textColor="@color/star_black"
+                            android:theme="@style/TextLabel" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--business description-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/titleBusinessBio"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:textSize="@dimen/sp_15">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etBusinessBio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableEnd="@drawable/ic_arrow_right_gray"
+                            android:focusable="false"
+                            android:hint="@string/business_description"
+                            android:inputType="none"
+                            android:maxLines="3"
+                            android:textColor="@color/star_black"
+                            android:theme="@style/TextLabel" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--business website-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/titleBusinessWebsite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:textSize="@dimen/sp_15">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etBusinessWebsite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableEnd="@drawable/ic_arrow_right_gray"
+                            android:focusable="false"
+                            android:hint="@string/business_website"
+                            android:inputType="none"
+                            android:maxLines="1"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:theme="@style/TextLabel" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--business category-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/titleBusinessCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:textSize="@dimen/sp_15">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etBusinessCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableEnd="@drawable/ic_arrow_right_gray"
+                            android:focusable="false"
+                            android:hint="@string/business_category"
+                            android:inputType="none"
+                            android:maxLines="1"
+                            android:textColor="@color/star_black"
+                            android:theme="@style/TextLabel" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--business email-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/titleBusinessEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:textSize="@dimen/sp_15">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etBusinessEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableEnd="@drawable/ic_arrow_right_gray"
+                            android:focusable="false"
+                            android:hint="@string/business_email"
+                            android:inputType="none"
+                            android:maxLines="1"
+                            android:theme="@style/TextLabel" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--business phone-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/titleBusinessPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:textSize="@dimen/sp_15">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etBusinessPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableEnd="@drawable/ic_arrow_right_gray"
+                            android:focusable="false"
+                            android:inputType="none"
+                            android:hint="@string/business_contact"
+                            android:maxLines="1"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:theme="@style/TextLabel" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--business address-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/titleBusinessAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:textSize="@dimen/sp_15">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etBusinessAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableEnd="@drawable/ic_arrow_right_gray"
+                            android:focusable="false"
+                            android:hint="@string/business_address"
+                            android:inputType="none"
+                            android:maxLines="3"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:theme="@style/TextLabel" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!--switch account-->
+                <RelativeLayout
+                    android:id="@+id/rlSwitchAccountPrivacy"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:paddingStart="@dimen/dp_20"
+                    android:paddingEnd="@dimen/dp_20">
+
+                    <TextView
+                        android:id="@+id/private_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/switch_account_privacy"
+                        android:textColor="@color/base_color"
+                        android:textSize="@dimen/medium"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/isPrivate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:button="@drawable/custom_switch"
+                        android:checked="true"
+                        android:thumb="@null"
+                        app:track="@null" />
+
+                    <TextView
+                        android:id="@+id/message1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/private_title"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="@string/switch_account_message"
+                        android:textSize="@dimen/medium" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+<!--    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+<!--        android:id="@+id/adView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        ads:adSize="BANNER"-->
+<!--        ads:adUnitId="@string/banner_id" />-->
+
+</RelativeLayout>

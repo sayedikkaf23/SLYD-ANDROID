@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <item
+        android:id="@+id/status"
+        android:icon="@drawable/menu_status"
+        android:title=""
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/menu_message"
+        android:title=""
+        app:showAsAction="always" />
+
+<!--    <item-->
+<!--        android:id="@+id/messages"-->
+<!--        android:icon="@drawable/menu_message"-->
+<!--        android:title=""-->
+<!--        app:showAsAction="always" />-->
+
+
+    <item
+        android:id="@+id/call"
+        android:icon="@drawable/menu_call"
+        android:title=""
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/menu_profile"
+        android:title=""
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/menu_settings"
+        android:title=""
+        app:showAsAction="always" />
+
+
+</menu>

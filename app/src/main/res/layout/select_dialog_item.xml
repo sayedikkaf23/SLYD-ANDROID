@@ -1,0 +1,12 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/medium"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:textColor="?android:attr/textColorAlertDialogListItem"
+    android:gravity="center_vertical"
+    android:paddingStart="@dimen/dip_14"
+    android:paddingEnd="@dimen/dip_15"
+    android:ellipsize="marquee" />

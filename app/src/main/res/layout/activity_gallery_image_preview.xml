@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:background="@color/color_black">
+
+
+            <ImageView
+                android:id="@+id/iv_picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/Image" />
+
+            <jp.co.cyberagent.android.gpuimage.GPUImageView
+                android:id="@+id/iv_picture_filter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/Image" />
+
+            <chat.hola.com.app.motionView.motionviews.widget.MotionView
+                android:id="@+id/main_motion_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_centerInParent="true"
+                android:background="@color/transparent" />
+
+            <RelativeLayout
+                android:id="@+id/draw_doodle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:visibility="gone" />
+
+
+            <View
+                android:id="@+id/swipe_for_filter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+        <include
+            android:id="@+id/image_edit_layout_header"
+            layout="@layout/image_edit_layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+
+        <ProgressBar
+            android:id="@+id/pb_sending_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/main_motion_text_entity_edit_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_edit_layout_header"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/text_entity_font_size_decrease"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_neg_1" />
+
+            <ImageButton
+                android:id="@+id/text_entity_font_size_increase"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_plus_1" />
+
+            <ImageButton
+                android:id="@+id/text_entity_font_change"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_text_fields" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/text_entity_edit"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_mode_edit" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/select_colour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_motion_text_entity_edit_panel"
+
+            android:layout_alignParentEnd="true"
+            android:background="@color/transparent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/blackColour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/doodle_colourselector1"
+                android:clickable="true" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/blueColour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/doodle_colourselector2"
+                android:clickable="true" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/greenColour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/doodle_colourselector3"
+                android:clickable="true" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/redColour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/doodle_colourselector4"
+                android:clickable="true"
+
+                />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/trans_black">
+
+                <EditText
+                    android:id="@+id/eT_caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="@string/add_caption"
+                    android:padding="@dimen/eight_dp"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/whiteOverlay"
+                    android:textSize="@dimen/big"
+                    android:maxLength="50"/>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|end">
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/ivNext"
+                android:layout_width="@dimen/dp_220"
+                android:layout_height="@dimen/dp_220"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/dp_20"
+                android:tint="@color/color_white"
+                android:visibility="visible"
+                app:backgroundTint="@color/base_color"
+                app:srcCompat="@drawable/ic_next_arrow_icon" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

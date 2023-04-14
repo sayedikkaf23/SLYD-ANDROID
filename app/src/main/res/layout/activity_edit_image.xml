@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black">
+
+    <FrameLayout
+        android:id="@+id/fl_canvas_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <chat.hola.com.app.Utilities.TouchImageView
+            android:id="@+id/imgDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+
+            />
+    </FrameLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="@dimen/dp_5"
+        android:padding="@dimen/dp_10"
+        android:tint="@color/color_white"
+        app:srcCompat="@drawable/arrow_back_black" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        >
+
+        <ImageView
+            android:id="@+id/iv_add_sticker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_msg_panel_smiles"
+            android:layout_gravity="center_vertical"
+            android:tint="@color/color_white"
+            android:layout_margin="@dimen/dp_10"
+            android:contentDescription="@string/Image"
+            />
+
+        <TextView
+            android:id="@+id/tv_add_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T"
+            android:textColor="@color/color_white"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/sp_23"
+            android:layout_margin="@dimen/dp_10"
+            />
+
+        <ImageView
+            android:id="@+id/iv_draw_doodle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/brush_icn"
+            android:layout_gravity="center_vertical"
+            android:tint="@color/color_white"
+            android:layout_margin="@dimen/dp_10"
+            android:contentDescription="@string/Image"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

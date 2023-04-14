@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/base_color_dark"
+    android:orientation="horizontal">
+    <!--android:background="#B063affc"-->
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/backButton"
+        style="?actionButtonStyle"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:foreground="@drawable/ripple_selector"
+        android:layout_marginLeft="@dimen/dp_10"
+        app:srcCompat="@drawable/ic_back_new" />
+
+    <FrameLayout
+        android:id="@+id/profileImageChatScreen"
+        android:layout_width="@dimen/dp_54"
+        android:layout_height="@dimen/dp_54"
+        android:layout_centerVertical="true"
+
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_toEndOf="@+id/backButton"
+        android:layout_toRightOf="@+id/backButton"
+        android:foreground="@drawable/ripple_selector">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imv"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            />
+
+        <!--<TextView-->
+        <!--android:id="@+id/profileText"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:textAllCaps="true"-->
+        <!--android:textColor="@color/mineShaft"-->
+        <!--android:textSize="18dp"-->
+        <!--android:textStyle="bold" />-->
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iV_star"
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/dp_6"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_star_badge_new"
+
+            />
+
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+
+        android:id="@+id/header_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_toStartOf="@+id/initiateCall"
+        android:layout_toLeftOf="@+id/initiateCall"
+        android:layout_toEndOf="@+id/profileImageChatScreen"
+        android:layout_toRightOf="@+id/profileImageChatScreen"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/receiverName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/dp_12"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small" />
+
+
+        <TextView
+            android:id="@+id/onlineStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/receiverName"
+            android:layout_marginTop="@dimen/dp_3"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/headerReceiverName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_toStartOf="@+id/initiateVideoCall"
+        android:layout_toLeftOf="@+id/initiateVideoCall"
+        android:layout_toEndOf="@+id/profileImageChatScreen"
+        android:layout_toRightOf="@+id/profileImageChatScreen"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/medium" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/initiateVideoCall"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/initiateAudioCall"
+        android:layout_toLeftOf="@+id/initiateAudioCall"
+        android:layout_marginRight="@dimen/dp_20"
+        app:srcCompat="@drawable/ic_video_call" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/initiateAudioCall"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_toStartOf="@+id/attachment11"
+        android:layout_toLeftOf="@+id/attachment11"
+        app:srcCompat="@drawable/ic_audio_call" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/attachment11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/more"
+        android:layout_toLeftOf="@+id/more"
+        android:foreground="@drawable/ripple_selector"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingLeft="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15"
+        android:tint="@color/base_color"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_attachment" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:foreground="@drawable/ripple_selector"
+        android:paddingStart="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingEnd="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15"
+        android:tint="@color/base_color"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_more" />
+
+</RelativeLayout>
+

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorHintOfRed"
+
+
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:text="@string/NewName"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/close"
+            style="?actionButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:foreground="@drawable/ripple_selector"
+            android:tint="@color/color_tint"
+            app:srcCompat="@drawable/cancel_white" />
+
+        <RelativeLayout
+
+            android:id="@+id/rl7"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="?actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:foreground="@drawable/ripple_selector"
+                android:tint="@color/color_tint"
+                app:srcCompat="@drawable/ic_check_black_24dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar"
+
+        android:layout_marginBottom="@dimen/dp_32"
+        android:background="#e5e5e5"
+
+
+        />
+
+    <!--
+
+     Have to cover this in the text input layout
+
+    -->
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_name2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/seperator"
+
+        android:layout_marginStart="@dimen/dp_13"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:layout_toStartOf="@+id/rl2"
+
+
+        android:layout_toLeftOf="@+id/rl2">
+
+
+        <!--android:hint="@string/EnterName"-->
+
+        <github.ankushsachdeva.emojicon.EmojiconEditText
+            android:id="@+id/et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="Sans serif"
+            android:inputType="textCapSentences|textAutoCorrect|textMultiLine"
+            android:maxLines="5"
+            android:paddingStart="@dimen/dp_2"
+            android:paddingLeft="@dimen/dp_2"
+            android:paddingEnd="@dimen/dp_2"
+            android:paddingRight="@dimen/dp_2"
+            android:scrollHorizontally="false"
+            android:textColor="@color/lblFromName"
+            android:textSize="@dimen/big"
+            android:theme="@style/TextLabel">
+
+        </github.ankushsachdeva.emojicon.EmojiconEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_alignEnd="@+id/input_layout_name2"-->
+    <!--android:layout_alignLeft="@+id/input_layout_name2"-->
+    <!--android:layout_alignRight="@+id/input_layout_name2"-->
+    <!--android:layout_alignStart="@+id/input_layout_name2"-->
+    <!--android:layout_below="@+id/input_layout_name2"-->
+    <!--android:background="@color/color_gray_chatscreen">-->
+
+    <!--</View>-->
+
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seperator"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_13"
+        android:layout_marginRight="@dimen/dp_13">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/emojiButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/sixteen_sp"
+            android:foreground="@drawable/ripple_selector"
+            android:src="@drawable/ic_msg_panel_smiles"
+            android:tint="@color/color_gray_chatscreen" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/chat_keyboard_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/ripple_selector"
+            android:tint="@color/color_gray_chatscreen"
+            android:visibility="gone"
+            app:srcCompat="@drawable/chat_keyboard_icon" />
+
+    </RelativeLayout>
+</RelativeLayout>

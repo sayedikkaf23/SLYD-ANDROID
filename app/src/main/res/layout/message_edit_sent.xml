@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/message_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+
+    android:layout_marginTop="@dimen/dp_5"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginStart="@dimen/dp_5"
+            android:tint="@color/color_gray_chatscreen"
+            app:srcCompat="@drawable/ic_edit_black_24px" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/forward_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:background="@drawable/reply_circle"
+            android:clickable="true"
+            android:layout_margin="@dimen/five_dp"
+            android:padding="@dimen/dp_7"
+            android:tint="@color/color_white"
+            app:srcCompat="@drawable/ic_reply_black_24px" />
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_75"
+            android:layout_marginStart="@dimen/dp_75"
+            android:background="@drawable/balloon_outgoing_normal">
+
+
+            <TextView
+                android:id="@+id/txtMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_8"
+                android:paddingEnd="@dimen/dp_13"
+                android:paddingLeft="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_13"
+                android:paddingStart="@dimen/dp_5"
+                android:textColor="@color/star_black"
+                android:textSize="@dimen/sp_16" />
+
+
+            <TextView
+                android:id="@+id/ts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/txtMsg"
+
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_2"
+                android:layout_toEndOf="@+id/comma"
+                android:layout_toRightOf="@+id/comma"
+                android:text="@string/time"
+                android:textColor="@color/star_grey"
+                android:textSize="@dimen/sp_10"
+                android:textStyle="italic"
+
+                />
+
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txtMsg"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginLeft="@dimen/dp_8"
+
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_2"
+                android:text=""
+
+                android:textColor="@color/star_grey"
+                android:textSize="@dimen/sp_10"
+                android:textStyle="italic"
+
+                />
+
+
+            <TextView
+                android:id="@+id/comma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtMsg"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_2"
+                android:layout_toEndOf="@+id/date"
+
+
+                android:layout_toRightOf="@+id/date"
+
+                android:text="@string/comma"
+                android:textColor="@color/star_grey"
+                android:textSize="@dimen/sp_10"
+                android:textStyle="italic"
+
+                />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/single_tick_green"
+                android:layout_width="@dimen/dp_12"
+                android:layout_height="@dimen/dp_12"
+
+                android:layout_below="@+id/txtMsg"
+                android:layout_marginBottom="@dimen/dp_3"
+
+
+                android:layout_marginEnd="@dimen/dp_8"
+                android:layout_marginLeft="@dimen/dp_5"
+
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_toEndOf="@+id/ts"
+
+                android:layout_toRightOf="@+id/ts"
+                android:background="@drawable/ic_single_tick"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/clock"
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_10"
+
+                android:layout_below="@+id/txtMsg"
+                android:layout_marginBottom="@dimen/dp_1"
+
+                android:layout_marginEnd="@dimen/dp_8"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_toEndOf="@+id/ts"
+                android:layout_toRightOf="@+id/ts"
+
+                android:background="@drawable/clock"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/double_tick_green"
+                android:layout_width="@dimen/dp_12"
+                android:layout_height="@dimen/dp_12"
+                android:layout_below="@+id/txtMsg"
+                android:layout_marginBottom="@dimen/dp_2"
+
+                android:layout_marginEnd="@dimen/dp_8"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_toEndOf="@+id/ts"
+                android:layout_toRightOf="@+id/ts"
+                android:background="@drawable/ic_double_tick"
+                android:visibility="gone" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/double_tick_blue"
+                android:layout_width="@dimen/dp_12"
+                android:layout_height="@dimen/dp_12"
+                android:layout_below="@+id/txtMsg"
+                android:layout_marginBottom="@dimen/dp_2"
+
+                android:layout_marginEnd="@dimen/dp_8"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_8"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_toEndOf="@+id/ts"
+
+                android:layout_toRightOf="@+id/ts"
+
+
+                android:src="@drawable/ic_double_tick"
+                android:tint="@color/chat_blue_tick"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/pic"
+            android:layout_width="@dimen/dp_36"
+            android:layout_height="@dimen/dp_36"
+            android:layout_marginTop="@dimen/dp_5"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+
+

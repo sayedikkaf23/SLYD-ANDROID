@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+        <!-- enable window content transitions -->
+        <item name="android:windowContentTransitions">true</item>
+
+        <!-- specify enter and exit transitions -->
+        <!-- options are: explode, slide, fade -->
+        <item name="android:windowEnterTransition">@transition/change_image_transform</item>
+        <item name="android:windowExitTransition">@transition/change_image_transform</item>
+
+        <!-- specify shared element transitions -->
+        <item name="android:windowSharedElementEnterTransition">
+            @transition/change_image_transform
+        </item>
+        <item name="android:windowSharedElementExitTransition">
+            @transition/change_image_transform
+        </item>
+    </style>
+
+    <style name="Text.12sp.Black.PoppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.12sp.AppColor.PoppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/allEastBayColor</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+    <style name="Text.20sp.Black.PoppinsBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorProductNeroTitle</item>
+        <item name="android:textSize">@dimen/sp_20</item>
+    </style>
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/yellow</item>
+        <item name="colorControlActivated">@color/yellow</item>
+    </style>
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/white</item>
+    </style>
+
+</resources>

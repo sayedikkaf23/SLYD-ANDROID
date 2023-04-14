@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<item-->
+        <!--android:id="@+id/actionDiscoverPpl"-->
+        <!--android:icon="@drawable/ic_discover"-->
+        <!--android:title="@string/DiscoverPeople"-->
+        <!--app:showAsAction="never" />-->
+
+    <item
+        android:id="@+id/actionSavedPost"
+        android:checked="false"
+        android:iconTint="@color/color_black"
+        android:icon="@drawable/menu_saved_post"
+        android:title="@string/menuSavedPost" />
+
+    <item
+        android:id="@+id/actionActivity"
+        android:checked="false"
+        android:iconTint="@color/color_black"
+        android:icon="@drawable/ic_notifications"
+        android:title="@string/menuActivity" />
+
+    <item
+        android:id="@+id/actionHistory"
+        android:checked="false"
+        android:visible="false"
+        android:iconTint="@color/color_black"
+        android:icon="@drawable/menu_history"
+        android:title="@string/menuHistory" />
+
+    <item
+        android:id="@+id/actionWallet"
+        android:checked="false"
+        android:iconTint="@color/color_black"
+        android:icon="@drawable/menu_wallet"
+        android:title="@string/menuWallet" />
+
+    <item
+        android:id="@+id/actionCard"
+        android:checked="false"
+        android:visible="false"
+        android:iconTint="@color/color_black"
+        android:icon="@drawable/menu_card"
+        android:title="@string/menuCard" />
+
+    <item
+        android:id="@+id/actionAddress"
+        android:checked="false"
+        android:visible="false"
+        android:iconTint="@color/color_black"
+        android:icon="@drawable/menu_address"
+        android:title="@string/menuAddress" />
+
+    <item
+        android:id="@+id/actionWishlist"
+        android:checked="false"
+        android:visible="false"
+        android:iconTint="@color/color_black"
+        android:icon="@drawable/menu_wishlist"
+        android:title="@string/menuWishList" />
+
+    <item
+        android:id="@+id/actionHelp"
+        android:checked="false"
+        android:visible="false"
+        android:iconTint="@color/color_black"
+        android:icon="@drawable/menu_help_center"
+        android:title="@string/menuHelpCenter" />
+
+    <item
+        android:id="@+id/actionSettings"
+        android:checked="false"
+        android:iconTint="@color/color_black"
+        android:icon="@drawable/menu_help_center"
+        android:title="@string/Settings" />
+
+
+<!--    *BugId:DUBAND053-->
+<!--    *BugTitle:coins tab added on home menu drawer-->
+<!--    * Developer name:Ankit K Tiwary-->
+<!--    * Fixed date:6April2021-->
+    <item
+    android:id="@+id/actionCoins"
+    android:checked="false"
+    android:icon="@drawable/ic_coin_small"
+    android:title="@string/Coins_text"/>
+
+    <item
+        android:id="@+id/actionFaq"
+        android:checked="false"
+        android:visible="false"
+        android:iconTint="@color/color_black"
+        android:icon="@drawable/menu_faq"
+        android:title="@string/menufaq" />
+</menu>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black">
+
+    <ImageView
+        android:id="@+id/iv_picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/Image"
+        android:scaleType="fitXY" />
+
+    <jp.co.cyberagent.android.gpuimage.GPUImageView
+        android:id="@+id/iv_picture_filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/Image"
+        android:scaleType="fitXY" />
+
+    <chat.hola.com.app.motionView.motionviews.widget.MotionView
+        android:id="@+id/main_motion_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+
+        android:background="@color/transparent" />
+
+    <RelativeLayout
+        android:id="@+id/draw_doodle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:visibility="gone" />
+
+
+    <View
+        android:id="@+id/swipe_for_filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/trans_black">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="@dimen/dp_5"
+            android:padding="@dimen/dp_10"
+            android:tint="@color/color_white"
+            app:srcCompat="@drawable/arrow_back_black" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentEnd="true"
+
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_filter"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/Image"
+                android:padding="@dimen/dp_10"
+                android:tint="@color/blue"
+                app:srcCompat="@drawable/baseline_filter_24px" />
+<!--            android:visibility="gone"-->
+            <ImageView
+                android:id="@+id/iv_undo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/Image"
+                android:padding="@dimen/dp_10"
+                android:tint="@color/color_white"
+                app:srcCompat="@drawable/baseline_undo_24px" />
+
+            <ImageView
+                android:id="@+id/iv_add_sticker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/Image"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/ic_msg_panel_smiles"
+                android:tint="@color/color_white" />
+
+            <TextView
+                android:id="@+id/tv_add_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/dp_10"
+                android:text="@string/t"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/sp_23"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_draw_doodle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/dp_10"
+                android:contentDescription="@string/Image"
+                android:src="@drawable/brush_icn"
+                android:tint="@color/color_white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/main_motion_text_entity_edit_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_action_bar"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/text_entity_font_size_decrease"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_neg_1" />
+
+        <ImageButton
+            android:id="@+id/text_entity_font_size_increase"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_plus_1" />
+
+        <ImageButton
+            android:id="@+id/text_entity_font_change"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_text_fields" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/text_entity_edit"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_mode_edit" />
+
+    </LinearLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/save_and_send_image"
+
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_margin="@dimen/dp_20"
+        android:background="@drawable/send_btn"
+        android:clickable="true" />
+
+
+    <ProgressBar
+        android:id="@+id/pb_sending_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+    <!--android:background="@drawable/download_background"-->
+
+    <LinearLayout
+        android:id="@+id/select_colour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+
+        android:layout_below="@id/main_motion_text_entity_edit_panel"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/blackColour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/doodle_colourselector1"
+            android:clickable="true" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/blueColour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/doodle_colourselector2"
+            android:clickable="true" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/greenColour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/doodle_colourselector3"
+            android:clickable="true" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/redColour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/doodle_colourselector4"
+            android:clickable="true"
+
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

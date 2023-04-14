@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/allBlackTxtColor"
+    android:foreground="?android:attr/selectableItemBackground"
+    >
+
+  <RelativeLayout
+      android:id="@+id/rlAdd"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_marginEnd="@dimen/dp_16"
+      android:layout_marginTop="@dimen/dp_16"
+      android:background="@drawable/button_bg_selector"
+      >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/dp_4"
+        android:paddingEnd="@dimen/dp_15"
+        android:paddingStart="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_4"
+        android:text="@string/add"
+        android:textColor="@color/white"  />
+
+  </RelativeLayout>
+
+  <TextView
+      android:id="@+id/tvUserName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_13"
+      android:layout_marginTop="@dimen/dp_22"
+      android:layout_toEndOf="@+id/ivUserImage"
+      android:layout_toStartOf="@+id/rlAdd"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:text="UserName"
+      android:textColor="@color/white"
+      android:textSize="@dimen/sp_16"
+      />
+  <TextView
+      android:id="@+id/tvUserIdentifier"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvUserName"
+      android:layout_marginEnd="@dimen/dp_13"
+      android:layout_marginTop="@dimen/dp_2"
+      android:layout_toEndOf="@+id/ivUserImage"
+      android:layout_toStartOf="@+id/rlAdd"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:text="UserIdentifier"
+      android:textColor="@color/white"
+      android:textSize="@dimen/sp_14"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivFollower"
+      app:srcCompat="@drawable/gs_ism_ic_follower"
+      android:layout_alignParentEnd="true"
+      android:layout_marginTop="3dp"
+      android:layout_marginEnd="@dimen/dp_28"
+      android:layout_below="@+id/tvUserName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:tint="@color/white"
+      />
+
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/dp_1"
+      android:layout_below="@id/ivUserImage"
+      android:layout_marginStart="@dimen/dp_80"
+      android:layout_marginTop="@dimen/dp_11"
+      android:background="@color/grey"
+      />
+
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivUserImage"
+      android:layout_width="@dimen/dp_60"
+      android:layout_height="@dimen/dp_60"
+      android:layout_marginEnd="@dimen/dp_13"
+      android:layout_marginStart="@dimen/dp_13"
+      android:layout_marginTop="@dimen/dp_13"
+      app:srcCompat="@drawable/default_profile"
+      />
+
+</RelativeLayout>

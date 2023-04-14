@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/actionBarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorHintOfRed"
+        android:elevation="@dimen/two_dp"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/twenty_dp"
+        android:paddingRight="@dimen/twenty_dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            style="?actionButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/five_dp"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            app:liteMode="true" />
+
+    </LinearLayout>
+
+</LinearLayout>

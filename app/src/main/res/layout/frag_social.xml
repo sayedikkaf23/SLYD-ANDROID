@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="user"
+            type="chat.hola.com.app.profileScreen.model.Data" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:id="@+id/root"
+        android:layout_height="match_parent"
+        android:background="@color/whiteOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swiperefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/socialRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_line_gray" />
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <LinearLayout
+                android:id="@+id/llEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@color/whiteOverlay"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/ten_dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/default_images_size"
+                    android:layout_height="@dimen/default_images_size"
+                    android:layout_margin="@dimen/dp_10"
+                    app:srcCompat="@drawable/ic_default_post" />
+
+                <TextView
+                    android:id="@+id/tvEmpty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+                    android:text="@string/no_post"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="@dimen/big" />
+
+                <TextView
+                    android:id="@+id/tvMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/five_dp"
+                    android:text="@string/HomeEmptyMsg"
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="@dimen/small" />
+
+                <Button
+                    android:id="@+id/btnFindPeople"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/five_dp"
+                    android:background="@drawable/follow_all_btn_selector"
+                    android:text="@string/FindPeopleToFollow"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/medium" />
+            </LinearLayout>
+
+            <chat.hola.com.app.models.InternetErrorView
+                android:id="@+id/llNetworkError"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/blurView"
+            android:visibility="gone"
+            android:alpha="0.4"
+            android:background="@color/star_black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <!--Collection bottom sheet-->
+        <FrameLayout
+            android:id="@+id/sheetCollection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:behavior_hideable="true"
+            app:behavior_peekHeight="@dimen/dp_400"
+            app:layout_behavior="@string/bottom_sheet_behavior">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/colorBonJour" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/cBack"
+                        android:visibility="gone"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tint="@color/star_black"
+                        android:src="@drawable/arrow_back_black"/>
+
+                    <TextView
+                        android:id="@+id/cTitle"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp_10"
+                        android:text="@string/save_to"
+                        android:textSize="@dimen/sp_15"
+                        android:textStyle="bold"
+                        android:textColor="@color/star_black"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/iV_newCollection"
+                        android:layout_marginEnd="@dimen/fifteen_dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="@dimen/dp_18"
+                        android:tint="@color/star_black"
+                        android:src="@drawable/ic_plus"/>
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/colorBonJour" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rV_collections"
+                    android:layout_marginStart="@dimen/five_dp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:layout_marginBottom="@dimen/twenty_dp"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/ll_newCollection"
+                    android:visibility="gone"
+                    android:layout_margin="@dimen/twenty_dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iV_cImage"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="@dimen/dp_100"
+                        android:src="@drawable/ic_default"/>
+
+                    <EditText
+                        android:id="@+id/et_cName"
+                        android:layout_margin="@dimen/ten_dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:minWidth="@dimen/dp_30"
+                        android:maxWidth="@dimen/dp_150"
+                        android:textSize="@dimen/small"
+                        android:gravity="center"
+                        android:textColor="@color/star_black"
+                        android:maxLines="1"
+                        android:maxLength="20"
+                        android:fontFamily="@font/sf_pro_regular"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/colorBonJour" />
+
+                <TextView
+                    android:id="@+id/tV_cAction"
+                    android:fontFamily="@font/sf_pro_medium"
+                    android:padding="@dimen/eight_dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/sp_15"
+                    android:textColor="@color/color_black"
+                    android:text="@string/Cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:behavior_hideable="true"
+            app:behavior_peekHeight="@dimen/dp_400"
+            app:layout_behavior="@string/bottom_sheet_behavior">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_gray"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_5"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="@dimen/dp_5"
+                        android:background="@drawable/rounded_rectangle" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp_10"
+                        android:text="@string/ShareTo"
+                        android:textSize="@dimen/sp_15"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/gray_text_darker"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:iconifiedByDefault="true"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/gray_text_darker" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/shareList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/base_color"
+                android:text="@string/done"
+                android:textAllCaps="false"
+                android:textColor="@color/color_white"
+                android:visibility="gone" />
+
+        </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

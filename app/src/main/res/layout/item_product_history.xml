@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clProductItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:paddingTop="@dimen/fifteen_dp"
+            android:paddingBottom="@dimen/fifteen_dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivProductImg"
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="@dimen/dp_70"
+                android:layout_marginStart="@dimen/twenty_dp"
+                app:srcCompat="@drawable/ic_placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProductName"
+                style="@style/Text.14sp.Nero.PoppinsReg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_marginEnd="@dimen/twenty_dp"
+                android:paddingEnd="@dimen/ten_dp"
+                android:maxLines="2"
+                android:textColor="#141414"
+                tools:text="Vehicula Lobortis Fringilla-Tellus Tincidunt"
+                app:layout_constraintEnd_toStartOf="@+id/ivItemNext"
+                app:layout_constraintStart_toEndOf="@+id/ivProductImg"
+                app:layout_constraintTop_toTopOf="@+id/ivProductImg" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProductStatus"
+                style="@style/Text.13sp.colorDoveGrayApprox.PoppinsRegular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_marginEnd="@dimen/twenty_dp"
+                tools:text="Vehicula"
+                app:layout_constraintEnd_toStartOf="@+id/ivItemNext"
+                app:layout_constraintStart_toEndOf="@+id/ivProductImg"
+                app:layout_constraintTop_toBottomOf="@+id/tvProductName" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivItemNext"
+                android:layout_width="@dimen/eight_dp"
+                android:layout_height="@dimen/eight_dp"
+                android:layout_marginEnd="@dimen/twenty_dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvProductStatus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvProductName"
+                app:srcCompat="@drawable/all_right_arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPharmacyItemQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Text.12sp.PoppinsMedium"
+                android:layout_marginEnd="@dimen/twenty_dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvProductStatus"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="X 2"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@+id/tvProductName" />
+
+        <RatingBar
+                android:id="@+id/rbProductRatings"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/thirty_dp"
+                android:layout_marginTop="@dimen/thirty_dp"
+                android:numStars="5"
+                android:rating="0"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:theme="@style/HistoryRatingBar"
+                app:layout_constraintStart_toStartOf="@+id/ivProductImg"
+                app:layout_constraintTop_toBottomOf="@+id/tvProductStatus" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProductReview"
+                style="@style/Text.14sp.EastBay.PoppinsSemiBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/twenty_dp"
+                android:background="?selectableItemBackground"
+                android:text="@string/historyRateNow"
+                android:gravity="end"
+                android:layout_marginStart="@dimen/twenty_dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/rbProductRatings"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rbProductRatings" />
+
+        <androidx.constraintlayout.widget.Group
+                android:id="@+id/vgHistoryProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="tvProductReview,rbProductRatings" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

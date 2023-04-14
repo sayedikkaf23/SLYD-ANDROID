@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layoutActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:elevation="@dimen/two_dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:gravity="center"
+            android:text="Call info"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            style="?actionButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/arrow_back_black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:layout_below="@+id/layoutActionBar"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/userImage"
+                android:layout_width="@dimen/dp_55"
+                android:layout_height="@dimen/dp_55"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_13"
+                android:layout_marginLeft="@dimen/dp_13"
+                android:layout_marginEnd="@dimen/dp_13"
+
+                android:layout_marginRight="@dimen/dp_13"
+                app:srcCompat="@drawable/chat_attachment_profile_default_image_frame" />
+
+
+            <TextView
+                android:id="@+id/usernamecall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/dp_22"
+                android:layout_marginEnd="@dimen/dp_13"
+                android:layout_marginRight="@dimen/dp_13"
+                android:layout_toEndOf="@+id/userImage"
+                android:layout_toRightOf="@+id/userImage"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:maxLines="1"
+                android:text="@string/username"
+                android:textColor="@color/post_username"
+                android:textSize="@dimen/medium" />
+
+            <TextView
+                android:id="@+id/call_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="@+id/usernamecall"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:layout_marginStart="@dimen/dp_3"
+
+                android:layout_marginTop="@dimen/sp_23"
+
+                android:layout_toEndOf="@+id/usernamecall"
+
+
+                android:layout_toLeftOf="@+id/callInfo"
+
+                android:layout_toRightOf="@+id/usernamecall"
+                android:layout_toStartOf="@+id/callInfo"
+                android:ellipsize="end"
+
+                android:maxLines="1"
+                android:text="@string/audio"
+                android:visibility="gone"
+                android:textColor="@color/direct_message"
+                android:textSize="@dimen/sp_15" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/Statuscall"
+                android:layout_width="@dimen/dp_15"
+                android:layout_height="@dimen/dp_15"
+                android:layout_below="@+id/usernamecall"
+                android:layout_marginTop="@dimen/dp_2"
+                android:layout_toEndOf="@+id/userImage"
+                android:tint="@color/direct_message"
+                android:layout_toRightOf="@+id/userImage" />
+
+
+            <TextView
+                android:id="@+id/call_type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:layout_below="@+id/usernamecall"
+                android:layout_marginTop="@dimen/dp_1"
+                android:layout_toEndOf="@+id/Statuscall"
+                android:layout_toRightOf="@+id/Statuscall"
+                android:textColor="@color/direct_message"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tv_calltype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:layout_below="@+id/usernamecall"
+                android:layout_marginTop="@dimen/dp_1"
+                android:layout_toEndOf="@+id/call_type_text"
+                android:layout_toRightOf="@+id/call_type_text"
+                android:textColor="@color/direct_message"
+                android:textSize="@dimen/sp_12" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/callStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usernamecall"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dp_1"
+                android:layout_toEndOf="@+id/userImage"
+                android:layout_toRightOf="@+id/userImage" />
+
+            <!--        <androidx.appcompat.widget.AppCompatImageView-->
+            <!--            android:id="@+id/Statuscall"-->
+            <!--            android:layout_width="@dimen/dp_22"-->
+            <!--            android:layout_height="@dimen/dp_22"-->
+            <!--            android:layout_alignParentEnd="true"-->
+            <!--            android:layout_alignParentRight="true"-->
+            <!--            android:layout_centerVertical="true"-->
+            <!--            android:layout_marginEnd="@dimen/dp_16"-->
+            <!--            android:layout_marginRight="@dimen/dp_16"-->
+            <!--            android:visibility="visible" />-->
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/callInfo"
+                android:layout_width="@dimen/dp_26"
+                android:layout_height="@dimen/dp_26"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_16"
+                android:src="@drawable/ic_info_icon"
+                android:tint="@color/base_color"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/timeingcall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usernamecall"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/dp_2"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:text="today"
+                android:textColor="@color/direct_message"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/callDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timeingcall"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp_2"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:text="0"
+                android:textColor="@color/direct_message"
+                android:textSize="@dimen/sp_12" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_line_gray"
+
+                />
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

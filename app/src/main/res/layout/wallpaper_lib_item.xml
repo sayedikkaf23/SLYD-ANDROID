@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/wallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_280"
+
+        android:background="@color/color_profile"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+
+        android:src="@drawable/home_grid_view_image_icon" />
+
+</RelativeLayout>

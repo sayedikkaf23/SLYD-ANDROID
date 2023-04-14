@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--toolbar-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="top"
+        android:background="@color/white"
+        android:padding="@dimen/dp0"
+        app:layout_collapseMode="pin"
+        app:layout_scrollFlags="scroll"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp0">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:text="@string/withdraw"
+                android:textColor="@color/color_black" />
+
+            <ImageButton
+                android:id="@+id/ibBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:src="?attr/homeAsUpIndicator"
+                android:tint="@color/color_black" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--detail-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_10"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:background="@drawable/top_corner_curved_custom"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tvBalanceAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/dp_90"
+                android:padding="@dimen/dp_3"
+                android:text="@string/balance"
+                android:textAllCaps="false"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/medium" />
+
+            <TextView
+                android:id="@+id/tvBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvBalanceAmount"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:padding="@dimen/dp_5"
+                android:text="@string/bal_zero"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/sp_32"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvWithdrawLogs"
+                android:layout_width="@dimen/dp_200"
+                android:layout_height="@dimen/dp_50"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_90"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/custom_white_border"
+                android:gravity="center"
+                android:padding="@dimen/dp_10"
+                android:text="@string/withdrawlogs"
+                android:textAllCaps="false"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/small"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!--        <include-->
+        <!--            layout="@layout/activity_withdraw_methods"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="@dimen/dp_1_0_5" />-->
+
+        <LinearLayout
+            android:id="@+id/llAddBankAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bank_account_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivbankImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_8"
+                android:padding="@dimen/dp_8"
+                android:src="@drawable/ic_bank_new" />
+
+            <TextView
+                android:id="@+id/tvaddBankAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_6"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:drawableEnd="@drawable/ic_next_arrow_icon"
+                android:drawableTint="@color/color_black"
+                android:text="Bank Accounts"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/big" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_3"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@drawable/bottom_corner_curved_custom"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnWithdraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="105dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/blue_curved_border"
+                android:backgroundTint="@color/color_white"
+                android:text="@string/withdraw"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:src="@drawable/ic_no_withdraw" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="@string/no_withdrawal_logs"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/medium"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:gravity="center"
+            android:text="@string/tv_desc"
+            android:textColor="@color/gray1"
+            android:textSize="@dimen/small"
+            android:visibility="gone" />
+    </LinearLayout>
+    <!--list-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:padding="@dimen/dp_10"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLogList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

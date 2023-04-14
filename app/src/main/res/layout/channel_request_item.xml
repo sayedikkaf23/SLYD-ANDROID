@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp_5">
+
+    <ImageView
+        android:id="@+id/ivProfilePic"
+        android:layout_width="@dimen/medium_profile_size"
+        android:layout_height="@dimen/medium_profile_size"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_one"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/dp_2"
+        android:layout_toEndOf="@+id/ivProfilePic"
+        android:layout_toLeftOf="@+id/llActions"
+        android:layout_toRightOf="@+id/ivProfilePic"
+        android:layout_toStartOf="@+id/llActions"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/small" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_1"
+            android:textColor="@color/gray_text_darker"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llActions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_30"
+            android:layout_margin="@dimen/dp_3"
+            android:layout_weight="1.5"
+            android:background="@drawable/colored_curved_background"
+            android:gravity="center"
+            android:padding="@dimen/dp_3"
+            android:text="@string/accept"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/small" />
+
+        <Button
+            android:id="@+id/btnReject"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_30"
+            android:layout_margin="@dimen/dp_3"
+            android:layout_weight="1.5"
+            android:background="@drawable/grey_curved_border"
+            android:gravity="center"
+            android:padding="@dimen/dp_3"
+            android:text="@string/reject"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_text_darker"
+            android:textSize="@dimen/small" />
+
+    </LinearLayout>
+</RelativeLayout>

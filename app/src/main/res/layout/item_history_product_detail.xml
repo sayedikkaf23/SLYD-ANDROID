@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clProductItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/ten_dp"
+        android:paddingBottom="@dimen/five_dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivProductImg"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_70"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:src="@drawable/bottle_img"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProductName"
+            style="@style/Text.14sp.Nero.PoppinsReg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:maxLines="2"
+            android:text="Vehicula Lobortis Fringilla-Tellus Tincidunt"
+            app:layout_constraintEnd_toStartOf="@+id/tvOrderCancel"
+            app:layout_constraintHorizontal_weight="6"
+            app:layout_constraintStart_toEndOf="@+id/ivProductImg"
+            app:layout_constraintTop_toTopOf="@+id/ivProductImg" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProductOrderId"
+            style="@style/Text.10sp.GrayApprx.PoppinsReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/tvProductName"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductName"
+            tools:text="pRODUCT oRDER id: r56g4a65" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOrderCancel"
+            style="@style/Text.12dp.allEastBayColor.poppinsRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:background="@drawable/square_round_silver_border"
+            android:includeFontPadding="false"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingTop="@dimen/five_dp"
+            android:paddingEnd="@dimen/ten_dp"
+            android:paddingBottom="@dimen/five_dp"
+            android:text="@string/historyStoreCancel"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/ivProductImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivProductImg" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHistorySizeAndColor"
+            style="@style/Text.13sp.colorDoveGrayApprox.PoppinsRegular"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/tvProductName"
+            app:layout_constraintStart_toStartOf="@+id/tvProductName"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductOrderId"
+            tools:text="Size: 500ml" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCartSoldByLabel"
+            style="@style/Text.13sp.ApproxBoulder.PoppinsLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/viewMoreSellersSoldBy"
+            app:layout_constraintStart_toStartOf="@+id/tvProductName"
+            app:layout_constraintTop_toBottomOf="@+id/tvHistorySizeAndColor" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSellerName"
+            style="@style/Text.13sp.AppColor.PoppinsLight"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/five_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCartSoldByLabel"
+            app:layout_constraintEnd_toEndOf="@+id/tvProductName"
+            app:layout_constraintStart_toEndOf="@+id/tvCartSoldByLabel"
+            app:layout_constraintTop_toTopOf="@+id/tvCartSoldByLabel"
+            tools:text="Samsung Electronics" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProductCasePrice"
+            style="@style/Text.12sp.BlckApprox.poppins_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toStartOf="@+id/tvProductName"
+            app:layout_constraintTop_toBottomOf="@+id/tvCartSoldByLabel"
+            tools:text="2 Case * $248.94" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProductBasePrice"
+            style="@style/Text.12sp.ApproxBoulder.PoppinsReg"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tvProductCasePrice"
+            app:layout_constraintLeft_toRightOf="@+id/tvProductCasePrice"
+            app:layout_constraintTop_toTopOf="@+id/tvProductCasePrice"
+            tools:text="$251.20" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCancelledItemDetails"
+            style="@style/Text.11sp.White.PoppinsSemiBold"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:background="@drawable/rect_carnation_bag"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingLeft="@dimen/ten_dp"
+            android:paddingTop="@dimen/ten_dp"
+            android:paddingEnd="@dimen/ten_dp"
+            android:paddingRight="@dimen/ten_dp"
+            android:paddingBottom="@dimen/ten_dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductCasePrice"
+            tools:text="Store Cancelled : 1  Quantity \n Reason : Product is not required anymore" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

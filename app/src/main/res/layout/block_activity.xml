@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorHintOfRed">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iV_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+                <TextView
+                    android:id="@+id/tvTbTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingEnd="@dimen/dp_15"
+                    android:gravity="center"
+                    android:textColor="@color/star_black"
+                    android:fontFamily="@font/sf_pro_semibold"
+                    android:textSize="@dimen/title"
+                    android:text="@string/BlockedUsers"/>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCommentList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbarLayout"
+        android:layout_margin="@dimen/dp_5" />
+
+    <LinearLayout
+        android:layout_below="@+id/appbarLayout"
+        android:id="@+id/llEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_20"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivEmpty"
+            android:layout_width="@dimen/default_images_size"
+            android:layout_height="@dimen/default_images_size"
+            android:layout_margin="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/empty_user" />
+
+        <TextView
+            android:id="@+id/tvEmptyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/five_dp"
+            android:text="@string/nodata"
+            android:textAlignment="center"
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/big" />
+
+        <TextView
+            android:id="@+id/tvEmptyMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/five_dp"
+            android:textAlignment="center"
+            android:textColor="@color/color_text_gray"
+            android:textSize="@dimen/small" />
+
+    </LinearLayout>
+
+    <chat.hola.com.app.models.InternetErrorView
+        android:id="@+id/llNetworkError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbarLayout"
+        android:animateLayoutChanges="true"
+        android:visibility="gone" />
+</RelativeLayout>

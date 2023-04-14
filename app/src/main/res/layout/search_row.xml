@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_5"
+    android:paddingTop="@dimen/ten_dp"
+    android:paddingBottom="@dimen/ten_dp">
+
+    <RelativeLayout
+        android:id="@+id/rlProfilePic"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/profileIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/content_descriptor"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/profile_one" />
+
+        <ImageView
+            android:id="@+id/ivStarBadge"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_star_badge_new" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toStartOf="@+id/tbFollow"
+        android:layout_toLeftOf="@+id/tbFollow"
+        android:layout_toEndOf="@+id/rlProfilePic"
+        android:layout_toRightOf="@+id/rlProfilePic">
+
+        <TextView
+            android:id="@+id/profileNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:textColor="@color/colorMineShaft"
+            android:textSize="@dimen/medium" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profileNameTv"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:textColor="@color/gray_text_darker"
+            android:textSize="@dimen/small" />
+    </RelativeLayout>
+
+    <ToggleButton
+        android:id="@+id/tbFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_35"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:maxLines="1"
+        android:padding="@dimen/two_dp"
+        android:textAllCaps="false"
+        android:textOff="@string/follow"
+        android:textOn="@string/following"
+        android:textSize="@dimen/small"
+        style="@style/followToggleButton"
+        android:visibility="visible" />
+</RelativeLayout>

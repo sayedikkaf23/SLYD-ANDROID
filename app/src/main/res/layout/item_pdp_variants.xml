@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clVariants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPdpVariantName"
+            style="@style/Text.14sp.Nero.PoppinsSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_0"
+            android:background="?selectableItemBackground"
+            android:paddingStart="@dimen/fifteen_dp"
+            android:paddingTop="@dimen/dp_12"
+            android:paddingEnd="@dimen/fifteen_dp"
+            android:paddingBottom="@dimen/dp_12"
+            android:text="@string/pdpColors"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPdpPriVariantName"
+            style="@style/Text.13sp.SpeechBlue.PoppinsMedium"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_0"
+            android:drawableEnd="@drawable/all_right_arrow"
+            android:drawablePadding="@dimen/ten_dp"
+            android:paddingStart="@dimen/fifteen_dp"
+            android:paddingTop="@dimen/fifteen_dp"
+            android:paddingEnd="@dimen/fifteen_dp"
+            android:paddingBottom="@dimen/fifteen_dp"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/viewVariants"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ten_dp"
+            android:background="@color/viewShadow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPdpVariantName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

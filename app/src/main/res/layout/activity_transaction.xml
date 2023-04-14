@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="chat.hola.com.app.wallet.transaction.TransactionActivity">
+
+    <RelativeLayout
+        android:id="@+id/rL_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:elevation="@dimen/two_dp">
+
+        <ImageView
+            android:id="@+id/iV_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:padding="@dimen/ten_dp"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/tV_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/transactions"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title"
+            android:fontFamily="@font/sf_pro_semibold"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/rL_actionBar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--balance layout-->
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/five_dp"
+                android:text="@string/your_balance"
+                android:fontFamily="@font/sf_pro_light"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/medium" />
+
+            <TextView
+                android:id="@+id/tV_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/five_dp"
+                android:text="@string/coin_init_val"
+                android:textColor="@color/base_color"
+                android:textSize="@dimen/title"
+                android:fontFamily="@font/sf_pro_semibold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/soft_grey" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/two_dp"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/base_color"
+            app:tabIndicatorHeight="@dimen/two_dp"
+            app:tabSelectedTextColor="@color/mineShaft"
+            app:tabTextColor="#CC2C2C2C">
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.viewpager.widget.ViewPager>
+
+    </LinearLayout>
+
+</RelativeLayout>

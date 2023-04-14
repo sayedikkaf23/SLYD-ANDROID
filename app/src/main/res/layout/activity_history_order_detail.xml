@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools"
+
+    >
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="chat.hola.com.app.orderdetails.HistoryOrderDetailViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/allWhiteColor">
+
+
+        <include
+            android:id="@+id/incHeader"
+            layout="@layout/layout_back_arrow_btn_header"
+             />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/allWhiteColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incHeader">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/thirty_dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOrderNo"
+                    style="@style/Text.16sp.EastBay.PoppinsSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/thirty_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:text="@string/historyOrderNo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOrderTime"
+                    style="@style/Text.12sp.Nero.PoppinsRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/three_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:text=""
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvOrderNo" />
+
+
+                <FrameLayout
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvOrderTime"
+                        android:id="@+id/flOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvOrders"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:visibility="visible"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+         />
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvOrdersPacking"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:visibility="gone"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvOrderTime" />
+
+                </FrameLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clBoxItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/flOrder">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvBoxOrders"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/five_dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPendingShipment"
+                        style="@style/Text.17sp.BrightGray.poppins.Bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ten_dp"
+                        android:background="@color/colorAlbaster"
+                        android:includeFontPadding="false"
+                        android:maxLines="2"
+                        android:paddingStart="@dimen/twenty_dp"
+                        android:paddingLeft="@dimen/twenty_dp"
+                        android:paddingTop="@dimen/fifteen_dp"
+                        android:paddingEnd="0dp"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="@dimen/fifteen_dp"
+                        android:text="@string/pandingShipment"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rvBoxOrders" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/viewShipment"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/two_dp"
+                        android:layerType="software"
+                        android:src="@drawable/dash_line"
+                        app:layout_constraintTop_toBottomOf="@+id/tvPendingShipment" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvPendingShipmentOrders"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/five_dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/viewShipment" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/viewShipmentBelow"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/two_dp"
+                        android:layerType="software"
+                        android:src="@drawable/dash_line"
+                        app:layout_constraintTop_toBottomOf="@+id/rvPendingShipmentOrders" />
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/vgPendingShipment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:constraint_referenced_ids="tvPendingShipment,viewShipment,rvPendingShipmentOrders,viewShipmentBelow" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCancelled"
+                        style="@style/Text.17sp.BrightGray.poppins.Bold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorAlbaster"
+                        android:drawablePadding="@dimen/ten_dp"
+                        android:includeFontPadding="false"
+                        android:maxLines="2"
+                        android:paddingStart="@dimen/twenty_dp"
+                        android:paddingLeft="@dimen/twenty_dp"
+                        android:paddingTop="@dimen/fifteen_dp"
+                        android:paddingEnd="0dp"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="@dimen/fifteen_dp"
+                        android:text="@string/cancelled"
+                        app:drawableLeftCompat="@drawable/ic_cancel"
+                        app:drawableStartCompat="@drawable/ic_cancel"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/viewShipmentBelow" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/viewCancelled"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/two_dp"
+                        android:layerType="software"
+                        android:src="@drawable/dash_line"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCancelled" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCancelled"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/five_dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/viewCancelled" />
+
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/vgCancelled"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:constraint_referenced_ids="tvCancelled,viewCancelled,rvCancelled" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/vgPrescriptionUpload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="tvPrescriptionUploadTitle, rvPrescriptionPreview, viewPrescriptionUploadDivider" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPrescriptionUploadTitle"
+                    style="@style/Text.16sp.ApproxBlack.PoppinsSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:includeFontPadding="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clBoxItem" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPrescriptionPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:layout_marginStart="@dimen/ten_dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintStart_toStartOf="@id/tvPrescriptionUploadTitle"
+                    app:layout_constraintTop_toBottomOf="@id/tvPrescriptionUploadTitle"/>
+
+                <View
+                    android:id="@+id/viewPrescriptionUploadDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ten_dp"
+                    android:background="@color/viewShadow"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rvPrescriptionPreview" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDetailDeliveryAddress"
+                        style="@style/Text.16sp.EastBay.PoppinsSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:text="@string/saveDeliveryLocation"
+                    app:layout_constraintStart_toStartOf="@id/tvOrderNo"
+                    app:layout_constraintTop_toBottomOf="@id/viewPrescriptionUploadDivider" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDetailDeliveryAddHeader"
+                    style="@style/Text.14sp.PoppinsMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:text="@{viewModel.deliveryAddressName}"
+                    app:layout_constraintStart_toStartOf="@id/tvOrderNo"
+                    app:layout_constraintTop_toBottomOf="@id/tvDetailDeliveryAddress" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDetailDeliveryAddLandMark"
+                    style="@style/Text.14sp.PoppinsMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:includeFontPadding="false"
+                    android:text="@{viewModel.deliveryAddress}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tvOrderNo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailDeliveryAddHeader" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDetailDeliveryAddphoneNum"
+                    style="@style/Text.12sp.OsloGray.PoppinsReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                        android:textColor="@color/color_text_black"
+                        android:onClick="@{() -> viewModel.onDeliveryPhoneNumClick()}"
+                    android:text="@{viewModel.deliveryPhoneNum}"
+                    app:layout_constraintStart_toStartOf="@+id/tvOrderNo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailDeliveryAddLandMark" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/two_dp"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:layerType="software"
+                    android:src="@drawable/dash_line"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailDeliveryAddphoneNum" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDetailBillingAddress"
+                        style="@style/Text.16sp.EastBay.PoppinsSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:text="@string/historyBillingAddress"
+                    app:layout_constraintStart_toStartOf="@+id/tvOrderNo"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDetailBillingAddHeader"
+                    style="@style/Text.14sp.PoppinsMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:text="@{viewModel.billingAddressName}"
+                    app:layout_constraintStart_toStartOf="@+id/tvOrderNo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailBillingAddress" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDetailBillingAddLandMark"
+                    style="@style/Text.14sp.PoppinsMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:text="@{viewModel.billingAddress}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tvOrderNo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailBillingAddHeader" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDetailBillingAddphoneNum"
+                    style="@style/Text.12sp.OsloGray.PoppinsReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                        android:textColor="@color/color_text_black"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:onClick="@{() -> viewModel.onBillingPhoneNumClick()}"
+                    android:text="@{viewModel.billingPhoneNum}"
+                    app:layout_constraintStart_toStartOf="@+id/tvOrderNo"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailBillingAddLandMark" />
+
+                <View
+                    android:id="@+id/viewPriceDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/two_dp"
+                    android:layout_marginTop="@dimen/thirty_dp"
+                    android:background="@drawable/shadow_below"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDetailBillingAddphoneNum" />
+
+                <include
+                    android:id="@+id/accoutingDetails"
+                    layout="@layout/layout_accounting_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/viewPriceDetails" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCancelOrReorder"
+                    style="@style/Text.14sp.PoppinsMedium"
+                        android:textColor="@color/blueFollowBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:onClick="@{() -> viewModel.cancelOrReorderClicked()}"
+                    android:text="@{viewModel.cancelOrReorder}"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/accoutingDetails" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

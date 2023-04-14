@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!--<TextView-->
+
+    <!--android:id="@+id/tv1"-->
+
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="13dp"-->
+
+    <!--android:layout_marginBottom="6dp"-->
+    <!--android:text="@string/MobileData"-->
+    <!--android:textColor="@color/color_text_black"-->
+    <!--android:textSize="15dp" />-->
+
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+
+        android:id="@+id/cb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_13"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_marginRight="@dimen/dp_13"
+        android:layout_marginStart="@dimen/dp_13"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+
+        android:id="@+id/cb2"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cb1"
+        android:layout_marginBottom="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_13"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_marginRight="@dimen/dp_13"
+        android:layout_marginStart="@dimen/dp_13" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+
+        android:id="@+id/cb3"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cb2"
+        android:layout_marginBottom="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_13"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_marginRight="@dimen/dp_13"
+        android:layout_marginStart="@dimen/dp_13" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+
+        android:id="@+id/cb4"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cb3"
+        android:layout_marginBottom="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_13"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_marginRight="@dimen/dp_13"
+        android:layout_marginStart="@dimen/dp_13" />
+
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cb1"
+        android:layout_marginTop="@dimen/dp_7"
+
+        android:layout_toEndOf="@+id/cb1"
+        android:layout_toRightOf="@+id/cb1"
+
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/Audio"
+        android:textColor="@color/color_text_black"
+        android:textSize="@dimen/sp_15" />
+
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cb2"
+        android:layout_below="@+id/tv1"
+        android:layout_marginTop="@dimen/dp_7"
+        android:layout_toEndOf="@+id/cb2"
+        android:layout_toRightOf="@+id/cb2"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/videos"
+        android:textColor="@color/color_text_black"
+
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:id="@+id/tv3"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cb3"
+        android:layout_below="@+id/tv2"
+        android:layout_marginTop="@dimen/dp_7"
+        android:layout_toEndOf="@+id/cb3"
+        android:layout_toRightOf="@+id/cb3"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/Photos"
+        android:textColor="@color/color_text_black"
+
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cb4"
+        android:layout_below="@+id/tv3"
+        android:layout_marginTop="@dimen/dp_7"
+        android:layout_toEndOf="@+id/cb4"
+        android:layout_toRightOf="@+id/cb4"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/Documents"
+
+        android:textColor="@color/color_text_black"
+        android:textSize="@dimen/sp_15" />
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="chat.hola.com.app.poststatus.PostStatusActivity"
+    android:id="@+id/rL_main"
+    android:background="@color/colorPrimary">
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:paddingStart="@dimen/ten_dp"
+            android:layout_gravity="left|bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iV_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/text_font_icon" />
+            <ImageView
+                android:id="@+id/iV_bgColor"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_toEndOf="@+id/iV_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/painter_palette"/>
+
+            <ImageView
+                android:id="@+id/iV_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:layout_marginEnd="@dimen/ten_dp"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:src="@drawable/send_btn" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/eT_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/ten_dp"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:layout_marginBottom="@dimen/ten_dp"
+        android:background="@null"
+        android:gravity="center"
+        android:hint="@string/type_a_status"
+        android:textColor="@color/color_white"
+        android:textColorHint="@color/gray_scale"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/sp_25"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:progressDrawable="@drawable/custom_progress"
+        android:background="@color/transparent"/>
+
+
+
+
+</RelativeLayout>

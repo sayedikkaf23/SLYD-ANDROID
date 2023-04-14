@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clColorItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp_0"
+        android:paddingEnd="@dimen/five_dp"
+        android:paddingBottom="@dimen/ten_dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvColorBackGround"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/thirty_dp"
+            android:background="@drawable/rect_border"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivColor"
+            android:layout_width="@dimen/dp_55"
+            android:layout_height="@dimen/dp_25"
+            android:paddingStart="@dimen/five_dp"
+            android:paddingLeft="@dimen/five_dp"
+            android:paddingEnd="@dimen/five_dp"
+            android:paddingRight="@dimen/five_dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivColorProduct"
+            android:layout_width="@dimen/fifty_dp"
+            android:layout_height="@dimen/dp_60"
+            android:background="@drawable/item_color_img_bag"
+            android:paddingTop="@dimen/two_dp"
+            android:paddingBottom="@dimen/two_dp"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingLeft="@dimen/ten_dp"
+            android:paddingEnd="@dimen/ten_dp"
+            android:paddingRight="@dimen/ten_dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

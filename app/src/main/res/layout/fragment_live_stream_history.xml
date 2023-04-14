@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <ScrollView
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_150"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivEmpty"
+                android:layout_width="@dimen/default_images_size"
+                android:layout_height="@dimen/default_images_size"
+                android:src="@drawable/empty_stories" />
+
+            <TextView
+                android:id="@+id/tvEmpty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_marginTop="@dimen/fourty_dp"
+                android:text="@string/no_stories_show"
+                android:textAlignment="center"
+                android:textColor="@color/color_text_gray_light"
+                android:textSize="@dimen/title" />
+
+            <Button
+                android:id="@+id/btnCreatePost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@color/blue"
+                android:text="@string/create_post"
+                android:textColor="@color/color_white"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerProfileTab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <chat.hola.com.app.models.InternetErrorView
+        android:id="@+id/llNetworkError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</RelativeLayout>

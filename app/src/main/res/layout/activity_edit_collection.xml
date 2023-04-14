@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context="chat.hola.com.app.collections.edit_collection.EditCollectionActivity">
+
+    <!--Action Bar-->
+    <RelativeLayout
+        android:id="@+id/rL_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorHintOfRed"
+        android:elevation="@dimen/two_dp">
+
+        <ImageView
+            android:id="@+id/iV_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:padding="@dimen/ten_dp"
+            android:src="@drawable/arrow_back_black"
+            android:tint="@color/color_black" />
+
+        <TextView
+            android:id="@+id/tV_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="start"
+            android:singleLine="true"
+            android:text="@string/edit_collection"
+            android:visibility="visible"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title"
+            android:fontFamily="@font/sf_pro_semibold"/>
+
+        <ImageView
+            android:id="@+id/iV_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:padding="@dimen/ten_dp"
+            android:src="@drawable/ic_done_white"
+            android:tint="@color/star_black" />
+    </RelativeLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rL_actionBar"
+        android:orientation="vertical">
+
+        <!--Cover Image-->
+        <LinearLayout
+            android:id="@+id/ll_changeImage"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100"
+                android:layout_gravity="center_horizontal"
+                app:cardCornerRadius="@dimen/dp_2"
+                app:cardElevation="@dimen/dp_1">
+
+                <ImageView
+                    android:id="@+id/iVcoverImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:fontFamily="@font/sf_pro_regular"
+                android:text="@string/change_cover"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/medium" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:layout_marginTop="@dimen/thirty_dp"
+            android:layout_marginBottom="@dimen/thirty_dp"
+            android:text="@string/name"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/medium"
+            android:fontFamily="@font/sf_pro_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/eT_name"
+            android:singleLine="true"
+            android:maxLength="20"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingEnd="@dimen/ten_dp"
+            android:layout_marginBottom="@dimen/thirty_dp"
+            android:textColor="@color/color_black"
+            android:textSize="16sp"
+            android:fontFamily="@font/sf_pro_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:layout_marginBottom="@dimen/thirty_dp"
+            android:text="@string/manage"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/medium"
+            android:fontFamily="@font/sf_pro_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tV_delete"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:layout_marginBottom="@dimen/thirty_dp"
+            android:text="@string/delete_collection"
+            android:textColor="@color/star_red"
+            android:textSize="@dimen/medium"
+            android:fontFamily="@font/sf_pro_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:layout_marginBottom="@dimen/thirty_dp"
+            android:text="@string/delete_collection_msg"
+            android:textColor="@color/star_grey"
+            android:textSize="@dimen/small"
+            android:fontFamily="@font/sf_pro_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

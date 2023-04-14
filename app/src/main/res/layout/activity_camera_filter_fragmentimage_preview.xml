@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:background="@color/color_background_gray">
+
+
+    <!--<include-->
+    <!--android:id="@+id/image_edit_layout"-->
+    <!--layout="@layout/image_editing_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="@dimen/dp_54"
+        android:visibility="gone">
+        <!--android:visibility="gone"-->
+        <!--android:layout_gravity="top"-->
+        <!--android:layout_marginTop="54dp"-->
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/trans_black">
+
+            <EditText
+                android:id="@+id/eT_caption"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="@string/add_caption"
+                android:padding="@dimen/five_dp"
+                android:textColor="@color/color_white"
+                android:textColorHint="@color/whiteOverlay"
+                android:textSize="@dimen/medium" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!--Insta like filters view-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+        <!--Tool bar item data-->
+        <RelativeLayout
+            android:id="@+id/topview_filter_image_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/topview_filter_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48">
+
+                <RelativeLayout
+                    android:id="@+id/back_button_img"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/dp_10"
+
+                        android:tint="@color/star_black"
+                        app:srcCompat="@drawable/arrow_back_black" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toStartOf="@+id/next_button"
+                    android:layout_toEndOf="@+id/back_button_img"
+                    android:fontFamily="@font/sf_pro_semibold"
+                    android:gravity="center"
+                    android:text="Edit Photo"
+                    android:textColor="@color/star_black"
+                    android:textSize="@dimen/title" />
+                <!--<RelativeLayout-->
+                <!--android:layout_width="48dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:background="?android:attr/selectableItemBackground">-->
+                <!--<ImageView-->
+                <!--android:id="@+id/iv_filters_filter_image"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:clickable="true"-->
+                <!--app:srcCompat="@drawable/lux_adjustment_icon" />-->
+                <!--</RelativeLayout>-->
+                <RelativeLayout
+                    android:id="@+id/next_button"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/dp_10"
+                        android:rotation="180"
+                        android:tint="@color/star_black"
+                        app:srcCompat="@drawable/arrow_back_black" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/title_rl"
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/toolName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/dp_10"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/color_text_black"
+                    android:textSize="@dimen/medium"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <!--End of tool bar.-->
+
+        <!--Image place holder-->
+        <!--<jp.co.cyberagent.android.gpuimage.GPUImageView-->
+        <!--android:id="@+id/gpuimage_filter_image"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="330dp"-->
+        <!--android:layout_below="@+id/topview_filter_image_rl"-->
+        <!--android:scaleType="center" />-->
+
+
+        <include
+            android:id="@+id/image_edit_layout"
+            layout="@layout/image_editing_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topview_filter_image_rl" />
+        <!--Image filter preview-->
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/fl_bottom_view_filter_image"
+            android:layout_below="@+id/image_edit_layout"
+            android:fillViewport="true">
+
+            <RelativeLayout
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+
+
+                    android:id="@+id/ll_filters"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="horizontal">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_all_filters_filter_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/dp_5" />
+
+                    <!--
+
+
+                              For generation of the dummy thumbnail images
+
+                              -->
+                    <chat.hola.com.app.DublyCamera.CameraInFragments.Filters.CustomGPUImageView
+                        android:id="@+id/dummy"
+
+                        android:layout_width="@dimen/dp_100"
+                        android:layout_height="@dimen/dp_100"
+
+
+                        android:visibility="visible" />
+
+                </LinearLayout>
+                <!--End of filter list data -->
+
+                <!--Edit filter list data-->
+                <LinearLayout
+
+                    android:id="@+id/ll_tools"
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_gravity="center"
+                    android:visibility="visible">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_all_tools_tool_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/dp_5" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_seekbar_filter_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:visibility="gone">
+
+
+                    <chat.hola.com.app.DublyCamera.CameraInFragments.Filters.HelperClasses.RangeSeekBar
+                        android:id="@+id/sb_filters_filter_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:max="100"
+                        app:singleThumb="false" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRangeMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sb_filters_filter_image"
+                        android:textColor="@color/unselected_text_color"
+                        android:textSize="@dimen/sp_12"
+                        android:layout_marginTop="@dimen/dp_13"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginBottom="@dimen/dp_3"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRangeMedian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sb_filters_filter_image"
+                        android:textColor="@color/unselected_text_color"
+                        android:textSize="@dimen/sp_12"
+                        android:layout_marginTop="@dimen/dp_13"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/dp_3"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRangeMax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sb_filters_filter_image"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/unselected_text_color"
+                        android:textSize="@dimen/sp_10"
+                        android:layout_marginTop="@dimen/dp_13"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:layout_marginBottom="@dimen/dp_3"
+                        />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <!--End of the edit filter list.-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_brightness_filter_image"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_above="@+id/fl_bottom_view_filter_image"-->
+        <!--android:layout_below="@+id/topview_filter_image_rl"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:clickable="true"-->
+        <!--android:focusable="true"-->
+        <!---->
+        <!--app:srcCompat="@drawable/tagged_user_icon_red" />-->
+
+
+        <FrameLayout
+            android:id="@+id/fl_bottom_view_filter_image"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_alignParentBottom="true">
+            <!--Bottom view for first filter-->
+            <LinearLayout
+                android:id="@+id/ll_filters_tools_filter_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/ll_filters_filter_image"
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/filters_selector"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_filters_filter_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/FILTERS"
+                        android:textColor="@color/star_black"
+                        android:textSize="@dimen/title" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_tools_filter_image"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_tools_filter_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/TOOLS"
+                        android:textColor="@color/star_black"
+                        android:textSize="@dimen/title" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--End of the bottom filter-->
+
+            <!--Don filter layout-->
+            <LinearLayout
+                android:id="@+id/ll_cancel_done_filter_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/ll_cancel_filter_image"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/CANCEL"
+                        android:textColor="@color/unselected_text_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_done_filter_image"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/DONE"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--End of Done filter.-->
+        </FrameLayout>
+    </RelativeLayout>
+
+    <!--End of insta like layout-->
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

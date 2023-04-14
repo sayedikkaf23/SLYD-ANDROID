@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/gray_lighter" />
+    <corners
+        android:bottomLeftRadius="@dimen/curved"
+        android:bottomRightRadius="@dimen/curved"
+        android:topLeftRadius="@dimen/curved"
+        android:topRightRadius="@dimen/curved" />
+</shape>

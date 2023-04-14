@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chat.hola.com.app.DublyCamera.CameraInFragments.CustomGallery.GridSquareRelativeView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        android:background="#4f000000"
+        android:id="@+id/thumb_nail_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:visibility="visible"
+        app:srcCompat="@drawable/videocam_black_24dp_vector_icon"
+        android:layout_alignParentTop="true"
+
+        android:layout_alignParentEnd="true"
+        android:id="@+id/video_icon"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</chat.hola.com.app.DublyCamera.CameraInFragments.CustomGallery.GridSquareRelativeView>

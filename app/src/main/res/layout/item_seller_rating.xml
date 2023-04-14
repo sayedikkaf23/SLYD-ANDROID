@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/ten_dp"
+        android:paddingEnd="@dimen/ten_dp"
+        android:paddingBottom="@dimen/ten_dp">
+
+        <ProgressBar
+            android:id="@+id/pbTotalRating"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:indeterminate="false"
+            android:max="500"
+            android:paddingStart="-5dp"
+            android:paddingTop="@dimen/eight_dp"
+            android:paddingEnd="-5dp"
+            android:paddingBottom="@dimen/eight_dp"
+            android:progress="150"
+            android:secondaryProgress="500"
+            app:layout_constraintEnd_toEndOf="@+id/tvRatingAttributeName"
+            app:layout_constraintStart_toStartOf="@+id/tvRatingAttributeName"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRating"
+            style="@style/Text.16sp.Nero.PoppinsBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/pbTotalRating"
+            app:layout_constraintLeft_toLeftOf="@+id/pbTotalRating"
+            app:layout_constraintRight_toRightOf="@+id/pbTotalRating"
+            app:layout_constraintTop_toTopOf="@+id/pbTotalRating"
+            tools:text="3.1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRatingAttributeName"
+            style="@style/Text.13sp.Nero.PoppinsRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five_dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pbTotalRating"
+            tools:text="Quality" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

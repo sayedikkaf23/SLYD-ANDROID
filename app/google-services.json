@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "434218475306",
+    "project_id": "ezcall-851b9",
+    "storage_bucket": "ezcall-851b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434218475306:android:fc99f59cc41645c5e30853",
+        "android_client_info": {
+          "package_name": "com.ezcall.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "434218475306-i1jkl4v8i3vkbmsjcbh4b8qqauaeuoga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw5LLaZLmbrEcjuPadFUFtgYByqznezT0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434218475306-i1jkl4v8i3vkbmsjcbh4b8qqauaeuoga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

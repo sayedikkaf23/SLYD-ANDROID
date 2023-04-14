@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black"
+    tools:context="chat.hola.com.app.Giphy.GifPlayer">
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:text="Loading..."-->
+    <!--android:textColor="@color/color_white"-->
+    <!--android:textSize="35dp" />-->
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/giphyIV"
+
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:transitionName="image" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/poweredby_giphy" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_13"
+        android:elevation="@dimen/dp_5"
+        android:foreground="@drawable/ripple_selector"
+        app:srcCompat="@drawable/ic_close" />
+
+
+</RelativeLayout>

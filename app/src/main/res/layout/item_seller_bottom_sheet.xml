@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="chat.hola.com.app.ecom.pdp.sellerbottomsheet.SellerBottomSheetViewModel" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:onClick="@{() -> viewmodel.onCrossClicked()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/close" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAboutSeller"
+            style="@style/Text.16sp.Nero.PoppinsBold"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:text="@string/pdpAboutSeller"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivCross" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/two_dp"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layerType="software"
+            android:src="@drawable/dash_line"
+            app:layout_constraintTop_toBottomOf="@+id/tvAboutSeller" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSellerName"
+            style="@style/Text.13sp.SpeechBlue.PoppinsMedium"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            tools:text="@string/pdpAboutSeller" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSelleSinceLabel"
+            style="@style/Text.13sp.colorDoveGrayApprox.PoppinsRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7"
+            android:text="@string/sellerSince"
+            app:layout_constraintStart_toStartOf="@+id/tvSellerName"
+            app:layout_constraintTop_toBottomOf="@+id/tvSellerName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSellerSinceVal"
+            style="@style/Text.13sp.ApproxBlack.poppinsReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_7"
+            android:text="2 years 12 days"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSelleSinceLabel"
+            app:layout_constraintStart_toEndOf="@+id/tvSelleSinceLabel"
+            app:layout_constraintTop_toTopOf="@+id/tvSelleSinceLabel" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSellerRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_marginTop="@dimen/thirty_dp"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tvSellerSinceVal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSellerScore"
+            style="@style/Text.13sp.colorDoveGrayApprox.PoppinsLight"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:paddingBottom="@dimen/twenty_dp"
+            android:text="@string/pdpSellerScore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvSellerRating" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/vgSellerInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="tvAboutSeller,tvSellerName,tvSelleSinceLabel,
+            tvSellerSinceVal,rvSellerRating,tvSellerScore,view" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTermsAndCond"
+            style="@style/Text.13sp.Nero.PoppinsRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:text="@string/pdpTermsAndConditions"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivCross" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/viewTandc"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/two_dp"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layerType="software"
+            android:src="@drawable/dash_line"
+            app:layout_constraintTop_toBottomOf="@+id/tvTermsAndCond" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTermsAndCondDesc"
+            style="@style/Text.13sp.ApproxBlack.poppinsReg"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:htmlText="@{viewmodel.termsOrPrivacyData}"
+            android:layout_marginTop="@dimen/ten_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewTandc"
+            tools:text="@string/pdpAboutSeller" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/vgTermsAndConditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tvTermsAndCond,viewTandc,tvTermsAndCondDesc" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

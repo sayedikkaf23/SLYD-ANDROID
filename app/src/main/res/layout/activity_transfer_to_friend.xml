@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rL_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="chat.hola.com.app.transfer_to_friend.TransferToFriendActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorHintOfRed"
+        android:elevation="@dimen/two_dp">
+
+        <ImageView
+            android:id="@+id/iV_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:padding="@dimen/ten_dp"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/tV_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:text="@string/transfer_to_friend"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_mainView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rL_actionBar"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_20"
+            android:fontFamily="@font/sf_pro_regular"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/medium" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_110"
+                android:layout_toStartOf="@+id/arrow">
+
+                <ImageView
+                    android:id="@+id/ivSenderProfilePic"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_100"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/profile_one" />
+
+                <TextView
+                    android:id="@+id/tvSenderCurrency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/curved_primary_color"
+                    android:padding="@dimen/dp_5"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/small" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_16"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:rotation="180"
+                android:src="@drawable/ic_arrow_back_black_24dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_110"
+                android:layout_toEndOf="@+id/arrow">
+
+                <ImageView
+                    android:id="@+id/ivReceiverProfilePic"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_100"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/profile_one" />
+
+                <TextView
+                    android:id="@+id/tvReceiverCurrency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/curved_primary_color"
+                    android:padding="@dimen/dp_5"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/small" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_toStartOf="@+id/etAmount"
+                android:fontFamily="@font/sf_pro_bold"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/sp_42" />
+
+            <EditText
+                android:id="@+id/etAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:background="@null"
+                android:fontFamily="@font/sf_pro_medium"
+                android:hint="@string/zero"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:textColor="@color/color_black"
+                android:textColorHint="@color/star_grey"
+                android:textSize="@dimen/sp_42" />
+
+
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/etNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@drawable/curved_gray_color1"
+            android:fontFamily="@font/sf_pro_light"
+            android:gravity="center"
+            android:hint="@string/add_note"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:paddingStart="@dimen/dp_25"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_25"
+            android:paddingBottom="@dimen/dp_10"
+            android:textColor="@color/star_black"
+            android:textColorHint="@color/star_black"
+            android:textSize="@dimen/medium" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:fontFamily="@font/sf_pro_regular"
+            android:gravity="center"
+            android:text="@string/min_amount"
+            android:textColor="#B9B9B9"
+            android:textSize="@dimen/tiny" />
+
+        <TextView
+            android:id="@+id/tvReceive"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_15"
+            android:fontFamily="@font/sf_pro_regular"
+            android:gravity="center"
+            android:drawableEnd="@drawable/ic_info_outline_basecolor"
+            android:textColor="#333333"
+            android:textSize="@dimen/small" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sucessfulView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rL_actionBar"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/fifty_dp"
+            android:src="@drawable/ic_success_green" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:fontFamily="@font/sf_pro_regular"
+            android:text="@string/payment_successful"
+            android:textColor="@color/transfer_green"
+            android:textSize="@dimen/medium" />
+
+        <TextView
+            android:id="@+id/tv_await"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/fifty_dp"
+            android:fontFamily="@font/sf_pro_regular"
+            android:gravity="center"
+            android:text="@string/awaitng_receipt_by"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_17" />
+
+        <TextView
+            android:id="@+id/tV_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:gravity="center"
+            android:text="@string/ruc"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp_24" />
+
+        <RelativeLayout
+            android:id="@+id/rL_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:background="@drawable/rounded_rectangle_green">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifty_dp"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:layout_marginEnd="@dimen/fifty_dp"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:fontFamily="@font/sf_pro_regular"
+                android:text="@string/done"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/big" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp_20"
+        android:background="@drawable/curved_primary_color"
+        android:text="@string/confirm"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

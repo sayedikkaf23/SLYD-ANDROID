@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white">
+
+    <RelativeLayout
+        android:id="@+id/rL_profile"
+        android:padding="@dimen/five_dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="@dimen/dp_55"
+        android:layout_height="@dimen/dp_55">
+
+        <ImageView
+            android:id="@+id/iV_profilePic"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:padding="@dimen/five_dp"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/rL_profile"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tV_userName"
+            android:textSize="@dimen/small"
+            android:textColor="@color/color_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/tV_time"
+            android:textSize="@dimen/small"
+            android:textColor="@color/color_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_below="@+id/rL_profile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/gray"/>
+
+</RelativeLayout>

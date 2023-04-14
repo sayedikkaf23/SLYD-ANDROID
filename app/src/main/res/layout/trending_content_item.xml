@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_5"
+    app:cardCornerRadius="@dimen/dp_5">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/llRowHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_5"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/two_dp">
+
+            <chat.hola.com.app.Utilities.RoundedImageView
+                android:id="@+id/ivItemTopImage"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/dp_2"
+                android:src="@drawable/profile_one" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_toEndOf="@+id/ivItemTopImage"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_5">
+
+                <TextView
+                    android:id="@+id/tvItemTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/star_black"
+                    android:textSize="@dimen/medium"
+                    tools:ignore="RtlCompat" />
+
+                <ImageView
+                    android:id="@+id/ivPrivacy"
+                    android:layout_width="@dimen/dp_15"
+                    android:layout_height="@dimen/dp_15"
+                    android:src="@drawable/lock"
+                    android:tint="@color/gray" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvItemSubscribe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:textColor="@color/color_text_gray"
+                android:textSize="@dimen/sp_13" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/ivArrow"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:padding="@dimen/dp_5"
+                    android:tint="@color/gray"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_next_arrow_icon" />
+
+                <ImageView
+                    android:id="@+id/ivDelete"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="30dp"
+                    android:padding="@dimen/dp_5"
+                    android:tint="@color/gray"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_delete" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlData"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_180">
+
+            <LinearLayout
+                android:id="@+id/llImageContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <FrameLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/ivImageOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        tools:src="@drawable/trending_image_sample" />
+
+                    <ImageButton
+                        android:id="@+id/ibPlayOne"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_play_circle_outline_black_24dp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/ivImageTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        tools:src="@drawable/trending_image_sample" />
+
+                    <ImageButton
+                        android:id="@+id/ibPlayTwo"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_play_circle_outline_black_24dp"
+                        tools:ignore="DuplicateIds" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/ivImageThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        tools:src="@drawable/trending_image_sample" />
+
+                    <ImageButton
+                        android:id="@+id/ibPlayThree"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_play_circle_outline_black_24dp"
+                        tools:ignore="DuplicateIds" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvViewMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:drawableEnd="@drawable/ic_navigate_next"
+            android:drawableTint="@color/white"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp_5"
+            android:text="@string/view_more"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

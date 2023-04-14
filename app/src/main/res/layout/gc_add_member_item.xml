@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_85"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardElevation="@dimen/dp_0"
+    app:cardMaxElevation="@dimen/dp_0"
+    app:cardPreventCornerOverlap="false"
+
+    app:cardUseCompatPadding="true">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+
+
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <FrameLayout
+            android:id="@+id/contactImage"
+            android:layout_width="@dimen/dp_64"
+            android:layout_height="@dimen/dp_64"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_13"
+
+            android:layout_marginLeft="@dimen/dp_13"
+            android:layout_marginEnd="@dimen/dp_13"
+            android:layout_marginRight="@dimen/dp_13"
+
+
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/storeImage2"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+
+                app:srcCompat="@drawable/chat_attachment_profile_default_image_frame" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iV_star"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/dp_6"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_star_badge_new"
+
+                />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/contactName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_alignParentTop="true"
+
+            android:layout_marginTop="@dimen/dp_22"
+            android:layout_marginEnd="@dimen/dp_13"
+
+            android:layout_marginRight="@dimen/dp_13"
+
+            android:layout_toEndOf="@+id/contactImage"
+
+            android:layout_toRightOf="@+id/contactImage"
+            android:ellipsize="end"
+
+            android:maxLines="1"
+
+            android:textColor="@color/color_text_search"
+            android:textSize="@dimen/medium" />
+
+
+        <TextView
+            android:id="@+id/contactStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactName"
+            android:layout_gravity="center_horizontal"
+
+            android:layout_marginEnd="@dimen/dp_13"
+
+            android:layout_marginRight="@dimen/dp_13"
+            android:layout_toEndOf="@+id/contactImage"
+
+
+            android:layout_toRightOf="@+id/contactImage"
+
+            android:ellipsize="end"
+            android:maxLines="1"
+
+            android:text="@string/AddMemberStatus"
+            android:textColor="@color/direct_message"
+            android:textSize="@dimen/small"
+            android:textStyle="italic"
+            android:visibility="visible"
+
+            />
+
+        <View
+
+
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_90"
+            android:layout_marginLeft="@dimen/dp_90"
+
+            />
+
+
+        <!--
+
+        Have been made transparent intentionally
+        -->
+        <!--android:background="@color/color_line_gray"-->
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

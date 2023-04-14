@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?><!--View while view is collapsed-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/tw__transparent"
+
+
+    android:orientation="vertical"
+
+    android:visibility="visible">
+
+    <Chronometer
+        android:id="@+id/chrono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_iv"
+        android:layout_width="@dimen/dp_74"
+        android:layout_height="@dimen/dp_74"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_8"
+        app:srcCompat="@drawable/chat_attachment_profile_default_image_frame"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/image_iv"
+        android:background="@color/color_white"
+
+
+        android:padding="@dimen/dp_5"
+
+        android:textColor="@color/color_text_black"
+        android:textSize="@dimen/sp_15"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

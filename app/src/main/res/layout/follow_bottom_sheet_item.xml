@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_5"
+    android:padding="@dimen/dp_5">
+
+    <ImageView
+        android:id="@+id/ivProfilePic"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_one" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/ivProfilePic"
+        android:layout_toRightOf="@id/ivProfilePic"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/ten_dp"
+        android:paddingLeft="@dimen/ten_dp"
+        android:paddingEnd="@dimen/five_dp"
+        android:paddingRight="@dimen/five_dp">
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/small" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+<!--    <Button-->
+<!--        android:id="@+id/tbSend"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:background="@drawable/toggle_bg_selecter1"-->
+<!--        android:checked="false"-->
+<!--        android:maxLines="1"-->
+<!--        android:padding="@dimen/two_dp"-->
+<!--        android:text="Send"-->
+<!--        android:enabled="true"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textColor="@color/toggle_text_color_selector1"-->
+<!--        android:textSize="12dp"-->
+<!--        tools:ignore="RtlHardcoded" />-->
+
+    <ToggleButton
+        android:id="@+id/tbSend"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_30"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/toggle_bg_selecter1"
+        android:checked="false"
+        android:maxLines="1"
+        android:padding="@dimen/two_dp"
+        android:textAllCaps="false"
+        android:textColor="@color/toggle_text_color_selector1"
+        android:textOff="@string/send"
+        android:textOn="@string/sent"
+        android:textSize="@dimen/sp_12" />
+</RelativeLayout>

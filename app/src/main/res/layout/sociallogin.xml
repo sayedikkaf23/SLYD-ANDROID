@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/loginwithfacbookbuttonrlout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:padding="@dimen/dp_5"
+        android:visibility="gone"
+        android:background="@drawable/curved_gray_color"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_15">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true">
+
+
+            <TextView
+                android:id="@+id/tv_login_withfb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/loginwithfacebook"
+                android:textColor="@color/allBlackTxtColor"
+                android:layout_toRightOf="@+id/iv_login_fb"
+                android:textSize="@dimen/sp_14"
+                />
+            <ImageView
+                android:id="@+id/iv_login_fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:layout_marginRight="@dimen/dp_10"
+                app:srcCompat="@drawable/ic_login_facebook_icon_off" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loginwithgooglebuttonrlout"
+        android:layout_below="@+id/loginwithfacbookbuttonrlout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:padding="@dimen/dp_5"
+        android:visibility="gone"
+        android:background="@drawable/curved_gray_color"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_15">
+
+        <RelativeLayout
+            android:background="@drawable/curved_gray_color"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+
+            <TextView
+                android:id="@+id/tv_login_withgoogle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:text="@string/loginwithgoogle"
+                android:textColor="@color/allBlackTxtColor"
+                android:layout_toRightOf="@+id/iv_login_google"
+                android:textSize="@dimen/sp_14"
+                />
+            <ImageView
+                android:id="@+id/iv_login_google"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:layout_marginRight="@dimen/dp_10"
+                app:srcCompat="@drawable/ic_login_google" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loginemail"
+        android:layout_below="@+id/loginwithgooglebuttonrlout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:padding="@dimen/dp_5"
+        android:visibility="visible"
+        android:background="@drawable/curved_gray_color"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_15">
+
+        <RelativeLayout
+            android:background="@drawable/curved_gray_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true">
+
+
+            <TextView
+                android:id="@+id/tv_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:text="@string/loginwithmail"
+                android:textColor="@color/allBlackTxtColor"
+                android:layout_toRightOf="@+id/iv_mail"
+                android:textSize="@dimen/sp_14"
+                />
+            <ImageView
+                android:id="@+id/iv_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:layout_marginRight="@dimen/dp_10"
+                app:srcCompat="@drawable/ic_business_email" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/loginphone"
+        android:layout_below="@+id/loginemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:padding="@dimen/dp_5"
+        android:visibility="gone"
+        android:background="@drawable/curved_gray_color"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_15">
+
+        <RelativeLayout
+            android:background="@drawable/curved_gray_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true">
+
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:text="@string/loginwithphone"
+                android:textColor="@color/allBlackTxtColor"
+                android:layout_toRightOf="@+id/iv_phone"
+                android:textSize="@dimen/sp_14"
+                />
+            <ImageView
+                android:id="@+id/iv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:layout_marginRight="@dimen/dp_10"
+                app:srcCompat="@drawable/ic_phone" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

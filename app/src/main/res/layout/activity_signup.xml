@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imageView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:src="@color/colorPrimary" />-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="top"
+        android:background="@color/color_white"
+        android:visibility="gone"
+        app:layout_collapseMode="pin">
+        <!--actionbar-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_white">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                style="?actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/minus_15"
+                android:tint="@color/color_tint"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_toStartOf="@+id/done"
+                android:layout_toEndOf="@+id/ivBack"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:gravity="center_horizontal"
+                android:text="@string/signup"
+                android:textAlignment="center"
+                android:textColor="@color/star_black"
+                android:textSize="@dimen/title" />
+
+            <Button
+                android:id="@+id/done"
+                style="?actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="@string/next"
+                android:textAlignment="textEnd"
+                android:textAllCaps="false"
+                android:textColor="@color/mineShaft"
+                android:textSize="@dimen/medium"
+                tools:ignore="RtlCompat" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <!-- UI for normal signupflow-->
+    <LinearLayout
+        android:id="@+id/ll_signup_UI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomBar"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_0"
+        android:background="@drawable/curved_accent_white"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_16">
+
+            <!--Social login buttons-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <FrameLayout
+                    android:id="@+id/FrameLayout1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1">
+
+                    <com.facebook.login.widget.LoginButton
+                        android:id="@+id/fbSignIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/fBCustom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/facebook_button" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/FrameLayout2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/googleSignIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/google_button" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <!--Login With Divider-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/dp_5"
+                    android:layout_toStartOf="@+id/text"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/or_continue_with"
+                    android:textColor="@color/star_black" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/dp_5"
+                    android:layout_toEndOf="@+id/text"
+                    android:background="@color/divider" />
+
+            </RelativeLayout>
+
+            <!--profile pc-->
+            <RelativeLayout
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:visibility="gone">
+
+
+                <chat.hola.com.app.Utilities.RoundedImageView
+                    android:id="@+id/ivProfilePic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:foreground="@drawable/ripple_selector"
+                    app:srcCompat="@drawable/profile_one" />
+
+
+                <ImageButton
+                    android:id="@+id/ibAdd"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/ic_add_circle_colored" />
+            </RelativeLayout>
+
+            <Switch
+                android:id="@+id/isPrivate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layoutDirection="rtl"
+                android:padding="@dimen/dp_10"
+                android:switchPadding="@dimen/dp_10"
+                android:text="@string/Public"
+                android:textColor="@color/star_black"
+                android:textSize="@dimen/medium"
+                android:visibility="gone" />
+
+            <!--signup header-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/color_white">
+
+                <ImageView
+                    android:id="@+id/ivClose"
+                    style="?actionButtonStyle"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_16"
+                    app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/tvHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_toStartOf="@+id/btndone"
+                    android:layout_toEndOf="@+id/ivClose"
+                    android:fontFamily="@font/sf_pro_semibold"
+                    android:gravity="center_horizontal"
+                    android:text="@string/signupheader"
+                    android:textAlignment="center"
+                    android:textColor="@color/star_black"
+                    android:textSize="@dimen/et_text" />
+
+                <Button
+                    android:id="@+id/btndone"
+                    style="?actionButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/Done"
+                    android:textAlignment="textEnd"
+                    android:textAllCaps="false"
+                    android:textColor="@color/mineShaft"
+                    android:textSize="@dimen/medium"
+                    android:visibility="invisible"
+                    tools:ignore="RtlCompat" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/singup_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/signupdesc"
+                android:textColor="@color/gray2"
+                android:textSize="@dimen/sp_14"></TextView>
+
+            <!--Login With OTP-->
+            <RelativeLayout
+                android:id="@+id/rl_reg_Mob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_30"
+                android:background="@drawable/curved_gray_color"
+                android:padding="@dimen/dp_5"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/countryFlag"
+                    android:layout_width="@dimen/dp_35"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/flag_ca"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvRegion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/countryFlag"
+                    android:layout_toRightOf="@+id/countryFlag"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="8dp"
+                    android:text="+91"
+                    android:textColor="@color/red"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toEndOf="@+id/tvRegion"
+                    android:layout_toRightOf="@+id/tvRegion"
+                    android:background="@null"
+                    android:ems="10"
+                    android:fontFamily="@font/sf_pro_semibold"
+                    android:hint="@string/phone_number"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:singleLine="true"
+                    android:textColor="@color/allBlackTxtColor"
+                    android:textSize="@dimen/fourteen_sp" />
+
+                <ImageView
+                    android:id="@+id/iV_phoneNumberCheck"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_tick"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvUserPhonewarning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_3"
+                android:drawableStart="@drawable/ic_warning"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_horizontal"
+                android:text="@string/phoneNumberWarning"
+                android:textColor="@color/light_black"
+                android:textSize="12sp"
+                android:visibility="invisible"></TextView>
+            <!--&lt;!&ndash;region&ndash;&gt;
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/textRegion"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="5dp"
+                    android:text="@string/region"
+                    android:textSize="@dimen/medium" />
+
+                <TextView
+                    android:id="@+id/tvRegion"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:padding="5dp"
+                    android:text="@string/select_region"
+                    android:textColor="@color/base_color"
+                    android:textSize="@dimen/medium" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/divider" />
+
+            &lt;!&ndash;phone&ndash;&gt;
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/textPhone"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="5dp"
+                    android:text="@string/phone"
+                    android:textSize="@dimen/medium" />
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="@android:color/transparent"
+                    android:digits="0123456789"
+                    android:hint="@string/phone_number"
+                    android:inputType="phone"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp_5"
+                    android:textColor="@color/star_black"
+                    android:textSize="@dimen/medium" />
+            </LinearLayout>-->
+
+            <!-- first and last name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dimen_5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_gray_color"
+                    android:fontFamily="@font/sf_pro_semibold"
+                    android:hint="@string/first_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp_10"
+                    android:singleLine="true"
+                    android:textColor="@color/allBlackTxtColor"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/etLname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_gray_color"
+                    android:fontFamily="@font/sf_pro_semibold"
+                    android:hint="@string/last_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp_10"
+                    android:singleLine="true"
+                    android:textColor="@color/allBlackTxtColor"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+
+            <!-- commenting last name-->
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/divider" />
+
+            &lt;!&ndash;name&ndash;&gt;
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/textLName"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="@dimen/dp_5"
+                    android:text="@string/first_name"
+                    android:textSize="@dimen/medium" />
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/first_name"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp_5"
+                    android:textColor="@color/star_black"
+                    android:textSize="@dimen/medium" />
+            </LinearLayout>-->
+
+            <!-- commenting last name-->
+            <!-- <View
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/dp_1"
+                 android:background="@color/divider" />
+
+             &lt;!&ndash;name&ndash;&gt;
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_marginTop="@dimen/dp_5"
+                 android:layout_marginBottom="@dimen/dp_5"
+                 android:weightSum="5">
+
+                 <TextView
+                     android:id="@+id/textName"
+                     android:layout_width="@dimen/dp_0"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="2"
+                     android:padding="@dimen/dp_5"
+                     android:text="@string/last_name"
+                     android:textSize="@dimen/medium" />
+
+                 <EditText
+                     android:id="@+id/etLname"
+                     android:layout_width="@dimen/dp_0"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="3"
+                     android:background="@android:color/transparent"
+                     android:hint="@string/last_name"
+                     android:inputType="text"
+                     android:maxLength="20"
+                     android:maxLines="1"
+                     android:padding="@dimen/dp_5"
+                     android:textColor="@color/star_black"
+                     android:textSize="@dimen/medium" />
+             </LinearLayout>
+
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/dp_1"
+                 android:background="@color/divider" />-->
+
+            <!--user name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_30"
+                android:background="@drawable/curved_gray_color"
+                android:padding="@dimen/dp_10"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/textUserName"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="@dimen/dp_5"
+                    android:text="@string/user_name1"
+                    android:textSize="@dimen/medium"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/etUserName"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@android:color/transparent"
+                    android:digits="@string/digits_both"
+                    android:hint="@string/hint_user_name"
+                    android:inputType="textPersonName"
+                    android:lines="1"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/star_black"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/iV_userNameCheck"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_tick"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_removeUsernameText"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/remove_all_x"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvUserNamewarning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_3"
+                android:drawableStart="@drawable/ic_warning"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_horizontal"
+                android:text="@string/usernameWarning"
+                android:textColor="@color/light_black"
+                android:textSize="12sp"
+                android:visibility="gone"></TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/divider"
+                android:visibility="gone" />
+
+            <!--email-->
+            <LinearLayout
+                android:id="@+id/ll_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:background="@drawable/curved_gray_color"
+                android:padding="@dimen/dp_10"
+                android:visibility="gone"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/textEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/email"
+                    android:textSize="@dimen/medium"
+                    android:visibility="gone" />
+
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textColor="@color/star_black"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/iV_emailClear"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_tick"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_removeEmailText"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/remove_all_x"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvEmailNamewarning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_3"
+                android:drawableStart="@drawable/ic_warning"
+                android:drawablePadding="@dimen/dp_10"
+                android:gravity="center_horizontal"
+                android:text="@string/emailWarning"
+                android:textColor="@color/light_black"
+                android:textSize="12sp"
+                android:visibility="gone"></TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/divider"
+                android:visibility="gone" />
+
+            <!--password-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:background="@drawable/curved_gray_color"
+                android:padding="@dimen/dp_10"
+                android:visibility="gone"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/textPassword"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/password"
+                    android:textSize="@dimen/medium"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:maxLength="24"
+                    android:maxLines="1"
+                    android:textColor="@color/star_black"
+                    android:textSize="@dimen/sp_14" />
+
+                <ToggleButton
+                    android:id="@+id/tbPassword"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:background="@drawable/eye_toggle"
+                    android:disabledAlpha="?android:attr/disabledAlpha"
+                    android:textOff=""
+                    android:textOn="" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/divider"
+                android:visibility="gone" />
+
+            <!--confirm password-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:visibility="gone"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/textConfirmPassword"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="@dimen/dp_5"
+                    android:text="@string/confirm"
+                    android:textSize="@dimen/medium" />
+
+                <EditText
+                    android:id="@+id/etConfirmPassword"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_25"
+                    android:layout_weight="3"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/enter_confirm_password"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp_5"
+                    android:textColor="@color/star_black"
+                    android:textSize="@dimen/medium" />
+
+                <ToggleButton
+                    android:id="@+id/tbConfirmPassword"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_25"
+                    android:background="@drawable/eye_toggle"
+                    android:disabledAlpha="?android:attr/disabledAlpha"
+                    android:textOff=""
+                    android:textOn="" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/divider"
+                android:visibility="gone" />
+
+            <!--referral-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:visibility="gone"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/textReferralCode"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="@dimen/dp_5"
+                    android:text="@string/referral_code"
+                    android:textSize="@dimen/medium" />
+
+                <EditText
+                    android:id="@+id/etReferralCode"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/enter_referral_code"
+                    android:inputType="textCapSentences"
+                    android:maxLength="20"
+                    android:padding="@dimen/dp_5"
+                    android:text="@string/text_1111"
+                    android:textColor="@color/star_black"
+                    android:textSize="@dimen/medium" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/divider"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/cbTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/minus_5"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:text="@string/tapAgreeAndContinue"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_terms_conditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:gravity="center"
+                android:text="@string/signupconditions"
+                android:textColor="@color/gray2"
+                android:textSize="@dimen/sp_14"></TextView>
+
+            <TextView
+                android:id="@+id/tv_verify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_otp_figures"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_30"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:background="@drawable/curved_primary_color"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:gravity="center"
+                android:padding="@dimen/dp_10"
+                android:text="@string/signupheader"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--UI for to enter USERNAME -->
+    <LinearLayout
+        android:id="@+id/ll_Username_UI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rL_actionBar"
+        android:layout_margin="@dimen/dp_20"
+        android:background="@drawable/curved_accent_white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:background="@color/color_white">
+
+            <ImageView
+                android:id="@+id/ivClose_username"
+                style="?actionButtonStyle"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                app:srcCompat="@drawable/remove"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/tvHeader_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_toStartOf="@+id/btn_Done_username"
+                android:layout_toEndOf="@+id/ivClose_username"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:gravity="center_horizontal"
+                android:text="@string/welcome"
+                android:textAlignment="center"
+                android:textColor="@color/star_black"
+                android:textSize="@dimen/title" />
+
+            <Button
+                android:id="@+id/btn_Done_username"
+                style="?actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:text="@string/Done"
+                android:textAlignment="textEnd"
+                android:textAllCaps="false"
+                android:textColor="@color/mineShaft"
+                android:textSize="@dimen/medium"
+                android:visibility="invisible"
+                tools:ignore="RtlCompat" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tV_msg_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/thirty_dp"
+            android:layout_marginEnd="@dimen/thirty_dp"
+            android:fontFamily="@font/sf_pro_regular"
+            android:gravity="center"
+            android:text="@string/usernamedesc"
+            android:textColor="@color/gray2"
+            android:textSize="@dimen/sp_14" />
+
+        <!--user name-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_30"
+            android:background="@drawable/curved_gray_color"
+            android:padding="@dimen/dp_15"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/textUserName_register"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="@dimen/dp_5"
+                android:text="@string/user_name1"
+                android:textSize="@dimen/medium"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/etUserName_register"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@android:color/transparent"
+                android:hint="@string/hint_user_name"
+                android:inputType="textPersonName"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:textColor="@color/star_black"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:gravity="center"
+            android:text="@string/usernametextcondition"
+            android:textColor="@color/gray2"></TextView>
+
+
+        <RelativeLayout
+            android:id="@+id/rL_next_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/dp_30"
+            android:background="@drawable/curved_primary_color">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fifty_dp"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:layout_marginEnd="@dimen/fifty_dp"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:text="@string/Continue_small"
+                android:textAllCaps="false"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/sp_16" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_26"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvAlreadyMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_already_a_member"
+                android:textColor="@color/star_grey"
+                android:textSize="@dimen/medium" />
+
+            <TextView
+                android:id="@+id/tvSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:text="@string/Sign_In"
+                android:textColor="@color/base_color"
+                android:textSize="@dimen/medium" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/dp_10"
+        android:visibility="gone" />
+</RelativeLayout>

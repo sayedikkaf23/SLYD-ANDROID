@@ -1,0 +1,79 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="chat.hola.com.app.subscription.active.ActiveFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- TODO: Update blank fragment layout -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dp_10"
+                tools:listitem="@layout/item_subscriptions"/>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <!--Empty layout-->
+        <LinearLayout
+            android:id="@+id/ll_empty"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/emptyImage"
+                android:src="@drawable/ic_coin"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/emptyTitle"
+                android:layout_marginTop="@dimen/fifteen_dp"
+                android:textSize="@dimen/big"
+                android:textColor="@color/color_black"
+                android:gravity="center"
+                android:fontFamily="@font/sf_pro_regular"
+                android:text="@string/no_active_subscriptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/emptyMsg"
+                android:layout_marginTop="@dimen/fifteen_dp"
+                android:textSize="@dimen/small"
+                android:textColor="@color/star_grey"
+                android:gravity="center"
+                android:paddingStart="@dimen/thirty_dp"
+                android:paddingEnd="@dimen/thirty_dp"
+                tools:text="@string/no_active_subscriptions"
+                android:fontFamily="@font/sf_pro_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/emptyAction"
+                android:layout_marginTop="@dimen/fifteen_dp"
+                android:textSize="@dimen/medium"
+                android:textColor="@color/blue"
+                android:gravity="center"
+                android:fontFamily="@font/sf_pro_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

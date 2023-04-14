@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="chat.hola.com.app.star_configuration.EmailVerifyActivity">
+
+    <RelativeLayout
+        android:id="@+id/rL_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:elevation="@dimen/two_dp"
+        android:background="@color/colorHintOfRed">
+
+        <ImageView
+            android:id="@+id/iV_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:padding="@dimen/ten_dp"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/tV_title"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/email_verification"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/rL_actionBar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_margin="@dimen/ten_dp"
+            android:text="@string/email"
+            android:textSize="@dimen/medium"
+            android:fontFamily="@font/sf_pro_regular"
+            android:textColor="@color/gray_text_darker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/eT_email"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/big"
+            android:fontFamily="@font/sf_pro_regular"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:padding="@dimen/ten_dp"
+            android:textSize="@dimen/medium"
+            android:fontFamily="@font/sf_pro_regular"
+            android:textColor="@color/gray_text_darker"
+            android:text="@string/user_cannot_contact_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_background_gray"/>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:padding="@dimen/ten_dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/email"
+                android:textSize="@dimen/big"
+                android:textColor="@color/colorPrimary"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchEmail"
+                android:theme="@style/SCBSwitch"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twenty_dp"
+            android:background="@color/color_background_gray"/>
+
+        <RelativeLayout
+            android:id="@+id/rL_next"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/Save"
+                android:layout_gravity="center"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:textColor="@color/white"
+                android:background="@drawable/curved_primary_color"
+                android:gravity="center"
+                android:padding="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_20"
+                android:textSize="@dimen/sp_16" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

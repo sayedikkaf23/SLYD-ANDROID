@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="chat.hola.com.app.live_stream.LiveStream.LiveStreamBroadcaster.RTMPStreamBroadcasterActivity">
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/camera_view_renderer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/transparentCover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#77000000" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/clContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <chat.hola.com.app.live_stream.heart_animation.HeartsView
+            android:id="@+id/heartsView"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_350"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="@dimen/dp_80"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/rlHeader"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvLiveStreamStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/rounded_live"
+                android:paddingStart="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_6"
+                android:paddingEnd="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_6"
+                android:text="@string/live_indicator"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvNoOfViewers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_toEndOf="@+id/tvLiveStreamStatus"
+                android:background="@drawable/white_outline_radius"
+                android:drawableStart="@drawable/ic_remove_red_eye_black_24dp"
+                android:drawablePadding="@dimen/dp_5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingEnd="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_5"
+                android:text="@string/zero"
+                android:textColor="#FFFAFAFA"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnCloseLiveStream"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:text="@string/end"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/llTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dp_15"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_margin="@dimen/dp_5"
+                    android:src="@drawable/ic_access_time_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tvTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:text="@string/hr_m_sec"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llStartStreaming"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <include
+                layout="@layout/gift_viewer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:background="@drawable/gradient_radient">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMessages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:background="@android:color/transparent" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPresetMessages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/app_margin"
+                android:layout_marginEnd="@dimen/app_margin"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/ivSwitchCamera"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/ivMute"
+
+                    android:adjustViewBounds="true"
+                    android:onClick="changeCamera"
+                    android:src="@drawable/ic_switch_camera_white_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivMute"
+                    style="?borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/mute_show"
+                    android:tint="@color/white"
+
+                    app:layout_constraintBottom_toBottomOf="@id/ivSwitchCamera"
+                    app:layout_constraintEnd_toStartOf="@id/ivSwitchCamera"
+                    app:layout_constraintTop_toTopOf="@id/ivSwitchCamera" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSendMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:padding="@dimen/dp_5"
+                    android:src="@drawable/ic_send_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivSwitchCamera"
+                    app:layout_constraintEnd_toStartOf="@id/ivMute"
+                    app:layout_constraintTop_toTopOf="@id/ivSwitchCamera" />
+
+
+                <EditText
+                    android:id="@+id/etSendMessage"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/app_margin"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/app_margin"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:background="@drawable/chat_background1"
+                    android:hint="@string/typeSomethingHere"
+                    android:maxLength="100"
+                    android:maxLines="3"
+                    android:paddingLeft="@dimen/app_margin"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingRight="@dimen/app_margin"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ivSendMessage"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:behavior_hideable="true"
+            app:behavior_peekHeight="@dimen/dp_400"
+            app:layout_behavior="@string/bottom_sheet_behavior">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/tvViewer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/viewers"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/medium" />
+
+                    <TextView
+                        android:id="@+id/done"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/done"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/small" />
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:background="@color/gray_text_darker" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/viewerList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_20" />
+            </LinearLayout>
+
+        </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlStreamEnd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/dp_10"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivStreamPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llBottom"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/ivProfilePic"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/empty_user" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:text="@string/live_stream_ended"
+                android:textColor="@color/white"
+                android:textSize="@dimen/big"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_20"
+                android:background="@drawable/border_white_thick"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp_20"
+                android:paddingBottom="@dimen/dp_20">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <!--coins-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_2"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_margin="@dimen/dp_2"
+                            android:src="@drawable/ic_live_coin_earned" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_pro_semibold"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_2"
+                            android:text="@string/coins1"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small" />
+
+                        <TextView
+                            android:id="@+id/tvCoins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_pro_semibold"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_2"
+                            android:text="@string/zero"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small" />
+
+                    </LinearLayout>
+
+                    <!--gifts-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_2"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_margin="@dimen/dp_2"
+                            android:src="@drawable/ic_live_gift" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_pro_semibold"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_2"
+                            android:text="@string/gifts"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small" />
+
+                        <TextView
+                            android:id="@+id/tvGifts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_pro_semibold"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_2"
+                            android:text="@string/zero"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <!--clicks-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_2"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_margin="@dimen/dp_2"
+                            android:src="@drawable/ic_live_money_earned" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_pro_semibold"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_2"
+                            android:text="@string/money_earned"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small" />
+
+                        <TextView
+                            android:id="@+id/tvEarned"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_pro_semibold"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_2"
+                            android:text="@string/zero"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small" />
+
+                    </LinearLayout>
+
+                    <!--views-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_2"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_margin="@dimen/dp_2"
+                            android:src="@drawable/ic_live_viewers" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_pro_semibold"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_2"
+                            android:text="@string/views1"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small" />
+
+                        <TextView
+                            android:id="@+id/tvViews"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_pro_semibold"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_2"
+                            android:text="@string/zero"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="@dimen/dp_10"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sf_pro_bold"
+                        android:text="@string/live_time"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tvLiveTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sf_pro_bold"
+                        android:gravity="end"
+                        android:text="@string/string_298"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/llBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnShare"
+            android:layout_marginStart="@dimen/dp_50"
+            android:layout_marginEnd="@dimen/dp_50"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvShareMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:layout_toStartOf="@+id/switchShare"
+                android:padding="@dimen/dp_10"
+                android:text="@string/live_share_message"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/medium" />
+
+            <Switch
+                android:id="@+id/switchShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:button="@drawable/custom_switch"
+                android:checked="false"
+                android:thumb="@null"
+                app:track="@null" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_50"
+            android:layout_marginEnd="@dimen/dp_50"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:background="@drawable/gradient_curved_background"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/done"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

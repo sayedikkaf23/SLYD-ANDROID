@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/trans_black"
+    android:weightSum="1"
+    android:orientation="vertical"
+    android:gravity="bottom">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/trans_black"
+        android:layout_weight="0.15"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.85"
+        android:background="@color/trans_black">
+
+        <!--
+            &lt;!&ndash; Action bar &ndash;&gt;
+            <RelativeLayout
+                android:id="@+id/rL_action_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="@dimen/dp_2"
+                android:background="@color/color_white">
+
+                <RelativeLayout
+                    android:id="@+id/rL_back_btn"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        app:srcCompat="@drawable/arrow_back_black"
+                        android:tint="@color/base_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+                <TextView
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/star_black"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/rL_back_btn"
+                    android:layout_toRightOf="@+id/rL_back_btn"
+                    android:text="@string/share_loc"
+                    android:fontFamily="@font/sf_pro_medium"
+                    android:textSize="@dimen/title"/>
+            </RelativeLayout>-->
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/white_bg" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLocation"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_20"
+            android:src="@drawable/attach_location" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack_into"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:src="@drawable/close_square" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_toEndOf="@+id/ivLocation"
+            android:text="@string/Location"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/dp_18"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_bg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_below="@+id/ivLocation"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:background="@drawable/rounded_rectangle_light_gray"
+            app:cardCornerRadius="@dimen/dp_10">
+
+            <RelativeLayout
+                android:id="@+id/rL_searchLoc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/soft_grey">
+
+                <ImageView
+                    android:id="@+id/iV_search_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:src="@drawable/quantum_ic_search_grey600_24" />
+
+                <TextView
+                    android:id="@+id/Locality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/iV_search_icon"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/Search"
+                    android:textColor="@color/gray"
+
+                    android:textSize="@dimen/small" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/cv_bg"
+            android:layout_marginTop="@dimen/dp_5">
+
+            <fragment xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.yelo.com.main.activity.ChangeLocationActivity" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:src="@drawable/add_marker" />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/rL_confirm_location"
+            android:layout_width="175dp"
+            android:layout_height="@dimen/dip_70"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dp_40"
+            android:background="@color/transparent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_rectangle_base_color2">
+
+                <TextView
+                    android:id="@+id/tV_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:fontFamily="@font/sf_pro_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/send_loc"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/medium" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:src="@drawable/right_arrow_white" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

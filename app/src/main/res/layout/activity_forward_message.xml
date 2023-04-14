@@ -1,0 +1,352 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/close"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:layout_marginStart="@dimen/dp_13"
+            android:elevation="@dimen/dp_5"
+            android:foreground="@drawable/ripple_selector"
+            android:tint="@color/color_tint"
+            app:srcCompat="@drawable/cancel_normal" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_2"
+            android:layout_marginRight="@dimen/dp_2">
+
+
+        </androidx.appcompat.widget.SearchView>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/color_line_gray" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@+id/seperator"
+        android:fillViewport="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+
+
+                android:id="@+id/rl4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_37"
+
+                    android:background="@color/color_background_gray">
+
+
+                    <TextView
+
+                        android:id="@+id/tvContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+
+                        android:layout_alignParentStart="true"
+
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_toLeftOf="@+id/rl6"
+                        android:layout_toStartOf="@+id/rl6"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/ContactsCamelCase"
+                        android:textColor="#757575" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl6"
+                        android:layout_width="@dimen/dp_90"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true">
+
+                        <TextView
+                            android:id="@+id/viewAll_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/iv"
+
+
+                            android:layout_toStartOf="@+id/iv"
+                            android:text="@string/ViewAll" />
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dp_5"
+                            android:layout_marginRight="@dimen/dp_5"
+                            android:tint="#757575"
+                            app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24px" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/seperator2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/dp_1"
+
+
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/color_line_gray"
+
+
+                        />
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/contacts_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@+id/rl2">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/noContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl2"
+                    android:layout_margin="@dimen/dp_13"
+
+                    android:textSize="@dimen/medium"
+                    android:visibility="gone" />
+                <!--For showing the send message item at the bottom -->
+            </RelativeLayout>
+
+
+            <RelativeLayout
+
+                android:id="@+id/rl5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl4">
+
+                <RelativeLayout
+                    android:id="@+id/rl3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_37"
+
+                    android:background="@color/color_background_gray">
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/dp_1"
+
+
+                        android:layout_alignParentTop="true"
+                        android:background="@color/color_line_gray"
+
+
+                        />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dp_13"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_marginRight="@dimen/dp_13"
+                        android:layout_marginStart="@dimen/dp_16"
+
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/RecentChats"
+                        android:textColor="#757575" />
+
+
+                    <View
+                        android:id="@+id/seperator4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/dp_1"
+
+
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/color_line_gray"
+
+
+                        />
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/chats_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@+id/rl3">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+                <TextView
+                    android:id="@+id/noChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl3"
+                    android:layout_margin="@dimen/dp_13"
+
+                    android:textSize="@dimen/medium"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/userMessagechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"
+                android:gravity="center"
+
+                android:text="@string/forward_contacts"
+
+
+                android:textSize="@dimen/big"
+                android:visibility="gone" />
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/noMatch"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginLeft="40dp"-->
+            <!--android:layout_marginRight="40dp"-->
+            <!--android:layout_marginTop="70dp"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/noMatch"-->
+            <!--android:textSize="18dp"-->
+            <!--android:visibility="gone" />-->
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_75"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentBottom="true"
+            android:background="@color/forward_gray"
+            android:descendantFocusability="beforeDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+
+            <TextView
+
+
+                android:id="@+id/selectedContacts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:layout_marginEnd="@dimen/dp_50"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_50"
+                android:layout_marginStart="@dimen/dp_8"
+                android:ellipsize="end"
+
+                android:maxLines="1"
+
+
+                android:textColor="@color/color_black" />
+
+
+        </RelativeLayout>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/send_iv"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:layout_marginRight="@dimen/dp_8"
+            android:background="@drawable/record_audio_background"
+
+            android:foreground="@drawable/ripple_selector"
+            android:padding="@dimen/dp_13"
+            android:tint="@color/color_white"
+            app:srcCompat="@drawable/ic_send_black_24px" />
+
+    </RelativeLayout>
+</RelativeLayout>
+

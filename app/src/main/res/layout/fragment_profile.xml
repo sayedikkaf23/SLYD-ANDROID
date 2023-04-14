@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.ProfileFragment"
+    >
+
+
+  <TextView
+      android:id="@+id/tvUserDetails"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_13"
+      android:layout_marginStart="@dimen/dp_13"
+      android:layout_marginTop="@dimen/dp_18"
+      android:text="@string/user_details_caps"
+      android:textSize="@dimen/big"
+      android:textStyle="bold"
+      />
+
+
+  <TextView
+      android:id="@+id/tvNamePlaceHolder"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvUserDetails"
+      android:layout_marginEnd="@dimen/dp_13"
+      android:layout_marginStart="@dimen/dp_13"
+      android:layout_marginTop="@dimen/dp_32"
+      android:text="@string/name"
+      android:textSize="@dimen/big"
+      android:textStyle="bold"
+      />
+
+  <TextView
+      android:id="@+id/tvName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvNamePlaceHolder"
+      android:layout_marginEnd="@dimen/dp_13"
+      android:layout_marginStart="@dimen/dp_13"
+      android:layout_marginTop="@dimen/dp_5"
+      android:ellipsize="end"
+      android:maxLines="3"
+      android:text="@string/test_user"
+      android:textSize="@dimen/medium"
+      />
+
+  <TextView
+      android:id="@+id/tvEmailPlaceHolder"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvName"
+      android:layout_marginEnd="@dimen/dp_13"
+      android:layout_marginStart="@dimen/dp_13"
+      android:layout_marginTop="@dimen/dp_13"
+      android:text="@string/Email"
+      android:textSize="@dimen/big"
+      android:textStyle="bold"
+      />
+
+  <TextView
+      android:id="@+id/tvEmail"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvEmailPlaceHolder"
+      android:layout_marginEnd="@dimen/dp_13"
+      android:layout_marginStart="@dimen/dp_13"
+      android:layout_marginTop="@dimen/dp_5"
+      android:ellipsize="end"
+      android:maxLines="5"
+      android:text="@string/test_gmail"
+      android:textSize="@dimen/medium"
+      />
+
+
+  <RelativeLayout
+      android:id="@+id/rlSignout"
+      android:layout_width="@dimen/dp_120"
+      android:layout_height="@dimen/dp_40"
+      android:layout_below="@+id/tvEmail"
+      android:layout_centerHorizontal="true"
+      android:layout_margin="@dimen/dp_30"
+      android:background="@color/color_black"
+      >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/signout"
+        android:textColor="@color/white"
+        />
+  </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/two_dp"
+        android:paddingEnd="@dimen/five_dp"
+        android:paddingRight="@dimen/five_dp"
+        app:cardBackgroundColor="@color/colorProductBackground"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/five_dp"
+            android:padding="@dimen/three_dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvViewSellersProductActualPrice"
+                style="@style/Text.16sp.ApproxBlack.PoppinsMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="$4,584" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvViewSellersOfferPrice"
+                style="@style/Text.13sp.Nobel.PoppinsRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/eight_dp"
+                android:includeFontPadding="false"
+                app:layout_constraintBottom_toBottomOf="@+id/tvViewSellersProductActualPrice"
+                app:layout_constraintLeft_toRightOf="@+id/tvViewSellersProductActualPrice"
+                app:layout_constraintTop_toTopOf="@+id/tvViewSellersProductActualPrice"
+                tools:text="2,087.00" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvViewSellersOfferPercentage"
+                style="@style/Text.13sp.Green.PoppinsRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/four_dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvViewSellersProductActualPrice"
+                app:layout_constraintLeft_toRightOf="@+id/tvViewSellersOfferPrice"
+                app:layout_constraintTop_toTopOf="@+id/tvViewSellersProductActualPrice" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/vgSellerOffer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="tvViewSellersOfferPercentage,tvViewSellersOfferPrice" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvViewMoreSellerName"
+                style="@style/Text.12sp.BaseAppColor.poppinsRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/ten_dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvViewSellersProductActualPrice"
+                tools:text="Chadraui" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSellerOverallRating"
+                style="@style/Text.13sp.ApproxBlack.poppinsLight"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/four_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:drawableEnd="@drawable/star_blue"
+                android:drawablePadding="@dimen/five_dp"
+                android:includeFontPadding="false"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvViewMoreSellerName"
+                tools:text="4.5" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btProductAddToCart"
+                style="@style/Text.13sp.SpeechBlue.PoppinsMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:background="@drawable/square_round_silver_border"
+                android:enabled="true"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingStart="@dimen/ten_dp"
+                android:paddingEnd="@dimen/ten_dp"
+                android:text="@string/allView"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvViewMoreSellerName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

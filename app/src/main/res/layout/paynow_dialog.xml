@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/fifty_dp"
+    android:background="@drawable/rounded_rectangle_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rL_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:elevation="@dimen/two_dp">
+
+        <ImageView
+            android:id="@+id/iV_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:padding="@dimen/ten_dp"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            android:id="@+id/tV_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:text="@string/payment"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/title" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/divider" />
+
+    <TextView
+        android:id="@+id/tV_payTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fifteen_dp"
+        android:fontFamily="@font/sf_pro_regular"
+        android:gravity="center"
+        android:text="@string/pay_to"
+        android:textColor="@color/star_black"
+        android:textSize="@dimen/medium" />
+
+    <TextView
+        android:id="@+id/tV_amt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fifteen_dp"
+        android:fontFamily="@font/sf_pro_semibold"
+        android:gravity="center"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/big" />
+
+
+    <TextView
+        android:id="@+id/tvBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ten_dp"
+        android:fontFamily="@font/sf_pro_regular"
+        android:gravity="center"
+        android:text="@string/balance"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/small" />
+
+    <TextView
+        android:id="@+id/tvWillReceive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ten_dp"
+        android:fontFamily="@font/sf_pro_regular"
+        android:gravity="center"
+        android:text="@string/balance"
+        android:textColor="@color/star_black"
+        android:textSize="@dimen/big" />
+
+    <Button
+        android:id="@+id/btnPayNow"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/curved_primary_color"
+        android:text="@string/pay_now"
+        android:textColor="@color/white" />
+
+</LinearLayout>

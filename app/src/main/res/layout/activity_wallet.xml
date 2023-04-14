@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="chat.hola.com.app.wallet.wallet_detail.WalletActivity">
+
+    <RelativeLayout
+        android:id="@+id/rL_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:elevation="@dimen/two_dp">
+
+        <ImageView
+            android:id="@+id/iV_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:padding="@dimen/ten_dp"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/tV_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/wallet"
+            android:textColor="@color/star_black"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:textSize="@dimen/title" />
+
+    </RelativeLayout>
+
+    <!--main layout-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rL_actionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--balance layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+                    android:text="@string/your_balance"
+                    android:fontFamily="@font/sf_pro_light"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/medium" />
+
+                <TextView
+                    android:id="@+id/tV_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+                    android:text="@string/coin_init_val"
+                    android:textColor="@color/base_color"
+                    android:textSize="@dimen/title"
+                    android:fontFamily="@font/sf_pro_semibold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/soft_grey" />
+
+            <!--money layout-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/ten_dp"
+                    android:padding="@dimen/ten_dp"
+                    android:src="@drawable/ic_money" />
+
+                <TextView
+                    android:id="@+id/tVMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+
+                    android:layout_toEndOf="@+id/ivMoney"
+                    android:padding="@dimen/fifteen_dp"
+                    android:text="@string/money"
+                    android:fontFamily="@font/sf_pro_regular"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/big" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/ten_dp"
+                    android:src="@drawable/ic_next_arrow_icon" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_below="@+id/tVMoney"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:background="@color/soft_grey" />
+
+            </RelativeLayout>
+
+            <!--card layout-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iVcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/ten_dp"
+                    android:padding="@dimen/ten_dp"
+                    android:src="@drawable/ic_card" />
+
+                <TextView
+                    android:id="@+id/tVcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/iVcard"
+                    android:padding="@dimen/fifteen_dp"
+                    android:text="@string/cards"
+                    android:fontFamily="@font/sf_pro_regular"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/big" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/ten_dp"
+                    android:src="@drawable/ic_next_arrow_icon" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_below="@+id/tVcard"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:background="@color/soft_grey" />
+
+            </RelativeLayout>
+
+            <!--Transaction History-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:padding="@dimen/ten_dp"
+                    android:fontFamily="@font/sf_pro_regular"
+                    android:text="@string/transaction_history"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/big" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:background="@color/soft_grey" />
+
+            </LinearLayout>
+
+            <!--Transaction History-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:padding="@dimen/ten_dp"
+                    android:text="@string/manage_payments"
+                    android:fontFamily="@font/sf_pro_regular"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/big" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:background="@color/color_background_gray" />
+            <!--Relative Cards History-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:padding="@dimen/ten_dp"
+                    android:text="@string/relative_cards"
+                    android:fontFamily="@font/sf_pro_regular"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/big" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:background="@color/color_background_gray" />
+
+
+            <!--Payments Security History-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:padding="@dimen/ten_dp"
+                    android:text="@string/payment_security"
+                    android:fontFamily="@font/sf_pro_regular"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/big" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:background="@color/soft_grey" />
+
+            </LinearLayout>
+
+            <!--Help Center History-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:padding="@dimen/ten_dp"
+                    android:text="@string/help_center"
+                    android:fontFamily="@font/sf_pro_regular"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/big" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:background="@color/color_background_gray" />
+
+            <!--Switch Wallet Region History-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:padding="@dimen/ten_dp"
+                    android:text="@string/switch_wallet_region"
+                    android:fontFamily="@font/sf_pro_regular"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/big" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:background="@color/soft_grey" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

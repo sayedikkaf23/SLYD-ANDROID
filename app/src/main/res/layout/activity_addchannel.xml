@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <RelativeLayout
+        android:id="@+id/layoutActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#fff"
+        android:elevation="@dimen/two_dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/five_dp">
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="?actionButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical"
+            android:text="@string/Cancel"
+            android:textAlignment="textStart"
+            android:textColor="@color/mineShaft"
+            android:textSize="@dimen/big"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/tvCreateChannel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:text="@string/CreateChannel"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title" />
+
+
+        <Button
+            android:id="@+id/btnSave"
+            style="?actionButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:text="@string/create"
+            android:textAlignment="textEnd"
+            android:textColor="@color/mineShaft"
+            android:textSize="@dimen/big"
+            tools:ignore="RtlCompat" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutActionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/ten_dp">
+
+            <FrameLayout
+                android:id="@+id/flAddProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/twenty_dp"
+                android:layout_marginBottom="@dimen/ten_dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/twenty_dp"
+                    app:srcCompat="@drawable/ic_default_img" />
+
+                <chat.hola.com.app.Utilities.RoundedImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_100"
+                    android:layout_gravity="center"
+                    android:foreground="@drawable/pic_with_gray_stroke" />
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/btnUploadPhoto"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/uploadPictureStr"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/medium" />
+
+            <!--divider-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:background="#f1f1f3"
+                android:visibility="visible" />
+
+            <!--name-->
+            <EditText
+                android:id="@+id/etChannelName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical|start"
+                android:hint="@string/ChannelNameStr"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="@dimen/dp_10"
+                android:textColor="@color/color_black"
+                android:textColorHint="@color/gray" />
+            <!--divider-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#f1f1f3"
+                android:visibility="visible" />
+            <!--category-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvCategory"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/tvCategoryName"
+                    android:background="@color/white"
+                    android:gravity="center_vertical|start"
+                    android:hint="@string/select_category"
+                    android:padding="@dimen/dp_10"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/tvCategoryName"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/white"
+                    android:drawableEnd="@drawable/ic_navigate_next"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:drawableTint="@color/base_color"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|end"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp_10"
+                    android:singleLine="true"
+                    android:textColor="@color/star_black" />
+            </RelativeLayout>
+
+            <!--divider-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#f1f1f3"
+                android:visibility="visible" />
+
+            <!--category-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvPrivateChannel"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical|start"
+                    android:hint="@string/PrivateChannel"
+                    android:padding="@dimen/dp_10"
+                    android:textColor="@color/gray" />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchPrivateChannel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:background="@color/transparent"
+                        android:button="@drawable/custom_selector"
+                        android:gravity="center"
+                        android:thumb="@color/transparent"
+                        app:track="@color/transparent" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!--divider-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#f1f1f3"
+                android:visibility="visible" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

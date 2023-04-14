@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingBottom="@dimen/ten_dp"
+    android:paddingTop="@dimen/ten_dp">
+
+    <ImageView
+        android:id="@+id/profileIv"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_20"
+        app:srcCompat="@drawable/ic_def_hashtag"
+        android:scaleType="fitXY"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/profileNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ten_dp"
+        android:layout_marginStart="@dimen/ten_dp"
+        android:layout_toEndOf="@+id/profileIv"
+        android:layout_toRightOf="@+id/profileIv"
+        android:padding="@dimen/dp_2"
+        android:textColor="@color/colorMineShaft"
+        android:textSize="@dimen/big" />
+
+    <TextView
+        android:id="@+id/tvCounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileNameTv"
+        android:layout_marginLeft="@dimen/ten_dp"
+        android:layout_marginStart="@dimen/ten_dp"
+        android:layout_toEndOf="@+id/profileIv"
+        android:layout_toRightOf="@+id/profileIv"
+        android:visibility="visible"
+        android:padding="@dimen/dp_2" android:textColor="@color/colorGray"
+        android:textSize="@dimen/sp_12" />
+
+</RelativeLayout>

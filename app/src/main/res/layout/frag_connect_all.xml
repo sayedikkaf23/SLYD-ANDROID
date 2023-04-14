@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <RelativeLayout
+        android:id="@+id/actionBarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:elevation="@dimen/two_dp"
+        android:background="@color/base_color_dark"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:tint="@color/white"
+                android:src="@drawable/ic_launcher_foreground"/>
+
+            <TextView
+                android:id="@+id/text_friends_messages"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/euclid_circular_b_medium"
+                android:gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_5"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/big"
+                />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ll_count"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/iV_info"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/dp_5"
+                android:padding="@dimen/dp_5"
+                android:src="@drawable/ic_info_more" />
+
+
+            <ImageView
+                android:id="@+id/iV_plus"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/dp_5"
+                android:visibility="gone"
+                android:src="@drawable/ic_plus_round" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_16"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:src="@drawable/actionbar_logo"
+            android:text="@string/string_639"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/activity"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/content_descriptor"
+            android:padding="@dimen/five_dp"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_activity" />
+
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_32"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/iv_chat"
+            android:background="@color/base_color"
+            android:visibility="gone"
+            app:defaultQueryHint="@string/search"
+            app:iconifiedByDefault="true"
+            app:queryBackground="@drawable/rounded_rectangle_white"
+            app:queryHint="@string/search"
+            app:searchIcon="@drawable/ic_search_white" />
+
+        <ImageView
+            android:id="@+id/iv_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/iV_pluss"
+            android:contentDescription="@string/content_descriptor"
+            android:padding="@dimen/ten_dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_chats_new" />
+
+        <ImageView
+            android:id="@+id/iV_pluss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/content_descriptor"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_option_menu_white" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llStories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionBarRl"
+        android:background="@color/color_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_5"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/storyPic"
+                android:layout_width="@dimen/dp_55"
+                android:layout_height="@dimen/dp_55"
+                android:background="@drawable/circular_story_item_bg_black">
+
+                <ImageView
+                    android:id="@+id/addMyStoryIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dp_3"
+                    android:src="@drawable/profile_one" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAdd"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_gravity="center"
+                    android:elevation="@dimen/dp_2"
+                    android:padding="@dimen/dp_5"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_plus" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvMyStory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/dp_2"
+                android:text="@string/add_story"
+                android:textColor="@color/colorMineShaft"
+                android:textSize="@dimen/sp_12"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMyStory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="@dimen/dp_55"
+                android:layout_height="@dimen/dp_55"
+                android:background="@drawable/circular_story_item_bg">
+
+                <ImageView
+                    android:id="@+id/iV_myStory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/profile_one"
+                    android:padding="@dimen/dp_2" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/dp_2"
+                android:text="@string/myStory"
+                android:textColor="@color/colorMineShaft"
+                android:textSize="@dimen/sp_12"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10" />
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/faBtn"
+        android:layout_width="@dimen/dp_56"
+        android:layout_height="@dimen/dp_56"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_80"
+        android:clickable="true"
+        android:tint="@color/color_white"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_old_handphone" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/connectTl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_below="@+id/llStories"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:elevation="@dimen/two_dp"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/colorCerulean"
+        app:tabIndicatorHeight="@dimen/two_dp"
+        app:tabSelectedTextColor="@color/mineShaft"
+        app:tabTextColor="#CC2C2C2C" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/two_dp"
+        android:layout_below="@id/connectTl"
+        android:background="@drawable/shadow_below" />
+
+    <RelativeLayout
+        android:id="@+id/rel_new_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/connectTl"
+        android:padding="@dimen/dp_10"
+        android:visibility="gone">
+
+        <!--message-->
+        <RelativeLayout
+            android:id="@+id/rel_new_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_back"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:padding="@dimen/dp_15"
+                android:src="@drawable/ic_back_new_black" />
+
+            <TextView
+                android:id="@+id/tvProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_toRightOf="@+id/img_back"
+                android:fontFamily="@font/euclid_circular_b_regular"
+                android:text="@string/back_"
+                android:textColor="@color/color_profile_name"
+                android:textSize="@dimen/medium"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_info"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/ic_info_more_black"
+                android:tint="@color/color_black"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/rel_new_message"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@color/gray" />
+
+        <!--newcontact-->
+        <RelativeLayout
+            android:id="@+id/rel_add_new_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
+                    android:padding="@dimen/dp_15"
+                    android:src="@drawable/ic_add_user" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/euclid_circular_b_regular"
+                        android:text="Add new contact"
+                        android:textColor="@color/color_profile_name"
+                        android:textSize="@dimen/subheading_text_size"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:fontFamily="@font/euclid_circular_b_regular"
+                        android:gravity="start"
+                        android:text="By username, phone number, or email"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/subheading_text_size"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_5"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/rel_add_new_contact"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@color/gray" />
+
+        <!--new chat-->
+        <RelativeLayout
+            android:id="@+id/rel_create_new_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
+                    android:padding="@dimen/dp_15"
+                    android:src="@drawable/ic_create_new_group" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/euclid_circular_b_regular"
+                        android:text="New chat"
+                        android:textColor="@color/color_profile_name"
+                        android:textSize="@dimen/subheading_text_size"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:fontFamily="@font/euclid_circular_b_regular"
+                        android:gravity="start"
+                        android:text="Create a new chat"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/subheading_text_size"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_2"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/rel_create_new_chat"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@color/gray" />
+
+        <!--new group-->
+        <RelativeLayout
+            android:id="@+id/rel_create_new_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
+                    android:padding="@dimen/dp_15"
+                    android:src="@drawable/ic_create_new_group" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/euclid_circular_b_regular"
+                        android:text="@string/create_new_group"
+                        android:textColor="@color/color_profile_name"
+                        android:textSize="@dimen/subheading_text_size"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:fontFamily="@font/euclid_circular_b_regular"
+                        android:gravity="start"
+                        android:text="Create a new group adding existing friends"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/subheading_text_size"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/view_3"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/rel_create_new_group"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@color/gray" />
+
+        <!--new secret chat-->
+        <RelativeLayout
+            android:id="@+id/rel_create_new_secretChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
+                    android:padding="@dimen/dp_15"
+                    android:src="@drawable/ic_create_new_group" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/euclid_circular_b_regular"
+                        android:text="Create secret chat"
+                        android:textColor="@color/color_profile_name"
+                        android:textSize="@dimen/subheading_text_size"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:fontFamily="@font/euclid_circular_b_regular"
+                        android:gravity="start"
+                        android:text="Create a new secret chat"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/subheading_text_size"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_4"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/rel_create_new_secretChat"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@color/gray" />
+
+        <RelativeLayout
+            android:id="@+id/rel_create_new_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
+                    android:padding="@dimen/dp_15"
+                    android:src="@drawable/ic_bookmark" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/euclid_circular_b_regular"
+                        android:text="@string/create_new_section"
+                        android:textColor="@color/color_profile_name"
+                        android:textSize="@dimen/subheading_text_size"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:fontFamily="@font/euclid_circular_b_regular"
+                        android:gravity="start"
+                        android:text="Like Company co-workers, Family, Friends etc."
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/subheading_text_size"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/connectVp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_new_add" />
+
+</RelativeLayout>

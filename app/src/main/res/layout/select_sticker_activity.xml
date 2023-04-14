@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black"
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+
+
+    <ImageView
+        android:id="@+id/iv_image"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_centerVertical="true"
+
+        android:contentDescription="@string/Image"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/trans_black"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="@dimen/dp_5"
+            android:padding="@dimen/dp_10"
+            android:tint="@color/color_white"
+            app:srcCompat="@drawable/arrow_back_black" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_sticker"
+            android:textColor="@color/color_white"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:textSize="@dimen/title"
+            />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/stickers_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_action_bar"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    </RelativeLayout>
+

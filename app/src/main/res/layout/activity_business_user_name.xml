@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="chat.hola.com.app.profileScreen.editProfile.EditUserNameActivity">
+
+    <ProgressBar
+        android:id="@+id/pbUserNameProgress"
+        android:layout_width="@dimen/dp_15"
+        android:layout_height="@dimen/dp_15"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/layoutActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:elevation="@dimen/two_dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <include layout="@layout/layout_back_arrow_btn_header" />
+
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clusername"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/layoutActionBar"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:hint="@string/enter_user_name"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etUserName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawablePadding="@dimen/fifteen_dp"
+                android:inputType="textPersonName"
+                android:fontFamily="@font/poppins"
+                android:maxLength="50"
+                android:imeOptions="actionNext"
+                android:paddingBottom="@dimen/fifteen_dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivValidUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/tiUserName"
+            app:layout_constraintBottom_toBottomOf="@id/tiUserName"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvChangeUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clusername"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Save"
+        android:layout_gravity="center"
+        android:fontFamily="@font/sf_pro_semibold"
+        android:textColor="@color/white"
+        android:background="@drawable/curved_primary_color"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textSize="@dimen/sp_16"/>
+
+</RelativeLayout>

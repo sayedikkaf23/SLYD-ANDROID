@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:padding="@dimen/dp_16">
+
+    <LinearLayout
+        android:id="@+id/llTitleContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimenTitleTopWithBackarrow"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvEnter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_your"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title_text_size" />
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/number"
+            android:textColor="@color/base_color"
+            android:textSize="@dimen/title_text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llTitleContainer"
+        android:layout_marginTop="@dimen/dp_50"
+        android:orientation="vertical">
+
+        <!--mobile number-->
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48">
+
+            <RelativeLayout
+                android:id="@+id/rlCountryCode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/ivFlag"
+                    android:layout_width="@dimen/dp_35"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/two_dp"
+                    android:contentDescription="@string/country"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    tools:src="@drawable/flag_in" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/ivFlag"
+                    android:layout_toRightOf="@+id/ivFlag"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tvCountryCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="5"
+                        android:padding="@dimen/two_dp"
+                        android:text="@string/mobno_start"
+                        android:textColor="@color/star_black"
+                        android:textSize="@dimen/big" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toEndOf="@+id/tvCountryCode"
+                        app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:layout_toEndOf="@+id/rlCountryCode"
+                android:background="@color/transparent"
+                android:backgroundTint="@color/transparent"
+                android:focusable="true"
+                android:hint="@string/phoneNumber"
+                android:inputType="phone"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:textColor="@color/star_black"
+                android:textSize="@dimen/big">
+
+                <requestFocus />
+            </EditText>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/colorGray" />
+
+        <!--referral code-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginTop="@dimen/dp_10">
+
+            <EditText
+                android:id="@+id/etReferCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:backgroundTint="@color/transparent"
+                android:hint="@string/enter_referral_code"
+                android:inputType="text|textNoSuggestions"
+                android:maxLength="14"
+                android:maxLines="1"
+                android:padding="@dimen/dp_5"
+                android:textAllCaps="true"
+                android:textColor="@color/star_black"
+                android:textSize="@dimen/big" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/colorGray" />
+
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7"
+            android:textColor="@android:color/holo_red_light" />
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/ibNext"
+        android:layout_width="@dimen/next_circle_size"
+        android:layout_height="@dimen/next_circle_size"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient_circle"
+        android:src="@drawable/ic_forward" />
+
+</RelativeLayout>

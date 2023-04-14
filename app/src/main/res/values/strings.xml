@@ -1,0 +1,3085 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE resources [<!ENTITY appname "slyd">]>
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">&appname;</string>
+    <string name="facebook_app_id">1674519595980409</string>
+    <string name="fb_login_protocol_scheme">fb1674519595980403</string>
+    <string name="google_api_key_places">AIzaSyBYwnbxkkvB9BFMTviY8NxGkvibfyXs8d0</string>
+    <string name="admob_appid">ca-app-pub-9199908208295488~2197642172</string>
+    <!--    <string name="interstitial_id">ca-app-pub-7422620791332459/2505747489</string>-->
+    <string name="banner_id">ca-app-pub-3940256099942544/6300978111</string>
+    <!--    <string name="banner_id">ca-app-pub-9199908208295488/1677917363</string>-->
+    <!--    <string name="interstitial_id">ca-app-pub-3940256099942544/1033173712</string>&lt;!&ndash;TEST&ndash;&gt;-->
+    <string name="string_38">Already downloading!!</string>
+    <string name="string_211">PERMISSION DENIED</string>
+    <string name="string_393">Download Confirmation</string>
+    <string name="string_506">Download </string>
+    <string name="string_534"> size image?</string>
+    <string name="string_537"> size document?</string>
+    <string name="more_message">more new messages</string>
+    <string name="string_580">OK</string>
+    <string name="string_591">CANCEL</string>
+    <string name="string_578">CONTINUE</string>
+    <string name="string_535">size video?</string>
+    <string name="string_39">Download failed!!</string>
+    <string name="string_40">File not found!!</string>
+    <string name="string_41">Download canceled!!</string>
+    <string name="string_4">Syncing</string>
+    <string name="string_280">Image</string>
+    <string name="string_281">Video</string>
+
+    <string name="string_498">Document downloaded!!</string>
+    <string name="string_42">Image downloaded!!</string>
+    <string name="string_43">Video downloaded!!</string>
+
+    <string name="string_47">Doodle downloaded!!</string>
+    <string name="NoImage">No image selected!!</string>
+    <string name="NoDocument">No document selected!!</string>
+    <string name="string_45">Allow external storage access to download %s</string>
+    <string name="string_644">Gallery</string>
+    <string name="Document">Document</string>
+    <string name="album">Album</string>
+    <string name="file">File</string>
+    <string name="star_packet">Star Packet</string>
+    <string name="transfer">Transfer</string>
+
+    <string name="string_982">Grant external storage permission required to save captured video!!</string>
+    <string name="string_67">Allow gallery access!!</string>
+
+    <string name="string_981">Grant external storage permission required to save captured image!!</string>
+    <string name="string_57">Access external storage permission denied!!</string>
+
+    <string name="string_68">Record audio permission denied!!</string>
+
+    <string name="string_61">Camera not found!!</string>
+    <string name="string_764">Video can\'t be selected,Try another video!!</string>
+
+
+    <string name="string_674">Video can\'t be forwarded,Try another video!!</string>
+    <string name="string_52">Can\'t send video greater than </string>
+    <string name="string_51">Error sending video,Try again!!</string>
+    <string name="string_49">Error sending image,Try again!!</string>
+    <string name="string_492">Error sending doodle,Try again!!</string>
+
+    <string name="string_511">Error forwarding video,Try again!!</string>
+    <string name="string_491">Error forwarding image,Try again!!</string>
+
+    <string name="string_50">Image can\'t be sent,try capturing again!!</string>
+    <string name="string_48">Image can\'t be selected,try different image!!</string>
+
+
+    <string name="string_481">Doodle can\'t be forwarded,try different doodle!!</string>
+
+
+    <string name="string_482">Image can\'t be forwarded,try different image!!</string>
+
+
+    <string name="string_56"> Mb!!</string>
+    <string name="string_207">Today</string>
+    <string name="string_208">Yesterday</string>
+    <string name="string_639">Chats</string>
+    <string name="string_948">No chat with</string>
+    <string name="string_55">Try downloading!!</string>
+    <string name="string_65">Allow camera access!!</string>
+    <string name="string_62">Access camera permission denied!!</string>
+    <string name="string_246">No Number</string>
+    <string name="string_247">Unknown</string>
+    <string name="string_44">Audio downloaded!!</string>
+    <string name="string_646">Audio</string>
+    <string name="string_647">Location</string>
+    <string name="string_648">Contact</string>
+    <string name="string_607">Audio Received</string>
+    <string name="string_608">Audio Not Found</string>
+    <string name="string_610">Document Not Found</string>
+    <string name="string_609">Audio Sent</string>
+    <string name="string_538">size audio?</string>
+    <!--<string name="string_795">New receiverImage</string>-->
+    <!--<string name="string_796">New Video</string>-->
+    <!--<string name="string_797">New Location</string>-->
+    <!--<string name="string_798">New Contact</string>-->
+    <!--<string name="string_799">New Audio</string>-->
+    <string name="string_245">No chats to show</string>
+    <string name="string_725">items</string>
+    <string name="video_nf">Video Not Found</string>
+    <string name="string_285">No media sent yet</string>
+    <string name="image_nf">Image Not Found</string>
+    <string name="doodle_nf">Doodle Not Found</string>
+
+
+    <string name="gifSmall">Gifs</string>
+    <string name="stickers">STICKERS</string>
+
+    <string name="newSecretChat">New Secret Chat</string>
+    <string name="string_284">Media sent</string>
+    <string name="string_1004">Video not downloaded yet!!</string>
+    <string name="string_282">No media yet</string>
+    <string name="string_204"> AND </string>
+    <string name="string_283">Media received</string>
+    <string name="string_1005">Video not found!!</string>
+    <string name="string_805">SENT</string>
+    <string name="string_806">RECEIVED</string>
+    <string name="string_1006">Access storage permission denied!!</string>
+    <string name="string_279">MEDIA HISTORY</string>
+    <string name="string_637">Media History</string>
+    <string name="string_638">Delete Chat</string>
+    <string name="string_640">Clear Chat</string>
+
+    <string name="string_691">Enable Last Seen</string>
+    <string name="string_692">Disable Last Seen</string>
+
+    <string name="string_369">Delete Confirmation</string>
+    <string name="string_584">YES</string>
+    <string name="string_558">Delete chat with</string>
+    <string name="string_593">NO</string>
+    <string name="string_346">Name: </string>
+    <string name="string_347">Address: </string>
+    <string name="string_348">LatLng: </string>
+    <string name="string_395">Location Shared</string>
+    <string name="string_581">OPEN MAP</string>
+    <string name="string_34">No app installed to show location!!</string>
+    <string name="string_600">Failed to select location,Try Again!!</string>
+    <string name="string_53">Error sending audio,Try again!!</string>
+
+    <string name="string_531">Error forwarding audio,Try again!!</string>
+    <string name="string_79">Mic not found!!</string>
+
+    <string name="string_54">Can\'t send audio greater than </string>
+    <string name="string_766">Audio can\'t be selected,Try another audio!!</string>
+    <string name="string_667">Audio can\'t be forwarded,Try another audio!!</string>
+    <string name="string_768">Audio can\'t be recorded,Try another audio!!</string>
+
+
+    <string name="string_75">Allow record audio permission!!</string>
+
+
+    <string name="string_64">Allow location access!!</string>
+    <string name="string_58">Enable location services!!</string>
+    <string name="string_803">&appname; File Uploading</string>
+    <string name="string_337">Online</string>
+    <string name="string_484">Loading...</string>
+    <string name="string_60">Access contacts permission denied!!</string>
+    <string name="string_59">Access location permission denied!!</string>
+    <string name="string_767">Contact can\'t be selected,Try another contact!!</string>
+    <string name="string_911">Location Settings</string>
+    <string name="string_912">Location services isn\'t enabled</string>
+    <string name="string_590">ENABLE</string>
+    <string name="string_66">Allow contacts access!!</string>
+    <string name="string_63">Upload failed!!</string>
+    <string name="string_11"> deleted successfully!!</string>
+    <string name="string_485">Deleting a message is irreversible?</string>
+    <string name="string_801">Message</string>
+    <string name="string_46">Type something to send!!</string>
+    <string name="string_336">Connecting...</string>
+    <string name="string_753">Write a message...</string>
+    <string name="string_755">Offline</string>
+    <string name="string_800">Type something...</string>
+    <string name="text_9000">9000</string>
+    <!--
+
+    For non-firebase signup and login
+
+    -->
+
+
+    <!--
+
+    For calls
+
+    -->
+
+
+    <string name="app_name_call">&appname; Call</string>
+    <string name="connecting">CONNECTING</string>
+
+    <string name="ringing">RINGING</string>
+
+    <string name="pref_startvideobitrate_key">startvideobitrate_preference</string>
+    <string name="pref_startvideobitrate_title">Start video bitrate setting.</string>
+    <string name="pref_startvideobitrate_dlg">Start video bitrate setting.</string>
+    <string name="pref_startvideobitrate_default">Default</string>
+
+
+    <string name="pref_startvideobitratevalue_key">startvideobitratevalue_preference</string>
+    <string name="pref_startvideobitratevalue_title">Video encoder start bitrate.</string>
+    <string name="pref_startvideobitratevalue_dlg">Enter video encoder start bitrate in kbps.</string>
+    <string name="pref_startvideobitratevalue_default">1000</string>
+
+
+    <string name="missing_url">FATAL ERROR: Missing URL to connect to.</string>
+    <string name="connecting_to">Connecting to: %1$s</string>
+
+    <string name="Start_Call"></string>
+    <string name="Start_Audio_Video_call">Start Audio/Video call</string>
+    <string name="No_Internet_Connection_Available">Syncing</string>
+    <string name="Mqtt_Audio_Call">&appname; Audio Call</string>
+    <string name="Mqtt_Video_Call">&appname; Video Call</string>
+
+    <string name="Timeout">No reply</string>
+
+    <string name="No_Calls">No calls to show</string>
+    <string name="Calls">CALLS</string>
+    <string name="noMatch">No results found for </string>
+    <string-array name="days">
+        <item>SUNDAY</item>
+        <item>MONDAY</item>
+        <item>TUESDAY</item>
+        <item>WEDNESDAY</item>
+        <item>THURSDAY</item>
+        <item>FRIDAY</item>
+        <item>SATURDAY</item>
+    </string-array>
+    <string name="AudioCall">Audio Call</string>
+    <string name="VideoCall">Video Call</string>
+
+
+    <string name="doodle_failed">Doodle can\'t be shared,Try different doodle!!</string>
+
+
+    <string name="record_audio">Press and hold audio share button to record audio!!</string>
+
+    <string name="Sticker">Sticker</string>
+
+    <string name="Doodle">Doodle</string>
+    <string name="Post">Post</string>
+
+    <string name="Gif">Gif</string>
+
+
+    <string name="NewDocument">New Document</string>
+
+    <string name="NewImage">New Image</string>
+    <string name="NewVideo">New Video</string>
+    <string name="NewLocation">New Location</string>
+    <string name="NewContact">New Contact</string>
+    <string name="NewAudio">New Audio</string>
+    <string name="NewSticker">New Sticker</string>
+    <string name="NewDoodle">New Doodle</string>
+    <string name="NewGiphy">New Giphy</string>
+    <string name="NewPost">New Post</string>
+
+    <string name="Image">Image</string>
+    <string name="Video">Video</string>
+    <string name="Location">Location</string>
+    <string name="Contact">Contact</string>
+    <string name="Audio">Audio</string>
+    <string name="Stickers">Sticker</string>
+
+    <string name="Giphy">Giphy</string>
+
+    <string name="Enter_Sticker">Please enter sticker name!!</string>
+    <string name="Enter_Giphy">Please enter giphy name!!</string>
+
+    <string name="Search">Search</string>
+    <string name="Typing">Typing...</string>
+    <string name="DeleteConfirmation">Delete Confirmation</string>
+    <string name="Continue">CONTINUE</string>
+    <string name="for_me">For me</string>
+    <string name="for_everyone">For everyone</string>
+    <string name="ClearCalls">Clear all call logs?</string>
+
+    <string name="DeleteCall">Deleting a call log is irreversible?</string>
+
+    <string name="DeleteChat">Deleting a conversation is irreversible?</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="StartCall"></string>
+    <string name="CallOption">Start Audio/Video call</string>
+
+    <string name="busy">is busy on another call</string>
+
+
+    <string name="NoAnswer">No answer by </string>
+
+
+    <!--
+
+    Secret chat strings
+
+    -->
+    <string name="SecretChat">Secret chat:</string>
+    <string name="UseEncryption">Use end-to-end encryption</string>
+    <string name="leaveNoTrace">Leave no trace on our servers</string>
+    <string name="HaveTimer">Have a self-destruct timer</string>
+    <string name="NoForwarding">Do not allow forwarding</string>
+    <string name="YouInvited">You have invited</string>
+    <string name="JoinSecretChat">to join a Secret chat</string>
+    <string name="youAreInvited">You are invited by</string>
+    <string name="SelectTimer">Select timer</string>
+    <string name="Done">Done</string>
+    <string name="Timer_set_to">Destruct timer is set to</string>
+    <string name="Timer_set_off">Destruct timer is set off</string>
+
+
+    <!--
+
+    User's Screen
+
+    -->
+
+
+    <!--
+
+    Option on click of plus icon
+
+    -->
+
+
+    <string name="option_secret">Secret chat</string>
+
+    <string name="string_881">Access external storage permission required to save doodle drawn!!</string>
+    <string name="string_882">Access external storage permission required to save audio recorded!!</string>
+
+
+    <string name="string_883">Access external storage permission required to select document!!</string>
+
+    <string name="call_initiate">Hangup current call to initiate another call!!</string>
+
+    <string name="call_camera">Camera not available while being active on a call!!</string>
+
+
+    <!--
+
+
+    Phone number verification
+
+    -->
+    <string name="string_85">Read SMS permission required to read verification code automatically</string>
+    <string name="string_149">Incorrect verification code,Try again!!</string>
+    <string name="string_294">Waiting to automatically detect an SMS sent to number above</string>
+    <string name="string_295">To complete your phone number verification,please enter the 4 digit code received on number above</string>
+    <string name="string_296">00:</string>
+    <string name="string_297">00:0</string>
+    <string name="string_298">00:00</string>
+    <string name="string_299">:0</string>
+    <string name="string_356">Number Verification</string>
+
+    <string name="string_406">Verifying code</string>
+    <string name="string_545">Enter valid number</string>
+    <string name="string_547">Requesting verification code</string>
+
+    <string name="string_548">Error sending verification code</string>
+    <string name="string_549">Error sending verification code again</string>
+    <string name="string_550">Failed to verify verification code</string>
+
+
+    <string name="string_552">A SMS with a verification code will be sent to your phone number</string>
+    <string name="string_354">Info</string>
+    <string name="string_594">EDIT</string>
+    <string name="string_642">SELECT COUNTRY</string>
+    <string name="string_723">Waiting to automatically detect an SMS to</string>
+    <string name="string_724">RESEND</string>
+    <string name="string_722">VERIFY CODE</string>
+    <string name="string_740">NUMBER VERIFICATION</string>
+    <string name="string_741">Select Country</string>
+    <string name="chooseCountry">Choose Country</string>
+    <string name="string_742">&appname; will send an sms message to verify your\nphone number. Enter your country code and\nphone number:</string>
+    <string name="string_743">+</string>
+    <string name="string_744">Enter number</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="string_748">_ _ _ _</string>
+    <string name="string_905">GRANT</string>
+    <string name="string_955">Search country</string>
+    <string name="string_956">Country not found</string>
+    <string name="string_970">Already verified the same number thrice from given device,for the week</string>
+    <string name="string_971">Already verified the six numbers from given device,for the week</string>
+    <string name="string_972">Already made 3 failed number verification requests,for the week</string>
+    <string name="string_973">You device is blocked due to abuse of the number verification service</string>
+    <string name="string_980">Enter a valid number!!</string>
+
+    <string name="select_channel">Select channel</string>
+    <string name="profileText">Please enter your name and an optional profile photo</string>
+    <string name="user_name">Your public username</string>
+
+    <string name="EnterStatus">What ur upto...</string>
+
+
+    <string name="UpdateNameFailed">Failed to update the name!!</string>
+    <string name="UpdatePicFailed">Failed to update the profile pic!!</string>
+    <string name="UpdateStatusFailed">Failed to update the status!!</string>
+
+    <!--
+
+    SeProfilefile
+
+    -->
+
+
+    <string name="Status">Status</string>
+    <string name="SetupProfile">Setup Profile</string>
+    <string name="string_15">Out of memory.Try Again!!</string>
+    <string name="string_16">Image selection canceled!!</string>
+
+    <string name="string_7">Document selection canceled!!</string>
+    <string name="string_19">Sorry! Failed to crop image</string>
+
+
+    <string name="string_17">Sorry! Failed to capture image</string>
+    <string name="string_18">Image capture canceled!!</string>
+    <string name="media_capture_canceled">Media capture canceled!!</string>
+    <string name="string_31">Media can\'t be selected,try different media!!</string>
+    <string name="string_113">Sorry! Failed to select image</string>
+
+    <string name="string_115">Sorry! Failed to select document</string>
+
+    <string name="string_221">Access camera permission required to capture profile image!!</string>
+    <string name="string_222">Access storage permission required to select profile image!!</string>
+    <string name="string_236">Disclaimer</string>
+    <string name="string_255">Add profile picture</string>
+
+    <string name="UpdateProfile_Failed">User name is taken, please enter another</string>
+
+    <string name="string_419">Save profile without pic?</string>
+    <string name="string_1020">Select Picture</string>
+    <string name="string_1021">Select image from gallery</string>
+    <string name="string_1022">Take photo from camera</string>
+    <string name="string_1218">Access external storage permission required to save captured image!!</string>
+
+    <string name="Enter_Name">Enter user name!!</string>
+
+    <string name="Invalid_Name">Please enter at minimum 4 characters in the Username field</string>
+
+
+    <string name="Verify_Otp">Verifying verification code</string>
+
+
+    <string name="Upload_Failed">Failed to upload profile pic!!</string>
+
+
+    <!--<string name="Save_Picture">Saving profile pic</string>-->
+    <string name="Fetch_Details">Fetching user details</string>
+    <string name="Save_Details">Saving user details</string>
+    <string name="profile_disclaimer">This is not your username and will be visible to your contacts using &appname;.</string>
+
+    <string name="Profile">PROFILE</string>
+    <string name="Profile1">Profile</string>
+    <string name="PhoneAndStatus">User Details</string>
+
+
+    <string name="NewName">Update Name</string>
+    <string name="NewStatus">Update Status</string>
+
+
+    <string name="current_status">Your current status</string>
+    <string name="select_status">Select your new status</string>
+
+
+    <string name="name_empty">Name can\'t be empty</string>
+    <string name="status_empty">Status can\'t be empty</string>
+    <string name="name_atleast">Name must have atleast 4 characters</string>
+    <string name="status_atleast">Status must have atleast 4 characters</string>
+
+
+    <string name="name_save">Enter a valid name to save</string>
+
+    <string name="status_save">Enter a valid status to save</string>
+
+
+    <!--
+
+    Update status
+
+    -->
+
+
+    <string name="Available">Available</string>
+    <string name="Busy">Busy</string>
+    <string name="AtSchool">At school</string>
+
+    <string name="AtTheMovies">At the movies</string>
+    <string name="AtWork">At work</string>
+    <string name="BatteryAboutToDie">Battery about to die</string>
+
+
+    <!--
+
+    Contact sync module
+    -->
+
+    <string name="No_Sync_Contacts">No contacts to sync</string>
+    <string name="Sync_Contacts">Syncing contacts</string>
+    <string name="Load_Contacts">Loading contacts</string>
+
+
+    <string name="Load_Chats">Loading chats</string>
+
+
+    <string name="none_contacts">You don\'t have any contacts yet!</string>
+    <string name="Contacts">Contacts</string>
+    <string name="show_contacts">No contacts to show</string>
+
+
+    <string name="ContactDeleted">Contact deleted!!</string>
+
+
+    <string name="default_status">Hey! I am using &appname;</string>
+    <string name="string_756">Allow access contacts permission, required to sync contacts!!</string>
+
+    <string name="string_757">Allow access contacts permission, to reflect change in contacts!!</string>
+
+
+    <!--
+
+    Crop image
+    -->
+
+
+    <!--<string name="crop_image_activity_title">Crop Image</string>-->
+    <!--
+
+    Have put this as empty intentionally to put the blank title
+
+    -->
+
+    <string name="crop_image_activity_title"> </string>
+
+
+    <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
+    <string name="crop_image_menu_rotate_right">Rotate</string>
+    <string name="crop_image_menu_crop">Crop</string>
+    <string name="crop_image_menu_flip">Flip</string>
+    <string name="crop_image_menu_flip_horizontally">Flip horizontally</string>
+    <string name="crop_image_menu_flip_vertically">Flip vertically</string>
+
+    <string name="pick_image_intent_chooser_title">Select source</string>
+
+
+    <!--
+
+    Sync chats
+
+    -->
+    <string name="Chat_Sync">No chats to sync</string>
+    <string name="Retrieve_Message">Retrieving messages...</string>
+
+    <string name="Failed_Message_Retrieve">Failed to retrieve previous messages!!</string>
+
+
+    <!--
+
+    Push notifications
+
+    -->
+    <!--
+
+    Delete notification
+
+    -->
+
+    <string name="delete_failed">Failed to delete the conversation!!</string>
+
+
+    <string name="delete_failed_calls">Failed to delete the call logs!!</string>
+
+    <!--
+
+    Settings
+    -->
+
+    <string name="AppIconUrl">https://s3.amazonaws.com/sellr/file_1514556648.png</string>
+
+    <string name="InviteFailed">Failed to send invitation!!</string>
+    <string name="InviteMessage">Hey! Join me on &appname;,This cool new messaging app.</string>
+    <string name="Invite">Invite contacts</string>
+    <string name="DataUsageCamelCase">Data usage</string>
+    <string name="Settings">Settings</string>
+    <string name="SettingsCamelCase">Settings</string>
+    <string name="TermsTitle">Terms of service</string>
+
+    <string name="None">None</string>
+
+
+    <string name="Blocked">Blocked users</string>
+
+
+    <!--
+
+    Profile
+
+    -->
+    <string name="ProfileCamelCase">Profile</string>
+
+
+    <string name="Terms">Terms and Privacy Policy</string>
+
+
+    <string name="ContactsCamelCase">Contacts</string>
+
+
+    <string name="RecentChats">Recent Chats</string>
+
+
+    <!--
+    OpponProfilefile
+    -->
+
+    <string name="MuteFailed">Failed to save mute preference,Try again later!!</string>
+    <string name="Media">Media</string>
+
+
+    <string name="Block">Block</string>
+    <string name="Unblock">Unblock</string>
+    <string name="unblock_contact">Unblock Contact</string>
+
+    <string name="PhoneStatus">Status</string>
+    <!--
+
+    Record audio
+    -->
+
+    <string name="SlideToCancel">Slide To Cancel</string>
+
+
+    <!--
+
+
+    Share image from gallery
+    -->
+    <item name="image_id" type="id" />
+
+    <!--
+
+    For Document and media file picker
+
+    -->
+
+    <string name="no_files_found">No Files Found</string>
+
+    <string name="all_photos">All Photos</string>
+    <string name="all_videos">All Videos</string>
+    <string name="all_files">All Files</string>
+
+    <string name="select_photo_text">SELECT IMAGE</string>
+    <string name="select_doc_text">SELECT DOCUMENT</string>
+    <string name="videos">Videos</string>
+    <string name="images">Images</string>
+
+
+    <string name="NoAppForDocument">No app installed to open %s</string>
+
+
+    <!--
+
+  Sync calls
+
+  -->
+    <string name="Call_Sync">No calls to sync</string>
+
+
+    <!--
+
+    Message forwarding
+
+    -->
+    <string name="Forward">FORWARD</string>
+    <string name="ForwardPostFailed">Failed to forward post, as there is no internet connection!!</string>
+    <string name="string_381">Failed to forward message, as there is no internet connection!!</string>
+
+
+    <string name="string_382">Failed to forward document, as there is no internet connection!!</string>
+
+    <string name="forward_contacts">No contacts to forward the message to</string>
+
+    <string name="forward_chats_contacts">No chats or contacts to forward the message to</string>
+
+
+    <string name="Forwarding">Forwarding...</string>
+
+
+    <string name="Hide">Hide</string>
+    <string name="ViewAll">View All</string>
+    <string name="TryForward">Try forwarding!!</string>
+
+    <string name="DownloadImage">Download the image to enable forwarding!!</string>
+    <string name="DownloadVideo">Download the video to enable forwarding!!</string>
+    <string name="DownloadAudio">Download the audio to enable forwarding!!</string>
+    <string name="DownloadDoodle">Download the doodle to enable forwarding!!</string>
+    <string name="DownloadDocument">Download the document to enable forwarding!!</string>
+
+    <string name="PermissionImageForward">Grant external storage permission required to forward image!!</string>
+    <string name="PermissionVideoForward">Grant external storage permission required to forward video!!</string>
+    <string name="PermissionAudioForward">Grant external storage permission required to forward audio!!</string>
+    <string name="PermissionDoodleForward">Grant external storage permission required to forward doodle!!</string>
+    <string name="PermissionDocumentForward">Grant external storage permission required to forward document!!</string>
+
+
+    <string name="NotFoundImageForward">Image to forward has been moved or deleted!!</string>
+    <string name="NotFoundVideoForward">Video to forward has been moved or deleted!!</string>
+    <string name="NotFoundAudioForward">Audio to forward has been moved or deleted!!</string>
+    <string name="NotFoundDoodleForward">Doodle to forward has been moved or deleted!!</string>
+    <string name="NotFoundDocumentForward">Document to forward has been moved or deleted!!</string>
+
+    <string name="ForwardPermission">Allow external storage access to forward %s</string>
+    <!--
+
+    Message reply
+
+
+    -->
+
+    <string name="DownloadImageReply">Download the image to enable reply!!</string>
+    <string name="DownloadVideoReply">Download the video to enable reply!!</string>
+    <string name="DownloadAudioReply">Download the audio to enable reply!!</string>
+    <string name="DownloadDoodleReply">Download the doodle to enable reply!!</string>
+    <string name="DownloadDocumentReply">Download the document to enable reply!!</string>
+
+
+    <string name="PermissionImageReply">Grant external storage permission required to reply on image!!</string>
+    <string name="PermissionVideoReply">Grant external storage permission required to reply on video!!</string>
+    <string name="PermissionAudioReply">Grant external storage permission required to reply on audio!!</string>
+    <string name="PermissionDoodleReply">Grant external storage permission required to reply on doodle!!</string>
+    <string name="PermissionDocumentReply">Grant external storage permission required to reply on document!!</string>
+
+    <string name="NotFoundImageReply">Image to reply on has been moved or deleted!!</string>
+    <string name="NotFoundVideoReply">Video to reply on has been moved or deleted!!</string>
+
+    <string name="NotFoundDoodleReply">Doodle to reply on has been moved or deleted!!</string>
+
+    <!--
+
+
+
+    Message info
+
+    -->
+
+
+    <string name="MessageInfo">Message Info</string>
+
+    <string name="Read">Read</string>
+
+
+    <string name="Delivered">Delivered</string>
+
+
+    <string name="NotDelivered">Message not delivered yet!!</string>
+
+
+    <string name="NotSent">Message is pending to be sent!!</string>
+
+
+    <string name="NotRead">Message not read yet!!</string>
+
+
+    <string name="NotFound">Message not found!!</string>
+
+
+    <string name="You">You</string>
+
+
+    <string name="YouSmall">you</string>
+
+
+    <string name="RecordFailed">Failed to record audio.TryAgain!!</string>
+    <!--
+
+
+    Group chat
+
+    -->
+
+
+    <string name="Mute">Mute</string>
+
+    <string name="NewGroupChat">New Group </string>
+    <string name="NewGroup">New Group</string>
+    <string name="GroupChat">Group Chat</string>
+    <string name="MembersSelected"> of 256 admin</string>
+    <string name="DeleteConversation">Delete conversation</string>
+    <string name="ExitGroup">Exit group</string>
+    <string name="AddParticipants">Add participants</string>
+    <string name="AddSubject">Add subject</string>
+    <string name="AtleastOne">Select atleast one member to continue!!</string>
+    <string name="NoMembers">No contacts to initiate a groupchat with</string>
+    <string name="GroupSubject">Type group subject here...</string>
+    <string name="GroupIcon">Add Group Icon</string>
+    <string name="ProvideSubject">Provide a group subject and optional group icon</string>
+    <string name="ParticipantCount">Participants: %s/256</string>
+    <string name="UploadGroupPicFailed">Failed to upload group icon!!</string>
+    <string name="EmptySubject">Group subject can\'t be empty!!</string>
+    <string name="SaveGroupIcon">Saving group icon</string>
+    <string name="CreatingGroup">Creating group</string>
+    <string name="CreatedGroup">%s created the group</string>
+    <string name="AddParticipant">Add participant...</string>
+    <string name="GroupAdmin">Group Admin</string>
+    <string name="Participants">participants</string>
+    <string name="Make">Make</string>
+    <string name="Making">Making</string>
+    <string name="Removing">Removing</string>
+    <string name="Remove">Remove</string>
+    <string name="MakeAdmin">group admin</string>
+    <string name="Removed">removed</string>
+    <string name="Made">made</string>
+    <string name="ToGroup">to group</string>
+    <string name="FromGroup">from group</string>
+    <string name="SavingIcon">Updating group icon</string>
+    <string name="GroupIconTitle">Group icon</string>
+    <string name="UpdatedGroupIcon">changed the group icon</string>
+    <string name="UpdatedGroupSubject">changed the group subject to %s</string>
+    <string name="YouCantSendMessageText">You can\'t send messages to this group because you\'re no
+        longer a member.</string>
+    <string name="GroupName">Group subject can\'t be empty</string>
+    <string name="UpdateSubject">Update subject</string>
+    <string name="SavingSubject">Updating group subject</string>
+    <string name="CreatedBy">Created by %s</string>
+    <string name="AddMember">to %s group?</string>
+    <string name="AddMemberTo">Add %s</string>
+    <string name="AddedMember">added %s</string>
+    <string name="AddMemberTitle">Add Member</string>
+    <string name="AddMemberSubTitle">%s contacts</string>
+    <string name="NoLongerMember">You can\'t add member to %s because you\'re no
+        longer a member.</string>
+    <string name="AddMemberStatus">Already added to the group</string>
+    <string name="NoMembersToAdd">No contacts to add to group %s</string>
+    <string name="AddedAlready">%s is already a member of the group!!</string>
+    <string name="Adding">Adding %s</string>
+    <string name="ToGroupName">to %s group</string>
+    <string name="Leaving">Leaving %s group</string>
+    <string name="FetchMembers">Fetching %s group members</string>
+    <string name="Deleting">Deleting %s group conversation</string>
+    <string name="Leave">Make someone else group admin to leave the group!!</string>
+    <string name="LeftGroup">%s left the group</string>
+    <string name="FetchDetails">Failed to fetch group member details!!</string>
+    <string name="LeaveGroup">Leave the group to delete the conversation!!</string>
+    <string name="BeingOffline">Being offline you may miss the latest group updates!!</string>
+    <string name="delete_group">Failed to delete the conversation!!</string>
+    <string name="ReadBy">Read by</string>
+    <string name="DeliveredTo">Delivered to</string>
+
+    <string name="Remaining">%s remaining</string>
+    <string name="DeliveryStatus">Fetching message delivery status...</string>
+
+
+    <string name="SaveFailed">Failed to save mute group preference,Try again later!!</string>
+    <string name="text_already_a_member">Already a Member?</string>
+
+    <string name="FailedDeliveryStatus">Failed to fetch message delivery status!!</string>
+
+
+    <!--
+
+    For the data usage
+
+    -->
+
+    <string name="Access">Allow external storage access to auto download the media!!</string>
+    <string name="Wifi">When using mobile data</string>
+    <string name="MobileData">When connected on Wi-Fi</string>
+
+    <string name="DataUsage">Data Usage</string>
+
+    <string name="AutoDownload">Media auto-download</string>
+
+    <string name="VoiceMessage">NOTE: Non media messages are always automatically downloaded for the best communication experience</string>
+    <string name="Documents">Documents</string>
+
+    <string name="Photos">Photos</string>
+
+
+    <!--
+
+    For U-crop
+
+    -->
+
+
+    <!--
+
+    For the wallpaper
+
+    -->
+
+    <string name="SolidColor">Solid Colour</string>
+
+    <string name="NoWallpaper">No Wallpaper</string>
+
+    <string name="Camera">Camera</string>
+
+
+    <string name="Wallpaper">Wallpaper</string>
+
+
+    <string name="WLibrary">Wallpaper Library</string>
+
+    <string name="WallpaperColor">Solid Colours</string>
+
+
+    <string name="WallpaperDraw">Draw Wallpaper</string>
+
+    <string name="Draw">Draw</string>
+
+    <string name="Library">&appname; Library</string>
+    <string name="CameraAccess">Grant external storage permission required to save captured wallpaper!!</string>
+    <string name="WallpaperAccess">Access external storage permission required to select wallpaper!!</string>
+    <string name="WallpaperUpdated">Wallpaper updated!!</string>
+    <string name="SelectWallpaper">Select Wallpaper</string>
+    <string name="WallpaperFailed">Wallpaper can\'t be saved,Try drawing again!!</string>
+
+    <string name="WallpaperDrawn">Access external storage permission required to save wallpaper drawn!!</string>
+    <!--
+
+    Block
+
+    -->
+
+    <string name="YouCantSendMessage">You\'re not allowed to share message with %s.</string>
+    <string name="none_blocked">You haven\'t blocked any of your current contacts on &appname;!!</string>
+
+    <string name="NoBlocked">No blocked contacts</string>
+
+    <string name="BlockUser">%s user...</string>
+
+    <string name="BlockedUsers">Blocked Users</string>
+
+
+    <!--
+
+
+    Sharing
+    -->
+    <string name="Share">SHARE WITH</string>
+
+    <string name="ShareFailed">Failed to share %s!!</string>
+    <string name="Sharing">Sharing...</string>
+
+
+    <string name="StorageAccess">Access external storage permission required to share media!!</string>
+
+
+    <string name="share_contacts">No contacts to share the media with</string>
+
+    <string name="share_chats_contacts">No chats or contacts to share the media with</string>
+
+
+    <!--
+
+    For api level below 18
+    -->
+
+
+    <string name="NotificationTitle">Contact refresh required!!</string>
+
+
+    <string name="NotificationContent">Refresh contacts to reflect change in the phone contacts.</string>
+    <string name="add_sticker">Add Sticker</string>
+    <string name="add_text">Add Text</string>
+
+    <string name="select_color">Select colour</string>
+    <string name="ok">Ok</string>
+    <string name="select_font">Select font</string>
+
+
+    <!-- strings for filters -->
+
+    <string name="text_filter_normal">Normal</string>
+
+    <string name="text_filter_amaro">Amaro</string>
+    <string name="text_filter_rise">Rise</string>
+    <string name="text_filter_hudson">Hudson</string>
+    <string name="text_filter_xproii">Xproll</string>
+    <string name="text_filter_sierra">Sierra</string>
+    <string name="text_filter_lomofi">Lomo</string>
+    <string name="text_filter_early_bird">Earlybird</string>
+    <string name="text_filter_sutro">Sutro</string>
+    <string name="text_filter_toaster">Toaster</string>
+    <string name="text_filter_brannan">Brannan</string>
+    <string name="text_filter_inkwell">Inkwell</string>
+    <string name="text_filter_walden">Walden</string>
+    <string name="text_filter_hefe">Hefe</string>
+    <string name="text_filter_valencia">Valencia</string>
+    <string name="text_filter_nashville">Nashville</string>
+    <string name="text_filter_in1977">1977</string>
+    <string name="text_filter_lord_kelvin">LordKelvin</string>
+
+
+    <string name="filters">Preparing filters</string>
+    <string name="Filters">Filters</string>
+
+
+    <!--
+
+
+        Remove a message
+
+        -->
+    <string name="MessageRemoved">The message has been removed</string>
+    <string name="RemoveFailed">Failed to remove the message!!</string>
+    <string name="EditFailed">Failed to edit the message!!</string>
+    <string name="EditCanceled">Message editing canceled!!</string>
+
+
+    <!-- custom camera activities -->
+
+    <string name="cancel_label">Cancel</string>
+    <string name="ok_label">Ok</string>
+
+    <string name="settings_video_quality_title">Video size %s</string>
+    <string name="settings_photo_quality_title">Photo size</string>
+
+    <!-- Preview Activity -->
+    <string name="send">Send</string>
+    <string name="preview_controls_confirm">Save</string>
+    <string name="preview_controls_retake">Repeat</string>
+    <string name="preview_controls_cancel">Cancel</string>
+    <string name="preview_controls_crop">Crop</string>
+    <string name="preview_controls_original_ratio_label">Original</string>
+    <string name="agreeAndContinue">Agree &amp; Continue </string>
+    <string name="termsOfService">Terms Of Service and Privacy policy</string>
+    <string name="tapAgreeAndContinue">Accept the &appname;
+        Terms Of Service and Privacy policy </string>
+    <string name="welcomeToHowdo">Welcome to &appname;</string>
+    <string name="verifyNumber">Verify Your Number</string>
+    <string name="done">Done</string>
+    <string name="weWillVerifying">We will be verifying the\nphone number: </string>
+    <string name="isThisOk">Is this OK, or would you like to edit \nthe number?</string>
+    <string name="toEasilyVeryfying">To easily verify your phone number\n&appname; can automatically dedect\nyour verification code if you allow &appname;
+        to view SMS messages</string>
+    <string name="notNow">NOT NOW</string>
+    <string name="content_descriptor">&#8230;&#8230;&#8230;</string>
+    <string name="social">Social</string>
+    <string name="trending">Trending</string>
+    <string name="stories">Stories</string>
+    <string name="groups">Groups</string>
+    <string name="activity">Activity</string>
+    <string name="connect">Connect</string>
+    <string name="calls">CALLS</string>
+    <string name="chats">CHATS</string>
+    <string name="enterSixDigitCode">Enter 4-digit code</string>
+    <string name="resendSms">Resend SMS</string>
+    <string name="callMe">Call Me</string>
+    <string name="myStory">My Status</string>
+    <string name="tapToAddStory">Tap to add status update</string>
+    <string name="recentStories">RECENT STORIES</string>
+    <string name="viewStories">VIEWED STORIES</string>
+    <string name="views">0</string>
+    <string name="views_text">&#160;Views</string>
+    <string name="viewsTv">views</string>
+    <string name="viewAllComments">View all comments</string>
+    <string name="hoursAgo">5 HOURS AGO</string>
+    <string name="shareTo">Share To</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="instagram">Instagram</string>
+    <string name="search">Search</string>
+    <string name="people">People</string>
+    <string name="people1">&#160;people</string>
+    <string name="tags">Tags</string>
+    <string name="channel">Channel</string>
+    <string name="howdooSug">&appname; suggested</string>
+    <string name="Save">Save</string>
+    <string name="AddCategoryStr">Add Category*</string>
+    <string name="Description">Description*</string>
+    <string name="PrivateChannel">Private Channel</string>
+    <string name="CreateChannel">Create Channel</string>
+    <string name="Cancel">Cancel</string>
+    <string name="changePhoto">Change Photo</string>
+    <string name="ChannelNameStr">Channel Name*</string>
+    <string name="ContactNumber">Contact Number</string>
+    <string name="EditProfile">Edit Profile</string>
+    <string name="FirstNameStr">First Name</string>
+    <string name="LastNameStr">Last Name</string>
+    <string name="UsernameStr">Username*</string>
+    <string name="DateOfBirth">Date Of Birth</string>
+    <string name="dob_warning">"Please select valid birthdate "</string>
+
+    <string name="ContactDetail">Contact detail</string>
+    <string name="Email">Email</string>
+    <string name="story">Story</string>
+    <string name="grid">Grid</string>
+    <string name="Select">Select</string>
+    <string name="Title">Title</string>
+    <string name="HashTags">#Tags</string>
+    <string name="AddToMyChannel">Add To Channel</string>
+    <string name="AddToMyStory">ADD TO MY STORY</string>
+    <string name="StoryPrivacyMsg">Your story will only be visible to your contacts.</string>
+    <string name="publish">Publish</string>
+    <string name="share">Share</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="post">Post</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, colour, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate colour choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="posts">Posts</string>
+    <string name="following">Following</string>
+    <string name="followers">Followers</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="follow">Follow</string>
+    <string name="request_for_follow">Requested</string>
+
+    <string name="progress_dialog_loading">Loading…</string>
+    <string name="action_settings">Settings</string>
+    <string name="SelectCategory">Select category</string>
+    <string name="backpress_message">You will lost your upload progress. Press back again to continue.</string>
+    <string name="WriteACaption">Write a caption…</string>
+    <string name="write_comment">Write a comment…</string>
+    <string name="post_created">Posted to &appname; successfully</string>
+    <string name="add_location">Location</string>
+    <string name="select_location">Select Location</string>
+    <string name="locating_Text">Locating…</string>
+    <string name="cross_button_icon_text">x</string>
+    <string name="setting_Text">Nw fail</string>
+    <string name="connect_network_text">network</string>
+    <string name="cancel_text">cancel</string>
+    <string name="find_location_text">find location</string>
+    <string name="enterMobileNumber">Mobile number…</string>
+    <string name="FollowAll">Follow All</string>
+    <string name="FollowFacebookFriend">Follow Facebook friends</string>
+    <string name="FacebookFragMsg">You chose which friend to follow,\n
+we will never post  to facebook without your permission.</string>
+
+    <string name="FollowFragTitle">of your contacts are on\n &appname;.</string>
+    <string name="FollowFragMsg">Follow them to see their posts and videos.</string>
+    <string name="DiscoverPeople">Add Contacts</string>
+    <string name="Skip">Skip</string>
+    <string name="FacebookFriend">Add Friends</string>
+    <string name="FindFacebookFriend">Find Facebook friends</string>
+    <string name="keepMyPhonePrivate">Keep my contact number Private.</string>
+
+    <string name="com.twitter.sdk.android.CONSUMER_KEY" tools:ignore="ExtraTranslation">9huWxNpSGKhlmNxIEwEZRtffE</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET" tools:ignore="ExtraTranslation">EJaczrM2eIgy416Z1qRB4Fnxg7M84F7NHmmZKDWBMIJzwtLEyj</string>
+
+    <string name="of">of</string>
+    <string name="fullname">Full name</string>
+    <string name="Options">Options</string>
+    <string name="invite">Invite</string>
+    <string name="InviteFriends">Invite Friends</string>
+    <string name="Support">Support</string>
+    <string name="About">About</string>
+    <string name="ReportAProblem">Report a problem</string>
+    <string name="privacyPolicy">Privacy policy</string>
+    <string name="termsofservice">Terms of service</string>
+    <string name="HowdooVersion">v1.0.0</string>
+    <string name="LogOut">Log Out</string>
+    <string name="termsofService">Terms of service</string>
+    <string name="Language">Language</string>
+    <string name="selectApp">Invite Friends</string>
+    <string name="howdooPlayStore">https://play.google.com/store/apps/details?id=com.ezcall.android</string>
+    <string name="FollowPeople">Follow people</string>
+    <string name="FindContacts">Find contacts</string>
+    <string name="dont_want">Don\'t want to post on channel</string>
+    <string name="select_channel_confirm">You need to select at least one channel to post the picture in the channel</string>
+    <string name="TWITTER_CONSUMER_KEY">BnH5mPKztH0NkYeD8va93KipZ</string>
+    <string name="TWITTER_CONSUMER_SECRET">1RlOu1P7QXTvMvAs7OCHHy2r5l3wzSnJubDv1i0t2Yvvkq8SDe</string>
+    <string name="InviteFacebookFriends">Invite Facebook Friends</string>
+    <string name="enterEmail">Enter email</string>
+    <string name="ChangeEmail">Change Email</string>
+    <string name="NoDataFound">No Data Found!!</string>
+    <string name="installInstaMsg">Please install Instagram to continue sharing</string>
+    <string name="uploadPictureStr">Upload Photo</string>
+    <string name="NameStr">Name</string>
+    <string name="pleaseWait">Please wait…</string>
+    <string name="next">Next</string>
+    <string name="something_wrong">Something wrong</string>
+    <string name="userProfileSetup">Setting up user profile..</string>
+    <string name="EmailAddress">Email Address</string>
+    <string name="termsOfServiceTitle">Terms of Service</string>
+    <string name="channelProgressMsg">Creating channel…</string>
+    <string name="editProfileProgressMsg">Profile edit in progress.</string>
+    <string name="dummy">Profile edit in progress.</string>
+    <string name="aboutUrl">https://configfile.syld.io/aboutUs.html</string>
+    <string name="transition">detail</string>
+    <string name="devider">|</string>
+    <string name="inviteTitle">&appname; invitiation</string>
+    <string name="inviteMsg1">Hey! Join me on &appname; using this referral code</string>
+    <string name="inviteMsg2">This cool new  social  app.</string>
+    <string name="howdooUrl">https://www.dubly.xyz</string>
+    <string name="inviteFailedMsg">failed to send invites!!</string>
+    <string name="internet_connected">Internet connected</string>
+    <string name="internet_notconnected">Internet not connected</string>
+    <string name="session_expired">Session expired…</string>
+    <string name="emailEmptyMsg">please enter valid Email address!!</string>
+    <string name="alreadyLoggedIn">already_login</string>
+    <string name="addChannelPic">please add channel picture!!</string>
+    <string name="msgAddChannelName">please add channel name!!</string>
+    <string name="msgAddChannelCategory">please select category!!</string>
+    <string name="profileUpdated">Profile updated successfully!!</string>
+    <string name="enterFirstName">please enter first name!!</string>
+    <string name="enterUserName">please enter userName !!</string>
+    <string name="noChangeFound">No changes found in profile!!</string>
+    <string name="msgAddChannelDesc">please enter channel description!!</string>
+    <string name="channelCreated">Channel created successfully!!</string>
+    <string name="channelUpdated">Channel updated successfully!!</string>
+    <string name="channelCreateFailed">Failed to create channel!!</string>
+    <string name="NoActivityFound">No activities Found !!</string>
+    <string name="TryAgain">Try Again</string>
+    <string name="comments">Comments</string>
+    <string name="please_enter_posttext">Please enter comment message</string>
+    <string name="no_item">No comments to show</string>
+    <string name="at">\@</string>
+    <string name="Edit">Edit</string>
+    <string name="Report">Report</string>
+    <string name="Share_menu">Share</string>
+    <string name="Delete">Delete</string>
+    <string name="postDeleteMsg">Are you sure  to delete this post?</string>
+    <string name="yes">yes</string>
+    <string name="no">No</string>
+    <string name="ContactErrorMsg">Oops!! \n You do not have any of your contacts in &appname;.</string>
+    <string name="HomeEmptyTitle">You haven’t followed anyone on &appname;.</string>
+    <string name="HomeEmptyMsg">You have not followed anyone. Follow some users to see their posts here.</string>
+    <string name="FindPeopleToFollow">Find people to follow</string>
+    <string name="create_post_message">No posts to show</string>
+    <string name="no_purchase_posts">No purchased posts to show</string>
+    <string name="no_paid_posts">No paid posts to show</string>
+    <string name="ChannelEmptyMsg">No channel created as yet.\nPlease create your channel to share videos and photos.</string>
+    <string name="YouFragTitle">Recent activity on your post.</string>
+    <string name="YouFragMsg">When you make like, follow or comment on any post, it will appear here.</string>
+    <string name="FbContactErrorMsg">None of your Facebook friends\n are on &appname;.</string>
+    <string name="dummyString">dummyString</string>
+    <string name="StoryEmptyMsg">No post found!!\n Click on camera or plus(+)  icon  to post.</string>
+    <string name="FollowingFragTitle">Activity from people you follow</string>
+    <string name="FollowingFragMsg">When someone you follow, sends you follow request, comments or likes a post ,you will see it here.</string>
+    <string name="Subscribe">Subscribe</string>
+    <string name="Subscribed">Subscribed</string>
+    <string name="posted">public posts</string>
+    <string name="video_size_message">Video is too large, please try other video</string>
+
+    <string name="video_length_message">Recorded video length cannot be more than %s seconds</string>
+    <string name="video_size_exceeded">Recorded video size cannot be more than %s MB</string>
+
+
+    <string name="_Share">Share</string>
+    <string name="private_channel_message">This is private channel, please click on the request button to send your request</string>
+    <string name="create_post">Create post</string>
+    <string name="shareMsg">Hey… Check this post.</string>
+    <string name="deleted">Deleted successfully</string>
+    <string name="report">Report</string>
+    <string name="_continue">Continue</string>
+    <string name="reported_profile">Thank you for reporting this profile. Our review team will look into your request and will decide what to do based on the &appname;s security guidelines.</string>
+    <string name="reported_post">Thank you for reporting this post. Our review team will look into your request and will decide what to do based on the &appname;s security guidelines."</string>
+    <string name="already_reported_post">Post has already been reported by you."</string>
+    <string name="contact_permission_required">To help you connect with friends and family, allow &appname;
+        access to your contacts.</string>
+    <string name="request_subsribe">Request to subscribe</string>
+    <string name="requested">Requested</string>
+    <string name="recent">Recent feeds</string>
+    <string name="subscription_request">Subscription Requests</string>
+    <string name="approve_or_ignore">Approve or ignore requests</string>
+    <string name="accept_or_deny">Accept or deny requests</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Delete</string>
+    <string name="request">Request</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="subscribed">Subscribed</string>
+    <string name="select_category">Please select category*</string>
+    <string name="select_category1">Select category</string>
+    <string name="nodata">No data available</string>
+    <string name="already_requested">You requested to subscribe this channel, please wait to accept your request.</string>
+    <string name="justnow">Just now</string>
+    <string name="filter_normal">Nornmal</string>
+    <string name="tab_filters">tabFilter</string>
+    <string name="gallery">Gallery</string>
+    <string name="no_post">No post to show</string>
+    <string name="search_something">Search something to get the result</string>
+    <string name="follow_someone">Please follow someone to see the feed</string>
+    <string name="no_one_subscriber">No One Subscribers to see here.</string>
+    <string name="followers_empty">Once someone follow you, you can see the feed</string>
+    <string name="error_title">Oops</string>
+    <string name="error_reload">Reload</string>
+    <string name="error_message">There was a problem loading the data</string>
+    <string name="reload">Reload</string>
+    <string name="no_internet">No internet</string>
+    <string name="related_hashtags">Related Hashtags</string>
+    <string name="no_story">No stories to see</string>
+    <string name="no_story_message">You have no status</string>
+    <string name="logged_out">Successfully logged out</string>
+    <string name="user_deleted">Account deleted successfully</string>
+    <string name="follow_request">Follow Requests</string>
+    <string name="channel_request">Channel Requests</string>
+    <string name="make_private">Make Private</string>
+    <string name="default_private">By default the privacy is public,tap to make it private</string>
+    <string name="dubs">Dubs</string>
+    <string name="play">Play</string>
+    <string name="dub">Dub</string>
+    <string name="dub_with_it">Dub with this sound</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_hot_songs">Hot Songs</string>
+    <string name="tab_my_favs">My favourites</string>
+    <string name="tab_my_sounds">My Sounds</string>
+    <string name="private_no_post">This Account is Private. Follow this account to see their photos and videos.</string>
+    <string name="block_message">You have been blocked , for further details contact the admin at &appname;appscrip@gmail.com</string>
+    <string name="send_menu">Send</string>
+    <string name="ubBlock">Unblock</string>
+    <string name="title_activity_detail">DetailActivity</string>
+
+    <string name="termsUrl">https://configfile.syld.io/termsAndConditions.html</string>
+    <string name="termsUrlStar">https://configfile.syld.io/termsAndConditions.html</string>
+    <string name="privacyPolicyUrl">https://configfile.syld.io/privacyPolicy.html</string>
+    <string name="aboutUsUrl">https://configfile.syld.io/aboutUs.html</string>
+    <string name="lorem_ipsum">ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddsacasdfvsdagsfgfbfmnasbdfsdvfvsdkvmvdmnvmnvsm,fsmsavdfmn</string>
+    <string name="ShareTo">Share with</string>
+    <string name="sent">Sent</string>
+    <string name="category">Category</string>
+    <string name="write_message">Write a message...</string>
+    <string name="about">About</string>
+    <string name="close">Close</string>
+    <string name="slow">Slow</string>
+    <string name="normal">Normal</string>
+    <string name="fast">Fast</string>
+    <string name="select_song">Select song</string>
+    <string name="tip">Tip</string>
+    <string name="delete_confirm">Are you sure you want to delete last segment?</string>
+    <string name="confirm">Confirm</string>
+    <string name="no_post_available">Post is deleted</string>
+
+
+    <string name="camera_permission">Grant permission required for camera to work properly!!</string>
+
+    <string name="camera_permission_denied">Can\'t use camera as permissions required for camera to work properly are denied!!</string>
+    <string name="add_to_fav">Add to Favorites</string>
+    <string name="added_to_fav">Added to Favorites</string>
+    <string name="blank">" "</string>
+    <string name="enter_your">Enter your</string>
+    <string name="number">Number</string>
+    <string name="enter_referral_code">Enter referral code *</string>
+    <string name="country">Country</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="verification">Verification</string>
+    <string name="dint_get_code">I didn\'t get the code</string>
+    <string name="setup">Setup</string>
+    <string name="not_recived">If you haven\'t receive a</string>
+    <string name="code">Code</string>
+    <string name="resend_otp">Resend verification code</string>
+    <string name="verify_mobile_number">Verify your mobile number</string>
+    <string name="check_inbox">Check your SMS inbox</string>
+
+
+    <string name="send_request">Send Request</string>
+    <string name="view_social_profile">View Social Profile</string>
+    <string name="hide_my_posts">Hide My Posts</string>
+    <string name="user_blocked">User blocked</string>
+    <string name="request_accepted">Request accepted</string>
+    <string name="request_rejected">Request denied</string>
+
+
+    <!--on boarding-->
+    <string name="onboarding_title3">Payments at your \nfingerprints</string>
+    <string name="onboarding_title2">Privacy is your right</string>
+    <string name="onboarding_title1">Communicate \nthe way you want</string>
+    <string name="onboarding_description1">You can have different tabs for family,\nyour business partners, friends etc.</string>
+    <string name="onboarding_description2">appear offline or send times messages \nwith end-to-end encrypted \nconversations</string>
+    <string name="onboarding_description3">Because in life, everything is about \ncommunication.</string>
+    <string name="skip">Skip</string>
+    <string name="enter">Enter</string>
+    <string name="starchat">&appname;</string>
+    <string name="invalid_referral_code">Invalid referral code!</string>
+    <string name="validating_referral_code">Validating referral code</string>
+
+    <!--Camera Activity-->
+    <string name="preparing_camera">Preparing camera, please try again in a moment!!</string>
+    <string name="tips">Tips</string>
+    <string name="discard_text">Discard</string>
+    <string name="discard">Discard current sound and recording progress?</string>
+    <string name="camera_confirm">Confirm</string>
+    <string name="delete_segment_title">Alert</string>
+    <string name="delete_segment">Are Your sure, you want to delete last segment?</string>
+    <string name="processing_video">processing video… </string>
+    <string name="select_sound">Select sound</string>
+    <string name="dubsound_cancel">Selection of dubbing sound cancelled!!</string>
+    <string name="dubbing_max_size">Reached maximum size of the dubbing allowed!!</string>
+    <string name="recording_max_size">Reached maximum size of the recording allowed!!</string>
+    <string name="record_small_duration">Failed to save recording, as its too small to be saved!!</string>
+    <string name="add">Add</string>
+    <string name="view">View</string>
+    <string name="request_sent">Request sent</string>
+    <string name="mobile_contacts">Mobile contacts</string>
+    <string name="fiends">Friends</string>
+    <string name="new_friends">New Friends</string>
+    <string name="star_page">Star Pages</string>
+    <string name="fiend_request">Friend Request</string>
+    <string name="from">From</string>
+    <string name="delete_current_video">Delete currently recorded video to record another video!!</string>
+    <!--Transfer Coin-->
+    <string name="pay_to">Pay to</string>
+    <string name="ruc">Coin</string>
+    <string name="payment_successful">Payment successful</string>
+    <string name="awaitng_receipt_by">Awaiting receipt by</string>
+    <string name="sadasdsd">sadasdsd</string>
+    <string name="valid_amount">Please Enter Amount</string>
+    <string name="payment">Payment</string>
+    <string name="balance">Balance</string>
+    <string name="tv_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="transfer_to_friend">Transfer to a friend</string>
+    <string name="transfer_amount">Transfer Amount</string>
+    <string name="hint_amount">0.00</string>
+    <string name="add_note">Add Note</string>
+    <string name="send_star_packet">Send Star Packet</string>
+
+    <!--wallet-->
+    <string name="wallet">Wallet</string>
+    <string name="your_balance">Your Balance</string>
+    <string name="money">Money</string>
+    <string name="cards">Cards</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="manage_payments">Manage Payments</string>
+    <string name="relative_cards">Relative Cards</string>
+    <string name="payment_security">Payment Security</string>
+    <string name="help_center">Help Center</string>
+    <string name="switch_wallet_region">Switch Wallet Region</string>
+    <string name="qr_code">QR Code</string>
+    <string name="my_qr_code">My QR Code</string>
+    <string name="scan_note">Scan the QR Code to add me on ezcall</string>
+    <string name="temp_user_name">UserName</string>
+    <string name="date">12\nFeb</string>
+    <string name="remind">Remind</string>
+    <string name="to_confirm_receipt">to confirm payment</string>
+    <string name="refund_msg">Refunded to you if it\'s not accepted in 1day.\nResend transfer message.</string>
+    <string name="tranfer_time">Transfer Time</string>
+    <string name="transaction">Transaction</string>
+
+    <!--Star Profile-->
+    <string name="request_star_profile">Request Star Profile</string>
+    <string name="star_config">Star Configuration</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone number *</string>
+    <string name="phone_numberr">Phone number </string>
+    <string name="enter_otp1">Enter verification code that sent to your register email</string>
+    <string name="enter_otp2">Enter verification code that sent to your register phone number</string>
+    <string name="resend">Resend</string>
+    <string name="verified_email_msg">We have successfully updated your Email !</string>
+    <string name="verified_phone_num_msg">We have successfully updated your Phone Number !</string>
+    <string name="private_message">Private Message</string>
+    <string name="apply_for_star">Apply for star badge that appears next to a &appname; account\'s name to indicate that the Account is the authentic presence of a notable Public figure, celebrity, global brand or entity it Represents.</string>
+    <string name="submission_star">Submitting a request for verification does not guarantee that your account will be verified.</string>
+    <string name="photo_id_msg">We require a government-issued photo ID that shows your name and date of birth(e.g driver\'s license, passport or national identification card) or official business documents(tax filling, recent utility bill, article of incorporatioin) in order to review your request.</string>
+    <string name="username">Username</string>
+    <string name="full_name">Full Name</string>
+    <string name="known_as">Known As</string>
+    <string name="star_category">Star category</string>
+    <string name="choose_file">Choose file</string>
+    <string name="attach_photo_id">Please attach a Photo of your ID</string>
+    <string name="add_contacts">Add Contacts</string>
+    <string name="my_starchat_id">My &appname; ID :</string>
+
+    <!--add contact-->
+    <string name="invite_friend">Invite Friends to &appname;</string>
+    <string name="tell_ur_friends">Tell your friends to join &appname;</string>
+    <string name="scan_qr_code">Scan QR Code</string>
+    <string name="scan_contacts_qr">Scan contact\'s QR Code</string>
+    <string name="add_from_mobile">Add from mobile address book</string>
+    <string name="official_account">Official Accounts</string>
+    <string name="more_info_services">Get more info and services</string>
+    <string name="uploaded">Uploaded</string>
+    <string name="unfriend">Unfriend</string>
+
+    <!--Camera Activity-->
+    <string name="saving_video">Saving video</string>
+    <string name="capturing_image">Capturing image</string>
+    <string name="image_capture_failed">Failed to save the image captured, Try again!!</string>
+    <string name="processing_segment">Processing video segment</string>
+    <string name="select_segment_videofilter">Select a video segment from top to apply video filters!!</string>
+    <string name="select_segment_colorfilter">Select a video segment from top to apply colour filters!!</string>
+    <string name="filters_applied">Filters applied successfully to the given video segment!!</string>
+
+    <!--Gallery fragment-->
+    <string name="gallery_permission">Grant permission required to access media from gallery!!</string>
+    <string name="gallery_permission_denied">Can\'t display gallery media as permissions required to access gallery is denied!!</string>
+    <string name="not_able_to_load_text">Not able to load image!</string>
+    <string name="not_able_to_play_text">Not able to play this video!</string>
+    <string name="not_able_to_share_text">Not able to share this video!</string>
+    <string name="photo">Photo</string>
+    <string name="manage">Manage</string>
+    <string name="manage_filters">Manage Filters</string>
+    <string name="Brightness">Brightness</string>
+    <string name="Contrast">Contrast</string>
+    <string name="Vignette">Vignette</string>
+    <string name="Sharpen">Sharpen</string>
+    <string name="Shadow">Shadows</string>
+    <string name="Saturation">Saturation</string>
+    <string name="processing">Processing…</string>
+
+    <string name="FILTERS">FILTERS</string>
+    <string name="TOOLS">TOOLS</string>
+    <string name="CANCEL" tools:ignore="ButtonCase">CANCEL</string>
+    <string name="DONE">DONE</string>
+    <string name="edit">Edit</string>
+    <string name="star_desc">Description (optional)</string>
+    <string name="optional">(Optional)</string>
+    <string name="chat">Chat</string>
+    <string name="switch_to_star">Switch to Star</string>
+    <string name="switch_to_normal">Switch to normal</string>
+    <string name="top_50_actress">Top 50 Best Actresses</string>
+    <string name="top_50_actor">Top 50 Best Actors</string>
+    <string name="top_10_stars">Top 10 Most Influential Stars</string>
+    <string name="unfollow">Unfollow</string>
+    <string name="liked_by">Liked by&#160;</string>
+    <string name="dot">&#xb7;</string>
+    <string name="bio">Bio</string>
+    <string name="ad">Advertisement</string>
+    <string name="locations">Locations</string>
+    <string name="contacs">Contacts</string>
+    <string name="favourite">Favourite</string>
+    <string name="starchat_id">&appname; ID</string>
+    <string name="private_account_title">This Account is Private</string>
+    <string name="private_account_message">Follow this account to see their photos and video.</string>
+    <string name="likers">Likers</string>
+    <string name="referral_code">Referral Code</string>
+    <string name="refer_your_friends">Refer your friends</string>
+    <string name="refer_msg">Get a reward if your contact sign up using your invite code.</string>
+    <string name="copy">Copy</string>
+    <string name="share_code">Share Code</string>
+    <string name="new_transfer">New Transfer</string>
+    <string name="status_colon">status:</string>
+    <string name="amount_received">Amount Received Successfully</string>
+    <string name="waiting_for_confirmation">Waiting for your confirmation</string>
+    <string name="accept_your_payment">accepted  your payment</string>
+    <string name="denied_your_payment">denied your payment</string>
+    <string name="did_not_respond_to_your_payment">did not respond to your payment</string>
+    <string name="you_are_cancel_this_payment">You canceled this payment</string>
+    <string name="you_are_accepted_this_payment">You accepted this payment</string>
+    <string name="the_payment_sent_by">The payment sent by</string>
+    <string name="has_now_expired">has now expired</string>
+    <string name="you_are_rejected_this_payment">You rejected this payment</string>
+    <string name="is_canceled_this_payment">canceled this payment</string>
+    <string name="you_received_payment">You received payment</string>
+    <string name="canceled_the_payment_of">canceled the payment of</string>
+    <string name="paying">Paying</string>
+    <string name="zero">0</string>
+    <string name="paid_to">Paid to</string>
+    <string name="paid">Paid</string>
+    <string name="to">to</string>
+    <string name="to1">To</string>
+    <string name="from_colon">From:</string>
+    <string name="to_colon">To:</string>
+    <string name="payment_accepted">Payment Accepted!</string>
+    <string name="received_from">Received from</string>
+    <string name="received">Received</string>
+    <string name="signup">Sign Up</string>
+    <string name="region">Region</string>
+    <string name="phone">Phone</string>
+    <string name="name">Name</string>
+    <string name="enter_name">Enter your full name *</string>
+    <string name="user_name1">User Name</string>
+    <string name="enter_user_name">Enter your user name *</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter your password *</string>
+    <string name="enter_confirm_password">Confirm your password *</string>
+    <string name="login">Log In</string>
+    <string name="account">Account</string>
+    <string name="starchatid_username">&appname; ID / User name *</string>
+    <string name="sms_code">SMS Code</string>
+    <string name="enter_otp">Enter verification code</string>
+    <string name="pending">Payment pending</string>
+    <string name="time_out">Payment expired</string>
+    <string name="denied">Payment denied</string>
+    <string name="canceled">Payment canceled</string>
+    <string name="paymentaccepted">Payment accepted</string>
+    <string name="missed_call">Missed call</string>
+    <string name="missed_audio_call">Missed audio call</string>
+    <string name="missed_video_call">Missed video call</string>
+    <string name="enter_email">Enter email address *</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="personalDetails">Personal Details</string>
+    <string name="starDetails">Star Details</string>
+    <string name="SecretChatNoFriends">No friends to initiate a secret chat with</string>
+
+    <string name="new_secretchat">Secret chat</string>
+    <string name="change_password">Change password</string>
+    <string name="new_post">New Post</string>
+    <string name="please_add_friends">Please follow someone to send</string>
+    <string name="email_verification">Email Verification</string>
+    <string name="no_stories_show">No stories to show</string>
+    <string name="no_tag_post_show">No tagged post to show</string>
+    <string name="no_liked_post_show">No liked post to show</string>
+    <string name="permission_requires">Permission requires</string>
+    <string name="back_press_message">Please click BACK again to exit</string>
+    <string name="back_">Back</string>
+    <string name="find_friend">Find Friends</string>
+    <string name="my_stories">My stories</string>
+    <string name="are_you_sure_to_delete_this_story">Delete this status update? It will also be deleted for everyone who received it.</string>
+    <string name="report_message">Are you sure you want to report this post?</string>
+    <string name="report_user_message">Are you sure you want to report</string>
+    <string name="are_you_sure">Are you sure you want to </string>
+    <string name="verify_otp_number_msg">Please enter the verification code that has been sent to the registered phone number</string>
+    <string name="verify_otp_email_msg">Please enter the verification code that has been sent to the registered email</string>
+    <string name="resend_otp_msg">If you have not received the verification code , please get a new one by clicking on the RESEND button</string>
+    <string name="verification_code_sent_email">The verification code has been sent to the email address</string>
+    <string name="verification_code_sent_phone">The verification code has been sent to the phone number</string>
+    <string name="please_enter_code_below">Please enter the code below.</string>
+    <string name="confirm_phone_number">Confirm Phone Number</string>
+    <string name="confirm_email_address">Confirm email addess</string>
+    <string name="enter_verification_code">Enter verification code</string>
+    <string name="star_request_done">Thank you for submitting your request. Our review team will go through your application and you will receive an email to confirm if your profile has been accepted or denied.</string>
+    <string name="unblock_user_msg">Are you sure you want to un-block this user?</string>
+    <string name="unblock">Unblock</string>
+    <string name="sounds">Sounds</string>
+    <string name="empty_fav_msg">Please add a song to your favorites.</string>
+    <string name="enter_email_message">Please enter the registered email address to which we can send you the verification code</string>
+    <string name="new_password_message">Please set your new password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="added_as_friend">Added as a friend</string>
+
+    <string name="pref_room_key">room_preference</string>
+    <string name="pref_room_list_key">room_list_preference</string>
+
+    <string name="pref_videosettings_key">video_settings_key</string>
+    <string name="pref_videosettings_title">Video call settings.</string>
+
+    <string name="pref_videocall_key">videocall_preference</string>
+    <string name="pref_videocall_title">Video call.</string>
+    <string name="pref_videocall_dlg">Enable video in a call.</string>
+    <string name="pref_videocall_default">true</string>
+
+    <string name="pref_screencapture_key">screencapture_preference</string>
+    <string name="pref_screencapture_title">Use screencapture.</string>
+    <string name="pref_screencapture_default">false</string>
+
+    <string name="pref_camera2_key">camera2_preference</string>
+    <string name="pref_camera2_title">Use Camera2.</string>
+    <string name="pref_camera2_default">true</string>
+    <string name="pref_camera2_not_supported">Not supported on this device.</string>
+
+    <string name="pref_resolution_key">resolution_preference</string>
+    <string name="pref_resolution_title">Video quality.</string>
+    <string name="pref_resolution_dlg">Select video call quality.</string>
+    <string name="pref_resolution_default">Default</string>
+
+    <string name="pref_fps_key">fps_preference</string>
+    <string name="pref_fps_title">Camera fps.</string>
+    <string name="pref_fps_dlg">Enter local camera fps.</string>
+    <string name="pref_fps_default">Default</string>
+
+    <string name="pref_capturequalityslider_key">capturequalityslider_preference</string>
+    <string name="pref_capturequalityslider_title">Capture quality slider.</string>
+    <string name="pref_capturequalityslider_dlg">Enable slider for changing capture quality.</string>
+    <string name="pref_capturequalityslider_default">false</string>
+
+    <string name="pref_maxvideobitrate_key">maxvideobitrate_preference</string>
+    <string name="pref_maxvideobitrate_title">Maximum video bitrate setting.</string>
+    <string name="pref_maxvideobitrate_dlg">Maximum video bitrate setting.</string>
+    <string name="pref_maxvideobitrate_default">Default</string>
+
+    <string name="pref_maxvideobitratevalue_key">maxvideobitratevalue_preference</string>
+    <string name="pref_maxvideobitratevalue_title">Video encoder maximum bitrate.</string>
+    <string name="pref_maxvideobitratevalue_dlg">Enter video encoder maximum bitrate in kbps.</string>
+    <string name="pref_maxvideobitratevalue_default">1700</string>
+
+    <string name="pref_videocodec_key">videocodec_preference</string>
+    <string name="pref_videocodec_title">Default video codec.</string>
+    <string name="pref_videocodec_dlg">Select default video codec.</string>
+    <string name="pref_videocodec_default">VP8</string>
+
+    <string name="pref_hwcodec_key">hwcodec_preference</string>
+    <string name="pref_hwcodec_title">Video codec hardware acceleration.</string>
+    <string name="pref_hwcodec_dlg">Use hardware accelerated video codec (if available).</string>
+    <string name="pref_hwcodec_default">true</string>
+
+    <string name="pref_capturetotexture_key">capturetotexture_preference</string>
+    <string name="pref_capturetotexture_title">Video capture to surface texture.</string>
+    <string name="pref_capturetotexture_dlg">Capture video to textures (if available).</string>
+    <string name="pref_capturetotexture_default">true</string>
+
+    <string name="pref_flexfec_key">flexfec_preference</string>
+    <string name="pref_flexfec_title">Codec-agnostic Flexible FEC.</string>
+    <string name="pref_flexfec_dlg">Enable FlexFEC.</string>
+    <string name="pref_flexfec_default">false</string>
+
+    <string name="pref_value_enabled">Enabled</string>
+    <string name="pref_value_disabled">Disabled</string>
+
+    <string name="pref_audiosettings_key">audio_settings_key</string>
+    <string name="pref_audiosettings_title">WebRTC audio settings.</string>
+
+    <string name="pref_startaudiobitrate_key">startaudiobitrate_preference</string>
+    <string name="pref_startaudiobitrate_title">Audio bitrate setting.</string>
+    <string name="pref_startaudiobitrate_dlg">Audio bitrate setting.</string>
+    <string name="pref_startaudiobitrate_default">Default</string>
+
+    <string name="pref_startaudiobitratevalue_key">startaudiobitratevalue_preference</string>
+    <string name="pref_startaudiobitratevalue_title">Audio codec bitrate.</string>
+    <string name="pref_startaudiobitratevalue_dlg">Enter audio codec bitrate in kbps.</string>
+    <string name="pref_startaudiobitratevalue_default">32</string>
+
+    <string name="pref_audiocodec_key">audiocodec_preference</string>
+    <string name="pref_audiocodec_title">Default audio codec.</string>
+    <string name="pref_audiocodec_dlg">Select default audio codec.</string>
+    <string name="pref_audiocodec_default">OPUS</string>
+
+    <string name="pref_noaudioprocessing_key">audioprocessing_preference</string>
+    <string name="pref_noaudioprocessing_title">Disable audio processing.</string>
+    <string name="pref_noaudioprocessing_dlg">Disable audio processing pipeline.</string>
+    <string name="pref_noaudioprocessing_default">false</string>
+
+    <string name="pref_aecdump_key">aecdump_preference</string>
+    <string name="pref_aecdump_title">Create aecdump.</string>
+    <string name="pref_aecdump_dlg">Enable diagnostic audio recordings.</string>
+    <string name="pref_aecdump_default">false</string>
+
+    <string name="pref_enable_save_input_audio_to_file_key">enable_key</string>
+    <string name="pref_enable_save_input_audio_to_file_title">Save input audio to file.</string>
+    <string name="pref_enable_save_input_audio_to_file_dlg">Save input audio to file.</string>
+    <string name="pref_enable_save_input_audio_to_file_default">false</string>
+
+    <string name="pref_opensles_key">opensles_preference</string>
+    <string name="pref_opensles_title">Use OpenSL ES for audio playback.</string>
+    <string name="pref_opensles_dlg">Use OpenSL ES for audio playback.</string>
+    <string name="pref_opensles_default">false</string>
+
+    <string name="pref_disable_built_in_aec_key">disable_built_in_aec_preference</string>
+    <string name="pref_disable_built_in_aec_title">Disable hardware AEC.</string>
+    <string name="pref_disable_built_in_aec_dlg">Disable hardware AEC.</string>
+    <string name="pref_disable_built_in_aec_default">false</string>
+    <string name="pref_built_in_aec_not_available">Hardware AEC is not available</string>
+
+    <string name="pref_disable_built_in_agc_key">disable_built_in_agc_preference</string>
+    <string name="pref_disable_built_in_agc_title">Disable hardware AGC.</string>
+    <string name="pref_disable_built_in_agc_dlg">Disable hardware AGC.</string>
+    <string name="pref_disable_built_in_agc_default">false</string>
+    <string name="pref_built_in_agc_not_available">Hardware AGC is not available</string>
+
+    <string name="pref_disable_built_in_ns_key">disable_built_in_ns_preference</string>
+    <string name="pref_disable_built_in_ns_title">Disable hardware NS.</string>
+    <string name="pref_disable_built_in_ns_dlg">Disable hardware NS.</string>
+    <string name="pref_disable_built_in_ns_default">false</string>
+    <string name="pref_built_in_ns_not_available">Hardware NS is not available</string>
+
+    <string name="pref_disable_webrtc_agc_and_hpf_key">disable_webrtc_agc_and_hpf_preference</string>
+    <string name="pref_disable_webrtc_agc_and_hpf_title">Disable WebRTC AGC and HPF.</string>
+    <string name="pref_disable_webrtc_agc_default">false</string>
+
+    <string name="pref_speakerphone_key">speakerphone_preference</string>
+    <string name="pref_speakerphone_title">Speakerphone.</string>
+    <string name="pref_speakerphone_dlg">Speakerphone.</string>
+    <string name="pref_speakerphone_default">auto</string>
+
+    <string name="pref_datasettings_key">data_settings_key</string>
+    <string name="pref_datasettings_title">WebRTC data channel settings.</string>
+
+    <string name="pref_enable_datachannel_key">enable_datachannel_preference</string>
+    <string name="pref_enable_datachannel_title">Enable datachannel.</string>
+    <string name="pref_enable_datachannel_default" translatable="false">false</string>
+
+    <string name="pref_ordered_key">ordered_preference</string>
+    <string name="pref_ordered_title">Order messages.</string>
+    <string name="pref_ordered_default" translatable="false">true</string>
+
+    <string name="pref_data_protocol_key">Subprotocol</string>
+    <string name="pref_data_protocol_title">Subprotocol.</string>
+    <string name="pref_data_protocol_dlg">Enter subprotocol.</string>
+    <string name="pref_data_protocol_default" translatable="false"></string>
+
+    <string name="pref_negotiated_key">negotiated_preference</string>
+    <string name="pref_negotiated_title">Negotiated.</string>
+    <string name="pref_negotiated_default" translatable="false">false</string>
+
+    <string name="pref_max_retransmit_time_ms_key">max_retransmit_time_ms_preference</string>
+    <string name="pref_max_retransmit_time_ms_title">Max delay to retransmit.</string>
+    <string name="pref_max_retransmit_time_ms_dlg">Enter max delay to retransmit (in ms).</string>
+    <string name="pref_max_retransmit_time_ms_default" translatable="false">-1</string>
+
+    <string name="pref_max_retransmits_key">max_retransmits_preference</string>
+    <string name="pref_max_retransmits_title">Max attempts to retransmit.</string>
+    <string name="pref_max_retransmits_dlg">Enter max attempts to retransmit.</string>
+    <string name="pref_max_retransmits_default" translatable="false">-1</string>
+
+    <string name="pref_data_id_key">data_id_preference</string>
+    <string name="pref_data_id_title">Data id.</string>
+    <string name="pref_data_id_dlg">Enter data channel id.</string>
+    <string name="pref_data_id_default" translatable="false">-1</string>
+
+    <string name="pref_miscsettings_key">misc_settings_key</string>
+    <string name="pref_miscsettings_title">Miscellaneous settings.</string>
+
+    <string name="pref_room_server_url_key">room_server_url_preference</string>
+    <string name="pref_room_server_url_title">Room server URL.</string>
+    <string name="pref_room_server_url_dlg">Enter a room server URL.</string>
+    <string name="pref_room_server_url_default" translatable="false">https://appr.tc</string>
+
+    <string name="pref_displayhud_key">displayhud_preference</string>
+    <string name="pref_displayhud_title">Display call statistics.</string>
+    <string name="pref_displayhud_dlg">Display call statistics.</string>
+    <string name="pref_displayhud_default" translatable="false">false</string>
+
+    <string name="pref_tracing_key">tracing_preference</string>
+    <string name="pref_tracing_title">Debug performance tracing.</string>
+    <string name="pref_tracing_dlg">Debug performance tracing.</string>
+    <string name="pref_tracing_default" translatable="false">false</string>
+
+    <string name="pref_enable_rtceventlog_key">enable_rtceventlog_key</string>
+    <string name="pref_enable_rtceventlog_title">Enable RtcEventLog.</string>
+    <string name="pref_enable_rtceventlog_default">false</string>
+
+    <string name="reconnecting">RECONNECTING</string>
+
+
+    <string name="reconnect_failed">Failed to reconnect!!</string>
+    <string name="camera2_texture_only_error">Camera2 only supports capturing to texture. Either disable Camera2 or enable capturing to texture in the options.</string>
+    <string name="CallQuality">Call quality</string>
+    <string name="verify_email">Verify Email Address</string>
+
+
+    <!--LIVE STREAM-->
+    <!--AlertProgress-->
+    <string name="try_again">Try Again&#8230;.</string>
+    <string name="alert">Alert!</string>
+    <string name="network_alert_message">Network service is disabled. Do you wish to enable it?</string>
+    <string name="network_alert_title">Network Settings</string>
+    <string name="checkYourInternet">Check your internet connection, please.</string>
+    <string name="Countrypicker">Country Picker.</string>
+    <string name="registering">Registering…</string>
+    <string name="loggingin">Logging in…</string>
+    <string name="starting_streaming">Starting streaming…</string>
+    <string name="playing_streaming">Playing stream…</string>
+
+
+    <string name="takephoto">camera</string>
+
+    <!--RTMPStreamPlayerActivity-->
+
+    <string name="live_indicator">Live</string>
+    <string name="offline_indicator">Offline</string>
+    <string name="start_broadcasting">Start Broadcasting</string>
+    <string name="stream_name">Stream Name</string>
+    <string name="nocamera">No camera exists in your device</string>
+    <string name="camera_not_running_properly">Camera is not running properly</string>
+    <string name="restart">Restart</string>
+    <string name="streaming_not_finished">Your previous broadcast still sends packets due to slow internet speed</string>
+    <string name="oopps_shouldnt_happen">Oopps this shouldn\'t be happened. Please let the library developer this status</string>
+    <string name="broadcast_connection_lost">Connection to media server is lost</string>
+    <string name="low_bandwidth">Network speed is low. Latency is increasing.</string>
+    <string name="not_eligible_for_broadcast">Your device is not eligible to broadcast. There is no hardware encoder.</string>
+    <string name="no_network_connectivity">You\'re not connected to any network. Please connect to Internet</string>
+    <string name="stop_broadcasting">Stop</string>
+    <string name="camera_permission_is_required">Camera permission is required to run this app</string>
+    <string name="microphone_permission_is_required">Microphone permission is required to run this app</string>
+    <string name="permission">Permission</string>
+    <string name="app_doesnot_work_without_permissions">App does not work without permissions. Please give Camera and Record Audio permission on app settings</string>
+    <string name="app_doesnot_work_without_FilePermisssion">App does not work without permissions. Please give Camera and File permission on app settings</string>
+    <string name="typeSomethingHere">Send a message...</string>
+
+    <string name="broadcast_Start_failed">Failed to start streaming, wait for sometime or try again later!!</string>
+
+    <string name="stream_not_live">Stream is no longer live!!</string>
+
+    <string name="audio">Audio</string>
+
+    <string name="text">Text</string>
+
+    <string name="retry">Retry</string>
+
+    <string name="selection_disabled">Disabled</string>
+
+    <string name="selection_default">Default</string>
+
+    <string name="selection_default_none">Default (none)</string>
+
+    <string name="unexpected_intent_action">Unexpected intent action: <xliff:g id="action">%1$s</xliff:g></string>
+
+    <string name="enable_random_adaptation">Enable random adaptation</string>
+
+    <string name="error_drm_not_supported">Protected content not supported on API levels below 18</string>
+
+    <string name="error_drm_unsupported_scheme">This device does not support the required DRM scheme</string>
+
+    <string name="error_drm_unknown">An unknown DRM error occurred</string>
+
+    <string name="error_no_decoder">This device does not provide a decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+
+    <string name="error_no_secure_decoder">This device does not provide a secure decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+
+    <string name="error_querying_decoders">Unable to query device decoders</string>
+
+    <string name="error_instantiating_decoder">Unable to instantiate decoder <xliff:g id="decoder_name">%1$s</xliff:g></string>
+
+    <string name="error_unsupported_video">Media includes video tracks, but none are playable by this device</string>
+
+    <string name="error_unsupported_audio">Media includes audio tracks, but none are playable by this device</string>
+
+    <string name="storage_permission_denied">Permission to access storage was denied</string>
+
+    <string name="sample_list_load_error">One or more sample lists failed to load</string>
+    <string name="stream_not_started">Failed to start. Please check server url and security credentials.</string>
+
+
+    <string name="noAnswer">No Answer</string>
+
+    <string name="image_capture_canceled">Image capturing canceled!!</string>
+
+    <string name="coins">coins</string>
+    <string name="no_gifts">No gifts currently available!!</string>
+    <string name="no_gifts_category">No gifts in the given category</string>
+
+    <string name="like_failed">Failed to like the given stream,being offline!!</string>
+    <string name="sending_gift_failed">Failed to send gifts,being offline!!</string>
+
+    <string name="uploading_image">Uploading image...</string>
+    <string name="preparing_stream">Preparing stream...</string>
+    <string name="upload_image_failed">Failed to upload image!!</string>
+
+    <string name="signout_failed">Failed to signout!!</string>
+
+    <string name="sending_message_failed">Failed to send message,being offline!!</string>
+
+    <string name="retrieve_chathistory_failed">Failed to fetch stream chat history!!</string>
+    <string name="fetch_gifts_failed">Failed to fetch gifts!!</string>
+    <string name="retrieve_viewers_failed">Failed to fetch number of stream viewers!!</string>
+    <string name="stream_subscribe_failed">Failed to subscribe to the stream events!!</string>
+    <string name="stream_play_failed">Failed to play stream,wait for sometime or try again later!!</string>
+    <string name="stream_offline">Failed to play stream,as publisher is no longer publishing!!</string>
+    <string name="signout">Sign out</string>
+    <string name="MQTT_USERNAME">mqttUser</string>
+    <string name="MQTT_PASSWORD">SZgumMBaqsRBet74Tk9mht6Fk</string>
+    <string name="video">Video</string>
+    <string name="go_live">Go Live</string>
+    <string name="live_on_app">Live on &appname;</string>
+    <string name="we_will_notify">We will notify your followers so that they will not miss this live session.</string>
+    <string name="start_live_stream">Start Live Stream</string>
+    <string name="live_users">Live Users</string>
+    <string name="no_live_friends">\nNo live user found\nPlease check after some time</string>
+    <string name="end">End</string>
+    <string name="viewers">Viewers</string>
+    <string name="insufficient_balance">Insufficient balance</string>
+    <string name="insufficient_balance_message">Not enough coins, please recharge and try again.</string>
+    <string name="end_live_stream">End Live Video</string>
+    <string name="live_stream_ended">Live stream ended</string>
+    <string name="live_share_message">Save your video under your profile for your followers to watch.</string>
+    <string name="zero1">0.0</string>
+    <string name="select_contact">SELECT CONTACT</string>
+    <string name="no_stream_show">No streams to show</string>
+    <string name="change_stream">Change Stream</string>
+    <string name="audio_call_ended">Audio call</string>
+    <string name="video_call_ended">Video call</string>
+    <string name="call">Call</string>
+    <!--LIVE STREAM END-->
+
+    <!--BUSINESS PROFILE-->
+    <string name="business_profile">Business Profile</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="business_title1">INSIGHTS</string>
+    <string name="business_title2"><![CDATA[PRODUCTS & SERVICES]]></string>
+    <string name="business_title3">BUSINESS PROFILE</string>
+    <string name="business_description1">Add a phone number, email address or location so that a customer can reach you directly by clicking a button on your profile</string>
+    <string name="business_description2">Learn about your followers and get insights on how your posts are performing</string>
+    <string name="business_description3">Post products and services and allow your customers to buy them by a simple click.</string>
+    <string name="business_name">Business name</string>
+    <string name="website">Website</string>
+    <string name="business_website">Business website</string>
+    <string name="business_bio">Business Description</string>
+    <string name="business_details">Business Information</string>
+    <string name="business_email">Business email</string>
+    <string name="business_contact">Business phone</string>
+    <string name="business_description">About Business</string>
+    <string name="address">Address</string>
+    <string name="busines_profile_contact">Business profile contact</string>
+    <string name="busines_profile">Business Profile</string>
+    <string name="street">Street</string>
+    <string name="city_town">City / Town</string>
+    <string name="zipcode">Zip code</string>
+    <string name="address_message">Please add a valid address so people can navigate to your location in maps.</string>
+    <string name="business_message">Edit or remove any information that you do not wish to display.</string>
+    <string name="business_category">Business category</string>
+    <string name="business_message1">People will be able to email, call and get directions to your business from new button and link on your profile.</string>
+    <string name="public_account">Public Account</string>
+    <string name="private_account_message1">To switch to a business account, your account must be public</string>
+    <string name="select_business_category">Select Business Category</string>
+    <string name="www">www.</string>
+    <string name="enter_valid_email">Please enter valid email address</string>
+    <string name="enter_valid_phone_countrycode">Please select countrycode and enter valid phone number</string>
+    <string name="verify_email_error">Please verify email address on click of verify button.</string>
+    <string name="verify_phone_error">Please verify phone number on click of verify button</string>
+    <string name="location">Location</string>
+    <string name="configure_busines_profile">Configure business profile</string>
+    <string name="sucess_business_profile_created">Thank you for registering your business , our business profile support team will get back with you shortly for any updates</string>
+    <string name="business_configuration">Configuration</string>
+    <string name="allow_email">Allow to send email</string>
+    <string name="allow_call">Allow to call</string>
+    <string name="business">Business</string>
+    <string name="add_business_post">Add as business post</string>
+    <string name="action_button">Button</string>
+    <string name="action_button_text">Action Button</string>
+    <string name="add_link">Add Link</string>
+    <string name="link">Link</string>
+    <string name="price">Price</string>
+    <string name="add_price">Add Price</string>
+    <string name="visit">Visit</string>
+    <string name="default_money">&#36; 0</string>
+    <string name="url">URL</string>
+    <string name="default_currency">$</string>
+    <string name="post_type">Post Type</string>
+    <string name="your_website">www.yourlink.com</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="button_text">Button Text</string>
+    <string name="enter_price">Enter Price</string>
+    <string name="enter_link">Enter link</string>
+    <string name="contact_options">Contact options</string>
+    <string name="email_phone">Email, Phone</string>
+    <string name="business_post_details">Business Post Details</string>
+    <string name="create">Create</string>
+    <!--END BUSINESS PROFILE-->
+
+    <!--COLLECTION-->
+    <string name="saved">Saved</string>
+    <string name="create_collection">Create collection</string>
+    <string name="collection_name">Collection name</string>
+    <string name="all_post">All post</string>
+    <string name="save_to_collection">Save to collection</string>
+    <string name="view_saved">View Saved</string>
+    <string name="add_to_collection">Add to collection</string>
+    <string name="add_to">Add to</string>
+    <string name="save_to">Save to</string>
+    <string name="new_collection">New collection</string>
+    <string name="collection_created">Collection created.</string>
+    <string name="added_to_collection">Added to collection.</string>
+    <string name="edit_collection">Edit collection</string>
+    <string name="change_cover">Change Cover</string>
+    <string name="delete_collection">Delete Collection</string>
+    <string name="delete_collection_que">Delete Collection?</string>
+    <string name="delete_collection_msg">When you delete this collection, the photos and videos will still be saved.</string>
+    <string name="delete">Delete</string>
+    <string name="no_saved_collection">Nothing saved yet</string>
+    <string name="no_saved_collection_msg">All the posts and items that you\'ve saved will be shown here.</string>
+    <string name="start_saving">Start saving</string>
+    <string name="no_collection_post_msg">Save photos and videos to your collection.</string>
+    <string name="no_post_to_add_collection_msg">Save photos and videos to this collection. No one will be notified and only you can see what you\'ve saved.</string>
+    <string name="also_share">Also Share With</string>
+    <string name="installFb">Facebook app is not installed</string>
+    <string name="new_chat">New Chat</string>
+    <string name="fetching">Fetching...</string>
+    <string name="snap_title">Snap cover photo</string>
+    <string name="snap_message">We will display your snap as your live stream cover photo.</string>
+    <string name="check_internet">Please check your internet connection and try again for awesome experience.</string>
+    <string name="checking_internet">Checking Connection</string>
+    <string name="check_internet_message">We are connecting your live stream, Please wait for better experience.</string>
+    <string name="oops_wrong">Oops something went wrong</string>
+    <!--END COLLECTION-->
+
+    <!--                          GroupCalling Strings                       -->
+    <string name="login_in_lopongo">
+        <![CDATA[<font color=\'#102027\'>Login in </font><font color=\'#66B5FC\'> Lopongo</font>]]></string>
+    <string name="access_data">Access data</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="recover_password">Recover password</string>
+    <string name="hint_user_name">User name</string>
+    <string name="hint_password">Password</string>
+    <string name="access">Access</string>
+    <string name="login_logo">login_logo</string>
+    <string name="dialog_sign_up_text">OOPS! It seems like your user name or password \n is not registered with us ? <annotation type="sign_up_link">Sign up</annotation></string>
+
+    <!--RegisterActivity-->
+    <string name="registerName">Name</string>
+
+    <!--ALL-->
+    <string name="allSignUp">SIGN UP</string>
+    <string name="allContinue">Continue</string>
+
+    <!--CallingActivity-->
+    <string name="incoming_audio_call">Incoming Voice Call</string>
+    <string name="incoming_video_call">Incoming Video Call</string>
+    <string name="tap_to_open">\"Tap to open\"</string>
+    <string name="callingVideoCall">&appname; CALL</string>
+    <string name="video_call">&appname; Video Call</string>
+    <string name="audio_call">&appname; Voice Call</string>
+    <string name="callingCalling">CALLING</string>
+    <string name="callingCallingSmall">Calling…</string>
+    <string name="callingCancel">CANCEL</string>
+    <string name="info">Info</string>
+    <string name="info_description">Information about this video</string>
+    <string name="calling_rationale_camera">This app needs access to your camera then you can call/receive.</string>
+    <string name="calling_mandate">This app must need the camera permission to continue</string>
+    <string name="calling_miss_call">You have got a miss call</string>
+    <string name="calling_user_busy">is busy on another call. Please try again after sometime.</string>
+
+    <!--calling dialog -->
+    <string name="allContactsTitle">Select contacts to call</string>
+
+    <!--Dashboard activity-->
+    <string name="dashboardAddedCall">Already added to the call</string>
+    <string name="open">Open</string>
+    <string name="discover_people">Discover</string>
+    <!--                          GroupCalling  End                          -->
+
+
+    <string name="find_contact_follow">Find Contact to Follow</string>
+    <string name="contact_where_upload_text">To help you connect with friends, allow &appname;
+        access to your contacts</string>
+    <string name="find_more_info">Learn more about Privacy Policy</string>
+    <string name="manage_setting_text">You can manage what information we use in the app under your phones settings</string>
+    <string name="contact_upload_permission_text">&appname; is excited to continue to connect with friends to chat, call and share social moments.</string>
+    <string name="not_now">Not now</string>
+    <string name="view_more">View more</string>
+    <string name="update_email">Update email</string>
+    <string name="gifts">Gifts</string>
+    <string name="live_time">Live Time:</string>
+    <string name="views1">Views</string>
+    <string name="read_policy">Read our Privacy Policy. Tap \"Agree and continue\" to accept the Terms of Services.</string>
+    <string name="company">3Embed Software Technologies Pvt. Ltd.</string>
+    <string name="contact_sync_dialog_message">&appname; is excited to continue to connect users in your contacts! connect with Friends to Chat, Call and Share social feeds with them.\n\nContacts from your address book will be uploaded to the &appname;
+        to help you and others to find the friends.</string>
+    <string name="media_selection_failed">Failed to select given media!!</string>
+    <string name="image_selection_failed">Failed to select given image!!</string>
+    <string name="activity_not_found">Activity not found!!</string>
+
+
+    <!-- wallet-->
+    <string name="wallet_agree">I Agree</string>
+    <string name="terms_conditions">Terms And Conditions</string>
+    <string name="ifsc_code_star">IFSC Code*</string>
+    <string name="account_number_star">Account Number*</string>
+    <string name="confirm_account_number_star">Confirm Account Number*</string>
+    <string name="account_holder_name_star">Account Holder Name</string>
+    <string name="nick_name">Nick Name</string>
+    <string name="title_bank_details">Bank Details</string>
+    <string name="title_identification">Identification</string>
+    <string name="document_number">Document Number*</string>
+    <string name="name_on_document">Name On Document*</string>
+    <string name="select_document">Select Document Type*</string>
+    <string name="upload_doc_star">Upload Doc*</string>
+    <string name="front_side">Front Side*</string>
+    <string name="back_side">Back Side*</string>
+    <string name="verify">Verify</string>
+    <string name="wallet_activated">Wallet Activated</string>
+    <string name="wallet_message">Now you can transfer money through the wallet. Enjoy the great experience of DoChat wallet.</string>
+    <string name="success">Success</string>
+    <string name="help">Help ?</string>
+    <string name="help_title">Help</string>
+    <string name="wallet_balance">WALLET BALANCE</string>
+    <string name="default_balance">$ 0.00</string>
+    <string name="recharge">Recharge</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="bank_card">Bank / Cards</string>
+    <string name="recent_transactions">RECENT TRANSACTIONS</string>
+    <string name="all_transactions">All Transactions</string>
+    <string name="no_transactions_yet">No transactions</string>
+    <string name="no_transactions_credit_yet">No transactions</string>
+    <string name="no_transactions_debit_yet">No transactions</string>
+    <string name="credit_transactions">Credit Transactions</string>
+    <string name="debit_transactions">Debit Transactions</string>
+    <string name="recharge_wallet">Recharge wallet</string>
+    <string name="change">Change</string>
+    <string name="recharge_amount">Recharge Amount</string>
+    <string name="recently_added">Recently Added</string>
+    <string name="choose_method">Choose Method</string>
+    <string name="bank_account">BANK ACCOUNT</string>
+    <string name="plus_add">+ Add</string>
+    <string name="plus_card">+ Card</string>
+    <string name="saved_cards">SAVED CARDS</string>
+    <string name="recharge_success">Recharged Successfully</string>
+    <string name="transaction_id">Transaction Id</string>
+    <string name="date_time"><![CDATA[Date & Time]]></string>
+    <string name="recharge_mode">Recharge Mode</string>
+    <string name="recharge_amount1">Recharge Amount</string>
+    <string name="error_mandatory">Please enter valid data</string>
+    <string name="error_match_account">Confirm account number should match Account number</string>
+    <string name="error_select_doc">Select document</string>
+    <string name="kyc">KYC</string>
+    <string name="oops">Oops</string>
+    <string name="kyc_not_verified">Pending KYC verification</string>
+    <string name="kyc_not_verified_message">KYC Application submitted and pending review, we will let you know the status of your KYC via email and notification</string>
+    <string name="okay">Okay!</string>
+    <string name="kyc_applied">KYC Application</string>
+    <!--    <string name="kyc_applied_message">Your KYC is successfully applied. Our team will verify and do further process. The process will take 3 days. Thank you!!!</string>-->
+    <string name="kyc_applied_message">Your details will be reviewed by our account admin team and if approved your wallet will be available for use. Thank you!!!</string>
+    <string name="enter_amount">Please enter amount</string>
+    <string name="enter_credit">Enter credit amount</string>
+    <string name="suggested">Suggestion</string>
+    <string name="select_payment_mode">Select Payment Mode</string>
+    <string name="inviteMsg3">Hey! Join me on Crowwe.</string>
+    <string name="no_sms_app">Message application not found</string>
+    <string name="sent_to">Sent to</string>
+    <string name="scan_my_code_pay">Scan my code to pay</string>
+    <string name="send_amount">Send Payment</string>
+    <string name="amount">Amount</string>
+    <string name="invalid_password">Invalid password</string>
+    <string name="sent_successfully">Sent successfully</string>
+    <string name="enter_app_password">Enter App Password</string>
+    <string name="open_scanner">Open Scanner</string>
+    <string name="withdrawlogs">Withdrawal logs</string>
+    <string name="balanceAmount">Balance Amount</string>
+    <string name="balanceWithdrawal">Balance Withdrawal</string>
+    <string name="no_withdrawal_logs">No Withdrawal Logs</string>
+    <string name="no_bank_account">No Bank Account</string>
+    <string name="add_your_bank_account">Add Your Bank Account</string>
+    <string name="bank_code_star">Bank Code*</string>
+    <string name="need_camera_permission">Need camera permission!</string>
+    <string name="give_camera_permission">Please give the camera permission from settings</string>
+    <string name="txn_no">TXN NO.:</string>
+    <string name="received_transaction">Received transaction</string>
+    <string name="sent_transaction">Sent transaction</string>
+    <string name="submitted_succesfully">Withdraw request submitted successfully</string>
+    <string name="bank">Bank</string>
+    <string name="fee">Fee</string>
+    <string name="withdraw_id">WITHDRAW ID:</string>
+    <string name="friends">Friends</string>
+    <string name="ad_card">+ Add Card</string>
+    <string name="change_card">Change Card</string>
+    <string name="selected_card">Selected Card</string>
+    <string name="select_card_message">Please select a card</string>
+    <string name="wallet_recharge_confirmation">Are you sure you want to recharge the wallet with</string>
+    <string name="withdraw_methods">Withdraw Methods</string>
+    <string name="withdraw_methods_description">Select any of the payment receiving method to withdraw the money.</string>
+    <string name="stripe_account">Stripe Account</string>
+    <string name="create_account">Create Account</string>
+    <string name="add_stripe_account">Add Stripe Account</string>
+    <string name="upload_photo_id">Upload Photo Id</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="ssn">SSN</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="submit">Submit</string>
+    <string name="gender">Gender</string>
+    <string name="select_your_gender">Select your gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="id_number">Document Number</string>
+    <string name="account_number">Account number</string>
+    <string name="routing_number">Routing number</string>
+    <string name="wallet_recharged">Wallet Recharged</string>
+    <string name="account_holder_name">Account holder name</string>
+    <string name="account_type">Account Type</string>
+    <string name="bank_deleted">Bank deleted successfully</string>
+    <string name="kyc_title">Know your client (KYC)</string>
+    <string name="kyc_message">To activate your wallet please compete the know your client form</string>
+    <string name="select_country">Select country</string>
+    <string name="withdraw_amount">Withdarwal Amount</string>
+    <string name="fee_message">withdrawal fee deducted</string>
+    <string name="message_wallet_not_available">"Wallet is not created, please create wallet to transfer the money. "</string>
+    <string name="message_wallet_ask_to_create">The user your are trying to send a payment to does not have an active cash wallet yet and therefore you cannot send this user any payment.</string>
+    <string name="continue_as_guest">Continue As Guest</string>
+    <string name="sign_in_message">You are not login with &appname;.\nTo use this feature you need to login.</string>
+    <string name="for_you">For You</string>
+    <string name="delete_channel_message">Are you sure you want to delete the channel?</string>
+
+    ------------------------------------------------
+    <string name="text_1111">1111</string>
+    <string name="dubly_transaction">&appname; Transaction</string>
+    <string name="payment_refund">Payment will be refunded if not confirmed within 24 hours.</string>
+    <string name="min_amount">Minimum amount 0.01</string>
+    <string name="hint_ver_code">* * * *</string>
+    <string name="add_caption">Add caption</string>
+    <string name="Public">Public</string>
+    <string name="disable_warning">If disabled, users cannot see your email address</string>
+    <string name="disable_warning_chat">If disable, users can not chat with you.</string>
+    <string name="coin_init_val">Coin 00.00</string>
+    <string name="bal_zero">00.00</string>
+    <string name="reason">Reason</string>
+    <string name="incmng_caller_name">TammyAllen</string>
+    <string name="incoming">INCOMING</string>
+    <string name="incoming_">incoming</string>
+    <string name="outgoing_">outgoing</string>
+    <string name="you_miss_video_call">You missed video call</string>
+    <string name="you_miss_voice_call">You missed voice call</string>
+    <string name="last_called">Last called</string>
+    <string name="select_loc">Select a Location</string>
+    <string name="share_posting_loc_insta">Share Your posting Location From Your Phone on Instagram</string>
+    <string name="share_posting_loc_to_friends">
+        Share your posting location with your phone on Instagram, Let your friend to know your posting place, and more.</string>
+    <string name="turn_on">Turn On</string>
+    <string name="tv_mobno">+1 203 456 7890</string>
+    <string name="no_chat_history">No chat history to display.</string>
+    <string name="hr_m_sec">00:10:36</string>
+    <string name="string_0"> 0 </string>
+    <string name="share_loc">Share Location</string>
+    <string name="send_loc">Send Location</string>
+    <string name="sel_region">Select Region</string>
+    <string name="Sign_In">Sign In</string>
+    <string name="select_region">Select Region *</string>
+    <string name="login_via_dublyid">Login via &appname; ID</string>
+    <string name="not_a_member"> Not a Member yet? </string>
+    <string name="mobno_start">+91</string>
+    <string name="user_cannot_contact_warning">If disable, users can not contact you.</string>
+    <string name="tv_loc">dsad</string>
+    <string name="type_a_status">Type a Status</string>
+    <string name="time">15:56 AM</string>
+    <string name="timen">12:54 AM</string>
+    <string name="timed">12:45 PM</string>
+    <string name="agree_terms">I agree to the &appname;
+        Terms and Conditions for a star profile</string>
+    <string name="pdf">PPDF_112121.pdf</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="you">You</string>
+    <string name="message">Message</string>
+    <string name="login_via_otp">Login via sms code</string>
+    <string name="gif">GIFS</string>
+    <string name="name_Jimmy_Carr">Jimmy Carr</string>
+    <string name="hundred">100</string>
+    <string name="init_Kms">0.0 kms</string>
+    <string name="text_0.1x">0.1x</string>
+    <string name="text_0.5x">.0.5x</string>
+    <string name="text_1x">1x</string>
+    <string name="text_2x">2x</string>
+    <string name="text_3x">3x</string>
+    <string name="hello">Hello</string>
+    <string name="hardik">Hardik</string>
+    <string name="dm">asdasdasdasdasdasd</string>
+    <string name="text_12">12</string>
+    <string name="people_not_found_to_chat">People not found to chat, please follow people to chat with them.</string>
+    <string name="slash">/</string>
+    <string name="name_demo">dsjhkj</string>
+    <string name="add_story">Add story</string>
+    <string name="tv_options">&#8942;</string>
+    <string name="no_call_history_show_call_log">No call history available at the moment.Call logs will show up for you in this section.</string>
+    <string name="user_details_caps">USER DETAILS-</string>
+    <string name="test_user">Test user</string>
+    <string name="test_gmail">test@gmail.com</string>
+    <string name="twenty_five">25</string>
+    <string name="no_contacts">No contact</string>
+    <string name="four_participants">4 participants</string>
+    <string name="contacts_name">Jim</string>
+    <string name="comma">,</string>
+    <string name="dem">asdasdasd</string>
+    <string name="sender">Sender</string>
+    <string name="one_Coins">1 Coins</string>
+    <string name="posts_12k">12k Posts</string>
+    <string name="t">T</string>
+    <string name="mb_val">1.2MB</string>
+    <string name="madrid_spain">Madrid, Spain</string>
+    <string name="music">Music</string>
+    <string name="sep">|</string>
+    <string name="participant">Participant: 3/256</string>
+    <string name="random_no">#1234567890123</string>
+    <string name="tv_amount">$ 20.00</string>
+    <string name="tv_transaction_date">16 Nov 19, 13:17:22</string>
+    <string name="temp_time">23:45 AM</string>
+    <string name="text_1212">1212</string>
+    <string name="t_time">12:05 AM</string>
+    <string name="text_pending">Pending</string>
+    <string name="text_reject">Reject</string>
+    <string name="first_coin_init">Coin 1.00</string>
+    <string name="debra_text">debra.14</string>
+    <string name="loading_data_wait">Loading data. Please wait..</string>
+    <string name="text_off">Off</string>
+    <string name="you_have_invited_joma_to_join">You have invited joma to join a stealth chat</string>
+    <string name="text_user_Identifier">userIdentifier</string>
+    <string name="text_group_created">you created a group</string>
+    <string name="temp_transaction_id">TXN ID: SCT_AJ38248S </string>
+    <string name="reposted_start_post">Reposted star post</string>
+    <string name="tv_time">Fri, 14 feb 2017 02:21 AM</string>
+    <string name="profile_name_tv">Aaron Paul</string>
+    <string name="random_text">dsgsad</string>
+    <string name="random_text_1">dfgdfgd</string>
+    <string name="ss_jadeja">ssjadeja</string>
+    <string name="text_bengaluru">Bengaluru</string>
+    <string name="desc_is_here">description is here</string>
+    <string name="text_jeremy_carr">Jeremy Carr</string>
+    <string name="text_filter_name">Luminous Threshold</string>
+
+
+    -----------------For java files(new)------------
+    <string name="message_hi">Hi</string>
+    <string name="message_I_am">I\'m</string>
+    <string name="double_inverted_comma">""</string>
+    <string name="space">" "</string>
+    <string name="text_howdoo">howdoo</string>
+    <string name="dash_space">- </string>
+    <string name="login_via_phone_no">Login via Phone Number</string>
+    <string name="login_via_password">Login via Password</string>
+    <string name="init_time">00:0$min:0$sec</string>
+    <string name="semicolon">:</string>
+    <string name="cont_dot">...</string>
+    <string name="preparing_to_share">Preparing to share...</string>
+    <string name="zero_perc">0%</string>
+    <string name="perc">%</string>
+    <string name="downloading">Downloading...</string>
+    <string name="unable_to_select_audio">Unable to select Audio</string>
+    <string name="text_post">Post</string>
+    <string name="transaction_detail">Transaction Detail</string>
+    <string name="account_no_demo">XXXX XXXX XXXX </string>
+    <string name="email_address_already_exists">Email Address Already Exists</string>
+    <string name="date_format">dd/MM/yyyy</string>
+    <string name="alredy_added_in_collection">Already added in collection !</string>
+
+    <string name="audio_placeholder">Audio track duration-</string>
+    <string name="drag_select_pause_position">Mark the stop point</string>
+    <string name="start_countdown_shooting">Start Countdown</string>
+    <string name="zero_sec">0s</string>
+    <string name="sixty_sec">60s</string>
+    <string name="timer">Timer</string>
+    <string name="max_duration">%1$ss</string>
+    <string name="fifteen_sec">15s</string>
+    <!--    Allow download & comments-->
+    <string name="accessibility">Accessibility</string>
+    <string name="allow_download">Allow download</string>
+    <string name="allow_comments">Allow comments</string>
+    <string name="comments_disabled">The owner has disabled comments for this post</string>
+    <string name="download_gif">Download Gif</string>
+    <string name="copy_link">Copy link</string>
+    <string name="more">More</string>
+    <string name="not_interested">Not interested</string>
+    <string name="download_media">Download media</string>
+    <string name="download_disabled">The owner has disabled download for this post</string>
+    <string name="gif_not_applicable">Only video posts can be downloaded as gif</string>
+    <string name="link_copied">Media link copied successfully</string>
+    <string name="link_copy_failed">Failed to copy media link</string>
+    <string name="media_downloaded">Media downloaded successfully to %1$s</string>
+    <string name="post_by">Post by-</string>
+    <string name="copy_disabled">The owner has disabled copy link for this post</string>
+    <string name="share_post">Share post\'s dynamic link using-</string>
+    <string name="download_failed">Download post\'s media failed</string>
+    <string name="downloading_media">Downloading media</string>
+    <!--Deepar & Banuba  -->
+    <string name="download">Download</string>
+    <string name="ism_filters">Filters</string>
+    <string name="ism_masks">Masks</string>
+    <string name="ism_effects">Effects</string>
+    <string name="ism_clear_all">Clear All</string>
+    <string name="normal_camera">Normal\nCamera</string>
+    <string name="ar_camera">\u0020 \u0020 AR  \nCamera</string>
+    <string name="beautify">Beautify</string>
+    <string name="ar_filters">Filters</string>
+    <string name="video_record_failed">Failed to record video.Please try again!!</string>
+    <string name="flash_not_supported">Camera flash not supported with AR camera!!</string>
+    <string name="filters_download_required">&lt;&lt;&lt;&lt; Download filters required</string>
+    <string name="download_filters">Download filters</string>
+    <string name="download_size">Download size-</string>
+    <string name="preparing_filters">Preparing filters</string>
+    <string name="filters_prepare_failed">Failed to prepare filters</string>
+    <string name="filters_prepared">Filters prepared successfully</string>
+    <string name="beauty_download">Download filters from filters tab above to apply the beautify effect!!</string>
+
+    <!--Duet  -->
+    <string name="duet">Duet</string>
+    <string name="duet_not_applicable">Duet can only be made with video posts</string>
+    <string name="record_duet">Record duet</string>
+    <string name="preparing_duet">Preparing duet</string>
+    <string name="allow_duet">Allow duet</string>
+    <string name="duet_disabled">The owner has disabled duet for this post</string>
+    <string name="preparing_sound">Preparing sound</string>
+    <string name="or_continue_with">Or Continue With</string>
+    <string name="or_login_with">Or Login With</string>
+    <string name="likes">Likes</string>
+
+    <!--drawer-->
+    <string name="menuSavedPost">Saved Post</string>
+    <string name="menuActivity">Activity</string>
+    <string name="menuHistory">Order History</string>
+    <string name="menuWallet">Wallet</string>
+    <string name="menuCard">Debit/Credit Card</string>
+    <string name="menuAddress">Manage Addresses</string>
+    <string name="menuWishList">Wishlist</string>
+    <string name="menuHelpCenter">Help Center</string>
+    <string name="menufaq">FAQs</string>
+
+    <!--ecom-->
+    <string name="noFaqFound">No Faq\'s found</string>
+    <string name="my_balance">My balance</string>
+    <string name="transactions">Transactions</string>
+    <string name="transfer_coin">Transfer Coin</string>
+    <string name="search_people">Search people</string>
+    <string name="forward">Forward</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="unbookmark">Remove from bookmarks</string>
+    <string name="post_removed_bookmark">Post removed from bookmark</string>
+    <string name="record">Record</string>
+    <string name="record_not_applicable">Record with audio can only be made with video posts</string>
+    <string name="no_likes">No Likes</string>
+    <string name="no_comments">No Comments</string>
+    <string name="make_default">Make Default</string>
+    <string name="defaultAddress">Default</string>
+
+    <!--manage address -->
+    <string name="add_new_address">Add new address</string>
+    <string name="addAddress">Add Address</string>
+    <string name="noSavedAddress">No saved addresses</string>
+    <string name="home">Home</string>
+    <string name="work">Work</string>
+    <string name="savedAddress">Saved Addresses</string>
+    <string name="selectAddress">Select Address</string>
+    <string name="selectSaveAs">please select save as</string>
+    <string name="addrExist">This address already added, choose another</string>
+    <string name="continueText">Continue</string>
+    <string name="emptyAddressMsg">No Addresses Found</string>
+    <string name="deleteAddressWarning">Are you sure you want to delete this address?</string>
+    <string name="chooseAddress">Choose Address</string>
+    <string name="manageAddressTitle">Manage Addresses</string>
+    <string name="confirmAddressTitle">Confirm Delivery Address</string>
+    <string name="selectDiffDeliveryAddress">We do not deliver at selected address. Please select different delivery address</string>
+    <string name="allCancel">Cancel</string>
+    <string name="invalidName">Invalid name</string>
+    <string name="invalidPhone">Invalid phone</string>
+    <string name="invalidIndianPhone">Entered mobile number is not valid. Please enter a valid 10 digit mobile number</string>
+    <string name="invalidAddressLineOne">Invalid address line 1</string>
+    <string name="invalidArea">Invalid Area</string>
+    <string name="invalidCity">Invalid City</string>
+    <string name="invalidCountry">Invalid Country</string>
+    <string name="invalidPostalCode">Invalid Postal Code</string>
+    <string name="addressHomeType">Home</string>
+    <string name="addressWorkType">Work</string>
+    <string name="addressOther">Other eg: Parent\'s home</string>
+    <string name="addNewAddress">Add New Address</string>
+    <string name="editAddress">Edit Address</string>
+    <string name="search_hint">Search…</string>
+    <string name="addressName">Name*</string>
+    <string name="addressLine1">Address Line 1*</string>
+    <string name="addressLine2">Address Line 2</string>
+    <string name="addressArea">Area*</string>
+    <string name="addressCity">City/District*</string>
+    <string name="addressCountry">Country*</string>
+    <string name="addressPostalCode">Postal Code*</string>
+    <string name="addressLandMark">Land Mark</string>
+    <string name="addressType">Address Type</string>
+    <string name="signUpPhoneNumber">Phone Number*</string>
+    <string name="otherAddressHint">eg: Parent\'s home</string>
+    <string name="signUpEnterValidName">please enter valid name</string>
+    <string name="signUpEnterValidPhoneNum">please enter valid phonenumber</string>
+    <string name="signUpPhoneNumExist">The entered phoneNumber is already existed.</string>
+    <string name="signUpEmailExist">this email address is already registered ,please try another one.</string>
+    <string name="validAddressError">Address should not be empty</string>
+    <string name="validPostalCodeError">Postal Code should not be empty</string>
+    <string name="validCityNameError">City Name should not be empty</string>
+    <string name="validCountryNameError">Country Name should not be empty</string>
+    <string name="validAreaNameError">Area Name should not be empty</string>
+    <string name="follow_user">Follow User</string>
+    <string name="outOfStock">OUT OF STOCK</string>
+    <string name="flat">FLAT</string>
+    <string name="upto">UPTO</string>
+    <string name="off">OFF</string>
+    <string name="notify">Notify</string>
+    <string name="select">Select</string>
+    <string name="dealEnds">Deal Ends in:</string>
+    <string name="tAndC">T&amp;C</string>
+    <string name="categories">Categories</string>
+    <string name="pdpColors">Colors</string>
+    <string name="pdpNotifyMe">Notify me</string>
+    <string name="pdpOutOffStock">Out Of Stock</string>
+    <string name="quantity">Quantity</string>
+    <string-array name="product_quantiy">
+        <item>2 Pcs</item>
+        <item>3 Pcs</item>
+        <item>4 Pcs</item>
+        <item>5 Pcs</item>
+    </string-array>
+    <string name="pdpAddGoCart">Go To Cart</string>
+    <string name="pdpAddToCart">Add To Cart</string>
+    <string name="pdpPleaseEnterMail">Please Enter Email Address</string>
+    <string name="pdpOnUpto">Upto</string>
+    <string name="pdpOff">Off</string>
+    <string name="pdpFlat">Flat</string>
+    <string name="pdpAddToCartWarning">you are exceeding the limit,we don\'t have that much stock.</string>
+    <string name="tvFilterTitle">Color</string>
+    <string name="pdpSizeChart">Size Chart</string>
+    <string name="pdpAboutSeller">About the seller</string>
+    <string name="sellerSince">Seller Since</string>
+    <string name="pdpSellerScore">Seller score is calculated based on customer feedback and seller performance</string>
+    <string name="pdpTermsAndConditions">Terms &amp; Conditions</string>
+    <string name="pdpOnOffer">on offer</string>
+    <string name="availableOffers">Available Offers</string>
+    <string name="allDesription">Description</string>
+    <string name="allMore">More</string>
+    <string name="pdpAllDetails">All Details</string>
+    <string name="pdpSellerInformation">Seller Information</string>
+    <string name="pdpRatingReviews"><![CDATA[Ratings & Reviews]]></string>
+    <string name="allRateProduct">Rate Product</string>
+    <string name="pdpAlsoViewed">People Also Viewed</string>
+    <string name="pdpHighlights">HighLights :</string>
+    <string name="errorGeneratingLink">Error generating share link</string>
+    <string name="onOffer">ON OFFER</string>
+    <string name="menuFlagAsAbusive">Flag as abusive</string>
+    <string name="allDetails">All Details</string>
+    <string name="highlights">Highlights</string>
+    <string name="internetIssue">Please check internet and try again.</string>
+    <string name="allDescription">Description</string>
+    <string name="reviewProduct">Review Product</string>
+    <string name="reviewSeller">Review Seller</string>
+    <string name="reviewProductAll">All</string>
+    <string name="pdpRatings">ratings</string>
+    <string name="pdpReviews">reviews</string>
+    <string name="and">and</string>
+    <string name="allOtherSellers">Other Sellers</string>
+    <string name="pdpHighlightsTitle">HighLights</string>
+    <string name="productDetails">Product Details</string>
+    <string name="rateservice">Rate Service</string>
+    <string name="leaveAReview">Leave a review</string>
+    <string name="reviewProductOverall">Overall</string>
+    <string name="allTakePhoto">Take Photo</string>
+    <string name="allChooseFromGallery">Choose from Gallery</string>
+    <string name="allAddPhoto">Add Photo!</string>
+    <string name="allDone">Done</string>
+    <string name="ratedriver">Rate Driver</string>
+    <string name="reviewProductTitleHint">Enter title.</string>
+    <string name="reviewProductDescHint">Enter description.</string>
+    <string name="reviewAboutSeller">Review about Seller.</string>
+    <string name="allTitle">Title</string>
+    <string name="reviewSomeThingAboutSeller">Tell something about the seller</string>
+    <string name="apply">Apply</string>
+    <string name="pdpSpecifications">Specifications</string>
+    <string name="rateSeller">Rate Seller</string>
+    <string name="allReviews">All Reviews</string>
+    <string name="all_submit">Submit</string>
+    <string name="all_reviews_Most_helpful">Most Helpful</string>
+    <string name="reviewProductTitle">Haven\'t purchased this product?</string>
+    <string name="reviewProductDesc">Sorry! You are not allowed to review this product since you haven\'t bought it on Our Site.</string>
+    <string name="reviewProductShopNow">shop now</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="reviewProductHangOn">Hang on, loading content</string>
+    <string name="pdpNotifyMessage">Get notified as soon as the product is available again</string>
+    <string name="allView">View</string>
+    <string name="deliverTo">Deliver To</string>
+    <string name="cartChange">Change</string>
+    <string name="cartAddAddress">Add Address</string>
+    <string name="historyBillingAddress">Billing Address</string>
+    <string name="sameAsDeliveryAdress">Same as Delivery address</string>
+    <string name="favourites">Favorite</string>
+    <string name="extraNotesText">Add instructions</string>
+    <string name="contactlessDeliveryType">Contactless delivery Type</string>
+    <string name="none">None</string>
+    <string name="cartEmptyTitle">There\'s nothing in your cart</string>
+    <string name="confirmAndPlaceOrder">Confirm &amp; Place Order</string>
+    <string name="tvChange">CHANGE</string>
+    <string name="cartPlaceOrder">Place order</string>
+    <string name="cartTotalAmt">Total Amount</string>
+    <string name="tipInfo">Reward your riders’s commitment</string>
+    <string name="Clear">Clear</string>
+    <string name="applyPromoCode">Apply Promocode</string>
+    <string name="allItems">Items</string>
+    <string name="confirmOrderCashOnDel">Cash On Delivery</string>
+    <string name="payMentMethod">Payment method</string>
+    <string name="cartContinueShopping">Continue shopping</string>
+    <string name="forgotPasswordSucessDesc">You can now log using your new password and enjoy shopping</string>
+    <string name="forgotPasswordSucess">Reset password successful</string>
+    <string name="cartPriceDetils">Price Details</string>
+    <string name="cartOrderSubTotal">Total before tax</string>
+    <string name="offerDiscount">Offer Discount</string>
+    <string name="promotionsApplied">Promotions Applied</string>
+    <string name="allTaxes">Taxes :</string>
+    <string name="deliveryFee">Delivery Fee</string>
+    <string name="cartOrderTotal">Total After tax</string>
+    <string name="cartSavings">Your savings</string>
+    <string name="payMentBreakDown">Payment Breakdown</string>
+    <string name="allTotal">Total</string>
+    <string name="confirmOrder">Confirm Order</string>
+    <string name="myCart">My Cart</string>
+    <string name="confirmOrderlSuccess">Order Placed successfully</string>
+    <string name="customizations">Customizations</string>
+    <string name="selectPromoCode">Select Promocode</string>
+    <string name="cartMore">+More</string>
+    <string name="mfgBy">Mfg By:</string>
+    <string name="cartOfferAppiled">1 offer Applied</string>
+    <string name="cart">Cart</string>
+    <string name="free">Free</string>
+    <string name="paymentMentodTotalAmt">Total amount to be paid:</string>
+    <string name="allPaymentMethod">Payment Method</string>
+    <string name="pmWallet">Wallet</string>
+    <string name="pmPayOnDel">Pay On Delivery</string>
+    <string name="addMoney">Add Money</string>
+    <string name="addCard">Add Card</string>
+    <string name="card">Card</string>
+    <string name="ending">ending</string>
+    <string name="selectThePaymentType">Please Select Payment Type</string>
+    <string name="xxx">**** **** ****</string>
+    <string name="wishListSearchHint">Search list</string>
+    <string name="noItemsMessage">No items yet</string>
+    <string name="emptyWishListMsg">Simply browse and tap on the heart icon</string>
+    <string name="clipboardSuccess">Your code is copied</string>
+    <string name="continueShopping">Continue Shopping</string>
+    <string name="clearAll">Clear All</string>
+    <string name="searchText">Searching…</string>
+    <string name="scanAgain">Scan Again</string>
+    <string name="searchMessage">Try rewording your search or entering a new keyword</string>
+    <string name="searchLabel">OOps! Item not found</string>
+    <string name="filterClearFilters">Clear Filters</string>
+    <string name="allCategories">All Categories</string>
+    <string name="wishList">WishList</string>
+    <string name="deleteWishlistItemWarning">Are you sure you want to delete this product from your wish list?</string>
+    <string name="cleaAllWishList">Are you sure you want to clear all your wishList products?</string>
+    <string-array name="sort_types">
+        <item>Relevance</item>
+        <item>Popularity</item>
+        <item>Price — Low to High</item>
+        <item>Price — High to Low</item>
+        <item>Newest First</item>
+    </string-array>
+    <string name="sortBy">Sort By</string>
+    <string name="in_the_post">In the post</string>
+    <string name="historyMyOrders">Orders</string>
+    <string name="historySearchList">Search orders</string>
+    <string name="emptyHistory">No history Available</string>
+    <string name="historyOrderNo">ORDER NO : </string>
+    <string name="totalAmount">Total Amount </string>
+    <string name="youRatedStore">You Rated</string>
+    <string name="youRatedOrder">You Rated</string>
+    <string name="reorder">Re Order</string>
+    <string name="details">Details</string>
+    <string name="yourRatedForStore">"You Rated "</string>
+    <string name="youRatedDriver">You Rated</string>
+    <string name="historyStoreName">Store Name</string>
+    <string name="historyRateNow">Rate Now</string>
+    <string name="packageId">PID</string>
+    <string name="tracking">Tracking</string>
+    <string name="viewMoreSellersSoldBy">Sold by: </string>
+    <string name="historyStoreCancel">Cancel</string>
+    <string name="historyShippingAlongWith">Shipped along with</string>
+    <string name="historyReturnProduct">Return Product</string>
+    <string name="cancelReasonForCancellation">Reason For Cancellation</string>
+    <!--add address-->
+    <string name="saveDeliveryLocation">Delivery address</string>
+    <string name="downLoadInvoice">Download Invoice</string>
+    <string name="allId">"ID : "</string>
+    <string name="historyTrackShipment">Track Shipment</string>
+    <string name="historyEditReview">Edit Review</string>
+    <string name="historyStoreOrderId">"SID : "</string>
+    <string name="storeOrderId">Store Order ID: </string>
+    <string name="box">BOX</string>
+    <string name="pandingShipment">Pending Shipment</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="allOrderDetails">Order Details</string>
+    <string name="historyDetailOrderNo">"ORDER NO: "</string>
+    <string name="historyProductOrderId">Product ID:</string>
+    <string name="orderedOn">Order On </string>
+    <string name="storeCancelled">Store Cancelled</string>
+
+    <!--Isometrik Group streaming-->
+    <string name="ism_single_broadcaster">Single Broadcaster</string>
+    <string name="ism_multiple_broadcaster">Multiple Broadcasters</string>
+    <string name="ism_no_followers_followees">You don\'t have any followers or followees to join the broadcast.</string>
+    <string name="ism_fetch_followers_followees_failed">Failed to fetch followers and followees to join the broadcast.</string>
+    <string name="ism_search_followers_followees_failed">Failed to search followers and followees to join the broadcast.</string>
+    <string name="enter_caption">Please enter caption!</string>
+    <string name="please_select_category">Please select category!</string>
+
+    <!--device specific permissions-->
+    <string name="open_app_info">Open App Info</string>
+    <string name="device_specific_settings_msg">For running the notification services, calling and chat in background, app require device specific permissions like auto start, display popup in background.</string>
+    <string name="app_background_restrictiion_msg">For running the notification services, calling and chat in background, need to remove the Flixso app from background restricted like Battery optimization from settings</string>
+
+    <!--Login Signup-->
+
+    <string name="bullethint">●</string>
+
+    <string name="userNameEmpty">Username can\'t be empty</string>
+    <string name="changeUserName">Change Username</string>
+    <string name="emailHint">abc@xyz.com</string>
+    <string name="or">OR</string>
+    <string name="welcome">Welcome to &appname;</string>
+    <string name="welcometext">Shoot videos, capture photos, send payments, chat and call on &appname;</string>
+    <string name="logintextcondition">By Login, you agree to our \n Terms of Service and Privacy Policy</string>
+    <string name="usernametextcondition">By Continue, you agree to our \n Terms of Service and Privacy Policy</string>
+    <string name="loginwithfacebook">Login with Facebook</string>
+    <string name="loginwithmail">Login with Email</string>
+    <string name="loginwithphone">Login with Phone</string>
+    <string name="loginwithgoogle">Login with Google</string>
+
+    <string name="enter_password_txt">Enter Password</string>
+    <string name="emailpswdtxt">Enter the correct password for</string>
+    <string name="signUpComment">Customer Signup Verification Code</string>
+    <string name="logout">Logout</string>
+    <string name="logoutWarning">Are you sure you want to Logout ?</string>
+    <string name="linkedWithPhoneOther">This phone number is already linked with another profile</string>
+    <string name="linkedWithOther">This email is already linked with another profile</string>
+    <string name="addressLine">Address Area</string>
+    <string name="lastNameImp">Last Name</string>
+    <string name="firstNameImp">First Name</string>
+    <string name="save">Save</string>
+    <string name="rideAddressDone">Done</string>
+    <string name="video_call_with">Video Call With</string>
+    <string name="video_shout_with">Video Shout With</string>
+    <string name="accepted">Accepted</string>
+    <string name="request_detail">Request Details</string>
+    <string name="shout_out_video">Shout out video</string>
+    <string name="onlinePaymentMethod">Online Payment</string>
+
+    <string name="emailWarning">This email address is already in use</string>
+    <string name="usernameWarning">This user name is already in use</string>
+    <string name="phoneNumberWarning">This phone number is already in use</string>
+    <string name="emptyPhoneNumber">phoneNumber can\'t be empty</string>
+    <string name="emptyEmail">Email can\'t be empty</string>
+    <string name="emptyUsername">User name can\'t be empty</string>
+    <string name="changeName">Change Name</string>
+
+    <string name="signupheader">Sign Up</string>
+    <string name="signupdesc">Create a new account on</string>
+
+    <string name="Continue_small">Continue</string>
+
+    <string name="signupok">Let’s Get Started</string>
+    <string name="usernamedesc">Create an account to get our features</string>
+    <string name="signupconditions">By signup, you agree to our \n Terms of Service and Privacy Policy</string>
+
+    <string name="old_password">Old Password</string>
+    <string name="resetPasswordText">Verification code sent</string>
+    <string name="resetPasswordsent">We have sent you an email with a link to reset your password, the link will remain active for 60 minutes only.</string>
+    <string name="calling_service_not_available">Calling service temporary not available !</string>
+    <string name="incoming_call">Incoming Call</string>
+    <string name="Coins_text">Coins</string>
+    <string name="select_plans">Select Plans</string>
+    <string name="buy_coins">Buy coins</string>
+    <string name="live">Live</string>
+    <string name="subscribes">Subscribers</string>
+    <string name="verify_profile">Verify Profile</string>
+    <string name="invite_contacts">Invite contacts</string>
+    <string name="subscriptions">Subscriptions</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="business_userName">Business username</string>
+    <string name="send_tip">Send Tip</string>
+    <string name="send_a_tip">Send a Tip</string>
+    <string name="exclusive">Xclusive</string>
+    <string name="tip_amount">Tip Amount</string>
+    <string name="get_more">Get More</string>
+    <string name="subscribe_confirm">Are you sure you want to subscribe to</string>
+    <string name="unsubscribe_dialog_msg">Are you sure you want to stop subscribing to</string>
+    <string name="add_coins">Add coins</string>
+    <string name="subscribe_new">Subscribe</string>
+    <string name="for_text">for</string>
+    <string name="slash_month">/month</string>
+    <string name="coins_colon">Coins:</string>
+
+    <!--    For longer text/usernames in home page posts -->
+    <string name="placeholder_for_long_text">...</string>
+    <string name="placeholder_for_username_begining">@</string>
+    <string name="subscription_setting">Subscription Setting</string>
+    <string name="paid_post">Paid Post</string>
+    <string name="set_monthly_value">Set monthly value</string>
+    <string name="please_enter_monthly_sub_cost">Please enter the monthly subscription cost</string>
+    <string name="you_will_get">You will get</string>
+    <string name="app_gets">App will get</string>
+
+    <string name="photo_id">Photo Id</string>
+    <string name="stripe_account_not_verified">Your stripe account is not yet verified, please check after some time.</string>
+    <!--  For the paid posts confirmation dialog  -->
+    <string name="confirm_paid_post1">Please confirm you want to purchase a</string>
+    <string name="confirm_paid_post2">post for</string>
+    <string name="charged_on">charged on</string>
+    <string name="every_month">every month</string>
+    <string name="remove">remove</string>
+    <string name="renew">renew</string>
+
+    <!--  For paid posts UI overlay  -->
+    <string name="subscribe_to">Subscribe to</string>
+    <string name="xclusive_post">Xclusive Post</string>
+    <string name="unlock_for">UNLOCK FOR</string>
+    <string name="subscribe_for">SUBSCRIBE FOR</string>
+    <string name="subscribe_for_month"> %1$.1f /month</string>
+    <string name="subscribe_for_month_confirmation">for %1$.1f /month</string>
+    <string name="unlock_post_to_share">Post needs to be unlocked first to enable sharing!!</string>
+    <string name="unlock_post_for_custom_actions">Post needs to be unlocked first to enable custom actions!!</string>
+
+    <!--    Xclusive posts fragment-->
+    <string name="no_xclusive_posts">No xclusive posts found.</string>
+    <string name="no_xclusive_posts_follow">Follow some users to see their xclusive posts here.</string>
+    <string name="music_by">by %1$s</string>
+    <string name="setup_business_profile">Setup Business Profile</string>
+    <string name="use_audio">Use Audio</string>
+    <string name="email_not_registered_msg">
+        <br>
+         This email id is not linked with and &appname; account,
+        </br>
+        <br>
+        please try again with new email id or register new user.
+        </br>
+    </string>
+    <string name="check_your_mail">Check Your Mail!</string>
+    <string name="locate">Locate</string>
+    <string name="switch_account_privacy">Switch Account Privacy</string>
+    <string name="switch_account_message">We understand your privacy, you can make account private or public by switch button.</string>
+    <string name="business_address">Business address</string>
+    <string name="verified">Verified</string>
+    <string name="not_verified">Not verified!</string>
+    <string name="edit_detail">Edit Detail</string>
+    <string name="email_sent">Email sent!</string>
+    <string name="check_your_mail_message">We have sent you the link to your profile email address.</string>
+    <string name="business_phone">Business phone</string>
+    <string name="username_not_available">Username is not available!</string>
+    <string name="save_and_verify"><![CDATA[Save & Verify]]></string>
+    <string name="no_active_subscriptions">No Active Subscriptions.</string>
+    <string name="no_cancelled_subscriptions">No Cancelled Subscriptions</string>
+    <string name="call_notificaiton">Call Notification</string>
+    <string name="user_does_not_exits">User does not exist or account has been deleted.</string>
+
+    <!--  Custom options for post  -->
+    <string name="ism_storage_allow_access_to_download_post">Allow access to external storage to download post</string>
+    <string name="ism_storage_allow_access_to_download_post_as_gif">Allow access to external storage to download post as gif</string>
+    <string name="ism_storage_allow_access_to_record_duet">Allow access to external storage to record duet with this post</string>
+    <string name="ism_storage_allow_access_to_record_with_this_post">Allow access to external storage to create post using audio of this post</string>
+
+    <!--    Share to social media popup-->
+    <string name="share_facebook">Facebook</string>
+    <string name="share_dynamic_link">Dynamic link</string>
+    <string name="share_others">Other apps</string>
+    <string name="choose_app">Choose app to share post</string>
+    <string name="no_apps_installed">No apps installed to share post</string>
+    <string name="facebook_share_canceled">Sharing post on facebook canceled</string>
+    <string name="facebook_share_successfull">Post shared successfully on facebook</string>
+    <string name="facebook_share_not_available">Sharing post on facebook is not supported</string>
+    <string name="dynamic_link_base_url">https://ezcallapp.page.link/post/</string>
+    <string name="dynamic_long_link_url">https://ezcallapp.page.link?link=</string>
+    <string name="dynamic_query_param">&amp;apn=com.ezcall.android</string>
+    <string name="share_post_description">Checkout this amazing post on &appname;</string>
+    <string name="share_post_title">Post shared via &appname;</string>
+    <string name="share_confirmation">Are you sure, you want to share the post to social media?</string>
+    <string name="share_post_using">Share post using-</string>
+    <string name="share_preparing">Preparing to share</string>
+
+    <string name="withdrawal_confirmation">Are you sure you want to withdraw</string>
+    <string name="withdraw_money">Withdraw Money</string>
+    <string name="balance_amount">Balance Amount</string>
+    <string name="transferred_successfully">Transferred successfully.</string>
+    <string name="withdraw_mode">Withdrawal mode</string>
+    <string name="from_wallet">from your wallet ?</string>
+    <string name="will_receive">will receive</string>
+    <string name="commission_fee">Commission fee</string>
+    <string name="withdrawal_logs">Withdrawal Logs</string>
+    <string name="commission_message">This fee is taken by the processor to transfer the money and for any currency conversion that might be necessary.</string>
+    <string name="sent_amount">Sent amount</string>
+    <string name="received_amount">Received amount</string>
+    <string name="processing_fee">Processing fee</string>
+    <string name="add_account">Add account</string>
+    <string name="get_verified_profile">Get verified profile</string>
+    <string name="pending_transactions">Pending Transactions</string>
+    <string name="digits_small">qwertyuiopasdfghjklzxcvbnm1234567890_</string>
+    <string name="digits_both">QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890_</string>
+    <string name="earn">Earn</string>
+    <string name="receiver_no_kyc">" has to complete their kyc for you to send them money"</string>
+    <string name="paid_post_can_not_be_share">Paid post can not be share.</string>
+    <string name="money_earned">Money Earned</string>
+    <string name="coins1">Coins</string>
+    <string name="chat_disable">User has disable their chat.</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="title_calls">Calls</string>
+    <string name="recent_updates">Recent Updates</string>
+    <string name="all">All</string>
+    <string name="missed">Missed</string>
+    <string name="inviteMsg">Check out EZcall for your smartphone. Download it today from</string>
+    <string name="welcome_to_slyd">Welcome to Slyd!</string>
+    <string name="find_your_friends">Find your friends here.</string>
+    <string name="noti_allow_text">Your account is registered! Now, allow \nus to send you notifications and sync \nyour contacts</string>
+    <string name="log_in">Log in</string>
+    <string name="login_msg">Your friends were waiting for you all \nthis time!</string>
+    <string name="otp_verify_screen_text">Please enter the OTP number you’ve \nreceived on your phone to verify your \nidentity</string>
+    <string name="otp_number">OTP Number</string>
+    <string name="otp">Otp</string>
+    <string name="the_new_world_is_waiting_for_you">The new world is waiting for you!</string>
+    <string name="email_id">Email ID</string>
+    <string name="_1_of_3">1 of 3</string>
+    <string name="_2_of_3">2 of 3</string>
+    <string name="_3_of_3">3 of 3</string>
+    <string name="country_of_residence">Country of Residence</string>
+    <string name="nationality">Nationality</string>
+    <string name="id_number_">ID Number</string>
+    <string name="enter_your_id">Enter your ID</string>
+    <string name="signup_otp_text">Final Step! Please enter the OTP \nnumber you’ve received on your \nmobile phone to verify the account.</string>
+    <string name="privacy_settings">Privacy Settings</string>
+    <string name="allow">Allow</string>
+    <string name="go_to_home">Go to Home</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="you_re_now_ready_to_slyd">You\'re now ready to slyd!</string>
+    <string name="in_categories">In Categories:</string>
+    <string name="block_contact">Block Contact</string>
+    <string name="report_contact">Report Contact</string>
+    <string name="new_message">New Message</string>
+    <string name="create_new_section">Create new section</string>
+    <string name="create_new_group">Create new group</string>
+    <string name="create_group">Create Group</string>
+
+
+    <string-array name="array_gender">
+        <item>Select your gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+    <string name="title_activity_create_new_section">CreateNewSectionActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="vector_path_menu">M3,8 L21,8 21,6 3,6z M3,18 L21,18 21,16 3,16z M3,13 L21,13 21,11 3,11z</string>
+    <string name="vector_path_line">M3,13 L21,13 21,11 3,11z M3,13 L21,13 21,11 3,11z M3,12 L21,12 21,12 3,12z</string>
+    <string name="vector_path_close">M5,6.41 L17.59,19 19,17.59 6.41,5z M6.41,19 L19,6.41 17.59,5 5,17.59z M12,12 L12,12 12,12 12,12z</string>
+
+    <string name="path_cross">M6.4,6.4 L17.6,17.6 M6.4,17.6 L17.6,6.4</string>
+    <string name="path_plus">M6.4,12 L17.6,12 M12,6.4 L12,17.6</string>
+
+    <string name="plus">plus</string>
+    <string name="groupPlusCross">groupPlusCross</string>
+    <string name="mycontacts">My Contacts List</string>
+</resources>

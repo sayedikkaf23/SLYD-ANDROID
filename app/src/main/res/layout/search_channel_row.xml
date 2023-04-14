@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_5"
+    android:paddingBottom="@dimen/ten_dp"
+    android:paddingTop="@dimen/ten_dp">
+
+    <chat.hola.com.app.Utilities.RoundedImageView
+        android:id="@+id/profileIv"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:contentDescription="@string/content_descriptor"
+        app:srcCompat="@drawable/profile_one" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toEndOf="@+id/profileIv"
+        android:layout_toRightOf="@+id/profileIv">
+
+        <TextView
+            android:id="@+id/profileNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_marginStart="@dimen/ten_dp"
+
+            android:textColor="@color/colorMineShaft"
+            android:textSize="@dimen/sixteen_sp" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profileNameTv"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:textColor="@color/gray_text_darker"
+            android:textSize="@dimen/fourteen_sp" />
+    </RelativeLayout>
+
+    <ToggleButton
+        android:id="@+id/tbSubscribe"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_35"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:maxLines="1"
+        android:padding="@dimen/two_dp"
+        android:textAllCaps="false"
+        style="@style/followToggleButton"
+        android:textOff="@string/subscribe"
+        android:textOn="@string/subscribed"
+        android:textSize="@dimen/small" />
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coin_navigation"
+    app:startDestination="@id/fragmentCoinPackage">
+
+    <fragment
+        android:id="@+id/fragmentCoinPackage"
+        android:name="chat.hola.com.app.coin.pack.CoinPackFragment"
+        tools:layout="@layout/fragment_coin_package" />
+
+</navigation>

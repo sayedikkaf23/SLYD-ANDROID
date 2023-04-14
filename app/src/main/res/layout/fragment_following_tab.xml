@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white">
+
+    <LinearLayout
+        android:id="@+id/llEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/color_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/ten_dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/default_images_size"
+            android:layout_height="@dimen/default_images_size"
+            android:layout_margin="@dimen/dp_10"
+            app:srcCompat="@drawable/empty_activity" />
+
+        <TextView
+            android:id="@+id/tvEmptyTitle"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/five_dp"
+            android:text="@string/FollowingFragTitle"
+            android:textAlignment="center"
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/big" />
+
+        <TextView
+            android:id="@+id/tvEmptyMsg"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/five_dp"
+            android:text="@string/FollowingFragMsg"
+            android:textAlignment="center"
+            android:textColor="@color/color_text_gray"
+            android:textSize="@dimen/small" />
+    </LinearLayout>
+
+    <chat.hola.com.app.models.InternetErrorView
+        android:id="@+id/llNetworkError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:visibility="gone" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

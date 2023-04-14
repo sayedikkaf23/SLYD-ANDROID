@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="chat.hola.com.app.ecom.addresslist.SavedAddressListViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ErrorMsg="@{viewModel.mError}"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/incHeader"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_gravity="top"
+            android:background="@color/white"
+            android:padding="@dimen/dp0"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:id="@+id/rlActionBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dp_5">
+
+                <ImageButton
+                    android:id="@+id/ibBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:onClick="@{() -> viewModel.clickBack()}"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_arrow_back_black_24dp" />
+
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/chooseAddress"
+                    android:textColor="@color/star_black"
+                    android:fontFamily="@font/sf_pro_semibold"
+                    android:textSize="@dimen/title" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddAddress"
+            style="@style/Text.14sp.colorWhite.regular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:visibility="invisible"
+            android:layout_marginBottom="@dimen/ten_dp"
+            android:background="@drawable/app_color_rect_ripple_effect"
+            android:text="@string/addAddress"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/rvAddressList"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incHeader" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSavedAddresses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Text.20sp.Black.PoppinsBold"
+            android:text="@string/savedAddress"
+            android:padding="@dimen/five_dp"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/incHeader"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAddAddress"
+            style="@style/Text.14sp.colorAdd.PoppinsSemiBold"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:text="@string/addAddress"
+            android:layout_marginTop="@dimen/dp_7"
+            android:paddingStart="@dimen/twenty_dp"
+            android:layout_marginStart="@dimen/five_dp"
+            android:paddingEnd="@dimen/twenty_dp"
+            android:paddingTop="@dimen/ten_dp"
+            android:paddingBottom="@dimen/ten_dp"
+            android:background="@drawable/add_background"
+            app:layout_constraintStart_toStartOf="@id/tvSavedAddresses"
+            app:layout_constraintTop_toBottomOf="@id/tvSavedAddresses" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAddressList"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:background="@color/alabaster"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/five_dp"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/btnContinue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAddAddress" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:visibility="@{viewModel.mIsEmpty}"
+            android:layout_marginTop="@dimen/five_dp"
+            style="@style/Text.16sp.Black.PoppinsMedium"
+            android:text="@string/emptyAddressMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivEmptyAddress" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivEmptyAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/address_empty"
+            android:visibility="@{viewModel.mIsEmpty}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddAddress" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnContinue"
+            style="@style/Text.14sp.colorWhite.regular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layout_marginBottom="@dimen/ten_dp"
+            android:background="@drawable/app_color_rect_ripple_effect"
+            android:text="@string/continueText"
+            android:textAllCaps="false"
+            android:enabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/colorRed"
+            android:visibility="@{viewModel.progressVisible}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

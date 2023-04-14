@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clItemRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/svVideoRenderer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPlaceHolder"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivGradientColor"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:background="@color/callingLightWhiteTransparent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPlaceHolderCalling"
+        style="@style/Text.14sp.White.Poppins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:drawableStart="@drawable/all_video_call_white_24dp"
+        android:drawablePadding="@dimen/dp_5"
+        android:gravity="center"
+        android:text="@string/callingCallingSmall"
+        app:layout_constraintBottom_toTopOf="@+id/glCenterGuideLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPlaceHolderCancel"
+        style="@style/Text.16sp.Yellow.PoppinsMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="@drawable/calling_transperant_shape"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp_25"
+        android:paddingTop="@dimen/dp_3"
+        android:paddingEnd="@dimen/dp_25"
+        android:paddingBottom="@dimen/dp_3"
+        android:text="@string/callingCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/glCenterGuideLine" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glCenterGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/grpPlaceHolderUI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="ivPlaceHolder,tvPlaceHolderCalling,tvPlaceHolderCancel,glCenterGuideLine" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/allWhiteColor"
+        android:paddingBottom="@dimen/twenty_dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPriceDetails"
+                style="@style/Text.20sp.PoppinsSemiBold"
+            android:layout_width="match_parent"
+                android:textSize="@dimen/sp_16"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/twenty_dp"
+            android:textColor="@color/headerBlue"
+            android:paddingTop="@dimen/fifteen_dp"
+            android:paddingEnd="@dimen/dp_0"
+            android:paddingBottom="@dimen/ten_dp"
+            android:text="@string/cartPriceDetils"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cartDashViewPriceAbove"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/two_dp"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layerType="software"
+            android:src="@drawable/black_dash_line"
+            app:layout_constraintTop_toBottomOf="@+id/tvPriceDetails" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCartSubTotal"
+            style="@style/Text.13sp.ApproxBlack.poppinsReg"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/cartOrderSubTotal"
+            app:layout_constraintRight_toLeftOf="@+id/tvCartSubTotalAmt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cartDashViewPriceAbove" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCartSubTotalAmt"
+            style="@style/Text.12sp.PoppinsRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCartSubTotal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvCartSubTotal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOfferDiscount"
+            style="@style/Text.13sp.ApproxBlack.poppinsReg"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/offerDiscount"
+            app:layout_constraintRight_toLeftOf="@id/tvCartSubTotalAmt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCartSubTotal" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOfferDiscountAmt"
+            style="@style/Text.12sp.PoppinsRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvOfferDiscount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvOfferDiscount" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/vgOfferDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tvOfferDiscount,tvOfferDiscountAmt" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCartPromotionsApplied"
+            style="@style/Text.12sp.PoppinsRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="@string/promotionsApplied"
+            app:layout_constraintRight_toLeftOf="@+id/tvCartPromotionsAmt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOfferDiscount" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCartPromotionsAmt"
+            style="@style/Text.12sp.PoppinsRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCartPromotionsApplied"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvCartPromotionsApplied" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/vgPromotionsApplied"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tvCartPromotionsApplied,tvCartPromotionsAmt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTaxes"
+            style="@style/Text.13sp.ApproxBlack.poppinsReg"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/five_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:gravity="center"
+            android:text="@string/allTaxes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCartPromotionsApplied" />
+
+
+        <LinearLayout
+            android:id="@+id/cartAddTaxLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/three_dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/tvTaxes">
+
+        </LinearLayout>
+
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCartShipping"
+            style="@style/Text.13sp.ApproxBlack.poppinsReg"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/five_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:text="@string/deliveryFee"
+            app:layout_constraintRight_toLeftOf="@+id/tvCartSubTotalAmt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cartAddTaxLl" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCartShippingAmt"
+            style="@style/Text.12sp.PoppinsRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCartShipping"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvCartShipping" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCartTip"
+            style="@style/Text.12sp.PoppinsRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/five_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:text="@string/tip"
+            android:visibility="gone"
+            app:layout_constraintRight_toLeftOf="@+id/tvCartSubTotalAmt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCartShipping" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCartTipAmt"
+            style="@style/Text.12sp.PoppinsRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            tools:text="3.04"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCartTip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvCartTip" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cartDashViewPriceBelow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/two_dp"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/five_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layerType="software"
+            android:src="@drawable/black_dash_line"
+            app:layout_constraintTop_toBottomOf="@+id/tvCartTipAmt" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCartOrderTotal"
+            style="@style/Text.13sp.PoppinsSemiBold"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/dp_7"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:text="@string/cartOrderTotal"
+            app:layout_constraintRight_toLeftOf="@+id/tvCartSubTotalAmt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cartDashViewPriceBelow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCartOrderTotalAmt"
+            style="@style/Text.14sp.BlackApprox.poppins_bold"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCartOrderTotal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvCartOrderTotal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCartTotalSavings"
+            style="@style/Text.12sp.HippieGreen.PoppinsReg"
+            android:layout_width="92dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/five_dp"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/sp_13"
+            android:text="@string/cartSavings"
+            app:layout_constraintRight_toLeftOf="@+id/tvCartTotalSavingsAmt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCartOrderTotal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCartTotalSavingsAmt"
+            style="@style/Text.12sp.HippieGreen.PoppinsReg"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCartTotalSavings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvCartTotalSavings" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPayMentMethodTxt"
+            style="@style/Text.16sp.Nero.PoppinsSemiBold"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:text="@string/payMentBreakDown"
+            android:visibility="gone"
+            app:layout_constraintRight_toLeftOf="@+id/tvCartSubTotalAmt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCartTotalSavings" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCartDashViewPmBelow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/two_dp"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layerType="software"
+            android:src="@drawable/black_dash_line"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/tvPayMentMethodTxt" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWalletTxt"
+            style="@style/Text.14sp.BrightGray.poppinsReg"
+            android:layout_width="92dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:includeFontPadding="false"
+            android:text="@string/wallet"
+            app:layout_constraintRight_toLeftOf="@+id/tvWalletAmt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivCartDashViewPmBelow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWalletAmt"
+            style="@style/Text.14sp.BrightGray.poppinsReg"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="@+id/tvWalletTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvWalletTxt" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCardTxt"
+            style="@style/Text.14sp.BrightGray.poppinsReg"
+            android:layout_width="92dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:includeFontPadding="false"
+            android:text="@string/card"
+            app:layout_constraintRight_toLeftOf="@+id/tvWalletAmt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWalletTxt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCardAmt"
+            style="@style/Text.14sp.BrightGray.poppinsReg"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCardTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvCardTxt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCashOnDelivery"
+            style="@style/Text.13sp.BrightGray.poppins.semiBold"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:text="@string/confirmOrderCashOnDel"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCardTxt" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/vgWallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tvWalletTxt,tvWalletAmt" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/vgCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tvCardTxt,tvCardAmt" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/vgTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="ivLineTotal,tvPaymentOrderTotal,tvPaymentOrderTotalAmt" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLineTotal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/two_dp"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/five_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layerType="software"
+            android:src="@drawable/black_dash_line"
+            app:layout_constraintTop_toBottomOf="@+id/tvCashOnDelivery" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPaymentOrderTotal"
+            style="@style/Text.14sp.BlackApprox.poppins_bold"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/dp_7"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:text="@string/allTotal"
+            app:layout_constraintRight_toLeftOf="@+id/tvPaymentOrderTotalAmt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivLineTotal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPaymentOrderTotalAmt"
+            style="@style/Text.14sp.BlackApprox.poppins_bold"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPaymentOrderTotal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvPaymentOrderTotal" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

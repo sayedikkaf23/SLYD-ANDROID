@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/smsVerification"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="top"
+        android:background="@color/color_white"
+        app:layout_collapseMode="pin">
+        <!--actionbar-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_white">
+
+            <ImageButton
+                android:id="@+id/ibBack"
+                style="?actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/minus_15"
+                android:tint="@color/color_tint"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:text="@string/verify_mobile_number"
+                android:textAlignment="center"
+                android:textColor="@color/mineShaft"
+                android:textSize="@dimen/title" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/llTitleContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/dimenTitleTopWithBackarrow"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMobileNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mobile_number"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title_text_size" />
+
+        <TextView
+            android:id="@+id/tvVerification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/verification"
+            android:textColor="@color/base_color"
+            android:textSize="@dimen/title_text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="@dimen/dp_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llTitleContainer"
+        android:layout_marginTop="@dimen/dp_50"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48">
+
+            <EditText
+                android:id="@+id/etOtp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:inputType="number|textNoSuggestions"
+                android:letterSpacing="0.50"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:textColor="@color/star_black"
+                android:textSize="@dimen/big" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/star_black" />
+
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7"
+            android:textColor="@android:color/holo_red_light" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/next_circle_size"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnResend"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/minus_2"
+            android:text="@string/dint_get_code"
+            android:textAllCaps="false"
+            android:textColor="@color/base_color"
+            android:textSize="@dimen/big" />
+
+        <ImageButton
+            android:id="@+id/ibNext"
+            android:layout_width="@dimen/next_circle_size"
+            android:layout_height="@dimen/next_circle_size"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/gradient_circle"
+            android:src="@drawable/ic_forward" />
+    </RelativeLayout>
+</RelativeLayout>

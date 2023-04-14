@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/ten_dp"
+    android:layout_marginTop="@dimen/ten_dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/twenty_dp">
+
+        <RelativeLayout
+            android:id="@+id/llRowHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="@dimen/five_dp"
+            android:paddingEnd="@dimen/five_dp"
+            android:paddingStart="@dimen/five_dp">
+
+            <chat.hola.com.app.Utilities.RoundedImageView
+                android:id="@+id/ivItemTopImage"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:foreground="@drawable/pic_with_stroke"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tvItemTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/ivItemTopImage"
+                android:maxLines="1"
+                android:paddingStart="@dimen/ten_dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/color_text_black"
+                android:textSize="@dimen/medium"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/tvItemSubscribe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/five_dp"
+                android:layout_marginRight="@dimen/five_dp"
+                android:maxLines="1"
+                android:padding="@dimen/five_dp"
+                android:textColor="@color/color_text_gray"
+                android:textSize="@dimen/sp_13" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_120dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerContentChild"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

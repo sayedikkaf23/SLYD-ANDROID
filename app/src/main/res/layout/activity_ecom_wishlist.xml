@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="chat.hola.com.app.ecom.wishlist.WishListViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ErrorMsg="@{viewModel.mError}"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/incWishListHeader"
+            layout="@layout/layout_back_arrow_btn_header" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/etWishListSearch"
+            android:id="@+id/incEmptyScreen"
+            layout="@layout/empty_screen"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etWishListSearch"
+            style="@style/Text.12sp.AllGray.PoppinsReg"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/dp_17"
+            android:background="@drawable/light_white_borderless_rect"
+            android:drawableStart="@drawable/ic_search_gray"
+            android:drawablePadding="@dimen/ten_dp"
+            android:hint="@string/wishListSearchHint"
+            android:padding="@dimen/fifteen_dp"
+            android:visibility="@{!viewModel.mIsEmpty}"
+            app:layout_constraintEnd_toStartOf="@+id/ivWishListFilter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incWishListHeader" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivWishListFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:background="@drawable/rect_shape"
+            android:padding="@dimen/dp_11"
+            android:visibility="@{!viewModel.mIsEmpty}"
+            app:layout_constraintBottom_toBottomOf="@id/etWishListSearch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/etWishListSearch"
+            app:layout_constraintTop_toTopOf="@id/etWishListSearch"
+            app:srcCompat="@drawable/ic_filter_medium" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivWishListEmpty"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_150"
+            android:visibility="@{viewModel.mIsEmpty}"
+            app:layout_constraintBottom_toTopOf="@+id/tvNoItemTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_no_favorite" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNoItemTitle"
+            style="@style/Text.20sp.Black.PoppinsSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:text="@string/noItemsMessage"
+            android:visibility="@{viewModel.mIsEmpty}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNoDataMsg"
+            style="@style/Text.12sp.PersianBlue.PoppinsReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/five_dp"
+            android:text="@string/emptyWishListMsg"
+            android:visibility="@{viewModel.mIsEmpty}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNoItemTitle" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnContinueShop"
+            style="@style/Text.14sp.colorWhite.regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7"
+            android:background="@color/allEastBayColor"
+            android:onClick="onClickListener"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingEnd="@dimen/ten_dp"
+            android:text="@string/continueShopping"
+            android:textAllCaps="false"
+            android:visibility="@{viewModel.mIsEmpty}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNoDataMsg" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            app:layout_constraintBottom_toTopOf="@+id/btnClearWishList"
+            app:layout_constraintTop_toBottomOf="@+id/etWishListSearch">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvWishListProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/thirty_dp"
+            android:layout_marginBottom="@dimen/fifteen_dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <ProgressBar
+            android:id="@+id/pbWishList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.mProgressStatus}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnClearWishList"
+            style="@style/Text.12sp.White.PoppinsSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:layout_marginBottom="@dimen/twenty_dp"
+            android:background="@drawable/app_color_rect_ripple_effect"
+            android:onClick="onClickListener"
+            android:text="@string/clearAll"
+            android:textAllCaps="false"
+            android:visibility="@{!viewModel.mIsEmpty}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

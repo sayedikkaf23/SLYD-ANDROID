@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitist_grey"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            style="?actionButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:tint="@color/star_black"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+            tools:ignore="RtlCompat" />
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/add_contacts"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="@color/star_grey" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--search-->
+        <TextView
+            android:id="@+id/atvSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_8"
+            android:background="@drawable/curved_borderless"
+            android:clickable="true"
+            android:drawableEnd="@drawable/ic_search"
+            android:focusable="true"
+            android:hint="@string/search"
+            android:padding="@dimen/dp_8"
+            android:textSize="@dimen/sp_15" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="@color/star_grey" />
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            android:gravity="center"
+            android:padding="@dimen/ten_dp">
+
+            <TextView
+                android:id="@+id/tvMyIdTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_2"
+                android:text="@string/my_starchat_id"
+                android:textColor="@color/star_black" />
+
+            <TextView
+                android:id="@+id/tvStarChatId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_2"
+                android:textColor="@color/star_black"
+                android:textSize="@dimen/sp_15" />
+
+            <ImageView
+                android:id="@+id/ivScan"
+                android:layout_width="@dimen/dimen_25dp"
+                android:layout_height="@dimen/dimen_25dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:src="@drawable/ic_qr_code"
+                android:textSize="@dimen/sp_15"
+                android:tint="@android:color/holo_green_dark" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:background="@color/star_grey" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_white"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_5">
+
+                <!--invite friend -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/email"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/dp_5"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_email" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_toEndOf="@+id/email"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/invite_friend"
+                            android:textColor="@color/star_black"
+                            android:textSize="@dimen/big" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tell_ur_friends"
+                            android:textColor="@color/star_grey"
+                            android:textSize="@dimen/sp_15" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/dp_5"
+                        android:src="@drawable/ic_next_arrow_icon"
+                        android:tint="@color/star_grey" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:layout_marginStart="@dimen/dp_40"
+                    android:background="@color/star_grey"
+                    android:visibility="gone" />
+
+                <!--qr code-->
+                <RelativeLayout
+                    android:id="@+id/rlQRCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginBottom="@dimen/dp_5">
+
+                    <ImageView
+                        android:id="@+id/qrcode"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/dp_5"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_scanner"
+                        android:tint="@color/base_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_toEndOf="@+id/qrcode"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvQrCodeTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/scan_qr_code"
+                            android:textColor="@color/star_black"
+                            android:textSize="@dimen/sp_18" />
+
+                        <TextView
+                            android:id="@+id/tvQrCodeDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/scan_contacts_qr"
+                            android:textColor="@color/star_grey"
+                            android:textSize="@dimen/sp_15" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/dp_5"
+                        android:src="@drawable/ic_next_arrow_icon"
+                        android:tint="@color/star_grey" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:layout_marginStart="@dimen/dp_40"
+                    android:background="@color/star_grey" />
+
+                <!--contact -->
+                <RelativeLayout
+                    android:id="@+id/rlContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginBottom="@dimen/dp_5">
+
+                    <ImageView
+                        android:id="@+id/contact"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_contacts"
+                        android:tint="@color/base_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_toEndOf="@+id/contact"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvContactTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mobile_contacts"
+                            android:textColor="@color/star_black"
+                            android:textSize="@dimen/sp_18" />
+
+                        <TextView
+                            android:id="@+id/tvContactDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_from_mobile"
+                            android:textColor="@color/star_grey"
+                            android:textSize="@dimen/sp_15" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/dp_5"
+                        android:src="@drawable/ic_next_arrow_icon"
+                        android:tint="@color/star_grey" />
+
+                </RelativeLayout>
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5"
+                    android:layout_marginStart="@dimen/dp_40"
+                    android:background="@color/star_grey" />
+
+                <!--official account -->
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginBottom="@dimen/dp_5">
+
+                    <ImageView
+                        android:id="@+id/official"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_account" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_toEndOf="@+id/official"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvOfficialAccountTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/official_account"
+                            android:textColor="@color/star_black"
+                            android:textSize="@dimen/sp_18" />
+
+                        <TextView
+                            android:id="@+id/tvOfficialAccountDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/more_info_services"
+                            android:textColor="@color/star_grey"
+                            android:textSize="@dimen/sp_15" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="@dimen/dp_5"
+                        android:src="@drawable/ic_next_arrow_icon"
+                        android:tint="@color/star_grey" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_85"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_white"
+    android:gravity="center_vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rlProfilePic"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:visibility="gone"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/ivRow"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_one"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivStarBadge"
+            android:layout_width="@dimen/dp_15"
+            android:layout_height="@dimen/dp_15"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_star_badge_new"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/storeImage2"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginEnd="@dimen/dp_13"
+        android:layout_marginRight="@dimen/dp_13"
+        android:layout_marginStart="@dimen/dp_13"
+        app:srcCompat="@drawable/chat_attachment_profile_default_image_frame" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_70"
+        android:layout_toEndOf="@id/storeImage2"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvRowTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/medium"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tvRowTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/color_text_search"
+            android:textSize="@dimen/small"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvInvite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/dp_20"
+        android:text="@string/invite"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/color_black"
+        android:textStyle="bold" />
+
+    <ToggleButton
+        android:id="@+id/tbFollow"
+        style="@style/followToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_30"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:maxLines="1"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        android:textAllCaps="false"
+        android:textOff="@string/follow"
+        android:textOn="@string/following"
+        android:textSize="@dimen/sp_12"
+        android:visibility="gone" />
+</RelativeLayout>

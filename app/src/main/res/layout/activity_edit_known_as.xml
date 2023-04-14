@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="chat.hola.com.app.profileScreen.editProfile.EditStatusActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:elevation="@dimen/two_dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <include layout="@layout/layout_back_arrow_btn_header" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilBio"
+        android:layout_below="@+id/layoutActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_weight="1"
+        android:textSize="@dimen/sp_15">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etBio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/known_as"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:fontFamily="@font/poppins"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:textColor="@color/color_black"
+            android:theme="@style/TextLabel" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvChangeBio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tilBio"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Save"
+        android:layout_gravity="center"
+        android:fontFamily="@font/sf_pro_semibold"
+        android:textColor="@color/white"
+        android:background="@drawable/curved_primary_color"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textSize="@dimen/sp_16"/>
+
+
+</RelativeLayout>

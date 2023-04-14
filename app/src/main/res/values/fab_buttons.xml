@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="fab_menu_icons">
+        <item>@drawable/ic_camera_floatingicon</item>
+        <item>@drawable/ic_attach_floating_icon</item>
+        <item>@drawable/ic_location</item>
+ <!--       <item>@drawable/ic_dollar_floating_icon</item>
+        <item>@drawable/ic_calender_floating_icon</item>-->
+        <item>@drawable/ic_voice_floating_icon</item>
+    </array>
+
+    <array name="fab_menu_colors">
+        <item>#FFFFFF</item>
+        <item>#FFFFFF</item>
+        <item>#FFFFFF</item>
+<!--        <item>#FFFFFF</item>
+        <item>#FFFFFF</item>-->
+        <item>#FFFFFF</item>
+    </array>
+
+    <array name="fab_menu_group_icons">
+        <item>@drawable/ic_camera_floatingicon</item>
+        <item>@drawable/ic_attach_floating_icon</item>
+        <item>@drawable/ic_location</item>
+        <item>@drawable/ic_voice_floating_icon</item>
+    </array>
+    <array name="fab_menu_group_colors">
+        <item>#FFFFFF</item>
+        <item>#FFFFFF</item>
+        <item>#FFFFFF</item>
+        <item>#FFFFFF</item>
+    </array>
+
+</resources>

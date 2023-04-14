@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_white"
+
+
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:maxLines="1"
+            android:text="@string/WallpaperColor"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/close"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:layout_marginStart="@dimen/dp_13"
+            android:elevation="@dimen/dp_5"
+            android:foreground="@drawable/ripple_selector"
+            android:tint="@color/color_tint"
+            app:srcCompat="@drawable/cancel_normal"
+
+            />
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_1"
+
+        android:layout_below="@+id/toolbar"
+        android:background="@color/color_line_gray"
+
+
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+
+
+        android:layout_height="match_parent"
+        android:layout_below="@+id/seperator">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_2">
+
+                <View
+                    android:id="@+id/solid1"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_marginEnd="@dimen/dp_2"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:layout_weight="1"
+                    android:background="@color/w1" />
+
+                <View
+                    android:id="@+id/solid2"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_marginEnd="@dimen/dp_2"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:layout_weight="1"
+                    android:background="@color/w2" />
+
+                <View
+                    android:id="@+id/solid3"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_weight="1"
+                    android:background="@color/w3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_2">
+
+                <View
+                    android:id="@+id/solid4"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_marginEnd="@dimen/dp_2"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:layout_weight="1"
+                    android:background="@color/w4" />
+
+                <View
+                    android:id="@+id/solid5"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_marginEnd="@dimen/dp_2"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:layout_weight="1"
+                    android:background="@color/w5" />
+
+                <View
+                    android:id="@+id/solid6"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_weight="1"
+                    android:background="@color/w6" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_2">
+
+                <View
+                    android:id="@+id/solid7"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_marginEnd="@dimen/dp_2"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:layout_weight="1"
+                    android:background="@color/w7" />
+
+                <View
+                    android:id="@+id/solid8"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_marginEnd="@dimen/dp_2"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:layout_weight="1"
+                    android:background="@color/w8" />
+
+                <View
+                    android:id="@+id/solid9"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_weight="1"
+                    android:background="@color/w9" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_2">
+
+                <View
+                    android:id="@+id/solid10"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_marginEnd="@dimen/dp_2"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:layout_weight="1"
+                    android:background="@color/w10" />
+
+                <View
+                    android:id="@+id/solid11"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_marginEnd="@dimen/dp_2"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:layout_weight="1"
+                    android:background="@color/w11" />
+
+                <View
+                    android:id="@+id/solid12"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_weight="1"
+                    android:background="@color/w12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_2">
+
+                <View
+                    android:id="@+id/solid13"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_marginEnd="@dimen/dp_2"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:layout_weight="1"
+                    android:background="@color/w13" />
+
+                <View
+                    android:id="@+id/solid14"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_marginEnd="@dimen/dp_2"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:layout_weight="1"
+                    android:background="@color/w14" />
+
+                <View
+                    android:id="@+id/solid15"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_weight="1"
+                    android:background="@color/w15" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_2">
+
+                <View
+                    android:id="@+id/solid16"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_marginEnd="@dimen/dp_2"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:layout_weight="1"
+                    android:background="@color/w16" />
+
+                <View
+                    android:id="@+id/solid17"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_marginEnd="@dimen/dp_2"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:layout_weight="1"
+                    android:background="@color/w17" />
+
+                <View
+                    android:id="@+id/solid18"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_weight="1"
+                    android:background="@color/w18" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_2">
+
+                <View
+                    android:id="@+id/solid19"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_marginEnd="@dimen/dp_2"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:layout_weight="1"
+                    android:background="@color/w19" />
+
+                <View
+                    android:id="@+id/solid20"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_marginEnd="@dimen/dp_2"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:layout_weight="1"
+                    android:background="@color/w20" />
+
+                <View
+                    android:id="@+id/solid21"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_weight="1"
+                    android:background="@color/w21" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

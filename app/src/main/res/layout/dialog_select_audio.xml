@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <TextView
+      android:id="@+id/tvDurationPh"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_toStartOf="@+id/tvDuration"
+      android:padding="@dimen/dp_5"
+      android:layout_margin="@dimen/dp_13"
+      android:maxLines="1"
+      android:ellipsize="end"
+      android:textColor="@color/gray_text_darker"
+      android:text="@string/audio_placeholder"
+      android:textSize="@dimen/sp_14" />
+
+  <TextView
+      android:id="@+id/tvDuration"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:padding="@dimen/dp_5"
+      android:maxLines="1"
+      android:ellipsize="end"
+      android:textColor="@color/gray_text_darker"
+      android:layout_margin="@dimen/dp_13"
+      android:textSize="@dimen/sp_14" />
+
+  <ProgressBar
+      android:id="@+id/pbDownload"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvDuration"
+      android:max="100"
+      style="?android:attr/progressBarStyleHorizontal"
+      android:visibility="gone"
+      android:layout_margin="@dimen/dp_13"
+      android:progress="0"/>
+
+  <LinearLayout
+      android:id="@+id/llDubWithIt"
+      android:layout_below="@+id/pbDownload"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/dp_13"
+      android:background="@drawable/dubly_button_bg"
+      android:gravity="center"
+      android:padding="@dimen/dp_5"
+      >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/dub"
+        android:padding="@dimen/dp_2"
+        android:src="@drawable/ic_videocam_white_24dp" />
+
+    <TextView
+        android:id="@+id/tvSound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_2"
+        android:text="@string/dub_with_it"
+        android:textAllCaps="true"
+        android:textColor="@color/color_white"
+        android:textStyle="bold" />
+  </LinearLayout>
+</RelativeLayout>

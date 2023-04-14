@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/ratingBackground"
+        android:paddingBottom="@dimen/twenty_dp"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRatingType"
+            style="@style/Text.16sp.Nero.PoppinsBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:text="@string/tvFilterTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRatingOne"
+            style="@style/Text.16sp.Nero.PoppinsBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/eight_dp"
+            android:background="@drawable/button_bg_selector"
+            android:includeFontPadding="false"
+            android:paddingStart="@dimen/dp_25"
+            android:paddingLeft="@dimen/dp_25"
+            android:paddingTop="@dimen/ten_dp"
+            android:paddingEnd="@dimen/dp_25"
+            android:paddingRight="@dimen/dp_25"
+            android:paddingBottom="@dimen/ten_dp"
+            android:text="@string/one"
+            app:layout_constraintRight_toLeftOf="@+id/tvRatingTwo"
+            app:layout_constraintTop_toBottomOf="@+id/tvRatingType" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRatingTwo"
+            style="@style/Text.16sp.Nero.PoppinsBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:layout_marginEnd="@dimen/eight_dp"
+            android:background="@drawable/button_bg_selector"
+            android:includeFontPadding="false"
+            android:paddingStart="@dimen/dp_25"
+            android:paddingLeft="@dimen/dp_25"
+            android:paddingTop="@dimen/ten_dp"
+            android:paddingEnd="@dimen/dp_25"
+            android:paddingRight="@dimen/dp_25"
+            android:paddingBottom="@dimen/ten_dp"
+            android:text="@string/two"
+            app:layout_constraintRight_toLeftOf="@+id/tvRatingThree"
+            app:layout_constraintTop_toBottomOf="@+id/tvRatingType" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRatingFour"
+            style="@style/Text.16sp.Nero.PoppinsBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/eight_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:background="@drawable/button_bg_selector"
+            android:includeFontPadding="false"
+            android:paddingStart="@dimen/dp_25"
+            android:paddingLeft="@dimen/dp_25"
+            android:paddingTop="@dimen/ten_dp"
+            android:paddingEnd="@dimen/dp_25"
+            android:paddingRight="@dimen/dp_25"
+            android:paddingBottom="@dimen/ten_dp"
+            android:text="@string/four"
+            app:layout_constraintLeft_toRightOf="@+id/tvRatingThree"
+            app:layout_constraintTop_toBottomOf="@+id/tvRatingType" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRatingFive"
+            style="@style/Text.16sp.Nero.PoppinsBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/eight_dp"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:background="@drawable/button_bg_selector"
+            android:includeFontPadding="false"
+            android:paddingStart="@dimen/dp_25"
+            android:paddingLeft="@dimen/dp_25"
+            android:paddingTop="@dimen/ten_dp"
+            android:paddingEnd="@dimen/dp_25"
+            android:paddingRight="@dimen/dp_25"
+            android:paddingBottom="@dimen/ten_dp"
+            android:text="@string/five"
+            app:layout_constraintLeft_toRightOf="@+id/tvRatingFour"
+            app:layout_constraintTop_toBottomOf="@+id/tvRatingType" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRatingThree"
+            style="@style/Text.16sp.Nero.PoppinsBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:background="@drawable/button_bg_selector"
+            android:includeFontPadding="false"
+            android:paddingStart="@dimen/dp_25"
+            android:paddingLeft="@dimen/dp_25"
+            android:paddingTop="@dimen/ten_dp"
+            android:paddingEnd="@dimen/dp_25"
+            android:paddingRight="@dimen/dp_25"
+            android:paddingBottom="@dimen/ten_dp"
+            android:text="@string/three"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRatingType"
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

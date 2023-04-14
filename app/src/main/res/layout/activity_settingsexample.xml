@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_margin="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/dp_5">
+
+            <ImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="@dimen/dimen_75dp"
+                android:layout_height="@dimen/dimen_75dp"
+                android:layout_margin="@dimen/two_dp"
+                android:foreground="@drawable/pic_with_stroke"
+                android:src="@drawable/profile_one" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_weight="0.5"
+                android:id="@+id/tvProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/color_text_black"
+                android:textSize="@dimen/medium"
+                android:visibility="visible"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:text="Profile Name"
+                android:layout_marginTop="@dimen/dp_5">
+            </TextView>
+
+            <TextView
+                android:layout_weight="0.5"
+                android:id="@+id/tvTaptoaddstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/color_text_black"
+                android:textSize="@dimen/medium"
+                android:visibility="visible"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:hint="Tap to add status update">
+            </TextView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/ivEditProfile"
+                android:layout_alignParentRight="true"
+                style="?actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/dp_5"
+                android:background="@drawable/circular_bg_filled_pink"
+                android:src="@drawable/edit_profile" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/text"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:id="@+id/ll_amountlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/tvAccount"
+            android:layout_margin="@dimen/dp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/large"
+            android:visibility="visible"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:text="@string/account"
+            android:layout_marginTop="@dimen/dp_5"/>
+
+        <!--Wallet-->
+        <RelativeLayout
+            android:id="@+id/rl_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tvWallet"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/color_text_black"
+                android:textSize="@dimen/big"
+                android:visibility="visible"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:text="@string/wallet"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/tvWalletAmount"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/base_color"
+                android:textSize="@dimen/big"
+                android:visibility="visible"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:text="$250.09"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <!--Tell a Friend-->
+        <RelativeLayout
+            android:id="@+id/rl_tellafriend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5">
+
+            <TextView
+                android:id="@+id/tvtellafriend"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/color_text_black"
+                android:textSize="@dimen/big"
+                android:visibility="visible"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:text="Tell a Friend"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_alignParentLeft="true"
+                android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24px"/>
+
+        </RelativeLayout>
+
+        <!--Blocked User-->
+        <RelativeLayout
+            android:id="@+id/rl_blockeduser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5">
+
+            <TextView
+                android:id="@+id/tvblockeduser"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/color_text_black"
+                android:textSize="@dimen/big"
+                android:visibility="visible"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:text="Blocked User"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_alignParentLeft="true"
+                android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24px"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/text"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:id="@+id/ll_supportlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/tvSupport"
+            android:layout_margin="@dimen/dp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/large"
+            android:visibility="visible"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:text="Support"
+            android:layout_marginTop="@dimen/dp_5"/>
+
+        <!--About-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tvAbout"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/color_text_black"
+                android:textSize="@dimen/big"
+                android:visibility="visible"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:text="@string/about"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_alignParentLeft="true"
+                android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24px"/>
+
+
+
+        </RelativeLayout>
+
+        <!--Privacy Policy-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5">
+
+            <TextView
+                android:id="@+id/tvPrivacyPolicy"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/color_text_black"
+                android:textSize="@dimen/big"
+                android:visibility="visible"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:text="@string/privacyPolicy"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_alignParentLeft="true"
+                android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24px"/>
+
+        </RelativeLayout>
+
+        <!--Blocked User-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5">
+
+            <TextView
+                android:id="@+id/tvTermsAndCond"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/color_text_black"
+                android:textSize="@dimen/big"
+                android:visibility="visible"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:text="@string/terms_conditions"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_alignParentLeft="true"
+                android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24px"/>
+
+        </RelativeLayout>
+
+        <!--Report a Problem-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5">
+
+            <TextView
+                android:id="@+id/tvreportaproblem"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/color_text_black"
+                android:textSize="@dimen/big"
+                android:visibility="visible"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:text="@string/ReportAProblem"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_alignParentLeft="true"
+                android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24px"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/text"
+        android:background="@color/divider" />
+
+    <!--Log-out-->
+    <LinearLayout
+        android:id="@+id/ll_logoutlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/tvLogout"
+            android:layout_margin="@dimen/dp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/color_text_black"
+            android:textSize="@dimen/large"
+            android:visibility="visible"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:text="@string/LogOut"
+            android:layout_marginTop="@dimen/dp_5"/>
+
+    </LinearLayout>
+
+</LinearLayout>

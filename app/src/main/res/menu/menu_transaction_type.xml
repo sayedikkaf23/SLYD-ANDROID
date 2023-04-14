@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_transaction_all"
+        android:title="@string/all_transactions" />
+
+    <item
+        android:id="@+id/action_transaction_pending"
+        android:title="@string/pending_transactions" />
+
+    <item
+        android:id="@+id/action_transaction_credit"
+        android:title="@string/credit_transactions" />
+    <item
+        android:id="@+id/action_transaction_debit"
+        android:title="@string/debit_transactions" />
+</menu>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/clWishListMain"
+        android:background="@color/white"
+        android:paddingTop="@dimen/twenty_dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivWishListImage"
+            android:layout_width="@dimen/dp_75"
+            android:layout_height="@dimen/dp_75"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:src="@drawable/ic_placeholder"
+            app:layout_constraintBottom_toBottomOf="@+id/tvWishListFinalPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvWishListProductName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWishListProductName"
+            style="@style/Text.14sp.CodGray.PoppinsRegular"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:lines="2"
+            android:maxLines="2"
+            app:layout_constraintEnd_toStartOf="@+id/ivWishListDelete"
+            app:layout_constraintStart_toEndOf="@+id/ivWishListImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Massa commodo velit Cras Ornare lacus vivamus" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivWishListDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:padding="@dimen/five_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvWishListProductName"
+            app:layout_constraintTop_toTopOf="@+id/tvWishListProductName"
+            app:srcCompat="@drawable/ic_delete" />
+
+        <RatingBar
+            android:id="@+id/rbWishListRatings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:numStars="5"
+            android:paddingStart="@dimen/dp_0"
+            android:stepSize="0.5"
+            android:isIndicator="true"
+            style="?android:attr/ratingBarStyleSmall"
+            android:theme="@style/RatingBar"
+            app:layout_constraintStart_toEndOf="@+id/ivWishListImage"
+            app:layout_constraintTop_toBottomOf="@id/tvWishListProductName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWishListBasePrice"
+            style="@style/Text.10sp.SolidBoulder.PoppinsMed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/five_dp"
+            app:layout_constraintStart_toEndOf="@+id/ivWishListImage"
+            app:layout_constraintTop_toBottomOf="@+id/rbWishListRatings"
+            tools:text="$132.64" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWishListFinalPrice"
+            style="@style/Text.15sp.CodGray.PoppinsSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/two_dp"
+            app:layout_constraintStart_toEndOf="@+id/ivWishListImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvWishListBasePrice"
+            tools:text="$132.64" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/two_dp"
+            android:layout_marginTop="@dimen/thirty_dp"
+            android:layerType="software"
+            android:src="@drawable/dash_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWishListFinalPrice" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

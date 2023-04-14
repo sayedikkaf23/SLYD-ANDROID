@@ -1,0 +1,177 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+
+        tools:context="com.customer.fivecanale.landing.historyscreen.HistoryScreenFragment">
+
+    <data>
+
+        <variable
+                name="viewModel"
+                type="chat.hola.com.app.orders.historyscreen.HistoryViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/allWhiteColor">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/arrow_back_black"
+                android:id="@+id/ivBackButton"
+                android:visibility="invisible"
+                app:layout_constraintTop_toTopOf="@id/tvHistoryMyOrders"
+                app:layout_constraintBottom_toBottomOf="@id/tvHistoryMyOrders"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/fifteen_dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHistoryMyOrders"
+                style="@style/Text.16sp.ApproxBlack.PoppinsSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/two_dp"
+                android:paddingTop="@dimen/fifteen_dp"
+                android:paddingBottom="@dimen/fifteen_dp"
+                android:text="@string/historyMyOrders"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSearchHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/twenty_dp"
+                android:layout_marginEnd="@dimen/twenty_dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvHistoryMyOrders">
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etHomeSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/five_dp"
+                    android:layout_marginEnd="0dp"
+                    android:background="@color/gray_lighter"
+                    android:drawableStart="@drawable/ic_search"
+                    android:drawablePadding="@dimen/ten_dp"
+                    android:fontFamily="@font/sf_pro_regular"
+                    android:hint="@string/historySearchList"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="@dimen/ten_dp"
+                    android:textColorHint="@color/allGreyColor"
+                    android:textSize="@dimen/fourteen_sp"
+                    app:layout_constraintEnd_toStartOf="@+id/ivOrderFilters"
+                    app:layout_constraintRight_toLeftOf="@+id/ivCross"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCross"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackground"
+                    android:onClick="@{() -> viewModel.onCrossIconClicked()}"
+                    android:padding="@dimen/two_dp"
+                    android:tint="@color/allGreyColor"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/ivOrderFilters"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/all_cross_icon" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivOrderFilters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_nav_menu_item"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="@{() -> viewModel.myOrdersClicked()}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/filters_selector" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/refreshSr"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/tvAllReviewsLoading"
+                app:layout_constraintTop_toBottomOf="@+id/clSearchHeader">
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:overScrollMode="never"
+                    android:paddingTop="@dimen/twenty_dp"
+                    android:scrollbars="none"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAllReviewsLoading"
+                style="@style/Text.12sp.NobelTextColor.poppinsLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_blue_rounded_corner"
+                android:gravity="center"
+                android:paddingTop="@dimen/ten_dp"
+                android:paddingBottom="@dimen/ten_dp"
+                android:text="@string/reviewProductHangOn"
+                android:visibility="@{viewModel.itemLoadingVisible}"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEmptyHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/thirty_dp"
+                android:src="@drawable/address_empty"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNoHistoryFound"
+                style="@style/Text.16sp.Black.PoppinsMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five_dp"
+                android:text="@string/emptyHistory"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivEmptyHistory" />
+
+        <androidx.constraintlayout.widget.Group
+                android:id="@+id/vgNoHistoryFound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="ivEmptyHistory,tvNoHistoryFound" />
+
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="@{viewModel.progressVisible}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

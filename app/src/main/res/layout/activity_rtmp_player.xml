@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+  <com.google.android.exoplayer2.ui.PlayerView
+      android:id="@+id/player_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      />
+  <!--ads:resize_mode="fill"-->
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivCloseStreaming"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/app_margin"
+      android:background="@drawable/circle_close"
+      android:padding="@dimen/dp_5"
+      />
+
+  <TextView
+      android:id="@+id/tvNoOfViewers"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="end"
+
+      android:layout_marginEnd="@dimen/dp_10"
+
+      android:layout_marginTop="21dp"
+      android:background="@drawable/white_outline_radius"
+      android:drawablePadding="@dimen/dp_5"
+      android:drawableStart="@drawable/ic_remove_red_eye_black_24dp"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:paddingEnd="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:text="@string/string_0"
+      android:textColor="#FFFAFAFA"
+      />
+
+
+  <LinearLayout
+      android:id="@+id/llTimer"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/tvLiveStreamStatus"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="@dimen/dp_17"
+      android:orientation="horizontal"
+      android:visibility="gone"
+      >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/dp_15"
+        android:layout_height="@dimen/dp_15"
+        android:layout_margin="@dimen/dp_5"
+        android:src="@drawable/ic_access_time_black_24dp"
+        />
+
+    <TextView
+
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_2"
+        android:drawablePadding="@dimen/dp_5"
+        android:text="@string/hr_m_sec"
+        android:textColor="@color/white"
+        />
+  </LinearLayout>
+
+
+  <chat.hola.com.app.live_stream.heart_animation.HeartsView xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:id="@+id/heartsView"
+      android:layout_width="@dimen/dp_100"
+      android:layout_height="@dimen/dp_350"
+      android:layout_gravity="bottom|end"
+      android:layout_marginBottom="@dimen/dp_108"
+      />
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      android:background="@android:color/transparent"
+      android:orientation="vertical"
+      >
+
+    <include
+
+        layout="@layout/gift_viewer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"
+        android:background="@drawable/gradient_radient"
+        >
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/rvMessages"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/app_margin"
+          android:layout_marginStart="@dimen/app_margin"
+          android:background="@android:color/transparent"
+          />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPresetMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/app_margin"
+        android:layout_marginStart="@dimen/app_margin"
+        android:paddingBottom="@dimen/dp_5"
+        android:paddingTop="@dimen/dp_5"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+      <EditText
+          android:id="@+id/etSendMessage"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/app_margin"
+          android:layout_marginLeft="@dimen/app_margin"
+          android:layout_marginRight="@dimen/app_margin"
+          android:layout_marginTop="@dimen/dp_10"
+          android:layout_toStartOf="@+id/ivSendMessage"
+          android:background="@drawable/chat_background1"
+          android:hint="@string/typeSomethingHere"
+          android:inputType="textAutoComplete"
+          android:paddingBottom="@dimen/dp_10"
+          android:paddingLeft="@dimen/app_margin"
+          android:paddingRight="@dimen/app_margin"
+          android:paddingTop="@dimen/dp_10"
+          android:textColor="@android:color/white"
+          android:textColorHint="@android:color/white"
+          android:textSize="@dimen/sp_14"
+          />
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ivSendMessage"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginEnd="@dimen/dp_5"
+          android:layout_toStartOf="@+id/ivGifts"
+          android:padding="@dimen/dimen_5dp"
+
+          android:src="@drawable/ic_send_black_24dp"
+          />
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ivGifts"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+
+          android:layout_centerVertical="true"
+          android:layout_marginEnd="@dimen/dp_5"
+          android:padding="@dimen/dimen_5dp"
+          android:src="@drawable/baseline_card_giftcard_24px"
+          android:tint="@color/white"
+          />
+
+    </RelativeLayout>
+  </LinearLayout>
+
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivHeart"
+      android:layout_width="@dimen/dp_24"
+      android:layout_height="@dimen/dp_24"
+      android:layout_gravity="bottom|end"
+      android:layout_marginBottom="@dimen/dp_110"
+      android:layout_marginEnd="@dimen/app_margin"
+      android:src="@drawable/ic_heart_selector"
+      />
+
+
+  <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:id="@+id/rlGiftsParent"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/dp_240"
+      android:background="@color/white"
+      android:visibility="gone"
+
+
+      app:behavior_hideable="true"
+      app:behavior_peekHeight="@dimen/dp_240"
+      app:layout_behavior="@string/bottom_sheet_behavior"
+      >
+    <!--android:visibility="gone"-->
+    <include
+        layout="@layout/popup_gifts"
+        android:id="@+id/giftsView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+
+        />
+
+
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

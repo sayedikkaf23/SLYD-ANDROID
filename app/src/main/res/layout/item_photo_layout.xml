@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginBottom="@dimen/dp_3"
+    android:layout_marginLeft="@dimen/dp_4"
+
+
+    android:layout_marginStart="@dimen/dp_4"
+    android:layout_marginTop="@dimen/dp_3"
+
+    >
+
+    <chat.hola.com.app.DocumentPicker.Views.SquareRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/image_placeholder"
+            android:padding="1dip"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:id="@+id/transparent_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/whiteOverlay"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/video_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_play_icon" />
+
+        <chat.hola.com.app.DocumentPicker.Views.SmoothCheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/dp_5" />
+
+    </chat.hola.com.app.DocumentPicker.Views.SquareRelativeLayout>
+
+</androidx.cardview.widget.CardView>

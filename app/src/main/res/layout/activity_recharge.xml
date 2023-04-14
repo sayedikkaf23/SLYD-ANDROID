@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--toolbar-->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnRecharge"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlBankInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_5"
+                android:padding="@dimen/dp_10"
+                android:background="@color/colorPrimaryLight"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivBankImage"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_bank_background"
+                    android:padding="@dimen/dp_10"
+                    android:src="@drawable/ic_bank" />
+
+                <LinearLayout
+                    android:id="@+id/llBank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_toStartOf="@+id/tvChangeBank"
+                    android:layout_toEndOf="@+id/ivBankImage"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvAccountNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_bold"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/small" />
+
+                    <TextView
+                        android:id="@+id/tvBankCode"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_medium"
+                        android:textColor="@color/star_grey"
+                        android:textSize="@dimen/medium" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvChangeBank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llBank"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:padding="@dimen/dp_5"
+                    android:text="@string/change"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlUserInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_5"
+                android:padding="@dimen/dp_10"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivPhoto"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="@dimen/dp_70" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/ivPhoto"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_3"
+                        android:textColor="@color/star_black"
+                        android:textSize="@dimen/big" />
+
+                    <TextView
+                        android:id="@+id/tvPhoneNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp_3"
+                        android:textColor="@color/gray_text_darker"
+                        android:textSize="@dimen/medium" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlCard"
+                android:background="@color/colorPrimaryLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_20"
+                android:paddingBottom="@dimen/dp_20"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvCardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/selected_card"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray1"
+                    android:textSize="@dimen/medium"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_below="@+id/tvCardTitle"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCardTitle"
+                    android:layout_margin="@dimen/dp_5"
+                    android:layout_toEndOf="@+id/ivImage"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/medium" />
+
+                    <TextView
+                        android:id="@+id/tvExpDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dp_3"
+                        android:textColor="#484848"
+                        android:textSize="@dimen/tiny"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvChangeCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCardTitle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:padding="@dimen/dp_5"
+                    android:textStyle="bold"
+                    android:text="@string/change_card"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tiny" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/dividerUserInfo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#f0f4f7"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/tvRechargeAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recharge_amount"
+                    android:textColor="@color/gray1"
+                    android:textSize="@dimen/medium" />
+
+                <RelativeLayout
+                    android:id="@+id/rlAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvRechargeAmount">
+
+                    <TextView
+                        android:id="@+id/tvCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_toStartOf="@+id/spCurrency"
+                        android:background="@color/white"
+                        android:padding="@dimen/dp_5"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/huge" />
+
+                    <EditText
+                        android:id="@+id/etAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_toStartOf="@+id/spCurrency"
+                        android:layout_toEndOf="@+id/tvCurrency"
+                        android:background="@color/white"
+                        android:hint="@string/hint_amount"
+                        android:inputType="numberDecimal"
+                        android:maxLength="10"
+                        android:padding="@dimen/dp_5"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/huge" />
+
+                    <Spinner
+                        android:id="@+id/spCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                        android:padding="@dimen/dp_5"
+                        android:textColor="@color/base_color"
+                        android:textSize="@dimen/medium"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_below="@+id/rlAmount"
+                    android:background="@color/color_black" />
+
+                <TextView
+                    android:id="@+id/tvBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider"
+                    android:textColor="@color/gray1"
+                    android:textSize="@dimen/small"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/tvRecentlyAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvBalance"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:text="@string/suggested"
+                    android:textColor="@color/gray1"
+                    android:textSize="@dimen/medium" />
+            </RelativeLayout>
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:id="@+id/rgAmountTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_5"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/llAddNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvAddNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_note"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray1"
+                    android:textSize="@dimen/medium" />
+
+                <EditText
+                    android:id="@+id/etNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@color/white"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp_5"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/large" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/color_black" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnRecharge"
+        style="@style/ButtonNormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/recharge" />
+
+</RelativeLayout>

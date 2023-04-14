@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="chat.hola.com.app.collections.create_collection.CreateCollectionActivity">
+
+    <!--Action Bar-->
+    <RelativeLayout
+        android:id="@+id/rL_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorHintOfRed"
+        android:elevation="@dimen/two_dp">
+
+        <ImageView
+            android:id="@+id/iV_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:padding="@dimen/ten_dp"
+            android:tint="@color/color_black"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            android:id="@+id/tV_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:text="@string/create_collection"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tV_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:padding="@dimen/ten_dp"
+            android:textColor="@color/color_black"
+            android:text="@string/next" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:layout_below="@+id/rL_actionBar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:paddingStart="@dimen/ten_dp"
+            android:text="@string/name"
+            android:textSize="@dimen/medium"
+            android:fontFamily="@font/sf_pro_medium"
+            android:textColor="@color/star_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/eT_name"
+            android:paddingStart="@dimen/ten_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:textSize="@dimen/medium"
+            android:fontFamily="@font/sf_pro_regular"
+            android:textColor="@color/star_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/collection_name"
+            android:maxLines="1"
+            android:maxLength="20"
+            tools:ignore="RtlSymmetry" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

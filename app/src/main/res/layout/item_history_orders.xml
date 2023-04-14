@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/ten_dp"
+            android:background="@color/allWhiteColor">
+        <View
+                android:id="@+id/dividerPickingStarted"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one_dp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:background="@color/mercury"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clOrderItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorProductBackground"
+                android:paddingStart="@dimen/twenty_dp"
+                android:paddingTop="@dimen/ten_dp"
+                android:paddingEnd="@dimen/twenty_dp"
+                android:paddingBottom="@dimen/ten_dp"
+                app:layout_constraintTop_toBottomOf="@id/dividerPickingStarted">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/dp_45"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/cvImageStore"
+                        android:layout_height="@dimen/dp_45">
+                    <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivStoreIcon"
+                            android:layout_width="@dimen/dp_45"
+                            android:src="@drawable/ic_store_placeholder"
+                            android:layout_height="@dimen/dp_45"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                             />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    app:layout_constraintStart_toEndOf="@+id/cvImageStore"
+                    app:layout_constraintTop_toTopOf="@id/cvImageStore"
+                    app:layout_constraintBottom_toBottomOf="@id/cvImageStore"
+                    android:layout_width="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvStoreName"
+                        app:layout_constraintTop_toTopOf="parent"
+                        style="@style/Text.12sp.PoppinsRegular"
+                        android:layout_width="0dp"
+                        android:textSize="@dimen/sp_12"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginEnd="@dimen/five_dp"
+                        android:paddingEnd="@dimen/five_dp"
+                        android:text="@string/historyStoreName"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/tvOrderStatus"
+                        />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvStoreId"
+                        style="@style/Text.12sp.PoppinsRegular"
+                        android:layout_width="0dp"
+                        android:textSize="@dimen/sp_12"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginEnd="@dimen/five_dp"
+                        android:text="@string/storeOrderId"
+                        app:layout_constraintTop_toBottomOf="@id/tvStoreName"
+                        app:layout_constraintRight_toLeftOf="@id/tvOrderStatus"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvOrderStatus"
+                        style="@style/Text.14sp.Grey.productSansRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/twenty_dp"
+                        android:paddingTop="@dimen/five_dp"
+                        android:paddingEnd="@dimen/twenty_dp"
+                        android:paddingBottom="@dimen/five_dp"
+                        android:text="@string/pending"
+                        android:textAllCaps="true"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/cvImageStore"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvStoreName" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvOrderStoreItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                tools:itemCount="2"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/two_dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/clOrderItem" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvViewMore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:padding="@dimen/five_dp"
+                android:gravity="end"
+                android:visibility="gone"
+                android:paddingEnd="@dimen/fifteen_dp"
+                tools:text="…. view 8 more"
+                style="@style/Text.14sp.Grey.productSansRegular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvOrderStoreItems" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReasonText"
+                style="@style/Text.14sp.Grey.productSansRegular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:paddingStart="@dimen/fifteen_dp"
+                android:paddingEnd="@dimen/fifteen_dp"
+                android:paddingTop="@dimen/dp_7"
+                android:textColor="@color/red_login_dark"
+                android:paddingBottom="@dimen/dp_7"
+                tools:text="Store Rejected one item."
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvOrderStoreItems"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTrackOrder"
+                style="@style/Text.12sp.Manatee.ProductSansBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/fifteen_dp"
+                android:paddingEnd="@dimen/fifteen_dp"
+                android:paddingTop="@dimen/ten_dp"
+                android:paddingBottom="@dimen/ten_dp"
+                android:visibility="gone"
+                android:gravity="center_horizontal"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:background="@drawable/add_button_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvOrderDetails"
+                app:layout_constraintTop_toBottomOf="@id/tvReasonText"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOrderDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/details"
+                android:gravity="center_horizontal"
+                android:paddingStart="@dimen/fifteen_dp"
+                android:paddingEnd="@dimen/fifteen_dp"
+                android:visibility="gone"
+                android:paddingTop="@dimen/ten_dp"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:paddingBottom="@dimen/ten_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvTrackOrder"
+                app:layout_constraintTop_toBottomOf="@id/tvReasonText"/>
+
+        <LinearLayout
+                android:id="@+id/llRating"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/ten_dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvTrackOrder"
+                android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:drawableStart="@drawable/ic_rating_star"
+                        android:drawablePadding="@dimen/ten_dp"
+                        android:textColor="@color/headerBlue"
+                        android:text="4.5"
+                        android:drawableTint="@color/greenCoupon"
+                        android:gravity="center"
+                        android:id="@+id/tvStoreRating"
+                        android:layout_marginStart="@dimen/fourty_dp"
+                        android:textSize="@dimen/sixteen_sp"
+                        style="@style/Text.14sp.Grey.productSansRegular"
+                        android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:textSize="@dimen/twelve_sp"
+                        android:id="@+id/tvStoreTotalRating"
+                        android:gravity="center"
+                        android:text="@string/yourRatedForStore"
+                        android:layout_marginEnd="@dimen/thirty_dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/five_dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvStoreRating"
+                        android:textColor="@color/manatee"
+                        style="@style/Text.14sp.Grey.productSansRegular"
+                        android:layout_height="wrap_content"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:drawableTint="@color/greenCoupon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:drawableStart="@drawable/ic_rating_star"
+                        android:drawablePadding="@dimen/ten_dp"
+                        android:textColor="@color/headerBlue"
+                        android:text="4.5"
+                        android:gravity="center"
+                        android:id="@+id/tvDriverRating"
+                        android:layout_marginStart="@dimen/fourty_dp"
+                        android:textSize="@dimen/sixteen_sp"
+                        style="@style/Text.14sp.Grey.productSansRegular"
+                        android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:textSize="@dimen/twelve_sp"
+                        android:id="@+id/tvDriverTotalRating"
+                        android:gravity="center"
+                        android:text="@string/youRatedDriver"
+                        android:layout_marginEnd="@dimen/thirty_dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/five_dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvDriverRating"
+                        android:textColor="@color/ratingBackground"
+                        style="@style/Text.14sp.Grey.productSansRegular"
+                        android:layout_height="wrap_content"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

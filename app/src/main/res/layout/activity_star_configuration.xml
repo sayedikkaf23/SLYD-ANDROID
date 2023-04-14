@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="chat.hola.com.app.star_configuration.StarConfigurationActivity">
+
+    <RelativeLayout
+        android:id="@+id/rL_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:elevation="@dimen/two_dp"
+        android:background="@color/colorHintOfRed">
+
+        <ImageView
+            android:id="@+id/iV_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:padding="@dimen/ten_dp"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/tV_title"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/star_config"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/title"
+            android:fontFamily="@font/sf_pro_semibold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/rL_actionBar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rL_email"
+            android:padding="@dimen/fifteen_dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/email"
+                android:textSize="@dimen/big"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/sf_pro_regular"
+                android:layout_toStartOf="@+id/next"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/next"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/ic_next_arrow_icon"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/soft_grey"/>
+
+        <RelativeLayout
+            android:id="@+id/rL_phoneNumber"
+            android:padding="@dimen/fifteen_dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/phone_number"
+                android:textSize="@dimen/big"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/sf_pro_regular"
+                android:layout_toStartOf="@+id/next1"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/next1"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/ic_next_arrow_icon"/>
+
+        </RelativeLayout>
+
+        <View
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/soft_grey"/>
+
+        <TextView
+            android:padding="@dimen/ten_dp"
+            android:paddingStart="@dimen/fifteen_dp"
+            android:textSize="@dimen/medium"
+            android:fontFamily="@font/sf_pro_regular"
+            android:textColor="@color/gray_text_darker"
+            android:text="@string/disable_warning_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_background_gray"/>
+
+        <RelativeLayout
+            android:padding="@dimen/fifteen_dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/chat"
+                android:textSize="@dimen/big"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/sf_pro_regular"
+                android:layout_toStartOf="@+id/chatSwitch"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/chatSwitch"
+                android:theme="@style/SCBSwitch"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/ic_next_arrow_icon"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/soft_grey"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

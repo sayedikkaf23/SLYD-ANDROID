@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:orientation="vertical"
+    tools:context="chat.hola.com.app.Giphy.SelectGIF">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_white"
+
+
+        >
+
+        <TextView
+            android:id="@+id/newGroup"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toEndOf="@+id/close"
+            android:layout_toRightOf="@+id/close"
+            android:text="@string/AddMemberTitle"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/sp_17"
+            android:textStyle="bold"
+
+            />
+
+
+        <TextView
+            android:id="@+id/membersCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/newGroup"
+            android:layout_marginTop="@dimen/dp_1"
+            android:layout_toEndOf="@+id/close"
+            android:layout_toLeftOf="@+id/search"
+
+            android:layout_toRightOf="@+id/close"
+            android:layout_toStartOf="@+id/search"
+
+
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/AddMemberSubTitle"
+            android:textColor="@color/color_text_black"
+
+
+            />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/close"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_13"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:layout_marginRight="@dimen/dp_13"
+
+
+            android:layout_marginStart="@dimen/dp_13"
+            android:elevation="@dimen/dp_5"
+            android:foreground="@drawable/ripple_selector"
+            android:tint="@color/color_text_black"
+            app:srcCompat="@drawable/arrow_back_black" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+
+            android:layout_marginEnd="@dimen/dp_2"
+            android:layout_marginRight="@dimen/dp_2"
+            android:layout_centerVertical="true"
+
+
+            android:queryHint="Search chats">
+
+
+        </androidx.appcompat.widget.SearchView>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+
+
+        android:layout_below="@+id/toolbar"
+        android:background="@color/color_line_gray"
+
+
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvContacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seperator"
+
+        android:scrollbarStyle="outsideInset" />
+
+
+    <TextView
+        android:id="@+id/messageContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:gravity="center"
+
+        android:text="@string/NoMembersToAdd"
+
+
+        android:textSize="@dimen/big"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/noMatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_70"
+        android:gravity="center"
+        android:text="@string/noMatch"
+        android:textSize="@dimen/big"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+  <TextView
+      android:id="@+id/tvConfirm"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:maxLines="2"
+      android:layout_centerHorizontal="true"
+      android:ellipsize="end"
+      android:layout_margin="@dimen/dp_13"
+      android:text="@string/share_confirmation"
+      android:gravity="center_horizontal"
+      />
+
+  <ProgressBar
+      android:id="@+id/pbDownload"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvConfirm"
+      android:max="100"
+      style="?android:attr/progressBarStyleHorizontal"
+      android:visibility="gone"
+      android:layout_margin="@dimen/dp_13"
+      android:progress="0"/>
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvShare"
+      android:layout_below="@+id/pbDownload"
+      android:layout_width="wrap_content"
+      android:text="@string/share"
+      android:paddingStart="@dimen/dp_16"
+      android:paddingEnd="@dimen/dp_16"
+      android:background="@drawable/gradient_curved_background"
+      android:layout_centerHorizontal="true"
+      android:textColor="@color/white"
+      android:gravity="center"
+      android:layout_marginBottom="@dimen/dp_13"
+      android:layout_height="@dimen/dp_32"/>
+
+</RelativeLayout>

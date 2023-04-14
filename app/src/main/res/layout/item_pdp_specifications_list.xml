@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clItemSpecifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/fifteen_dp"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginEnd="@dimen/fifteen_dp"
+        android:layout_marginBottom="@dimen/five_dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSpecKey"
+            style="@style/Text.12sp.Gey.PoppinsRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            app:layout_constraintEnd_toStartOf="@+id/tvSpecValue"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Type" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSpecValue"
+            style="@style/Text.12sp.Nero.PoppinsRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/tvSpecKey"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Bottle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

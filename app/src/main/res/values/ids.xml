@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="crop_image_menu_crop" type="drawable">@drawable/crop_image_menu_crop_stub</item>
+    <!--<item name="fixed_pin_id" type="id">hello </item>-->
+    <!--<item name="heading_text" type="id">heading_text</item>-->
+    <!--<item name="setting_click" type="id">setting_click</item>-->
+
+    <item name="heading_text" type="id"/>
+    <item name="setting_click" type="id"/>
+
+
+
+    <!--
+
+    Not sure of the location where they should be put, so have put them here temporarily.
+
+    -->
+    <public name="facing" type="attr" />
+    <public name="aspectRatio" type="attr" />
+    <public name="autoFocus" type="attr" />
+    <public name="flash" type="attr" />
+
+    <public name="Widget.CameraView" type="style" />
+</resources>

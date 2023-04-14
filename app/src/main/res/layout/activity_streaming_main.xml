@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frameLayoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llMainFragment" />
+
+
+    <LinearLayout
+        android:id="@+id/llMainFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/ivLiveBroadcasters"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="@dimen/app_margin"
+            android:paddingTop="@dimen/app_margin"
+            android:paddingRight="@dimen/app_margin"
+            android:paddingBottom="@dimen/dp_5"
+            android:src="@drawable/ic_stream" />
+
+        <ImageView
+            android:id="@+id/ivStartBroadcast"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="@dimen/app_margin"
+            android:paddingTop="@dimen/app_margin"
+            android:paddingRight="@dimen/app_margin"
+            android:paddingBottom="@dimen/dp_5"
+            android:src="@drawable/streambutton" />
+
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="@dimen/app_margin"
+            android:paddingTop="@dimen/app_margin"
+            android:paddingRight="@dimen/app_margin"
+            android:paddingBottom="@dimen/dp_5"
+            android:src="@drawable/ic_person_black_24dp"
+            android:tint="@color/red_login_dark" />
+    </LinearLayout>
+
+
+</RelativeLayout>

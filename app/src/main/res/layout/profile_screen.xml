@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/colorPrimary"
+
+
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:text="@string/Profile1"
+
+            android:textColor="@color/color_white"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:textSize="@dimen/title"
+
+            />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/close"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:layout_marginStart="@dimen/dp_13"
+            android:elevation="@dimen/dp_5"
+            android:foreground="@drawable/ripple_selector"
+            android:tint="@color/color_white"
+            app:srcCompat="@drawable/cancel_white"
+
+
+            />
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_1"
+
+
+        android:layout_below="@+id/toolbar"
+        android:background="@color/color_line_gray"
+
+
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+
+
+        android:layout_height="match_parent"
+        android:layout_below="@+id/seperator">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/selectProfileImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eeeeee">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="@dimen/dp_200"
+                    android:layout_height="@dimen/dp_200"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:foreground="@drawable/ripple_selector"
+                    android:background="@drawable/chat_attachment_profile_default_image_frame" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/profileImageSelector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profileImage"
+                    android:layout_marginLeft="@dimen/minus_60"
+                    android:layout_marginStart="@dimen/minus_60"
+                    android:layout_marginTop="@dimen/minus_90"
+                    android:layout_toEndOf="@+id/profileImage"
+
+                    android:foreground="@drawable/ripple_selector"
+                    android:layout_toRightOf="@+id/profileImage"
+                    android:src="@drawable/photo_off" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/profileStatusLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/selectProfileImage"
+
+
+                android:background="@color/color_white">
+
+                <!--<github.ankushsachdeva.emojicon.EmojiconTextView-->
+
+                <TextView
+                    android:id="@+id/profileStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_toLeftOf="@+id/profilePenStatus"
+                    android:layout_toStartOf="@+id/profilePenStatus"
+                    android:ellipsize="end"
+
+
+                    android:maxLines="1"
+
+
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/medium" />
+
+                <View
+                    android:id="@+id/viewLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"
+
+                    android:layout_below="@+id/profileStatus"
+
+                    android:background="@color/color_line_gray" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/profilePenStatus"
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:foreground="@drawable/ripple_selector"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:tint="@color/gray"
+                    app:srcCompat="@drawable/profile_pen_status_icon_off" />
+
+
+                <View
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="@dimen/dp_22"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_toLeftOf="@+id/profilePenStatus"
+                    android:layout_toStartOf="@+id/profilePenStatus"
+                    android:background="@color/image_not_gray" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profileStatusLayout"
+                android:background="#eeeeee">
+
+                <TextView
+                    android:id="@+id/textView_notURUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_25"
+                    android:layout_marginLeft="@dimen/dp_10"
+
+
+                    android:layout_marginRight="@dimen/dp_25"
+                    android:layout_marginStart="@dimen/dp_10"
+
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:text="@string/profile_disclaimer" />
+
+                <View
+                    android:id="@+id/viewLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_below="@+id/textView_notURUserName"
+                    android:background="@color/color_line_gray" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text"
+                android:background="@color/color_white">
+
+                <TextView
+                    android:id="@+id/phonetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_10"
+
+                    android:layout_marginStart="@dimen/dp_10"
+
+
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="@string/PhoneAndStatus"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/sp_16_33" />
+
+                <TextView
+                    android:id="@+id/phoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/phonetext"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginStart="@dimen/dp_10"
+
+                    android:textColor="@color/color_text_gray"
+                    android:textSize="@dimen/sp_16_67" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_below="@+id/phoneNumber"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@color/color_line_gray" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view">
+
+                    <TextView
+                        android:id="@+id/tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="@dimen/dp_8"
+
+
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="@string/Status"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/sp_16_67" />
+
+                    <!--<github.ankushsachdeva.emojicon.EmojiconTextView-->
+
+
+
+                    <TextView
+                        android:id="@+id/status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/tv"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_marginEnd="@dimen/dp_5"
+
+                        android:layout_marginLeft="@dimen/dp_14"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:layout_marginStart="@dimen/dp_14"
+                        android:layout_toLeftOf="@+id/viewLine3"
+                        android:layout_toStartOf="@+id/viewLine3"
+                        android:ellipsize="end"
+                        android:maxLines="5"
+
+
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/sp_15" />
+
+
+                    <View
+                        android:id="@+id/viewLine3"
+                        android:layout_width="@dimen/dp_1"
+                        android:layout_height="@dimen/dp_24"
+
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/dp_4"
+                        android:layout_toLeftOf="@+id/editStatus"
+                        android:layout_toStartOf="@+id/editStatus"
+                        android:background="@color/image_not_gray" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/editStatus"
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:foreground="@drawable/ripple_selector"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dp_11"
+                        android:layout_marginRight="@dimen/dp_11"
+                        android:tint="@color/gray"
+                        app:srcCompat="@drawable/profile_pen_status_icon_off" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_below="@+id/status"
+
+
+
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="@color/color_line_gray" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

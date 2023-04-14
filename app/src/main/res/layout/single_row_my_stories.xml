@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white">
+
+    <ImageView
+        android:id="@+id/ivProfilePic"
+        android:layout_width="@dimen/dp_55"
+        android:layout_height="@dimen/dp_55"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/ten_dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/profile_one"
+        tools:ignore="ContentDescription" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/dp_2"
+        android:layout_toStartOf="@+id/rL_viewCount"
+        android:layout_toEndOf="@+id/ivProfilePic"
+        android:layout_toRightOf="@+id/ivProfilePic">
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_2"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/sp_15"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvUserName"
+            android:padding="@dimen/dp_2"
+            android:textColor="@color/gray_text_darker"
+            android:textSize="@dimen/sp_15" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rL_viewCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/iV_option"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/five_dp"
+        android:layout_marginEnd="@dimen/dp_30">
+
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/eye_view_icon"
+            android:tint="@color/color_black" />
+
+        <TextView
+            android:id="@+id/tV_viewCount"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_regular"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/small" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iV_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/twenty_dp"
+        android:src="@drawable/ic_delete" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_below="@+id/ivProfilePic"
+        android:layout_marginTop="@dimen/fifteen_dp"
+        android:background="@color/dustyGray" />
+
+</RelativeLayout>

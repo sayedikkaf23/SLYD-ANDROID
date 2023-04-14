@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="chat.hola.com.app.historyproductdetail.HistoryProductDetailViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/allWhiteColor">
+
+
+        <include
+            android:id="@+id/incHeader"
+            layout="@layout/layout_back_arrow_btn_header"
+             />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/incHeader">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/thirty_dp">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAlbaster"
+                    android:paddingTop="@dimen/five_dp"
+                    android:paddingBottom="@dimen/five_dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBoxIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/twenty_dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvBoxCount"
+                        app:srcCompat="@drawable/ic_box_icon" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvBoxCount"
+                        style="@style/Text.14sp.Nero.PoppinsBold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginEnd="@dimen/twenty_dp"
+                        android:includeFontPadding="false"
+                        android:maxLines="2"
+                        app:layout_constraintStart_toEndOf="@+id/ivBoxIcon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Box 1" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPackageId"
+                        style="@style/Text.14sp.PoppinsMedium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginTop="@dimen/three_dp"
+                        android:layout_marginEnd="@dimen/twenty_dp"
+                        app:layout_constraintStart_toEndOf="@+id/ivBoxIcon"
+                        app:layout_constraintTop_toBottomOf="@+id/tvBoxCount"
+                        tools:text="PID: 819AH7DA473" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <include
+                    android:id="@+id/historyProductDetail"
+                    layout="@layout/item_history_product_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    app:layout_constraintTop_toBottomOf="@+id/clBox" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvShippingAlongWith"
+                    style="@style/Text.14sp.PoppinsMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/historyShippingAlongWith"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/historyProductDetail" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvOrders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/tvShippingAlongWith" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/dashLineViewTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/two_dp"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:layerType="software"
+                    android:src="@drawable/dash_line"
+                    app:layout_constraintTop_toBottomOf="@+id/rvOrders" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvShippingWith"
+                    style="@style/Text.14sp.PoppinsMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:includeFontPadding="false"
+                    android:text="@{viewmodel.trackingId}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dashLineViewTop" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clTracking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> viewmodel.tracking()}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvShippingWith">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvOrderStatus"
+                        style="@style/Text.13sp.PoppinsSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/twenty_dp"
+                        android:layout_marginTop="@dimen/ten_dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="shipped" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivItemNext"
+                        android:layout_width="@dimen/eight_dp"
+                        android:layout_height="@dimen/eight_dp"
+                        android:layout_marginEnd="@dimen/twenty_dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvOrderTime"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvOrderStatus"
+                        app:srcCompat="@drawable/all_right_arrow" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvOrderTime"
+                        style="@style/Text.12sp.Nero.PoppinsRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:layout_marginEnd="@dimen/twenty_dp"
+                        app:layout_constraintStart_toStartOf="@+id/tvOrderStatus"
+                        app:layout_constraintTop_toBottomOf="@+id/tvOrderStatus"
+                        tools:text="5th June 2019 10:32am" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RatingBar
+                    android:id="@+id/rbProductRatings"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    android:theme="@style/HistoryRatingBar"
+                    app:layout_constraintStart_toStartOf="@+id/tvShippingWith"
+                    app:layout_constraintTop_toBottomOf="@+id/clTracking" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvProductReview"
+                    style="@style/Text.14sp.EastBay.PoppinsSemiBold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:background="?selectableItemBackground"
+                    android:gravity="end"
+                    android:onClick="@{() -> viewmodel.rateNow()}"
+                    android:text="@string/historyRateNow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/rbProductRatings" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clReturnProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:background="@drawable/bay_color_border"
+                    android:paddingTop="@dimen/five_dp"
+                    android:paddingBottom="@dimen/five_dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rbProductRatings">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/eight_dp"
+                        android:layout_height="@dimen/eight_dp"
+                        android:layout_marginEnd="@dimen/ten_dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvReturnPolicy"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvReturnProduct"
+                        app:srcCompat="@drawable/all_right_arrow" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvReturnProduct"
+                        style="@style/Text.14sp.PoppinsMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/ten_dp"
+                        android:paddingEnd="0dp"
+                        android:text="@string/historyReturnProduct"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvReturnPolicy"
+                        style="@style/Text.10sp.DimGray.poppinsLight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/ten_dp"
+                        android:paddingEnd="0dp"
+                        android:text="@string/historyReturnProduct"
+                        app:layout_constraintTop_toBottomOf="@+id/tvReturnProduct" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/vgReturnProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{viewmodel.returnProductVisible}"
+                    app:constraint_referenced_ids="tvProductReview,rbProductRatings" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/dashLineViewBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/two_dp"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:layerType="software"
+                    android:src="@drawable/dash_line"
+                    app:layout_constraintTop_toBottomOf="@+id/clReturnProduct" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDetailDeliveryAddress"
+                    style="@style/Text.16sp.Black.PoppinsSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:text="@string/saveDeliveryLocation"
+                    app:layout_constraintStart_toStartOf="@+id/tvShippingWith"
+                    app:layout_constraintTop_toBottomOf="@+id/dashLineViewBottom" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDetailDeliveryAddHeader"
+                    style="@style/Text.14sp.PoppinsMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:text="@{viewmodel.deliveryAddressName}"
+                    app:layout_constraintStart_toStartOf="@+id/tvShippingWith"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailDeliveryAddress" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDetailDeliveryAddLandMark"
+                    style="@style/Text.14sp.PoppinsMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:includeFontPadding="false"
+                    android:text="@{viewmodel.deliveryAddress}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tvShippingWith"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailDeliveryAddHeader" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDetailDeliveryAddphoneNum"
+                    style="@style/Text.12dp.allEastBayColor.poppinsRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:text="@{viewmodel.deliveryPhoneNum}"
+                    app:layout_constraintStart_toStartOf="@+id/tvShippingWith"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailDeliveryAddLandMark" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/two_dp"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:layerType="software"
+                    android:src="@drawable/dash_line"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailDeliveryAddphoneNum" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDetailBillingAddress"
+                    style="@style/Text.16sp.Black.PoppinsSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:text="@string/historyBillingAddress"
+                    app:layout_constraintStart_toStartOf="@+id/tvShippingWith"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDetailBillingAddHeader"
+                    style="@style/Text.14sp.PoppinsMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:text="@{viewmodel.billingAddressName}"
+                    app:layout_constraintStart_toStartOf="@+id/tvShippingWith"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailBillingAddress" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDetailBillingAddLandMark"
+                    style="@style/Text.14sp.PoppinsMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:layout_marginEnd="@dimen/twenty_dp"
+                    android:text="@{viewmodel.billingAddress}"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toStartOf="@+id/tvShippingWith"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailBillingAddHeader" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDetailBillingAddphoneNum"
+                    style="@style/Text.12dp.allEastBayColor.poppinsRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:text="@{viewmodel.billingPhoneNum}"
+                    app:layout_constraintStart_toStartOf="@+id/tvShippingWith"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailBillingAddLandMark" />
+
+
+                <include
+                    android:id="@+id/accoutingDetails"
+                    layout="@layout/layout_accounting_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/allWhiteColor"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailBillingAddphoneNum" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDownloadInvoice"
+                    style="@style/Text.14sp.Nero.PoppinsBold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:onClick="@{() -> viewmodel.downLoadInvoice()}"
+                    android:text="@string/downLoadInvoice"
+                    android:visibility="@{viewmodel.returnProductVisible}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/accoutingDetails" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCancelOrReorder"
+                    style="@style/Text.14sp.Nero.PoppinsBold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/twenty_dp"
+                    android:layout_marginTop="0dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="@{viewmodel.cancelOrReorder}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDownloadInvoice" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:visibility="@{viewmodel.progressVisible}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                 />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

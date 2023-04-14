@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    tools:context="chat.hola.com.app.location.Location_Search_Activity">
+    <!--Heading tool bar-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whiteOverlay"
+        android:contentInsetStart="@dimen/dp_0"
+        android:contentInsetLeft="@dimen/dp_0"
+        android:contentInsetEnd="@dimen/dp_0"
+        android:contentInsetRight="@dimen/dp_0"
+        android:elevation="@dimen/dp_3"
+        app:contentInsetEnd="@dimen/dp_0"
+        app:contentInsetLeft="@dimen/dp_0"
+        app:contentInsetRight="@dimen/dp_0"
+        app:contentInsetStart="@dimen/dp_0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize">
+
+            <RelativeLayout
+                android:id="@+id/back_button"
+                android:layout_width="?actionBarSize"
+                android:layout_height="match_parent"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/ten_dp"
+                    android:background="@drawable/ic_arrow_back_black_24dp"
+                    android:contentDescription="@string/app_name" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/page_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:gravity="center"
+                android:text="@string/select_location"
+                android:textColor="@color/star_black"
+                android:textSize="@dimen/title" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/ten_dp"
+                android:indeterminate="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <!--Body part-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--Every thing is available for search-->
+        <LinearLayout
+            android:id="@+id/permission_garanted"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/search_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/search"
+                    android:padding="@dimen/dp_10"
+                    app:srcCompat="@drawable/ic_search" />
+
+                <EditText
+                    android:id="@+id/search_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_toStartOf="@+id/cross_button"
+                    android:layout_toLeftOf="@+id/cross_button"
+                    android:layout_toEndOf="@+id/search_button"
+                    android:layout_toRightOf="@+id/search_button"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/locating_Text"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp_10"
+                    android:textColor="@color/color_black"
+                    android:textColorHint="@color/bg_gray"
+                    android:textSize="@dimen/big" />
+
+                <ImageView
+                    android:id="@+id/cross_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:clickable="true"
+                    android:contentDescription="@string/cross_button_icon_text"
+                    android:padding="@dimen/dp_10"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/circle_close" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/gray" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/location_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <!--Location permission is denied-->
+        <RelativeLayout
+            android:id="@+id/location_premission_denined"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_gray"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/share_posting_loc_insta"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center"
+                    android:text="@string/share_posting_loc_to_friends"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/medium" />
+
+                <TextView
+                    android:id="@+id/turn_on_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:clickable="true"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/dp_5"
+                    android:text="@string/turn_on"
+                    android:textColor="@color/facebook_blue_color"
+                    android:textSize="@dimen/medium" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

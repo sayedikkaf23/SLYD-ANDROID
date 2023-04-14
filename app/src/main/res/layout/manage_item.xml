@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp_85"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dp_10"
+    android:layout_marginStart="@dimen/dp_3"
+    android:orientation="vertical">
+    <!--
+    *BugTitle :Manage fiter alignment button
+    *Bug Desc:Create Post: Alignment of the settings button in the filters list is inappropriate
+    *Developer name:Ankit K Tiwary
+    *Fixed Date:9-April-2021-->
+    <TextView
+
+        android:id="@+id/name"
+        android:layout_below="@+id/iv"
+        android:layout_width="@dimen/dp_95"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/dp_4"
+
+        android:layout_marginLeft="@dimen/dp_4"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:layout_marginRight="@dimen/dp_4"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/manage"
+        android:gravity="center"
+        android:textColor="@color/gray_text_darker"
+        android:background="@color/trans_black"
+        android:textSize="@dimen/sp_12" />
+
+    <RelativeLayout
+        android:id="@+id/iv"
+
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="@dimen/dp_90"
+
+
+        android:background="@color/color_white"
+
+
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/bar_button_settings" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

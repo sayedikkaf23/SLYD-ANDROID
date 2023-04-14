@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_white"
+
+
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:text="@string/UpdateSubject"
+
+            android:textColor="@color/star_black"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:textSize="@dimen/title"
+
+            />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/close"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginStart="@dimen/dp_5"
+            android:elevation="@dimen/dp_5"
+
+            android:foreground="@drawable/ripple_selector"
+            android:tint="@color/color_text_black"
+            app:srcCompat="@drawable/cancel_normal" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar"
+
+        android:layout_marginBottom="@dimen/dp_32"
+        android:background="@color/color_line_gray"
+
+
+        />
+
+    <!--
+
+     Have to cover this in the text input layout
+
+    -->
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_name2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/seperator"
+
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_marginStart="@dimen/dp_13"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_toLeftOf="@+id/maxLength"
+
+
+        android:layout_toStartOf="@+id/maxLength">
+
+
+        <!--android:hint="@string/EnterName"-->
+
+        <github.ankushsachdeva.emojicon.EmojiconEditText
+            android:id="@+id/et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/tw__transparent"
+            android:fontFamily="Sans serif"
+
+            android:inputType="textCapSentences|textAutoCorrect|textMultiLine"
+            android:maxLength="25"
+            android:maxLines="8"
+            android:paddingEnd="@dimen/dp_2"
+            android:paddingLeft="@dimen/dp_2"
+            android:paddingRight="@dimen/dp_2"
+            android:paddingStart="@dimen/dp_2"
+            android:scrollHorizontally="false"
+            android:textColor="@color/lblFromName"
+            android:textSize="@dimen/big">
+
+        </github.ankushsachdeva.emojicon.EmojiconEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/maxLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rl2"
+     
+        android:layout_marginEnd="@dimen/dp_3"
+        android:layout_marginRight="@dimen/dp_3"
+        android:layout_toLeftOf="@+id/rl2"
+        android:layout_toStartOf="@+id/rl2"
+
+        android:text="@string/twenty_five"
+        android:textColor="@color/lblFromName"
+        android:visibility="visible" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignEnd="@+id/maxLength"
+        android:layout_alignLeft="@+id/input_layout_name2"
+        android:layout_alignRight="@+id/maxLength"
+        android:layout_alignStart="@+id/input_layout_name2"
+        android:layout_below="@+id/input_layout_name2"
+
+        android:background="@color/color_gray_chatscreen">
+
+    </View>
+
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/seperator"
+        android:layout_marginEnd="@dimen/dp_13"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginRight="@dimen/dp_13"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_12">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/emojiButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/ripple_selector"
+            android:src="@drawable/ic_msg_panel_smiles"
+            android:tint="@color/color_gray_chatscreen" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/chat_keyboard_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/ripple_selector"
+            android:tint="@color/color_gray_chatscreen"
+            android:visibility="gone"
+            app:srcCompat="@drawable/chat_keyboard_icon" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_61"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:id="@+id/v2"
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/ripple_dark_grey" />
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@color/ripple_dark_grey" />
+
+
+        <RelativeLayout
+            android:id="@+id/cancel_rl"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/v2"
+            android:layout_toLeftOf="@+id/v1"
+            android:layout_toStartOf="@+id/v1"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <TextView
+
+                android:id="@+id/cancel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/cancel_label"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/medium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ok_rl"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/v2"
+            android:layout_toEndOf="@+id/v1"
+            android:layout_toRightOf="@+id/v1"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/ok_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/string_580"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/medium" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

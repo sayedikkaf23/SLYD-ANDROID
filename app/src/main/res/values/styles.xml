@@ -1,0 +1,1111 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="spbStyle">@style/GNowProgressBar</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="splash" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/splash_screen_layout</item>
+    </style>
+
+    <style name="DialogTheme">
+        <item name="android:windowEnterAnimation">@anim/anim_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_out</item>
+    </style>
+
+    <style name="FullScreen" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="GNowProgressBar" parent="SmoothProgressBar">
+        <item name="spb_stroke_separator_length">0dp</item>
+        <item name="spb_sections_count">2</item>
+        <item name="spb_speed">1.7</item>
+        <item name="spb_progressiveStart_speed">2</item>
+        <item name="spb_progressiveStop_speed">3.4</item>
+        <item name="spb_interpolator">spb_interpolator_acceleratedecelerate</item>
+        <item name="spb_mirror_mode">true</item>
+        <item name="spb_reversed">true</item>
+        <item name="spb_colors">@array/gplus_colors</item>
+        <item name="spb_progressiveStart_activated">true</item>
+    </style>
+
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="CustomTextStyleLPf5" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+
+        <item name="android:singleLine">true</item>
+
+    </style>
+
+
+    <style name="color_dialog" parent="android:Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+
+    <!--
+    For android file picker
+    -->
+
+
+    <style name="PickerTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabGravity">fill</item>
+        <item name="tabMaxWidth">0dp</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="LibAppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+
+
+        <item name="android:textColorPrimary">@color/color_black</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@android:color/background_light</item>
+        <item name="android:windowBackground">@color/bg_gray</item>
+    </style>
+
+    <!--
+
+       For the pinned list of contacts
+       -->
+
+
+    <!--
+
+    For the Ucrop
+
+    -->
+
+    <!--
+
+     For the camera shown in the video call
+
+     -->
+
+
+    <style name="Widget.CameraView" parent="android:Widget">
+        <item name="android:adjustViewBounds">false</item>
+        <item name="facing">back</item>
+        <item name="aspectRatio">4:3</item>
+        <item name="autoFocus">true</item>
+        <item name="flash">auto</item>
+    </style>
+
+
+    <!--  custom camera activity  -->
+    <style name="PreviewButtonsStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">#fafafa</item>
+    </style>
+
+    <style name="ThemeFullscreen.Crop">
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+    </style>
+
+    <style name="ThemeFullscreen" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <declare-styleable name="CropperView">
+        <attr name="grid_color" format="color" />
+        <attr name="grid_thickness" format="dimension" />
+        <attr name="grid_opacity" format="float" />
+        <attr name="padding_color" format="color" />
+        <attr name="add_padding_to_make_square" format="boolean" />
+    </declare-styleable>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TextLabel" parent="@android:style/TextAppearance">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/light</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/light</item>
+        <item name="colorControlNormal">@color/light</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/light</item>
+        <item name="android:textCursorDrawable">@drawable/et_cursor</item>
+
+    </style>
+
+    <style name="ExpandedAppBar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/color_text_black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="muteSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/colorPrimary</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#f1f1f1</item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#42221f1f</item>
+    </style>
+
+    <!-- set the rounded drawable as background to your bottom sheet -->
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/star_green</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/star_grey</item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">@color/star_grey</item>
+    </style>
+
+    <string-array name="gplus_colors">
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/green</item>
+        <item>@color/yellow</item>
+    </string-array>
+
+    <!--Posting page status bar not title progress bar theme-->
+    <style name="NoStatusBarDialog" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/sf_pro_semibold</item>
+    </style>
+
+    <!--Follow Following Toggle-->
+    <style name="followToggleButton">
+        <item name="android:textColor">@color/toggle_text_color_selector</item>
+        <item name="android:background">@drawable/toggle_bg_selecter</item>
+    </style>
+
+
+    <style name="Text.14sp.PrimaryTextSelectorColor.Poppins" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@drawable/dashboard_user_text_selector</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="Text.16sp.PrimaryColor.Poppins_Medium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="Text.12sp.PrimaryTextSelectorColor.PoppinsLight" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">@drawable/dashboard_user_text_selector</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <style name="Text.18sp.White.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/allWhiteColor</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="Text.16sp.Yellow.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/allYellowColor</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="Text.16sp.CallingTitle.Poppins" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/callingTitle</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="Text.14sp.White.Poppins" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/allWhiteColor</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="CallFullScreenStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/abc_slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/abc_slide_out_bottom</item>
+    </style>
+
+    <style name="ButtonNormal">
+        <item name="android:layout_margin">@dimen/dp_10</item>
+        <item name="android:background">@drawable/curved_primary_color</item>
+        <item name="android:textColor">@color/color_text</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/big</item>
+    </style>
+
+    <style name="fx_dlg_style" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <style name="Text.20sp.Black.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/large</item>
+    </style>
+
+    <style name="Text.13sp.BlackApprox.poppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.15sp.ApproxBlack.poppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/fifteen_sp</item>
+    </style>
+
+    <style name="NavigationTheme" parent="AppTheme">
+        <item name="android:textSize">15sp</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/selector_nav_menu_item</item>
+    </style>
+
+    <style name="Text.12sp.BlckApprox.poppins_regular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.14sp.Black.PoppinsMed" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.10sp.Black.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="Text.12sp.DoveGray.PoppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/dove_gray</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.11sp.HippieGreen.PoppinsMed" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/hippieGreen</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+    </style>
+
+    <style name="Text.14sp.colorWhite.regular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.14sp.colorAdd.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorAdd</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.16sp.Black.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+    </style>
+
+    <style name="Text.12sp.RidePickupDrop.ProductSansRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.12sp.OsloGray.PoppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/oslo_gray</item>
+        <item name="android:textColorHint">@color/oslo_gray</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.14sp.colorBlackApprox.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.14sp.ApproxBlack.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.12sp.AddColor.PoppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorAdd</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.10sp.Red.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorRed</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="Text.12sp.PersianBlue.PoppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/persian_blue</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.9sp.DarkGray.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textSize">@dimen/sp_9</item>
+    </style>
+
+    <style name="Text.12sp.BlackApprox.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.8sp.ApproxGray.PoppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/approx_gray</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+    </style>
+
+    <style name="Text.12sp.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.12sp.DimGray.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorProductDimGray</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.14sp.Nero.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorProductNeroTitle</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.13sp.SpeechBlue.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/allEastBayColor</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.16sp.Nero.PoppinsBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorProductNeroTitle</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+    </style>
+
+    <style name="Text.13sp.Nero.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorProductNeroTitle</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.11sp.Gey.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorApproxBoulder</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+    </style>
+
+    <style name="CustomProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/custom_progressbar</item>
+        <item name="android:minHeight">5dip</item>
+        <item name="android:maxHeight">10dip</item>
+    </style>
+
+    <style name="Text.12sp.White.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/allWhiteColor</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.16sp.Nero.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorProductNeroTitle</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+    </style>
+
+    <style name="Text.12sp.Gey.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorApproxBoulder</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.12sp.gey.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorApproxBoulder</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="Text.13sp.ApproxBlack.poppinsLight" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.16sp.PrimaryTextColor.poppinsemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorSharkapprox</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+    </style>
+
+    <style name="Text.14sp.Nobel.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/allNobelColor</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.14sp.Green.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorProductBackgroundDetails</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.16sp.Nero.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorProductNeroTitle</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+    </style>
+
+    <style name="Text.14sp.White.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/allWhiteColor</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.16sp.ScarletTextColor.poppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorScarlet</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+    </style>
+
+    <style name="Text.12dp.allEastBayColor.poppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/allEastBayColor</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.12sp.Nero.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorProductNeroTitle</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.13sp.colorDoveGrayApprox.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorDoveGrayApprox</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.13sp.ApproxBlack.poppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.13sp.colorDoveGrayApprox.PoppinsLight" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">@color/colorDoveGrayApprox</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.12sp.Gey.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorApproxBoulder</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.30sp.Nero.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorProductNeroTitle</item>
+        <item name="android:textSize">@dimen/thirty_dp</item>
+    </style>
+
+    <style name="Text.13sp.SpeechBlue.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/allEastBayColor</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.13sp.SpeechBlue.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/allEastBayColor</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.12sp.allBlackColor.OpenSansReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.14sp.Black.OpenSansBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/allBlackTxtColor</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.12sp.BaseAppColor.poppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/allEastBayColor</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.14sp.Nero.PoppinsBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorProductNeroTitle</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.14sp.colorBlackApprox.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.20sp.Black.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sp_20</item>
+    </style>
+
+    <style name="Text.13sp.Nobel.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/allNobelColor</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.10sp.White.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/allWhiteColor</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="Text.14sp.CadetBlue.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/allCadetBlue</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.18sp.Nero.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorProductNeroTitle</item>
+        <item name="android:textSize">@dimen/eighteen_sp</item>
+    </style>
+
+    <style name="Text.14sp.DimGray.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorProductDimGray</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.18sp.ApproxBlack.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/eighteen_sp</item>
+    </style>
+
+    <style name="Text.11sp.White.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/allWhiteColor</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+    </style>
+
+    <style name="Text.18sp.BlackApprox.productSansBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.12dp.PrimaryTextColor.poppins_semibold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.15sp.Nero.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorProductNeroTitle</item>
+        <item name="android:textSize">@dimen/fifteen_sp</item>
+    </style>
+
+    <style name="Text.18sp.Nero.PoppinsBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorProductNeroTitle</item>
+        <item name="android:textSize">@dimen/eighteen_sp</item>
+    </style>
+
+    <style name="Text.14sp.Grey.productSansRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.18sp.ProductSans.Regular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/sf_pro_regular</item>
+        <item name="android:textColor">@color/portGore</item>
+        <item name="android:textSize">@dimen/eighteen_sp</item>
+    </style>
+
+    <style name="Text.16sp.Purple.productSansBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/purple</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+    </style>
+
+    <style name="Text.12sp.Manatee.ProductSansBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/manatee</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.12sp.DoveGray.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorDoveGrayApprox</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.18sp.White.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/allWhiteColor</item>
+        <item name="android:textSize">@dimen/eighteen_sp</item>
+    </style>
+
+    <style name="Text.12sp.NobelTextColor.poppinsLight" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">@color/colorNobel</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.15sp.SeekBackground.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorProductSeekBackground</item>
+        <item name="android:textSize">@dimen/fifteen_sp</item>
+    </style>
+
+    <style name="Text.13sp.DimGray.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorProductDimGray</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.16sp.ApproxBlack.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+    </style>
+
+    <style name="Text.13sp.Green.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorProductBackgroundDetails</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.12sp.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="HistoryRatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/hippieGreen</item>
+        <item name="colorControlActivated">@color/hippieGreen</item>
+    </style>
+
+    <style name="Text.20sp.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sp_20</item>
+    </style>
+
+    <style name="Text.13sp.ApproxBlack.PoppinsLight" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.13sp.Black.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.13sp.White.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.14sp.EastBay.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/allEastBayColor</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.13sp.black.poppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.18sp.Black.PoppinsBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/eighteen_sp</item>
+    </style>
+
+    <style name="Text.14sp.colorSilverWhite.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorSilverWhite</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.16sp.ApproxBlack.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+    </style>
+
+    <style name="Text.16sp.EastBay.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/allEastBayColor</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+    </style>
+
+    <style name="Text.17sp.BrightGray.poppins.Bold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/colorBrightGray</item>
+        <item name="android:textSize">@dimen/sp_17</item>
+    </style>
+
+    <style name="Text.16sp.HippieGreen.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/hippieGreen</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+    </style>
+
+    <style name="Text.14sp.PortGore.PoppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/portGore</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.14sp.BrightGray.poppinsMReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorBrightGray</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.15sp.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/fifteen_sp</item>
+    </style>
+
+    <style name="Text.14sp.ApproxBlack.PoppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.19sp.PrimaryTextColor.poppins_bold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sp_19</item>
+    </style>
+
+    <style name="Text.12sp.White.ProductSansBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.14sp.BlackApprox.poppins_bold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.12sp.White.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.17sp.ApproxBlack.PoppinsBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sp_17</item>
+    </style>
+
+    <style name="Text.14sp.BrightGray.poppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorBrightGray</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.15sp.Black.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/fifteen_sp</item>
+    </style>
+
+    <style name="Text.14sp.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.15sp.BaseAppColor.poppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/allEastBayColor</item>
+        <item name="android:textSize">@dimen/fifteen_sp</item>
+    </style>
+
+    <style name="Text.16sp.Black.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+    </style>
+
+    <style name="Text.13sp.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.12sp.HippieGreen.PoppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/hippieGreen</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.13sp.BrightGray.poppins.semiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorBrightGray</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.10sp.GrayApprx.PoppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorGrayApprox</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="Text.14sp.tipToggle.PoppinsMed" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/toggle_text</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.14sp.Nero.PoppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorProductNeroTitle</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.14sp.EastBay.PoppinsMed" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/allEastBayColor</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.12sp.AddColor.OpenSansSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorAdd</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.13sp.ApproxBoulder.PoppinsLight" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">@color/colorApproxBoulder</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.13sp.AppColor.PoppinsLight" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">@color/allEastBayColor</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Text.14sp.colorBlack.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="Text.12sp.ApproxBoulder.PoppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorApproxBoulder</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.16sp.Black.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+    </style>
+
+    <style name="Text.12sp.Gray.PoppinsMed" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorDoveGray</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.10sp.Gray.PoppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/doveGray</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="Text.10sp.colorMountainMeadow.PoppinsMedium" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/mountainMeadow</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="Text.12sp.AllGray.PoppinsReg" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/allGreyColor</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="Text.10sp.DimGray.poppinsLight" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">@color/colorProductDimGray</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="Text.15sp.CodGray.PoppinsSemiBold" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/cod_gray</item>
+        <item name="android:textSize">@dimen/fifteen_sp</item>
+    </style>
+
+    <style name="Text.10sp.SolidBoulder.PoppinsMed" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/solid_boulder</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="Text.14sp.CodGray.PoppinsRegular" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/cod_gray</item>
+        <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+    <!-- set the rounded drawable as background to your bottom sheet -->
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/round_small_corner_white_bg</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+
+    <style name="activityTransparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@color/trans_black</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog" />
+
+    <style name="customfollowToggleButton">
+        <item name="android:textColor">@color/custom_toggle_text_selector</item>
+        <item name="android:background">@drawable/custom_toggle_bg_selector</item>
+    </style>
+
+    <style name="followtoggleCustom">
+        <item name="android:textColor">@color/toggle_custom_text_select</item>
+        <item name="android:background">@drawable/followtogglecustom</item>
+    </style>
+
+    <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="customstrokeborder">
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:background">@drawable/customstrokeborder</item>
+    </style>
+
+    <style name="custombuystrokeborder">
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:background">@drawable/custombuynowstroke</item>
+    </style>
+
+    <style name="inputErrorGreen" parent="TextAppearance.Design.Error">
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="inputErrorRed" parent="TextAppearance.Design.Error">
+        <item name="android:textColor">@color/red</item>
+    </style>
+</resources>

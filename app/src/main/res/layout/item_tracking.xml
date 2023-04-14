@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginBottom="-2dp"
+            android:background="@drawable/green_circle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTrackingStatus"
+            style="@style/Text.12sp.PoppinsRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            app:layout_constraintLeft_toRightOf="@+id/ivCircle"
+            app:layout_constraintTop_toTopOf="@+id/ivCircle"
+            tools:text="@string/historyBillingAddress" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvShipmentId"
+            style="@style/Text.12sp.PoppinsRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:includeFontPadding="false"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@+id/ivCircle"
+            app:layout_constraintTop_toBottomOf="@+id/tvTrackingStatus"
+            tools:text="@string/historyBillingAddress" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOrderStatusDate"
+            style="@style/Text.12sp.PoppinsRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/five_dp"
+            android:includeFontPadding="false"
+            android:paddingBottom="@dimen/fifteen_dp"
+            app:layout_constraintLeft_toRightOf="@+id/ivCircle"
+            app:layout_constraintTop_toBottomOf="@+id/tvShipmentId"
+            tools:text="@string/historyBillingAddress" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOrderStatusReason"
+            style="@style/Text.12sp.PoppinsRegular"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:visibility="visible"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            app:layout_constraintStart_toEndOf="@+id/ivCircle"
+            app:layout_constraintLeft_toRightOf="@+id/ivCircle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrderStatusDate"
+            tools:text="@string/historyBillingAddress" />
+
+
+        <View
+            android:id="@+id/viewTrackIndicatorHalf1"
+            android:layout_width="@dimen/three_dp"
+            android:layout_height="@dimen/dp0"
+            android:background="@color/hippieGreen"
+            app:layout_constraintBottom_toBottomOf="@+id/tvOrderStatusDate"
+            app:layout_constraintEnd_toEndOf="@+id/ivCircle"
+            app:layout_constraintStart_toStartOf="@+id/ivCircle"
+            app:layout_constraintTop_toBottomOf="@+id/ivCircle">
+
+        </View>
+
+        <View
+            android:id="@+id/viewTrackIndicatorHalf2"
+            android:layout_width="@dimen/three_dp"
+            android:layout_height="@dimen/thirty_dp"
+            android:background="@color/hippieGreen"
+            app:layout_constraintEnd_toEndOf="@+id/viewTrackIndicatorHalf1"
+            app:layout_constraintStart_toStartOf="@+id/viewTrackIndicatorHalf1"
+            app:layout_constraintTop_toBottomOf="@+id/viewTrackIndicatorHalf1">
+
+        </View>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlParent"
+    android:keepScreenOn="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/abLayout"
+      >
+
+    <TextView
+        android:id="@+id/tvNoBroadcaster"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="@dimen/dp_8"
+        android:gravity="center"
+        android:text="@string/stream_name"
+        android:textColor="@color/color_black"
+        android:visibility="gone"
+        />
+  </RelativeLayout>
+
+  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:id="@+id/refresh"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/abLayout"
+      >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLiveStreams"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_5"
+        />
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/btGoLive"
+      android:layout_width="@dimen/dp_72"
+      android:layout_height="@dimen/dp_72"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="@dimen/dp_30"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/ic_live"
+      app:srcCompat="@drawable/ic_live"
+      android:padding="@dimen/dp_18"
+      android:elevation="@dimen/dp_5"
+      />
+
+  <include
+
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+</RelativeLayout>

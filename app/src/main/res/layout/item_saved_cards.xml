@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCardItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/twenty_dp"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginEnd="@dimen/twenty_dp"
+        android:background="@drawable/rectangle_round_white_four_dp"
+        android:paddingTop="@dimen/fifteen_dp"
+        android:paddingBottom="@dimen/fifteen_dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCardBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:contentDescription="@string/content_descriptor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCardNumber"
+            style="@style/Text.15sp.ApproxBlack.poppinsMedium"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:includeFontPadding="false"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCardBrand"
+            app:layout_constraintLeft_toRightOf="@+id/ivCardBrand"
+            app:layout_constraintRight_toLeftOf="@+id/tvExpDate"
+            app:layout_constraintTop_toTopOf="@+id/ivCardBrand"
+            tools:text="**** **** **** 4975" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvExpDate"
+            style="@style/Text.15sp.ApproxBlack.poppinsMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/twenty_dp"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:includeFontPadding="false"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCardBrand"
+            app:layout_constraintRight_toLeftOf="@+id/ivRightArrow"
+            app:layout_constraintTop_toTopOf="@+id/ivCardBrand"
+            tools:text="08/20" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRightArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:contentDescription="@string/content_descriptor"
+            android:tint="@color/color_black"
+            android:padding="@dimen/ten_dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCardNumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvCardNumber"
+            app:srcCompat="@drawable/ic_delete" />
+
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbCard"
+            style="@style/Text.15sp.ApproxBlack.poppinsMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:clickable="false"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCardBrand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivCardBrand" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/two_dp"
+        android:paddingBottom="@dimen/two_dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProductRating"
+            style="@style/Text.12sp.PoppinsRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/one_dp"
+            android:drawableTint="@color/color_black"
+            android:gravity="center"
+            tools:text="4.5"
+            android:includeFontPadding="false"
+            app:drawableEndCompat="@drawable/pdp_rating_start"
+            app:drawableRightCompat="@drawable/pdp_rating_start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+<!--
+
+-->
+
+        <ProgressBar
+            android:id="@+id/pbDistribution"
+            style="@style/CustomProgressBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/four_dp"
+            android:progress="20"
+            android:max="100"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tvProductRating"
+            app:layout_constraintRight_toLeftOf="@+id/tvProductTotalRating"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProductTotalRating"
+            style="@style/Text.11sp.Gey.PoppinsRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="57,764"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

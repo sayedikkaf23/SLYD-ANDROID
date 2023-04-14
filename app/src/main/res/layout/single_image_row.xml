@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <chat.hola.com.app.Utilities.customimageview.PhotoView
+        android:id="@+id/imageIv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/content_descriptor"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:minHeight="120dp"
+        android:minWidth="120dp" />
+
+</RelativeLayout>

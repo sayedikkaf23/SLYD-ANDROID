@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- "shadow" -->
+    <item>
+        <shape android:shape="oval" >
+            <solid android:color="@color/allEastBayColor"/>
+            <stroke
+                android:width="2dp"
+                android:color="@color/white"/>
+            <size android:width="@dimen/twenty_dp"
+                android:height="@dimen/twenty_dp"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/allEastBayColor"/>
+            <stroke
+                android:width="2dp"
+                android:color="@color/white"/>
+            <size android:width="@dimen/twenty_dp"
+                android:height="@dimen/twenty_dp"/>
+        </shape>
+    </item>
+
+</layer-list>
+
+
+

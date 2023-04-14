@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iV_type"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/ten_dp"
+        android:src="@drawable/ic__trans_credit" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/ten_dp"
+        android:layout_toStartOf="@+id/tV_amount"
+        android:layout_toEndOf="@+id/iV_type"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tV_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_regular"
+            android:maxLines="1"
+            android:text="@string/temp_transaction_id"
+            android:textColor="@color/star_grey"
+            android:textSize="@dimen/tiny" />
+
+        <TextView
+            android:id="@+id/tV_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_regular"
+            android:text="@string/reposted_start_post"
+            android:textStyle="bold"
+            android:textColor="@color/star_black"
+            android:textSize="@dimen/medium" />
+
+        <TextView
+            android:id="@+id/tV_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_regular"
+            android:text="@string/tv_time"
+            android:textColor="@color/star_grey"
+            android:textSize="@dimen/tiny" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tV_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/ten_dp"
+        android:drawableStart="@drawable/ic_coin_small"
+        android:drawablePadding="@dimen/dp_5"
+        android:fontFamily="@font/sf_pro_semibold"
+        android:text="@string/first_coin_init"
+        android:textColor="@color/star_black"
+        android:textSize="@dimen/medium" />
+
+
+</RelativeLayout>

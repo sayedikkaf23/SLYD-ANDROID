@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:id="@+id/parent_layout"
+    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+    android:orientation="vertical">
+
+    <!--android:layout_marginBottom="130dp"-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/mAppBarContainer"
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/dp_180">
+        <FrameLayout
+            android:background="@color/gray_lighter"
+            android:layout_marginBottom="@dimen/dp_1"
+            android:id="@+id/top_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="@dimen/dp_48"
+            app:layout_scrollFlags="scroll|enterAlways">
+            <RelativeLayout
+                android:id="@+id/player"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <VideoView
+                    android:id="@+id/video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+
+                    android:layout_alignParentTop="true"
+
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+            <chat.hola.com.app.DublyCamera.CameraInFragments.CustomGallery.GalleryImageHandler.CropImageView
+                android:id="@+id/mPreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"/>
+            <androidx.appcompat.widget.AppCompatImageView
+
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/snap_button"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_margin="@dimen/dp_16"
+                android:padding="@dimen/dp_8"
+                android:layout_gravity="start|bottom"
+                android:scaleType="center"
+                app:srcCompat="@drawable/zoom_in_out_vector_asset"/>
+
+        </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/top_frame"
+        android:background="@color/color_line_gray"
+        android:id="@+id/mGalleryRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

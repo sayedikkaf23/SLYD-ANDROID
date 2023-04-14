@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_250"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/bg_gray"/>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="4">
+
+
+
+                <LinearLayout
+                    android:id="@+id/layoutAudio"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/attachment_circle_bg">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_audio_attach" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvAudio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp_11"
+                        android:text="@string/string_646"
+                        android:textColor="@color/custom_dialog_options_menu"
+                        android:textSize="@dimen/small" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/layoutPhoto"
+                    android:visibility="invisible"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/attach_camera" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvPhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp_11"
+                        android:text="@string/Camera"
+                        android:textColor="#4d4747"
+                        android:textSize="@dimen/small" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutGiphy"
+                    android:layout_width="@dimen/dp_0"
+                    android:visibility="invisible"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/attachment_circle_bg">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:gravity="center"
+                            android:text="@string/gif"
+                            android:textColor="@color/star_black"
+                            android:textSize="@dimen/small" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/tvGiphy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp_11"
+                        android:text="@string/gifSmall"
+                        android:textColor="#4d4747"
+                        android:textSize="@dimen/small" />
+
+                </LinearLayout>
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/layoutVideo"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="30dp"-->
+                <!--android:layout_marginRight="30dp"-->
+                <!--android:layout_marginTop="18dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<ImageView-->
+                <!--android:layout_width="60dp"-->
+                <!--android:layout_height="60dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:src="@drawable/video_off" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tvVideo"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:text="@string/string_281"-->
+                <!--android:textColor="@color/custom_dialog_options_menu"-->
+                <!--android:textSize="16dp" />-->
+
+                <!--</LinearLayout>-->
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_18"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:id="@+id/layoutContact"
+                    android:visibility="invisible"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_12"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/attach_contact" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="@string/string_648"
+                        android:textColor="@color/custom_dialog_options_menu"
+                        android:textSize="@dimen/small" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutVideo"
+                    android:visibility="invisible"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/attachment_circle_bg">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_22"
+                            android:layout_height="@dimen/dp_16"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_video_call" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="@string/string_281"
+                        android:textColor="@color/custom_dialog_options_menu"
+                        android:textSize="@dimen/small" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutLocation"
+                    android:visibility="invisible"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_12"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/attach_location" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="@string/string_647"
+                        android:textColor="@color/custom_dialog_options_menu"
+                        android:textSize="@dimen/small" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

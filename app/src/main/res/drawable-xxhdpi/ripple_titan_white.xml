@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/white"
+    >
+
+
+    <item>
+
+        <selector>
+
+
+            <item
+                android:drawable="@drawable/titan_white_selected_state"
+                android:state_enabled="true" />
+            <item
+                android:drawable="@drawable/gallery_bag"
+                android:state_enabled="false" />
+            <item
+                android:drawable="@drawable/gallery_bag"
+                android:state_pressed="true" />
+            <item
+                android:drawable="@drawable/gallery_bag"
+                android:state_focused="true" />
+            <item android:drawable="@drawable/gallery_bag" />
+
+        </selector>
+
+    </item>
+
+
+</ripple>

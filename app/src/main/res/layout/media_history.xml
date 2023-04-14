@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background_gray"
+    android:fitsSystemWindows="true">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/color_white"
+        android:visibility="gone"
+
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+
+
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/big"
+            android:textStyle="bold"
+
+            />
+
+
+        <!--android:layout_marginEnd="13dp"-->
+        <!--android:layout_marginLeft="13dp"-->
+        <!--android:layout_marginRight="13dp"-->
+
+
+        <!--android:layout_marginStart="13dp"-->
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/close"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:layout_marginStart="@dimen/dp_13"
+            android:elevation="@dimen/dp_5"
+            android:foreground="@drawable/ripple_selector"
+            android:tint="@color/color_black"
+            app:srcCompat="@drawable/cancel_white" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_1"
+
+
+        android:layout_below="@+id/toolbar"
+        android:background="@color/color_line_gray"
+        android:visibility="visible"
+
+        />
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        android:layout_below="@+id/seperator"
+
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:background="@color/color_white"
+
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/color_text_search"
+                app:tabMaxWidth="@dimen/dp_0"
+                app:tabMode="fixed"
+
+
+                app:tabSelectedTextColor="@color/color_tint"
+                app:tabTextAppearance="@style/CustomTextStyleLPf5"
+
+                app:tabTextColor="@color/color_text_gray"
+
+
+                />
+
+
+            <View
+
+                android:id="@+id/seperator2"
+                android:layout_width="fill_parent"
+
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/color_line_gray"
+
+
+                />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</RelativeLayout>

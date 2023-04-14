@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:orientation="vertical"
+    tools:context="chat.hola.com.app.Giphy.SelectGIF">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/newGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/close"
+            android:layout_toRightOf="@+id/close"
+            android:fontFamily="@font/euclid_circular_b_semibold"
+            android:text="@string/create_new_group"
+            android:textColor="@color/color_welcome_text"
+            android:textSize="@dimen/sp_18" />
+
+
+        <TextView
+            android:id="@+id/membersCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newGroup"
+            android:layout_marginTop="@dimen/dp_1"
+            android:layout_toStartOf="@+id/search"
+            android:layout_toLeftOf="@+id/search"
+            android:layout_toEndOf="@+id/close"
+            android:layout_toRightOf="@+id/close"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/AddParticipants"
+            android:textColor="@color/color_text_black"
+            android:visibility="gone" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/close"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_13"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:layout_marginEnd="@dimen/dp_13"
+            android:layout_marginRight="@dimen/dp_13"
+            android:foreground="@drawable/ripple_selector"
+            android:tint="@color/color_tint"
+            app:srcCompat="@drawable/ic_back_new_black" />
+        <!--SearchView009-->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_13"
+            android:queryHint="Search chats"
+            android:visibility="gone">
+
+
+        </androidx.appcompat.widget.SearchView>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/color_line_gray" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvContactsSelected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seperator"
+        android:layout_marginEnd="@dimen/dp_9"
+        android:layout_marginRight="@dimen/dp_9"
+        />
+
+
+    <View
+        android:id="@+id/seperator2"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_1"
+
+
+        android:layout_below="@+id/rvContactsSelected"
+        android:layout_marginStart="@dimen/dp_13"
+        android:layout_marginLeft="@dimen/dp_13"
+        android:layout_marginEnd="@dimen/dp_13"
+        android:layout_marginRight="@dimen/dp_13"
+        android:background="@color/color_line_gray"
+
+        />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seperator2">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvContacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seperator2"
+
+            android:scrollbarStyle="outsideInset" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/llEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/seperator"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/default_images_size"
+            android:layout_height="@dimen/default_images_size"
+            android:layout_margin="@dimen/dp_10"
+            android:src="@drawable/ic_contacts1" />
+
+        <TextView
+            android:id="@+id/userMessagechat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/no_contacts"
+            android:textSize="@dimen/big"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_create"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:background="@drawable/rounded_rectangle_base_color"
+        android:fontFamily="@font/euclid_circular_b_medium"
+        android:text="@string/create_group"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/medium" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="@dimen/dp_56"
+        android:layout_height="@dimen/dp_56"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp_16"
+        android:clickable="true"
+        android:rotation="180"
+        android:tint="@color/color_white"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/arrow_back_black" />
+
+
+    <TextView
+        android:id="@+id/messageContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:gravity="center"
+        android:text="@string/NoMembers"
+        android:textSize="@dimen/big"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/noMatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_70"
+        android:layout_marginRight="@dimen/dp_40"
+        android:gravity="center"
+        android:text="@string/noMatch"
+        android:textSize="@dimen/big"
+        android:visibility="gone" />
+</RelativeLayout>

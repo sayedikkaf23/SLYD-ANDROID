@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_15"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_5">
+
+        <chat.hola.com.app.Utilities.RoundedImageView
+            android:id="@+id/ivUserPhoto"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/profile_one" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_toRightOf="@+id/ivUserPhoto"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_2"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/medium"
+                tools:text="@string/ss_jadeja" />
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_2"
+                android:text="@string/text_bengaluru"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_350"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_default" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/ibVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/dp_5"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_videocam" />
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#11000000"
+        android:padding="@dimen/dp_5">
+
+        <!--<ImageButton-->
+        <!--android:id="@+id/ibLike"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--android:src="@drawable/like_selected" />-->
+        <RelativeLayout
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45">
+
+            <CheckBox
+                android:id="@+id/cbLike"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/dp_2"
+                android:background="@drawable/love"
+                android:button="@null"
+                android:checked="false"
+                android:stateListAnimator="@animator/scale"
+                tools:targetApi="lollipop" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/ibComment"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/dp_8"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_chat_off"
+            tools:ignore="ContentDescription" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/five_dp"
+        android:layout_marginLeft="@dimen/ten_dp"
+        android:layout_marginRight="@dimen/five_dp"
+        android:layout_marginStart="@dimen/ten_dp">
+
+        <TextView
+            android:id="@+id/tvUserName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_5"
+            android:padding="@dimen/minus_2"
+            android:text="@string/ss_jadeja"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvUserName1"
+            android:padding="@dimen/dp_2"
+            android:text="@string/desc_is_here"
+            android:textColor="@color/color_black"
+            android:visibility="visible" />
+
+        <chat.hola.com.app.Utilities.FlowLayout
+            android:id="@+id/flHashTags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_margin="@dimen/dp_0"
+            android:padding="@dimen/dp_2"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/flHashTags"
+            android:padding="@dimen/dp_2"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp_12" />
+
+    </RelativeLayout>
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:background="@color/gray" />-->
+</LinearLayout>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteOverlay"
+        tools:context="chat.hola.com.app.trendingDetail.TrendingDetail">
+
+        <RelativeLayout
+            android:id="@+id/actionBarRl"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorHintOfRed"
+            android:elevation="@dimen/two_dp"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/twenty_dp"
+            android:paddingRight="@dimen/twenty_dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                style="?actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:maxLines="1"
+                android:padding="@dimen/five_dp"
+                android:layout_marginStart="@dimen/dp_28"
+                android:layout_marginEnd="@dimen/dp_28"
+                android:textColor="@color/star_black"
+                android:textSize="@dimen/title"
+                android:ellipsize="end" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivCamera"
+                    style="?actionButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/content_descriptor"
+                    app:srcCompat="@drawable/ic_camera_icon" />
+
+                <ImageView
+                    android:id="@+id/ivSearch"
+                    style="?actionButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/ten_dp"
+                    android:layout_marginLeft="@dimen/ten_dp"
+                    android:layout_marginEnd="@dimen/ten_dp"
+                    android:layout_marginRight="@dimen/ten_dp"
+                    android:contentDescription="@string/content_descriptor"
+                    app:srcCompat="@drawable/ic_search" />
+
+                <chat.hola.com.app.Utilities.RoundedImageView
+                    android:id="@+id/profilePicIv"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/profile_pic_bag"
+                    android:contentDescription="@string/content_descriptor"
+                    app:srcCompat="@drawable/default_profile" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/actionBarRl">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/llSubscribe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp_10">
+
+                        <ImageView
+                            android:id="@+id/ivImageTop"
+                            android:layout_width="@dimen/dp_100"
+                            android:layout_height="@dimen/dp_100"
+                            android:layout_margin="@dimen/dp_1"
+                            android:padding="@dimen/dp_2"
+                            android:scaleType="fitXY" />
+
+                        <TextView
+                            android:id="@+id/tvSubscribers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dp_2"
+                            android:textColor="@color/color_text_gray"
+                            android:textSize="@dimen/small"
+                            android:visibility="visible" />
+
+                        <ToggleButton
+                            android:id="@+id/tbSubscribe"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:layout_marginRight="@dimen/five_dp"
+                            style="@style/followToggleButton"
+                            android:maxLines="1"
+                            android:padding="@dimen/dp_6"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/small"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_35"
+                            android:textOff="@string/subscribe"
+                            android:textOn="@string/subscribed" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llMusicContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dp_5"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/ivMusic"
+                            android:layout_width="@dimen/dp_80"
+                            android:layout_height="@dimen/dp_80"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_default" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_80"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvSound"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="2"
+                                android:padding="@dimen/dp_2"
+                                android:textSize="@dimen/sp_15" />
+
+                            <TextView
+                                android:id="@+id/tvDubs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="2"
+                                android:padding="@dimen/dp_2"
+                                android:textSize="@dimen/sp_12" />
+
+                            <CheckBox
+                                android:id="@+id/cbLike"
+                                android:layout_width="@dimen/dp_30"
+                                android:layout_height="@dimen/dp_30"
+                                android:layout_gravity="end"
+                                android:layout_marginTop="@dimen/dp_2"
+                                android:layout_marginEnd="@dimen/dp_5"
+                                android:layout_marginRight="@dimen/dp_5"
+                                android:background="@drawable/love1"
+                                android:button="@null"
+                                android:checked="false"
+                                android:gravity="center"
+                                android:stateListAnimator="@animator/scale" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:id="@+id/flMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <fragment
+                        android:id="@+id/mapView"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_120" />
+
+                    <View
+                        android:id="@+id/mapOverlay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                </FrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerTrendingDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/five_dp" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <chat.hola.com.app.models.InternetErrorView
+            android:id="@+id/llNetworkError"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/actionBarRl"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/llEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/actionBarRl"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivEmpty"
+                android:src="@drawable/empty_post"
+                android:layout_width="@dimen/default_images_size"
+                android:layout_height="@dimen/default_images_size"
+                android:layout_margin="@dimen/dp_10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nodata"
+                android:visibility="gone"
+                android:textSize="@dimen/big" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPrivateMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/dp_20"
+            android:gravity="center"
+            android:padding="@dimen/five_dp"
+            android:text="@string/private_channel_message"
+            android:textColor="@color/color_text_gray"
+            android:textSize="@dimen/small"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/postVideo"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_margin="@dimen/dp_10"
+        android:padding="@dimen/dp_2"
+        android:tint="@color/color_white"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+        app:srcCompat="@drawable/ic_videocam" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/curved_top_corners"
+    android:elevation="@dimen/dp_5"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/dp_16"
+    >
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_margin="@dimen/dp_10"
+      android:text="@string/share_post_using"
+      android:textSize="@dimen/sp_15"
+      android:textStyle="bold" />
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/dp_0_5"
+      android:layout_gravity="center_horizontal"
+      android:background="@color/gray_text_darker" />
+
+  <com.google.android.flexbox.FlexboxLayout
+      android:baselineAligned="false"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <RelativeLayout
+          android:id="@+id/rlFacebook"
+          android:layout_width="match_parent"
+          android:layout_margin="@dimen/dp_13"
+          android:layout_height="wrap_content"
+          >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFacebook"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_8"
+            app:srcCompat="@drawable/ic_facebook_app_logo"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFacebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivFacebook"
+            android:text="@string/share_facebook"
+            android:layout_centerHorizontal="true"
+            />
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/rlDynamicLink"
+          android:layout_width="match_parent"
+          android:layout_margin="@dimen/dp_13"
+          android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDynamicLink"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            app:srcCompat="@drawable/ic_copy_link"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:tint="@color/addYellow"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDynamicLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivDynamicLink"
+            android:text="@string/share_dynamic_link"
+            android:layout_centerHorizontal="true"
+            />
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/rlOthers"
+          android:layout_margin="@dimen/dp_13"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivOthers"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_8"
+            app:srcCompat="@drawable/ic_share_to_social_more"
+            android:tint="@color/colorPrimary"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOthers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivOthers"
+            android:text="@string/share_others"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            />
+      </RelativeLayout>
+
+  </com.google.android.flexbox.FlexboxLayout>
+</LinearLayout>
